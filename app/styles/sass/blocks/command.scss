@@ -1,0 +1,224 @@
+.command {
+    padding: 120px 0;
+}
+.command__content {
+}
+.command__title {
+    font-family: 'Normalidad', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 32px;
+}
+.command__block {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #E5E5E5;
+    margin-bottom: 32px;
+}
+.command__item {
+    width: 24%;
+    &:nth-child(1) {
+        .command__name {
+            &:before {
+                content: "Иванов Иван Иванович";
+            }
+        }
+    }
+    &:nth-child(2) {
+        .command__name {
+            &:before {
+                content: "Якушев Алексей Викторович";
+            }
+        }
+    }
+    &:nth-child(3) {
+        .command__name {
+            &:before {
+                content: "Иванова Анна Ивановна";
+            }
+        }
+    }
+    &:nth-child(4) {
+        .command__name {
+            &:before {
+                content: "Якушев Алексей Викторович";
+            }
+        }
+    }
+}
+.command__img {
+    img {
+        border-radius: 8px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    margin-bottom: 24px;
+}
+.command__description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 32px;
+
+}
+.command__name {
+    font-family: 'IBM', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    color: #000000;
+    margin-bottom: 8px;
+    &:before {
+        display: block;
+        text-align: center;
+    }
+}
+.command__position {
+    font-family: 'IBM', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: #7D7D7D;
+}
+.command__yet {
+    font-family: 'IBM', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: #7D7D7D;
+
+}
+
+
+@media (max-width: 1150px)  {
+    .command__item {
+        &:nth-child(1) {
+            .command__name {
+                &:before {
+                    content: "Иванов И.И.";
+                }
+            }
+        }
+        &:nth-child(2) {
+            .command__name {
+                &:before {
+                    content: "Якушев А.В.";
+                }
+            }
+        }
+        &:nth-child(3) {
+            .command__name {
+                &:before {
+                    content: "Иванова А.И.";
+                }
+            }
+        }
+        &:nth-child(4) {
+            .command__name {
+                &:before {
+                    content: "Якушев А.В.";
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .command__block {
+        flex-wrap: wrap;
+    }
+    .command__item {
+        width: 49%;
+        margin-bottom: 16px;
+    }
+    .command {
+        padding: 94px 0;
+    }
+    .command__item {
+        &:nth-child(1) {
+            .command__name {
+                &:before {
+                    content: "Иванов Иван Иванович";
+                }
+            }
+        }
+        &:nth-child(2) {
+            .command__name {
+                &:before {
+                    content: "Якушев Алексей Викторович";
+                }
+            }
+        }
+        &:nth-child(3) {
+            .command__name {
+                &:before {
+                    content: "Иванова Анна Ивановна";
+                }
+            }
+        }
+        &:nth-child(4) {
+            .command__name {
+                &:before {
+                    content: "Якушев Алексей Викторович";
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 570px) {
+    .command__item {
+        &:nth-child(1) {
+            .command__name {
+                &:before {
+                    content: "Иванов И.И.";
+                }
+            }
+        }
+        &:nth-child(2) {
+            .command__name {
+                &:before {
+                    content: "Якушев А.В.";
+                }
+            }
+        }
+        &:nth-child(3) {
+            .command__name {
+                &:before {
+                    content: "Иванова А.И.";
+                }
+            }
+        }
+        &:nth-child(4) {
+            .command__name {
+                &:before {
+                    content: "Якушев А.В.";
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 540px) {
+    .command {
+        padding: 64px 0;
+    }
+}

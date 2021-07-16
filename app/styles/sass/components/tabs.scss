@@ -1,0 +1,84 @@
+.tab {
+    list-style: none;
+    padding-left: none;
+    display: flex;
+    border: 1px solid $divider-color;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 8px;
+    width: max-content;
+
+    @include media-breakpoint-down(sm) {
+        flex-wrap: wrap;
+    }
+
+    &-item {
+        margin: 0 5px;
+    }
+
+    &-link {
+        padding: 12px 24px;
+        color: $black;
+        border: 0px;
+        background-color: transparent;
+        border-radius: 4px;
+        font-size: 14px;
+        line-height: 16px;
+        transition: 0.3s;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 12px;
+            line-height: 14px;
+            padding: 12px 16px;
+        }
+
+        &.active {
+            background-color: $accent;
+            color: $white;
+        }
+
+        &:not(.active):hover {
+            color: $white;
+            background-color: $accent-dark;
+        }
+    }
+
+    &.tab-links {
+        border: 0px;
+        padding: 0;
+
+        .tab-link {
+            padding: 0;
+            padding-right: 16px;
+            color: $base500;
+            font-size: 12px;
+            line-height: 14px;
+            text-align: left;
+
+            &.active {
+                background-color: transparent;
+                color: $black;
+            }
+
+            &:not(.active):hover {
+                color: $black;
+                background-color: transparent;
+            }
+        }
+    }
+
+    &-content > &-pane {
+        display: none;
+    }
+    &-content > .active {
+        display: block;
+    }
+}
+.fade {
+    transition: opacity 0.15s linear;
+
+    &:not(.show) {
+        opacity: 0;
+    }
+}

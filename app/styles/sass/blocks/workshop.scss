@@ -1,0 +1,33 @@
+.workshop {
+    padding: 120px 0 64px 0;
+    &__content {
+        width: 100%;
+        display: flex;
+    }
+    &__left {
+        width: 25%;
+    }
+    &__title {
+    }
+    &__right {
+        width: 75%;
+    }
+    &__subtitle {
+        font-family: 'IBM', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        color: #000000;
+        margin-bottom: 64px;
+    }
+    &__block {
+        img {
+            border-radius: 32px 8px;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+    
+}

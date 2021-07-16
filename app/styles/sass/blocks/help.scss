@@ -1,0 +1,241 @@
+.help {
+    padding: 120px 0;
+}
+.help__content {
+   display: flex; 
+}
+.help__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+    padding: 32px 0 24px 0;
+}
+.help__title {
+}
+.help__group {
+
+}
+.help__subtitle {
+    font-family: 'IBM', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: #7D7D7D;
+    margin-bottom: 32px;
+}
+
+.help__btn {
+    background-color: $accent;
+    color: #fff;
+    padding: 17px 34px;
+    border-radius: 24px 8px;
+    min-width: 220px;
+    &:hover {
+        color: #fff;
+        background-color: #C04838;
+    }
+}
+.help__right {
+    width: 70%;
+}
+
+
+
+.help__accordion {
+    font-family: 'Normalidad', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #CBCBCB;
+
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    position: relative;
+    border-top: 1px solid #E5E5E5;
+    padding: 32px 75px;
+    &::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: calc(50% - 24px);
+        left: 0;
+        width: 48px;
+        height: 48px;
+        border-radius: 50px;
+    }
+    &::after {
+        content: ' '; 
+        font-size: 13px;
+        color: #777;
+        display: block;
+        position: absolute;
+        top: calc(50% - 24px);
+        right: 0;
+        width: 48px;
+        height: 48px;
+        background-image: url(../images/dist/Icon/arrow-bottom-gray.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &:nth-child(1) {
+        border: none;
+        &::before {
+            background-image: url(../images/dist/accordion__icon-1.jpg);
+        }
+    }
+    &:nth-child(3) {
+        &::before {
+            background-image: url(../images/dist/accordion__icon-2.jpg);
+        }
+    }
+    &:nth-child(5) {
+        &::before {
+            background-image: url(../images/dist/accordion__icon-3.jpg);
+        }
+    }
+
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.help__accordion.active:after {
+    background-image: url(../images/dist/Icon/arrow-top-black.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.help__accordion.active {
+    color: #000000;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.help__panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+
+.help__menu {
+    padding-left: 60px;
+    margin-bottom: 32px;
+}
+.help__list {
+    font-family: 'IBM';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    color: #7D7D7D;
+    margin-bottom: 16px;
+}
+
+.help__bottom {
+    display: none;
+}
+
+
+
+
+@media (max-width: 1024px) {
+    .help {
+        padding: 96px 0;
+    }
+
+    .help__left {
+        width: 100%;
+        .help__group {
+            display: none;
+        }
+    }
+    .help__right {
+        width: 100%;
+    }
+    .help__content {
+        flex-direction: column;
+    }
+    .help__accordion {
+        font-size: 24px;
+        line-height: 24px;
+    }
+    .help__bottom {
+        margin-top: 32px;
+        display: block;
+    }
+    .help__group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .help__subtitle {
+        margin-bottom: 0px;
+    }
+    .help__left {
+        margin-bottom: 32px;
+    }
+}
+
+
+
+@media (max-width: 768px) { 
+    .help__accordion {
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .help__left {
+        padding: 0;
+        
+    }
+    .help__right {
+        border-top: 1px solid #E5E5E5;
+        border-bottom: 1px solid #E5E5E5;
+    }
+}
+
+
+@media (max-width: 540px) {
+    .help__left {
+        margin-bottom: 24px;
+    }
+    .help__bottom {
+        margin-top: 24px;
+    }
+    .help__group {
+        flex-direction: column;
+        text-align: center;
+    }
+    .help__subtitle {
+        max-width: 220px;
+        margin-bottom: 16px;
+    }
+    .help {
+        padding: 64px 0;
+    }
+    .help__accordion {
+        padding: 28px 62px;
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .help__btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .help__accordion {
+        padding: 28px 62px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+}

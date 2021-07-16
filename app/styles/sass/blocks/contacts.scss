@@ -1,0 +1,120 @@
+.contacts {
+    &__content {
+        padding-top: 72px;
+        // height: 500px;
+    }
+    &__info {
+        padding-top: 64px;
+        display: flex;
+    }
+    &__star {
+        flex-grow: 5;
+    }
+    &__data {
+        display: flex;
+        flex-grow: 10;
+    }
+    &__item {
+        margin-bottom: 46px;
+    }
+
+    &__link {
+        a {
+            font-family: 'Normalidad', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            color: #F05A46;
+            position: relative;
+            &:after {
+                position: absolute;
+                display: block;
+                content: "";
+                background-image: url(../images/dist/Icon/arrow-down-orange.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 16px;
+                height: 16px;
+                top: 0;
+                right: -20px;
+            }
+        }
+    }
+    &__adress {
+        font-family: 'Normalidad', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: #000000;
+        span {
+            font-family: 'Normalidad', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            color: #000000;
+        }
+    }
+    &__label {
+        font-family: 'IBM', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+        color: #7D7D7D; 
+        margin-bottom: 24px;
+    }
+    &__title {
+        font-family: 'Normalidad', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: #000000;
+    }
+    &__block {
+        display: flex;
+        flex-grow: 6;
+    }
+    &__column-1 {
+        flex-grow: 3.8;
+    }
+    &__column-2 {
+        flex-grow: 2;
+    }
+    &__column-3 {
+        flex-grow: 4;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .contacts {
+        &__star {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .contacts {
+        &__link {
+            display: none;
+        }
+        &__data {
+            flex-direction: column;
+        }
+    }
+}

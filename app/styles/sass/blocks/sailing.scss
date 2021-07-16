@@ -1,0 +1,86 @@
+.sailing {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #FAF9F5;
+    border: 1px solid #E5E5E5;
+}
+.sailing__content {
+    height: 48px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.sailing__block {
+    display: flex;
+    align-items: center;
+    flex-grow: 4;
+}
+.sailing__btn-link {
+    display: block;
+    background-image: url(../images/dist/Icon/arrow-top.svg);
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    margin-right: 32px;
+    transition: transform .3s ease-in-out;
+}
+.sailing__title {
+    font-family: 'Normalidad', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #000000;
+}
+.sailing__menu {
+    display: flex;
+    flex-grow: 6;
+}
+.sailing__list {
+    margin-right: 24px;
+}
+.sailing__link {
+    font-family: 'IBM', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: #7D7D7D;
+    text-decoration: none;
+    
+}
+
+.sailing__btn-call {
+    border: 1px solid #9FCCCB;
+    border-radius: 4px;
+    padding: 9px 18px;
+}
+
+
+@media (max-width: 1200px) {
+    .sailing__block {
+        flex-grow: 13;
+    }
+    .sailing__menu {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: -1000px;
+    }
+}
+
+@media (max-width: 540px) {
+    .sailing__btn-link {
+        margin-right: 12px;
+    }
+    .sailing__btn-call {
+        display: none;
+    }
+}

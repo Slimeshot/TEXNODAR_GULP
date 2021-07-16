@@ -1,0 +1,25 @@
+.block {
+    padding: 12px;
+    border: 1px solid $divider-color;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 16px;
+
+    &__title {
+        font-weight: 500;
+        margin-bottom: 10px;
+        color: $black;
+    }
+
+    p {
+        margin-bottom: 6px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        
+        > span {
+            padding-left: 2px;
+        }
+    }
+}

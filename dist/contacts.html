@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Контакты</title>
+	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/dist/preview.jpg">
+	
+	<link rel="stylesheet" href="css/main.min.css">
+	<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+
+	<header class="header">
+		<div class="container">
+			<div class="header__content">
+				<a href="index.html" class="header__logo">
+					<img src="images/dist/Logo.png" alt="logo">
+				</a>
+				<nav class="navigation header__navigation">
+					<ul class="navigation__menu">
+						<li class="navigation__list"><a href="flot.html" class="navigation__link">Флот</a></li>
+						<li class="navigation__list"><a href="#" class="navigation__link">Автотранспорт</a></li>
+						<li class="navigation__list"><a href="#" class="navigation__link">Буровые установки</a></li>
+						<li class="navigation__list"><a href="#" class="navigation__link">Ж/Д транспорт</a></li>
+						<li class="navigation__list"><a href="#" class="navigation__link">Статьи</a></li>
+						<li class="navigation__list"><a href="#" class="navigation__link">О нас</a></li>
+						<li class="navigation__list"><a href="contacts.html" class="navigation__link">Контакты</a></li>
+					</ul>
+				</nav>
+				<div class="header__contacts">
+					<span class="header__phone">8 (800) 250-00-16</span>
+					<a href="#" class="btn header__btn">Заказать звонок</a>
+				</div>
+				<div class="header__btn-menu">
+					<div class="header__burger">
+						<img src="images/dist/burger.svg" alt="menu">
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+
+<body>
+
+
+<section class="contacts">
+    <div class="container">
+        <div class="contacts__content">
+            <div class="contacts__info">
+                <div class="contacts__star">
+                    <img src="images/dist/Icon/Star.svg" alt="star">
+                </div>
+                <div class="contacts__data">
+                    <div class="contacts__column-1">
+                        <div class="contacts__item">
+                            <div class="contacts__label">Адрес</div>
+                            <div class="contacts__adress">Петрозаводск<br><span>6-й Гвардейский пер., 7а</span></div>
+                        </div>
+                        <div class="contacts__link">
+                            <a href="#">Смотреть на карте</a>
+                        </div>
+                    </div>
+                    <div class="contacts__block">
+                        <div class="contacts__column-2">
+                            <div class="contacts__item">
+                                <div class="contacts__label">Телефон</div>
+                                <div class="contacts__title">8 800 250-00-16</div>
+                            </div>
+                            <div class="contacts__item">
+                                <div class="contacts__label">График работы</div>
+                                <div class="contacts__title">9:00 — 18:00 <span>ПН-СБ</span></div>
+                            </div>
+                        </div>
+                        <div class="contacts__column-3">
+                            <div class="contacts__item">
+                                <div class="contacts__label">E-mail</div>
+                                <div class="contacts__title">skrt_biz@mail.ru</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<div id='map' style='width: 100%; height: 640px;'>
+</div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoic2xpbWVzaG90IiwiYSI6ImNrcjI4M2Y1ODI2cDgzMXFodDFuMG9jYW8ifQ.nMAxLQ2UlUxVBCcM-M8vuQ';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/slimeshot/ckr4uc0kp0tdc17lx2g29yl03'
+});
+</script>
+
+
+<section class="proposal">
+	<div class="container">
+		<div class="proposal__content">
+			<div class="proposal__left">
+				<span class="proposal__title title">Оставьте заявку<br> на консультацию</span>
+				<span class="proposal__subtitle">Оставляя заявку вы <br>
+					соглашаетесь на<span class="proposal__subtitle-orange"> обработку данных</span></span>
+			</div>
+			<div class="proposal__right">
+				<form class="proposal__form form">
+					<div class="form__block">
+						<input class="form__name" name="name" type="text" placeholder="Имя"> 
+						<input class="form__phone" name="phone" type="text" placeholder="Телефон"> 
+					</div>
+					<input type="submit" value="Оставить заявку" class="form__btn-primary">
+				</form>
+				<div class="proposal__row">
+					<span class="proposal__subtitle proposal__row-subtitle">Или свяжитесь удобным вам способом</span>
+				
+					<ul class="proposal__menu">
+						<li class="proposal__list"><a href="mailto:info@skrt.biz" class="proposal__link">info@skrt.biz</a></li>
+						<li class="proposal__list"><a href="tel:88002500016" class="proposal__link">8 (800) 250-00-16</a></li>
+						<li class="proposal__list"></li>
+						<li class="proposal__list"><a href="#" class="proposal__link">telegram <img src="images/dist/Icon/arrow-way-black.svg" alt="arrow" aria-hidden="true"></a></li>
+						<li class="proposal__list"><a href="#" class="proposal__link">whatsapp <img src="images/dist/Icon/arrow-way-black.svg" alt="arrow" aria-hidden="true"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__content">
+				<div class="footer__top">
+					<div class="footer__left">
+						<a href="#" class="footer__logo">
+							<img src="images/dist/Logo.png" alt="Logo">
+						</a>
+						<div class="footer__social">
+							<a href="#" class="footer__social-link">
+								<img src="images/dist/Icon/facebook.svg" alt="facebook">
+							</a>
+							<a href="#" class="footer__social-link">
+								<img src="images/dist/Icon/youtube.svg" alt="youtube">
+							</a>
+							<a href="#" class="footer__social-link">
+								<img src="images/dist/Icon/vk.svg" alt="vk">
+							</a>
+							<a href="#" class="footer__social-link">
+								<img src="images/dist/Icon/insta.svg" alt="insta">
+							</a>
+						</div>
+					</div>
+					<div class="footer__right">
+						<div class="footer__services">
+							<span class="footer__label">Услуги</span>
+							<ul class="footer__menu">
+								<li class="footer__list"><a href="#" class="footer__link">ЖД транспорт</a></li>
+								<li class="footer__list"><a href="#" class="footer__link">Буровые установки</a></li>
+								<li class="footer__list"><a href="#" class="footer__link">Автотранспорт</a></li>
+								<li class="footer__list"><a href="#" class="footer__link">Флот</a></li>
+							</ul>
+						</div>
+						<div class="footer__company">
+							<span class="footer__label">Компания</span>
+							<ul class="footer__menu">
+								<li class="footer__list"><a href="#" class="footer__link">О нас</a></li>
+								<li class="footer__list"><a href="contacts.html" class="footer__link">Контакты</a></li>
+								<li class="footer__list"><a href="#" class="footer__link">Статьи</a></li>
+								<li class="footer__list"><a href="#" class="footer__link">Сертификаты</a></li>
+							</ul>
+						</div>
+						<div class="footer__contacts">
+							<span class="footer__label">Контакты</span>
+							<ul class="footer__menu">
+								<li class="footer__list"><a href="tel:88002500016" class="footer__link">8 800 250-00-16</a></li>
+								<li class="footer__list"><a href="#" class="footer__link">Петрозаводск, 6-й Гвардейский пер., 7а</a></li>
+								<li class="footer__list"><a href="mailto:skrt_biz@mail.ru" class="footer__link">skrt_biz@mail.ru</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bot">
+					<div class="footer__left">
+						<span class="info footer__text">© 2021 ГК Технодар</span>
+						
+					</div>
+					<div class="footer__right">
+						<span class="dopamin footer__text">Created by <span>dopamine.team</span></span>
+						<span class="politics footer__text">Политика конфиденциальности</span>
+					</div>
+				</div>
+				<div class="footer__second-bot">
+					<span class="info footer__text">© 2021 ГК Технодар</span>
+					<span class="dopamin footer__text">Created by <span>dopamine.team</span></span>
+					<span class="politics footer__text">Политика конфиденциальности</span>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="js/app.min.js"></script>
+
+</body>
+</html>

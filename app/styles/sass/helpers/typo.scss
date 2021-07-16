@@ -1,0 +1,23 @@
+.ff-secondary {
+    font-family: 'Normalidad', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+.t-upper{
+    text-transform: uppercase;
+}
+.mutted {
+    color: $base300;
+}
+
+/*
+    Font sizes
+*/
+.fs-sm {
+    font-size: 12px;
+    line-height: 16px;
+}
+.fs-md {
+    font-size: 14px;
+    line-height: 16px;
+}

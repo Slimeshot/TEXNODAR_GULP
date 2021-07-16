@@ -1,0 +1,104 @@
+.production {
+    padding: 64px 0px;
+    &__content {
+
+    }
+    &__top {
+        display: flex;
+        padding-bottom: 64px;
+        border-bottom: 1px solid #E5E5E5;
+    }
+    &__left {
+        width: 50.5%;
+        padding-right: 110px;
+    }
+    &__label {
+        font-family: 'Normalidad', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 52px;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: #000000;
+
+    }
+    &__right {
+        width: 49.5%;
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 32px 8px;
+        }
+    }
+    &__subtitle {
+        font-family: 'IBM', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #7D7D7D;
+        max-width: 355px;
+    }
+    &__bottom {
+        padding-top: 64px;
+        display: flex;
+    }
+    &__title {
+        margin-bottom: 24px;
+    }
+    &__description {
+        font-family: 'IBM', sans-serif;        
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        color: #191919;
+        margin-bottom: 32px;
+
+    }
+    &__block {
+        display: flex;
+        padding-bottom: 32px;
+        border-bottom: 1px solid #E5E5E5
+    }
+    &__footnote {
+        font-family: 'IBM', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #7D7D7D;
+        width: 59%;
+    }
+    &__menu {
+        width: 41%;
+    }
+    &__list {
+        font-family: 'IBM', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 18px;
+        letter-spacing: 0.01em;
+        color: #191919;
+        padding: 16px 0;
+        border-bottom: 1px solid #E5E5E5;
+        &:nth-child(1) {
+            padding-top: 5px;
+        }
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    &__text {
+        font-family: 'IBM', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #7D7D7D;
+        margin-top: 32px;
+    }
+}

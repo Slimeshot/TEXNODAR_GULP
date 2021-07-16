@@ -1,0 +1,114 @@
+.calculator {
+    margin-top: 120px;
+
+    
+    @include media-breakpoint-down(lg){
+        margin-top: 96px;
+        background-color: $bg-secondary;
+    }
+
+    @include media-breakpoint-down(md){
+        margin-top: 0px;
+    }
+
+    &__wrapper {
+        background-color: $bg-secondary;
+        padding: 32px;
+        border-radius: 24px 8px;
+
+        @include media-breakpoint-down(md){
+            padding: 48px 0px;
+            background-color: transparent;
+        }
+    }
+
+    &__left{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        font-size: 14px;
+        line-height: 16px;
+        height: 100%;
+        
+
+        @include media-breakpoint-down(lg){
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+            padding-bottom: 32px;
+            border-bottom: 1px solid $divider-color;
+            margin-bottom: 32px;
+            height: auto;
+
+            @include media-breakpoint-down(md){
+                padding-bottom: 24px;
+                margin-bottom: 24px;
+            }
+
+            .mb-md{
+                margin-bottom: 0px;
+            }  
+        }
+
+       
+    }
+
+    &__subtitle{
+        @include media-breakpoint-down(lg){
+            text-align: right;
+        }
+
+        @include media-breakpoint-down(md){
+            display: flex;
+            justify-content: space-between;
+            flex: 0 0 100%;
+            margin-top: 24px;
+        }
+    }
+
+    &__form {
+        display: block !important;
+        position: relative;
+
+        input {
+            width: 100%;
+        }
+
+        &-hidden{
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            width: 100%;
+            height: 100%;
+            background-color: $bg-secondary;
+
+            display: none;
+
+            &.show{
+                display: block;
+                z-index: 2;
+            }
+        }
+
+        @include media-breakpoint-down(md){
+            &-footer{
+                display: flex;
+                flex-direction: column;
+
+                > *{
+                    width: 100%;
+                }
+
+                button{
+                    margin-bottom: 24px;
+                }
+
+                .divider{
+                    display: none;
+                }
+            }
+        }
+    }
+}
