@@ -110,10 +110,13 @@
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .certificate {
         padding: 94px 0;
     }
+}
+
+@media (max-width: 768px) {
     .certificate__controls {
         width: 90px;     
     }

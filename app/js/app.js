@@ -81,18 +81,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-	  //открытие бургер меню 
+		  //open/close burger-menu
 
-	  const burger = document.querySelector('.header__burger');
-	  const headerNavigation = document.querySelector('.header__navigation');
+	  const headerBurger = document.querySelector('.header__burger');
+	  const headerInfo = document.querySelector('.header__info');
 
 
-	  burger.addEventListener('click', () => {
-			burger.classList.toggle('active');
-			headerNavigation.classList.toggle('active');
+	  headerBurger.addEventListener('click', () => {
+		  	document.body.classList.toggle('active')
+			headerBurger.classList.toggle('active');
+			headerInfo.classList.toggle('active');
 
 	  })
 
+
+	  //open/close burger-menu
+	  const sailingBurger = document.querySelector('.sailing__burger');
+	  const sailingMenu = document.querySelector('.sailing__menu');
+	  const sailingLink = document.querySelectorAll('.sailing__link');
+
+
+	  if (sailingMenu) {
+		  sailingBurger.addEventListener('click', () => {
+				sailingBurger.classList.toggle('active');
+				sailingMenu.classList.toggle('active');
+				
+		  })
+	  }
+
+
+
+	  //close menu after click
+	  sailingLink.forEach(item => {
+		  item.addEventListener('click', () => {
+			sailingBurger.classList.remove('active');
+			sailingMenu.classList.remove('active');
+		  })
+	  })
 
 
 
@@ -125,30 +150,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// 		  }
 	// 		  })
-
-
 	// 	})
 	// });
 
-	  document.getElementById("defaultOpen").click();
+	if (document.getElementById("defaultOpen")) {
+		document.getElementById("defaultOpen").click();
+	}
 
-	  	
+
 	 // открытие блока читтать полностью 
-
 
 	  let btn = document.querySelector('.capability__btn');
 	  let content = document.querySelector('.capability__info');
 
 
-	  btn.addEventListener('click', () => {
-		  console.log(btn.innerHTML);
-		if (btn.innerHTML == "Читать полностью") {
-			btn.innerHTML = "Скрыть";
-		} else {
-			btn.innerHTML = "Читать полностью";
-		}
-		content.classList.toggle('active');
-	  })
+	  
+	  if (content) {
+		btn.addEventListener('click', () => {
+			console.log(btn.innerHTML);
+		  if (btn.innerHTML == "Читать полностью") {
+			  btn.innerHTML = "Скрыть";
+		  } else {
+			  btn.innerHTML = "Читать полностью";
+		  }
+		  content.classList.toggle('active');
+		})
+	  }
 
 
 
@@ -156,21 +183,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	  // плавный переход к ссылкам
 
-		$(document).ready(function(){
-			$("#navigation").on("click","a", function (event) {
-				event.preventDefault();
-				var id  = $(this).attr('href'),
-					top = $(id).offset().top;
-				$('body,html').animate({scrollTop: top}, 100);
-			});
-		});
+		document.querySelectorAll('a[href^="#"').forEach(link => {
 
-		$(document).ready(function(){
-			$("#links").on("click","a", function (event) {
-				event.preventDefault();
-				var id  = $(this).attr('href'),
-					top = $(id).offset().top;
-				$('body,html').animate({scrollTop: top}, 100);
+			link.addEventListener('click', function(e) {
+				e.preventDefault();
+		
+				let href = this.getAttribute('href').substring(1);
+		
+				const scrollTarget = document.getElementById(href);
+				
+				let topOffset;
+				// const topOffset = 0; // если не нужен отступ сверху 
+
+				if (document.querySelector('.sailing')) {
+					topOffset = document.querySelector('.sailing').offsetHeight;
+				} else {
+					topOffset = 0; // если не нужен отступ сверху 
+				}
+				const elementPosition = scrollTarget.getBoundingClientRect().top;
+				const offsetPosition = elementPosition - topOffset;
+		
+				window.scrollBy({
+					top: offsetPosition,
+					behavior: 'smooth'
+				});
 			});
 		});
 
@@ -210,26 +246,27 @@ document.addEventListener('DOMContentLoaded', () => {
 	  *  Calculation form behavior
 	  */
 	 let calcBtn = document.querySelector('.calculator__form .calculator_btn_next');
-	 calcBtn.addEventListener('click', (event) => {
+	 
+	 if (calcBtn) {
+		calcBtn.addEventListener('click', (event) => {
  
-		 let fields = [].slice.call(document.querySelectorAll('.calculator__form-visible input, select'));
-		 let isAllValid = true;
- 
-		 fields.map(function (filedElement) {
-			 console.log(filedElement.validity.valid);
-			 if (!filedElement.validity.valid)
-				 isAllValid = false;
-		 })
- 
-		 if (isAllValid) {
-			 event.preventDefault();
-			 let hiddenBlock = document.querySelector('.calculator__form .calculator__form-hidden');
-			 hiddenBlock.classList.add('show');
-		 }
- 
- 
- 
-	 });
+			let fields = [].slice.call(document.querySelectorAll('.calculator__form-visible input, select'));
+			let isAllValid = true;
+	
+			fields.map(function (filedElement) {
+				console.log(filedElement.validity.valid);
+				if (!filedElement.validity.valid)
+					isAllValid = false;
+			})
+	
+			if (isAllValid) {
+				event.preventDefault();
+				let hiddenBlock = document.querySelector('.calculator__form .calculator__form-hidden');
+				hiddenBlock.classList.add('show');
+			}
+	
+		});
+	 }
 
 
 
@@ -260,6 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	  
+
 })
 
 
