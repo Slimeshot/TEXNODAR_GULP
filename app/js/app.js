@@ -120,11 +120,44 @@ document.addEventListener('DOMContentLoaded', () => {
 	  })
 
 
+	  //close/open call 
+
+	  const headerBtn = document.querySelector('.header__btn');
+	  const callCross = document.querySelector('.call__cross');
+	  const sailingBtn = document.querySelectorAll('.sailing__btn-call');
+	  const callBlock = document.querySelector('.call');
+
+	  headerBtn.addEventListener('click', () => {
+		document.body.classList.remove('active')
+		headerBurger.classList.remove('active');
+		headerInfo.classList.remove('active');
+		callBlock.classList.add('active');
+
+	  })
+
+	  callCross.addEventListener('click', () => {
+		callBlock.classList.remove('active');
+	  })
+
+	  if (sailingBtn) {
+		  sailingBtn.forEach((item, index) => {
+			item.addEventListener('click', () => {
+				sailingBurger.classList.remove('active');
+				sailingMenu.classList.remove('active');
+				callBlock.classList.add('active');
+			  })
+		  })
+	  }
+
+
+
+
 
 
 	  // аккордеон для блока help
 
 	  const acc = document.querySelectorAll(".help__accordion");
+	//   const panel = document.querySelectorAll('.help__panel')
 
 	  for (let i = 0; i < acc.length; i++) {
 		acc[i].addEventListener("click", function() {
@@ -141,15 +174,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	//   acc.forEach((item, index) => {
 	// 	item.addEventListener('click', () => {
-	// 		panel.forEach((elem, counter) => {
-	// 			elem.style.maxHeight = null;
-	// 			if (index === counter) {
-	// 				item.classList.add('active')
-	// 				elem.style.maxHeight = elem.scrollHeight + "px";			
-	// 			  } else {
+	// 		// console.log(index);
+	// 		// panel.forEach((elem, counter) => {
+	// 		// 	console.log(counter);
+	// 		// 	elem.style.maxHeight = null;
+	// 		// 	item.classList.remove('active')
+	// 		// 	if (index === counter) {
+	// 		// 		item.classList.add('active')
+	// 		// 		elem.style.maxHeight = elem.scrollHeight + "px";			
+	// 		// 	  } else {
 
-	// 		  }
-	// 		  })
+	// 		//   }
+	// 		//   })
+	// 		// let pa = this.nextElementSibling;
+	// 		// console.log(index);
+	// 		// console.log(pa);
 	// 	})
 	// });
 

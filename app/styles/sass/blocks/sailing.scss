@@ -15,7 +15,7 @@
 .sailing__block {
     display: flex;
     align-items: center;
-    flex-grow: 4;
+    width: 25%;
 }
 .sailing__btn-link {
     display: block;
@@ -41,6 +41,7 @@
 .sailing__menu {
     display: flex;
     flex-grow: 6;
+    padding: 0 10px;
 }
 .sailing__list {
     margin-right: 24px;
@@ -72,6 +73,7 @@
         flex-grow: 13;
     }
     .sailing__menu {
+        padding: 0;
         position: absolute;
         width: 100%;
         height: auto;
@@ -86,6 +88,7 @@
             width: 100%;
             border-top: 1px solid #E5E5E5;
             padding: 24px 0;
+            margin-right: 0;
             .sailing__link {
                 display: block;
                 font-family: 'IBM', sans-serif;

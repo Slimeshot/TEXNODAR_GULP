@@ -1,5 +1,5 @@
 .control {
-    padding: 120px 0 64px 0;
+    padding: 120px 0 0 0;
     &__content {
         width: 100%;
         display: flex;
@@ -26,7 +26,10 @@
         display: flex;
         max-width: 616px;
         justify-content: space-between;
-        p {
+        p { 
+            &:first-child {
+                padding-left: 0px;
+            }
             font-family: 'IBM', sans-serif;
             font-style: normal;
             font-weight: normal;
@@ -35,6 +38,9 @@
             color: #000000;  
             max-width: 300px; 
             padding: 0 16px;
+            &:last-child {
+                max-width: 310px;
+            }
         }
     }
     
@@ -45,7 +51,7 @@
 
 @media (max-width: 1024px) {
     .control {
-        padding: 94px 0 64px 0;
+        padding: 94px 0 0 0;
         &__content {
             flex-direction: column;
         }

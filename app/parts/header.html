@@ -36,7 +36,7 @@
 								<li class="navigation__list"><a href="auto.html" class="navigation__link">Автотранспорт</a></li>
 								<li class="navigation__list"><a href="bur.html" class="navigation__link">Буровые установки</a></li>
 								<li class="navigation__list"><a href="train.html" class="navigation__link">Ж/Д транспорт</a></li>
-								<li class="navigation__list"><a href="paper.html" class="navigation__link">Статьи</a></li>
+								<!-- <li class="navigation__list"><a href="paper.html" class="navigation__link">Статьи</a></li> -->
 								<li class="navigation__list"><a href="index.html" class="navigation__link">О нас</a></li>
 								<li class="navigation__list"><a href="contacts.html" class="navigation__link">Контакты</a></li>
 							</ul>
@@ -80,6 +80,14 @@
 		<section class="call">
 			<div class="call__title">Заказать звонок</div>
 			<div class="call__subtitle">Перезвоним в указанное время</div>
-			<div class="call__form"></div>
-			<div class="btn call__btn">Оставить заявку</div>
+
+			<form class="call__form">
+				<input class="call__name" name="name" type="text" placeholder="Имя"> 
+				<input class="call__phone" name="phone" type="text" placeholder="Телефон"> 
+				<input type="submit" value="Оставить заявку" class="btn call__btn">
+				
+			</form>
+			<button class="btn call__cross">
+				<img src="../images/dist/cross.svg" alt="cross">
+			</button>
 		</section>

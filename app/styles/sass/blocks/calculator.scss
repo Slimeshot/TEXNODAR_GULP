@@ -112,3 +112,52 @@
         }
     }
 }
+
+
+@media (max-width: 768px) {
+    .calculator {
+        &::before {
+            display: block;
+            content: " ";
+            width: 100%;
+            height: 96px;
+            background-color: #fff;
+        }
+    }
+}
+
+
+@media (max-width: 540px) {
+    .calculator {
+        background-color: #fff;
+        // padding: 64px 0 24px 0;
+        &::after {
+            display: block;
+            content: " ";
+            width: 100%;
+            height: 24px;
+            background-color: #faf9f5;
+        }
+        &::before {
+            display: block;
+            content: " ";
+            width: 100%;
+            height: 64px;
+            background-color: #faf9f5;
+        }
+        &__wrapper {
+            border-radius: 0 0;
+            background-color: #fff;
+        }
+    }
+}
+
+
+
+
+.auto {
+    .calculator {
+        margin-top: 0;
+        background-color: #FAF9F5;
+    }
+}

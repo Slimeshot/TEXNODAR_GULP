@@ -16,10 +16,13 @@
     }
     &__item {
         margin-bottom: 46px;
+        
     }
 
     &__link {
         a {
+            display: inline-block;
+            margin-top: 5px;
             font-family: 'Normalidad', sans-serif;
             font-style: normal;
             font-weight: normal;

@@ -88,6 +88,7 @@
 }
 .project__slide-text {
     text-align: left;
+    width: 100%;
 }
 .project__slide-tittle {
     font-family: 'Normalidad', sans-serif;
@@ -100,13 +101,30 @@
     color: #000000;
     margin-bottom: 32px;
 }
+.project__slide-case {
+    list-style-type: disc
+}
 .project__slide-subtittle {
+    display: inline-block;
+    font-family: 'IBM', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.6em;
+    line-height: 1em;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 16px;
+}
+.project__slide-list {
     font-family: 'IBM', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 1.4em;
     line-height: 1.6em;
     color: #646464;
+    margin-bottom: 8px;
+    margin-left: 18px;
 }
 .project__slide-params {
     width: 100%;
@@ -137,8 +155,18 @@
     font-size: 1.2em;
     line-height: 1.2em;
     letter-spacing: -0.02em;
-    text-transform: uppercase;
     color: #000000;
+    text-align: right;
+}
+
+
+.train {
+    // .project__slide-case {
+    //     list-style-type: none;
+    // }
+    .project__slide-list {
+        line-height: 1.7em;
+    }
 }
 
 
@@ -149,7 +177,7 @@
 
     }
     .project__slide-subtittle {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 24px;
     }
     .project__slide-label {
@@ -161,9 +189,28 @@
         font-size: 12px;
         line-height: 16px;
     }
+
+    .project__slide-list {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+
 }
 
 @media (max-width: 1024px) {
+    .project__slide-tittle {
+        margin-bottom: 24px;
+    }
+    .project__slide-subtittle {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .project__slide-list {
+        font-size: 12px;
+        line-height: 14px;
+        
+    }
     .project__content {
         position: relative;
     }
@@ -247,8 +294,26 @@
         margin-left: 0px;
     }
     .project__slide-tittle {
-        font-size: 1.6em;
-        margin-bottom: 16px;
+        font-size: 18px;
+        margin-bottom: 18px;
+    }
+    .project__slide-subtittle {
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 8px;
+    }
+    .project__slide-list {
+        font-size: 12px;
+        line-height: 14px;
+        
+    }
+    .project__slide-label {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .project__slide-name {
+        font-size: 10px;
+        line-height: 12px;
     }
 
     .project__slide-params {
@@ -271,3 +336,5 @@
 
     }
 }
+
+

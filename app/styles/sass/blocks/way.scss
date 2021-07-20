@@ -22,7 +22,7 @@
             display: block;
             position: absolute;
             content: "";
-            background-image: url(../../../images/dist/Icon/arrow-right-up-orange.svg);
+            background-image: url(../images/dist/Icon/arrow-right-up-orange.svg);
             background-position: top;
             background-size: cover;
             width: 24px;
@@ -83,6 +83,23 @@
     }
 }
 
+
+
+@media (min-width: 1440px) {
+    .way {
+        &__item-title {
+            font-size: 20px;
+            line-height: 22px;
+        }
+        &__item-subtitle {
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.01em;
+            color: #7D7D7D;
+            position: absolute;
+        }
+    }
+}
 
 @media (max-width: 1024px) {
     .way {

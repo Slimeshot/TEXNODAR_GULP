@@ -1,7 +1,8 @@
 .proem {
-    height: 768px;
+    height: 620px;
     &__content {
-        height: 768px;
+        border-bottom: 1px solid #E5E5E5;
+        height: 620px;
         width: 100%;
         padding-top: 72px;
         display: flex;
@@ -10,7 +11,7 @@
     &__menu {
         display: flex;
         flex-direction: column;
-        flex-grow: 0;
+        flex-grow: 4;
     }
     &__list {
         margin-bottom: 36px;
@@ -39,7 +40,7 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        flex-grow: 1;
+        flex-grow: 10;
     }
     &__group {
         display: flex;
@@ -63,7 +64,7 @@
             &::after{
                 position: absolute;
                 content: " ";
-                background-image: url(../../../images/dist/Icon/arrow-right-up-orange.svg);
+                background-image: url(../images/dist/Icon/arrow-right-up-orange.svg);
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: 100% 100%;
@@ -87,6 +88,7 @@
         font-size: 16px;
         line-height: 24px;
         color: #7D7D7D;
+        margin-left: 3px;
     }
     &__btn {
         justify-self: flex-end;
@@ -139,6 +141,7 @@
             max-width: 610px;
             width: 100%;
             justify-content: space-between;
+            flex-grow: 0;
         }
     }
 }

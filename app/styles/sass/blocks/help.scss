@@ -1,5 +1,5 @@
 .help {
-    padding: 120px 0;
+    padding: 120px 0 60px 0;
 }
 .help__content {
    display: flex; 
@@ -150,7 +150,7 @@
 
 @media (max-width: 1024px) {
     .help {
-        padding: 96px 0;
+        padding: 96px 0 48px 0;
     }
 
     .help__left {
@@ -205,6 +205,9 @@
 
 
 @media (max-width: 540px) {
+    .help {
+        padding: 64px 0 32px 0;
+    }
     .help__left {
         margin-bottom: 24px;
     }
@@ -229,6 +232,9 @@
     }
     .help__btn {
         width: 100%;
+    }
+    .help__menu {
+        padding-left: 45px;
     }
 }
 
