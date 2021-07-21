@@ -7,10 +7,10 @@
 }
 .interface__left {
     width: 30%;
-
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 .interface__tittle {
     font-family: 'Normalidad', sans-serif;
@@ -22,6 +22,8 @@
     text-transform: uppercase;
     color: #000000;
     margin-bottom: 32px;
+    position: absolute;
+    top: 0;
 }
 .interface__subtittle {
     font-family: 'IBM';
@@ -35,17 +37,74 @@
 .interface__right {
     width: 70%;
     padding-left: 32px;
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+}
+.interface__text {
+    display: inline-block;
+    font-family: 'IBM', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+    margin-bottom: 32px;
+
 }
 
-.interface__img  {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+.interface__slider-panel {
+    display: flex;
+    align-items: center;
+}
+.interface__pagination {
+    font-family: 'Normalidad',sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.5);
+    padding-left: 30px;
+    width: 80px;
+    .swiper-pagination-current {
+        color: #000;
+    }
+}
+.interface__controls {
+    display: flex;
+    width: 140px;
+    justify-content: space-between;
+    
+}
+.interface__btn {
+    background-position: center;
+    background-size: 30%;
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 64px;
+    border-radius: 50px;
+    border: 1px solid #E5E5E5;
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+.interface__btn-prev {
+    background-image: url(../images/dist/Icon/arrow-left-black.svg);
+}
+.interface__btn-next {
+    background-image: url(../images/dist/Icon/arrow-right-black.svg);
 }
 
-.interface__img-mobile  {
-    display: none;
-}
+
+
 
 
 
@@ -72,6 +131,19 @@
     .interface__tittle {
         margin-bottom: 0;
         margin-right: 32px;
+        position: static;
+    }
+    .interface__slider-panel {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    .interface__btn {
+        width: 40px;
+        height: 40px;
+    }
+    .interface__controls {
+        width: 90px;
     }
 }
 
@@ -90,7 +162,7 @@
         width: 100%;
     }
     .interface__left {
-        margin-bottom: 24px;
+        margin-bottom: 16px;
     }
     .interface__tittle {
         margin-bottom: 16px;
@@ -98,14 +170,14 @@
     }
     .interface__subtittle {
         max-width: 100%;
+        margin-bottom: 16px;
     }
-    .interface__img {
-        display: none;
+    .interface__slider-panel {
+        position: static;
+        align-self: flex-end;
+        display: flex;
     }
-    .interface__img-mobile {
-        display: block;
-        width: 100%;
-        height: auto;
-        object-fit: cover;
+    .interface__controls {
+        order: 2;
     }
 }

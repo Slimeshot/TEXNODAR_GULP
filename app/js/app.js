@@ -87,6 +87,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	  });
 
+	  const interfaceSwiper = new Swiper('.interface__swiper', {
+		loop: true,
+
+
+		pagination: {
+		  el: '.interface__pagination',
+		  type: "fraction"
+		},
+
+		navigation: {
+		  nextEl: '.interface__btn-next',
+		  prevEl: '.interface__btn-prev',
+		},
+
+	  });
+
 
 	  const certificateSwiper = new Swiper('.certificate__swiper', {
 		loop: true,
@@ -195,6 +211,24 @@ document.addEventListener('DOMContentLoaded', () => {
 			  })
 		  })
 	  }
+
+
+
+	   //close/open call
+
+	   const calcBtnNext = document.querySelector('.calculator_btn_next');
+	   const calcCross = document.querySelector('.calculator__cross');
+	   const calcBlock = document.querySelector('.calculator__finish');
+
+	   calcBtnNext.addEventListener('click', () => {
+		   console.log('sdsd');
+		calcBlock.classList.add('active');
+	   })
+
+	   calcCross.addEventListener('click', () => {
+		calcBlock.classList.remove('active');
+	   })
+
 
 
 
@@ -331,28 +365,28 @@ document.addEventListener('DOMContentLoaded', () => {
 	 /**
 	  *  Calculation form behavior
 	  */
-	 let calcBtn = document.querySelector('.calculator__form .calculator_btn_next');
+	//  let calcBtn = document.querySelector('.calculator__form .calculator_btn_next');
 
-	 if (calcBtn) {
-		calcBtn.addEventListener('click', (event) => {
+	//  if (calcBtn) {
+	// 	calcBtn.addEventListener('click', (event) => {
  
-			let fields = [].slice.call(document.querySelectorAll('.calculator__form-visible input, select'));
-			let isAllValid = true;
+	// 		let fields = [].slice.call(document.querySelectorAll('.calculator__form-visible input, select'));
+	// 		let isAllValid = true;
 
-			fields.map(function (filedElement) {
-				console.log(filedElement.validity.valid);
-				if (!filedElement.validity.valid)
-					isAllValid = false;
-			})
+	// 		fields.map(function (filedElement) {
+	// 			console.log(filedElement.validity.valid);
+	// 			if (!filedElement.validity.valid)
+	// 				isAllValid = false;
+	// 		})
 
-			if (isAllValid) {
-				event.preventDefault();
-				let hiddenBlock = document.querySelector('.calculator__form .calculator__form-hidden');
-				hiddenBlock.classList.add('show');
-			}
+	// 		if (isAllValid) {
+	// 			event.preventDefault();
+	// 			let hiddenBlock = document.querySelector('.calculator__form .calculator__form-hidden');
+	// 			hiddenBlock.classList.add('show');
+	// 		}
 
-		});
-	 }
+	// 	});
+	//  }
 
 
 
