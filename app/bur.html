@@ -415,17 +415,16 @@
 									<div class="col-12 col-md-6">
 										<div class="form__select mb-md">
 											<select name="ship_type" id="">
-												<option value="1">Количество генераторов</option>
-												<option value="2">1</option>
-												<option value="3">2</option>
-												<option value="4">3</option>
-												<option value="5">4</option>
+												<option value="1">Вид судна</option>
+												<option value="2">Буксирное судно</option>
+												<option value="3">Промышленое судно</option>
+												<option value="4">Грузовое Судно</option>
 											</select>
 										</div>
 									</div>
 									<div class="col-12 col-md-6">
 										<div class="form__number mb-md">
-											<label for="formCount">Количество двигателей</label>
+											<label for="formCount">Количество единиц</label>
 											<div class="form__number-wrapper">
 												<span data-number-control data-action="min" class="icon minus"></span>
 												<input type="number" name="count" id="formCount" value="1" min="1" required>
@@ -435,7 +434,7 @@
 									</div>
 									<div class="col-12 col-md-6">
 										<input type="text" class="mb-md" name="month_delivery"
-											placeholder="Количество буровых установок" required>
+											placeholder="Расстояние в месяц" required>
 									</div>
 									<div class="col-12 col-md-6">
 										<input type="text" class="mb-md" name="price" placeholder="Стоимость за тонну"
@@ -446,7 +445,7 @@
 									<div class="col-12">
 										<div class="calculator__form-footer">
 											<div class="divider mt-md mb-xl"></div>
-											<button class="form__btn-primary mr-xl calculator_btn_next" role="button">Рассчитать</button>
+											<button class="form__btn-primary mr-xl calculator_btn_next" type="button">Рассчитать</button>
 											<span class="mutted fs-md">
 												Оставляя заявку вы соглашаетесь на <a href="#" target="_blank">обработку
 													данных</a>
@@ -455,16 +454,39 @@
 									</div>
 								</div>
 							</div>
-							<div class="calculator__form-hidden">
-								<div class="row">
-									<div class="col-12">
-										<h5>Спасибо за расчет!</h5>
-										<p class="mb-md mutted">Введите свой адрес электронной почты и мы вышлем на нее
-											результаты расчета!</p>
-										<input type="email" name="email" placeholder="example@example.ru" required>
-										<button class="form__btn-primary mt-md" role="submit">Отправить мне расчет</button>
+
+
+							<div class="calculator__finish">
+								<div class="calculator__info">
+									<div class="calculator__row">
+										<span>Вид судна</span><span class="calculator__total">1</span>
+									</div>
+									<div class="calculator__row">
+										<span>Количество единиц</span><span class="calculator__total">2</span>
+									</div>
+									<div class="calculator__row">
+										<span>Расстояние в месяц</span><span class="calculator__total">3</span>
+									</div>
+									<div class="calculator__row">
+										<span>Стоимость за тонну</span><span class="calculator__total">4</span>
+									</div>
+									<div class="calculator__row">
+										<span class="calculator__preresult">Стоимость за тонну</span><span class="calculator__result">4</span>
 									</div>
 								</div>
+								<div class="calculator__group">
+									<div class="calculator__title">Подробное описание</div>
+									<div class="calculator__subtitle">Укажите электронную почту для отправки</div>
+
+										<input class="calculator__email" name="email" type="text" placeholder="E-mail" required>
+										<button value="Оставить заявку" class="btn call__btn">Оставить заявку</button>
+
+								</div>
+								<button class="btn calculator__cross">
+									<img src="../images/dist/cross.svg" alt="cross">
+								</button>
+								<span class="calc__agree">Оставляя заявку вы соглашаетесь
+								на <span>обработку данных</span></span>
 							</div>
 						</form>
 					</div>
@@ -1325,8 +1347,8 @@
 						</div>
 						<div class="command__description">
 							<span class="command__name"></span>
-							<span class="command__position">Директор</span>
-	
+							<span class="command__position">Руководить отдела производства</span>
+
 						</div>
 					</div>
 					<div class="command__item">
@@ -1335,8 +1357,8 @@
 						</div>
 						<div class="command__description">
 							<span class="command__name"></span>
-							<span class="command__position">Директор</span>
-	
+							<span class="command__position">Руководитель проектного отдела</span>
+
 						</div>
 					</div>
 					<div class="command__item">
@@ -1345,8 +1367,8 @@
 						</div>
 						<div class="command__description">
 							<span class="command__name"></span>
-							<span class="command__position">Директор</span>
-	
+							<span class="command__position">Руководитель отдела продаж</span>
+
 						</div>
 					</div>
 				</div>

@@ -25,28 +25,28 @@
     &:nth-child(1) {
         .command__name {
             &:before {
-                content: "Иванов Иван Иванович";
+                content: "Алексей Викторович Якушев";
             }
         }
     }
     &:nth-child(2) {
         .command__name {
             &:before {
-                content: "Якушев Алексей Викторович";
+                content: "Георгий Михайлович Герасимов";
             }
         }
     }
     &:nth-child(3) {
         .command__name {
             &:before {
-                content: "Иванова Анна Ивановна";
+                content: "Александр Юрьевич Спиридонов";
             }
         }
     }
     &:nth-child(4) {
         .command__name {
             &:before {
-                content: "Якушев Алексей Викторович";
+                content: "Анна Геннадьевна Кялина";
             }
         }
     }
@@ -108,28 +108,28 @@
         &:nth-child(1) {
             .command__name {
                 &:before {
-                    content: "Иванов И.И.";
+                    content: "Якушев А.В.";
                 }
             }
         }
         &:nth-child(2) {
             .command__name {
                 &:before {
-                    content: "Якушев А.В.";
+                    content: "Герасимов Г.М.";
                 }
             }
         }
         &:nth-child(3) {
             .command__name {
                 &:before {
-                    content: "Иванова А.И.";
+                    content: "Спиридонов А.Ю.";
                 }
             }
         }
         &:nth-child(4) {
             .command__name {
                 &:before {
-                    content: "Якушев А.В.";
+                    content: "Кялина А.Г.";
                 }
             }
         }
@@ -152,32 +152,31 @@
         &:nth-child(1) {
             .command__name {
                 &:before {
-                    content: "Иванов Иван Иванович";
+                    content: "Алексей Викторович Якушев";
                 }
             }
         }
         &:nth-child(2) {
             .command__name {
                 &:before {
-                    content: "Якушев Алексей Викторович";
+                    content: "Георгий Михайлович Герасимов";
                 }
             }
         }
         &:nth-child(3) {
             .command__name {
                 &:before {
-                    content: "Иванова Анна Ивановна";
+                    content: "Александр Юрьевич Спиридонов";
                 }
             }
         }
         &:nth-child(4) {
             .command__name {
                 &:before {
-                    content: "Якушев Алексей Викторович";
+                    content: "Анна Геннадьевна Кялина";
                 }
             }
         }
-    }
 }
 
 
@@ -187,28 +186,28 @@
         &:nth-child(1) {
             .command__name {
                 &:before {
-                    content: "Иванов И.И.";
+                    content: "Якушев А.В.";
                 }
             }
         }
         &:nth-child(2) {
             .command__name {
                 &:before {
-                    content: "Якушев А.В.";
+                    content: "Герасимов Г.М.";
                 }
             }
         }
         &:nth-child(3) {
             .command__name {
                 &:before {
-                    content: "Иванова А.И.";
+                    content: "Спиридонов А.Ю.";
                 }
             }
         }
         &:nth-child(4) {
             .command__name {
                 &:before {
-                    content: "Якушев А.В.";
+                    content: "Кялина А.Г.";
                 }
             }
         }
@@ -221,4 +220,5 @@
     .command {
         padding: 64px 0;
     }
+}
 }
