@@ -220,14 +220,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	   const calcCross = document.querySelector('.calculator__cross');
 	   const calcBlock = document.querySelector('.calculator__finish');
 
-	   calcBtnNext.addEventListener('click', () => {
-		   console.log('sdsd');
-		calcBlock.classList.add('active');
-	   })
+	//    calcBtnNext.addEventListener('click', () => {
+	// 	   console.log('sdsd');
+	// 	calcBlock.classList.add('active');
+	//    })
 
-	   calcCross.addEventListener('click', () => {
-		calcBlock.classList.remove('active');
-	   })
+	//    calcCross.addEventListener('click', () => {
+	// 	calcBlock.classList.remove('active');
+	//    })
 
 
 

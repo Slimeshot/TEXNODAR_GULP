@@ -37,7 +37,7 @@
 								<li class="navigation__list"><a href="auto.html" class="navigation__link">Автотранспорт</a></li>
 								<li class="navigation__list"><a href="bur.html" class="navigation__link">Буровые установки</a></li>
 								<li class="navigation__list"><a href="train.html" class="navigation__link">Ж/Д транспорт</a></li>
-								<li class="navigation__list"><a href="paper.html" class="navigation__link">Статьи</a></li>
+								<!-- <li class="navigation__list"><a href="paper.html" class="navigation__link">Статьи</a></li> -->
 								<li class="navigation__list"><a href="index.html" class="navigation__link">О нас</a></li>
 								<li class="navigation__list"><a href="contacts.html" class="navigation__link">Контакты</a></li>
 							</ul>
@@ -81,54 +81,69 @@
 		<section class="call">
 			<div class="call__title">Заказать звонок</div>
 			<div class="call__subtitle">Перезвоним в указанное время</div>
-			<div class="call__form"></div>
-			<div class="btn call__btn">Оставить заявку</div>
+
+			<form class="call__form">
+				<input class="call__name" name="name" type="text" placeholder="Имя"> 
+				<input class="call__phone" name="phone" type="text" placeholder="Телефон"> 
+				<input type="submit" value="Оставить заявку" class="btn call__btn">
+				
+			</form>
+			<button class="btn call__cross">
+				<img src="../images/dist/cross.svg" alt="cross">
+			</button>
+			<span class="calc__agree">Оставляя заявку вы соглашаетесь 
+				на <span>обработку данных</span></span>
 		</section>
 
 <div class="auto">
 	<section class="intro" id="introLink">
-		<div class="container">
-			<div class="intro__container">
-				<div class="intro__text">
-					<h1 class="intro__title">Комплексное решение<br> для контроля автотранспорта</h1>
-					<h2 class="intro__subtitle">Сократите затраты на флот до 30%, используя	эффективные решения с гарантией качества</h2>
-				</div>
-				<div class="intro__bottom">
-					<div class="intro__buttons">
-						<a href="#" class="btn intro__btn-red">Рассчитать стоимость</a>
-						<a href="#systemLink" class="btn intro__btn-transparent">Подробнее о системе</a>
+		<div class="intro__media">
+			<video src="Auto.mp4" autoplay muted loop></video>
+		</div>
+		<div class="intro__content">
+			<div class="container">
+				<div class="intro__container">
+					<div class="intro__text">
+						<h1 class="intro__title">Комплексное решение<br>контроля автотранспорта</h1>
+						<h2 class="intro__subtitle">Сократите затраты на автотранспорт до 30%, используя эффективные решения с гарантией качества</h2>
 					</div>
-					<div class="intro__block">
-						<div class="intro__slider">
-							<div class="intro__slider-panel">
-								<div class="intro__pagination"></div>
-								<div class="intro__controls">
-									<div class="intro__btn intro__btn-prev"></div>
-									<div class="intro__btn intro__btn-next"></div>
-								</div>
-							</div>
-							<div class="swiper-container intro__swiper">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide intro__slide">
-										<span class="intro__slide-title">Местоположение и скорость</span>
-										<span class="intro__slide-subtitle">Сократите затраты на флот до 30%, используя эффективные решения с гарантией качества</span>
-									</div>
-									<div class="swiper-slide intro__slide">
-										<span class="intro__slide-title">Местоположение и скорость</span>
-										<span class="intro__slide-subtitle">Сократите затраты на флот до 30%, используя эффективные решения с гарантией качества</span>
-									</div>
-									<div class="swiper-slide intro__slide">
-										<span class="intro__slide-title">Местоположение и скорость</span>
-										<span class="intro__slide-subtitle">Сократите затраты на флот до 30%, используя эффективные решения с гарантией качества</span>
+					<div class="intro__bottom">
+						<div class="intro__buttons">
+							<a href="#" class="btn intro__btn-red">Рассчитать стоимость</a>
+							<a href="#systemLink" class="btn intro__btn-transparent">Подробнее о системе</a>
+						</div>
+						<div class="intro__block">
+							<div class="intro__slider">
+								<div class="intro__slider-panel">
+									<div class="intro__pagination"></div>
+									<div class="intro__controls">
+										<div class="intro__btn intro__btn-prev"></div>
+										<div class="intro__btn intro__btn-next"></div>
 									</div>
 								</div>
-								
+								<div class="swiper-container intro__swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide intro__slide">
+											<span class="intro__slide-title">Местоположение и скорость</span>
+											<span class="intro__slide-subtitle">Сократите затраты на флот до 30%, используя эффективные решения с гарантией качества</span>
+										</div>
+										<div class="swiper-slide intro__slide">
+											<span class="intro__slide-title">Местоположение и скорость</span>
+											<span class="intro__slide-subtitle">Сократите затраты на флот до 30%, используя эффективные решения с гарантией качества</span>
+										</div>
+										<div class="swiper-slide intro__slide">
+											<span class="intro__slide-title">Местоположение и скорость</span>
+											<span class="intro__slide-subtitle">Сократите затраты на флот до 30%, используя эффективные решения с гарантией качества</span>
+										</div>
+									</div>
+									
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+		
 			</div>
-	
 		</div>
 	</section>
 	
@@ -138,15 +153,14 @@
 			<div class="sailing__content" id="navigation">
 				<div class="sailing__block">
 					<a href="#introLink" class="sailing__btn-link"></a>
-					<span class="sailing__title">Решение для флота</span>
+					<h2 class="sailing__title">Решение для авто</h2>
 				</div>
 				<ul class="sailing__menu">
 					<li class="sailing__list"><a href="#projectLink" class="sailing__link">Кейсы</a></li>
-					<li class="sailing__list"><a href="#systemLink" class="sailing__link">Системы для флота</a></li>
-					<li class="sailing__list"><a href="#helpLink" class="sailing__link">Кому подходит</a></li>
-					<li class="sailing__list"><a href="#capabilityLink" class="sailing__link">Метрики измерений</a></li>
-					<li class="sailing__list"><a href="#interfaceLink" class="sailing__link">Интерфейс</a></li>
-					<li class="sailing__list"><a href="#solutionsLink" class="sailing__link">Готовые решения</a></li>
+					<li class="sailing__list"><a href="#whyLink" class="sailing__link">Почему мы</a></li>
+					<li class="sailing__list"><a href="#branchLink" class="sailing__link">Готовые решения</a></li>
+					<li class="sailing__list"><a href="#capabilityLink" class="sailing__link">О системе</a></li>
+					<li class="sailing__list"><a href="#methodLink" class="sailing__link">Порядок работы</a></li>
 					<li class="sailing__list"><button class="btn sailing__btn-call">Заказать звонок</button></li>
 				</ul>
 				<button class="btn sailing__btn-call">Заказать звонок</button>
@@ -164,7 +178,7 @@
 		<div class="container">
 			<div class="project__content">
 				<div class="project__block">
-					<span class="project__title title">Реализованные<br> проекты</span>
+					<h2 class="project__title title">Реализованные<br> проекты</h2>
 					<div class="project__slider-panel">
 						<div class="project__controls">
 							<div class="project__btn project__btn-prev"></div>
@@ -178,66 +192,111 @@
 						<div class="swiper-wrapper">
 							<div class="swiper-slide project__slide">
 								<div class="project__slide-img">
-									<img src="images/dist/sheep.jpg" alt="sheep">
+									<img src="images/dist/auto/mptc.jpg" alt="sheep">
 								</div>
 								<div class="project__slide-info">
 									<div class="project__slide-text">
-										<h4 class="project__slide-tittle">АО «ЯМСы»</h4>
-										<span class="project__slide-subtittle">Система контроля основана на массовых расходомерах кориолисового типа на главных двигателях и узлах приема топлива, на дизельгенераторах и котлоагрегатах узлы учета на основе датчиков прямого измерения Sekee серии FM (производства ГК «Технодар»), также были установлены узлы сопряжения со всеми агрегатами, для понимания о времени работы агрегата и его нагрузках.</span>
+										<h4 class="project__slide-tittle">АО МРТС</h4>
+										<span class="project__slide-subtittle">Задачи клиента:</span>
+										<ul class="project__slide-case">
+											<li class="project__slide-list">Контроль местоположения, скорости, времени работы двигателя.</li>
+											<li class="project__slide-list"> Учет расхода топлива. Вывод информации на инфодисплей в кабине оператора.</li>
+										</ul>
 									</div>
 									<div class="project__slide-params">
 										<div class="project__slide-row">
-											<span class="project__slide-label">Судно</span>
-											<span class="project__slide-name">СЯМ "АЛАНЕТТ"</span>
+											<span class="project__slide-label">Кол-во едениц транспорта:</span>
+											<span class="project__slide-name">382</span>
 										</div>
 										<div class="project__slide-row">
-											<span class="project__slide-label">Проект</span>
-											<span class="project__slide-name">"Longliner 172ft"</span>
+											<span class="project__slide-label">Количество СКТ</span>
+											<span class="project__slide-name">907</span>
 										</div>
 										<div class="project__slide-row">
-											<span class="project__slide-label">Стоимость внедрения</span>
-											<span class="project__slide-name">4 500 000 руб</span>
+											<span class="project__slide-label">Затраты на топливо до:</span>
+											<span class="project__slide-name"> 59 876 574 ₽</span>
 										</div>
 										<div class="project__slide-row">
-											<span class="project__slide-label">Окупаемость</span>
-											<span class="project__slide-name">4 мес</span>
+											<span class="project__slide-label">Затраты на топливо после:</span>
+											<span class="project__slide-name"> 55 086 614 ₽</span>
 										</div>
 										<div class="project__slide-row">
 											<span class="project__slide-label">Экономия</span>
-											<span class="project__slide-name">15 %</span>
+											<span class="project__slide-name"> 4 790 140 ₽ / мес <br> 8%</span>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="swiper-slide project__slide">
 								<div class="project__slide-img">
-									<img src="images/dist/sheep.jpg" alt="sheep">
+									<img src="images/dist/auto/euro.jpg" alt="sheep">
 								</div>
 								<div class="project__slide-info">
 									<div class="project__slide-text">
-										<h4 class="project__slide-tittle">АО «ЯМСы»</h4>
-										<span class="project__slide-subtittle">Система контроля основана на массовых расходомерах кориолисового типа на главных двигателях и узлах приема топлива, на дизельгенераторах и котлоагрегатах узлы учета на основе датчиков прямого измерения Sekee серии FM (производства ГК «Технодар»), также были установлены узлы сопряжения со всеми агрегатами, для понимания о времени работы агрегата и его нагрузках.</span>
+										<h4 class="project__slide-tittle">ГК Евроцемент</h4>
+										<span class="project__slide-subtittle">Задачи клиента:</span>
+										<ul class="project__slide-case">
+											<li class="project__slide-list">Контроль местоположения, скорости, времени работы двигателя, срабатывания спецоборудования</li>
+											<li class="project__slide-list">Учет расхода топлива, контроль заправок.</li>
+										</ul>
 									</div>
 									<div class="project__slide-params">
 										<div class="project__slide-row">
-											<span class="project__slide-label">Судно</span>
-											<span class="project__slide-name">СЯМ "АЛАНЕТТ"</span>
+											<span class="project__slide-label">Кол-во едениц транспорта:</span>
+											<span class="project__slide-name">995</span>
 										</div>
 										<div class="project__slide-row">
-											<span class="project__slide-label">Проект</span>
-											<span class="project__slide-name">"Longliner 172ft"</span>
+											<span class="project__slide-label">Количество СКТ</span>
+											<span class="project__slide-name">2311</span>
 										</div>
 										<div class="project__slide-row">
-											<span class="project__slide-label">Стоимость внедрения</span>
-											<span class="project__slide-name">4 500 000 руб</span>
+											<span class="project__slide-label">Затраты на топливо до:</span>
+											<span class="project__slide-name"> 81 123 458 ₽</span>
 										</div>
 										<div class="project__slide-row">
-											<span class="project__slide-label">Окупаемость</span>
-											<span class="project__slide-name">4 мес</span>
+											<span class="project__slide-label">Затраты на топливо после:</span>
+											<span class="project__slide-name"> 72 605 495 ₽</span>
 										</div>
 										<div class="project__slide-row">
 											<span class="project__slide-label">Экономия</span>
-											<span class="project__slide-name">15 %</span>
+											<span class="project__slide-name"> 8 517 963 ₽ / мес <br> 10.5%</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide project__slide">
+								<div class="project__slide-img">
+									<img src="images/dist/auto/teplo.jpg" alt="sheep">
+								</div>
+								<div class="project__slide-info">
+									<div class="project__slide-text">
+										<h4 class="project__slide-tittle">Технострой</h4>
+										<span class="project__slide-subtittle">Задачи клиента:</span>
+										<ul class="project__slide-case">
+											<li class="project__slide-list">Контроль местоположения, скорости, времени работы двигателя, загрузки двигателя.</li>
+											<li class="project__slide-list">Учет расхода топлива.</li>
+										</ul>
+									</div>
+									<div class="project__slide-params">
+										<div class="project__slide-row">
+											<span class="project__slide-label">Кол-во едениц транспорта:</span>
+											<span class="project__slide-name">633</span>
+										</div>
+										<div class="project__slide-row">
+											<span class="project__slide-label">Количество СКТ</span>
+											<span class="project__slide-name">912</span>
+										</div>
+										<div class="project__slide-row">
+											<span class="project__slide-label">Затраты на топливо до:</span>
+											<span class="project__slide-name"> 95 147 653 ₽</span>
+										</div>
+										<div class="project__slide-row">
+											<span class="project__slide-label">Затраты на топливо после:</span>
+											<span class="project__slide-name"> 91 341 746 ₽</span>
+										</div>
+										<div class="project__slide-row">
+											<span class="project__slide-label">Экономия</span>
+											<span class="project__slide-name"> 3 805 907 ₽ / мес <br> 4%</span>
 										</div>
 									</div>
 								</div>
@@ -254,8 +313,8 @@
 		<div class="container">
 			<div class="proposal__content">
 				<div class="proposal__left">
-					<span class="proposal__title title">Оставьте заявку<br> на консультацию</span>
-					<span class="proposal__subtitle">Оставляя заявку вы <br>
+					<h2 class="proposal__title title">Оставьте заявку<br> на консультацию</h2>
+					<span class="proposal__subtitle">Оставляя заявку, вы <br>
 						соглашаетесь на<span class="proposal__subtitle-orange"> обработку данных</span></span>
 				</div>
 				<div class="proposal__right">
@@ -288,138 +347,93 @@
 				<div class="problem__text">
 					<span class="problem__number">95%</span>
 					<span class="problem__line"></span>
-					<h4 class="problem__title">судовладельцев<br> сталкиваются с проблемами </h4>
+					<h4 class="problem__title">владельцев автотранспорта<br>
+						сталкиваются с проблемами </h4>
 				</div>
 				<div class="problem__gallery" id="links">
 					<div class="problem__block-1 problem__block">
-						<span class="problem__block-title">Учет</span>
-						<span class="problem__block-subtitle">Системы фактического расхода топлива отсутствуют</span>
+						<span class="problem__block-title">Воровство</span>
+						<span class="problem__block-subtitle">Слив топлива из бака транспортного средства</span>
 					</div>
-					<img src="images/dist/gallery-1.jpg" class="problem__img-2 problem__img"></img>
+					<div class="problem__block-2 problem__block">
+						<span class="problem__block-title">Обман</span>
+						<span class="problem__block-subtitle">Работа на конкурентов на транспорте собственника</span>
+					</div>
 					<div class="problem__block-3 problem__block">
-						<span class="problem__block-title">Бункеровка</span>
-						<span class="problem__block-subtitle">Расхождение показателей 
-							в объеме заправленного топлива 
-							и фактического количества полученного в массе топлива</span>
+						<span class="problem__block-title">Нарушение ПДД</span>
+						<span class="problem__block-subtitle"></span>
 					</div>
 					<div class="problem__block-4 problem__block">
-						<span class="problem__block-title">Воровство
-							топлива</span>
+						<span class="problem__block-title">Опасный стиль вождения водителей</span>
 						<span class="problem__block-subtitle"></span>
 					</div>
+					<img src="images/dist/gallery-3.jpg" class="problem__img-1 problem__img"></img>
+					<img src="images/dist/gallery-3-small.jpg" class="problem__img-2 problem__img"></img>
 					<div class="problem__block-5 problem__block">
-						<span class="problem__block-title">Поломки</span>
-						<span class="problem__block-subtitle">Выявить неисправность 
-							в работе двигателя, не доводя 
-							до капитальной поломки</span>
+						<span class="problem__block-title">Личное использование</span>
+						<span class="problem__block-subtitle">Использование автомобиля 
+							в личных целях</span>
 					</div>
 					<div class="problem__block-6 problem__block">
-						<span class="problem__block-title">Трудозатраты</span>
-						<span class="problem__block-subtitle">Экипаж и топ-менеджмент компании тратят много времени 
-							на учет и контроль топлива</span>
-					</div>
-					<div class="problem__block-7 problem__block">
-						<span class="problem__block-title">Двигатели</span>
-						<span class="problem__block-subtitle">Эксплуатация двигателей на запредельных нагрузках, вместо номинальных</span>
-					</div>
-					<img src="images/dist/gallery-2.jpg" class="problem__img-8 problem__img"></img>
-					<div class="problem__block-9 problem__block">
-						<span class="problem__block-title">Экипажем трудно
-							управлять</span>
+						<span class="problem__block-title">Накрутка одометра</span>
 						<span class="problem__block-subtitle"></span>
 					</div>
-					<a href="#systemLink" class="problem__block-10 problem__block">
-						<span class="problem__block-title">Мы решили эти проблемы</span>
-						<img src="images/dist/Icon/arrow-bottom-black.svg" alt="arrow" aria-hidden="true">
-					</a>
-					<img src="images/dist/gallery-1-small.jpg" class="problem__img-11 problem__img"></img>
-					<img src="images/dist/gallery-2-small.jpg" class="problem__img-12 problem__img"></img>
+					<div class="problem__block-7 problem__block">
+						<span class="problem__block-title">Отклонение от маршрута</span>
+						<span class="problem__block-subtitle"></span>
+					</div>
+					<div class="problem__block-8 problem__block">
+						<span class="problem__block-title">Мы решили эти проблемы на 248 реальных проектах</span>
+						<span class="problem__block-subtitle"></span>
+					</div>
+					
 				</div>
 			</div>
 		</div>
 	</section>
 	
-	<section class="system" id="systemLink">
+	
+
+	<section class="why" id="whyLink">
 		<div class="container">
-			<div class="system__content">
-				<div class="system__text">
-					<div class="system__title title">Системы контроля<br> и аналитики</div>
-					<div class="system__group">
-						<div class="system__subtitle">Подготовим схему внедрения<br>
-							систем для вашего флота</div>
-						<a href="#" class="btn system__btn">Рассчитать стоимость</a>
+			<div class="why__content">
+				<h2 class="why__title">Почему клиенты выбрали систему мониторинга транспорта<br> <span class="why__label">от компании технодар</span></h2>
+				<div class="why__block">
+					<div class="why__item">
+						<img src="images/dist/Icon/percent.svg" alt="icon">
+						<span class="why__item-title">
+							Экономия топлива до 50%
+						</span>
 					</div>
-				</div>
-				<div class="system__info">
-					<div class="system__block-1 system__block">
-						<div class="system__block-img">
-							<img src="images/dist/sensor.svg" alt="sensor">
-						</div>
-						<div class="system__about">
-							<h5 class="system__block-title">датчики</h5>
-							<span class="system__block-level">1-ый уровень контроля</span>
-							<ul class="system__block-menu">
-								<li class="system__block-list">Массового типа</li>
-								<li class="system__block-list">Объемного типа</li>
-								<li class="system__block-list">Режима работы двигателя</li>
-								<li class="system__block-list">Температуры двигателя</li>
-								<li class="system__block-list">Уровня топлива</li>
-								<li class="system__block-list">Плотности топлива</li>
-								<li class="system__block-list">Температуры</li>
-								<li class="system__block-list">Давления</li>
-							</ul>
-						</div>
+					<div class="why__item">
+						<img src="images/dist/Icon/headphones.svg" alt="icon">
+						<span class="why__item-title">
+							Единая сервисная служба
+						</span>
 					</div>
-					<div class="system__block-1 system__block">
-						<div class="system__block-img">
-							<img src="images/dist/controllers.svg" alt="controllers">
-						</div>
-						<div class="system__about">
-							<h5 class="system__block-title">контроллеры</h5>
-							<span class="system__block-level">2-ой уровень контроля</span>
-							<ul class="system__block-menu">
-								<li class="system__block-list">Ввода - вывода</li>
-								<li class="system__block-list">Аналоговые</li>
-								<li class="system__block-list">Цифровые</li>
-								<li class="system__block-list">Дискретные</li>
-								<li class="system__block-list">Modbus</li>
-								<li class="system__block-list">RS-485</li>
-								<li class="system__block-list">RS-232</li>
-								<li class="system__block-list">CAN</li>
-							</ul>
-						</div>
+					<div class="why__item">
+						<img src="images/dist/Icon/location.svg" alt="icon">
+						<span class="why__item-title">
+							Контроль местоположения и маршрута
+						</span>
 					</div>
-					<div class="system__block-1 system__block">
-						<div class="system__block-img">
-							<img src="images/dist/vmts.svg" alt="VMTS">
-						</div>
-						<div class="system__about">
-							<h5 class="system__block-title">VMTS</h5>
-							<span class="system__block-level">3-ий уровень контроля</span>
-							<ul class="system__block-menu">
-								<li class="system__block-list">Бортовой контроллер для сбора,  хранения и передачи на сервер неограниченного набора данных о судне.</li>
-							</ul>
-						</div>
+					<div class="why__item">
+						<img src="images/dist/Icon/calc.svg" alt="icon">
+						<span class="why__item-title">
+							Проверенные опытом отраслевые решения
+						</span>
 					</div>
-					<div class="system__block-1 system__block">
-						<div class="system__block-img">
-							<img src="images/dist/dots.svg" alt="DOTS">
-						</div>
-						<div class="system__about">
-							<h5 class="system__block-title">DOTS</h5>
-							<span class="system__block-level">4-ый уровень контроля</span>
-							<ul class="system__block-menu">
-								<li class="system__block-list">Программно-аппаратный комплекс 
-									для обработки, анализа и отображения информации, полученных с объекта мониторинга </li>
-							</ul>
-						</div>
+					<div class="why__item">
+						<img src="images/dist/Icon/clock.svg" alt="icon">
+						<span class="why__item-title">
+							Контроль режима эксплуатации транспорта
+						</span>
 					</div>
-				</div>
-				<div class="system__bottom">
-					<div class="system__group">
-						<div class="system__subtitle">Подготовим схему внедрения
-							систем для вашего флота</div>
-						<a href="#" class="btn system__btn">Рассчитать стоимость</a>
+					<div class="why__item">
+						<img src="images/dist/Icon/tablet.svg" alt="icon">
+						<span class="why__item-title">
+							Глубокая аналитика и автоматизированные отчеты
+						</span>
 					</div>
 				</div>
 			</div>
@@ -432,9 +446,9 @@
 				<div class="row">
 					<div class="col-lg-3 col-xl-4">
 						<div class="calculator__left">
-							<div class="calculator__title title">Рассчитайте<br>свою экономию</div>
+							<h2 class="calculator__title title">Рассчитайте<br>свою экономию</h2>
 							<div class="calculator__subtitle">
-								<p class="color-accent mb-md">3-6 месяца</p>
+								<p class="color-accent mb-md">3-6 месяцев</p>
 								<p class="color-base500">Средний срок окупаемости</p>
 							</div>
 						</div>
@@ -446,10 +460,10 @@
 									<div class="col-12 col-md-6">
 										<div class="form__select mb-md">
 											<select name="ship_type" id="">
-												<option value="1">Вид судна</option>
-												<option value="2">Буксирное судно</option>
-												<option value="3">Промышленое судно</option>
-												<option value="4">Грузовое Судно</option>
+												<option value="1">Вид транспорта</option>
+												<option value="2">Грузовой автотранспорт</option>
+												<option value="3">Спецтехника</option>
+												<option value="4">Легковой транспорт</option>
 											</select>
 										</div>
 									</div>
@@ -468,7 +482,7 @@
 											placeholder="Расстояние в месяц" required>
 									</div>
 									<div class="col-12 col-md-6">
-										<input type="text" class="mb-md" name="price" placeholder="Стоимость за тонну"
+										<input type="text" class="mb-md" name="price" placeholder="Стоимость за литр"
 											required>
 									</div>
 								</div>
@@ -504,132 +518,87 @@
 	</section>
 	
 	
-	<section class="help" id="helpLink">
+	<section class="decision">
 		<div class="container">
-			<div class="help__content">
-				<div class="help__left">
-					<div class="help__title title">Кому поможет комплексное<br> решение контроля флота?</div>
-					<div class="help__group">
-						<div class="help__subtitle">Подготовим схему внедрения<br>систем для вашего флота</div>
-						<a href="#" class="btn help__btn">Рассчитать стоимость</a>
-					</div>
-				</div>
-				<div class="help__right">
-					<div class="help__accordion" id="defaultOpen">Судовладельцам</div>
-					<div class="help__panel">
-						<ul class="help__menu">
-							<li class="help__list">Исключить человеческий фактор из бизнес-процессов организации</li>
-							<li class="help__list">Автоматизировать систему отчетности по потребителям топлива</li>
-							<li class="help__list">Дисциплинировать сотрудников организации</li>
-							<li class="help__list">Автоматизировать процессы учета топлива</li>
-						</ul>
-					</div>
-	
-					<div class="help__accordion">Управляющему компании</div>
-					<div class="help__panel">
-						<ul class="help__menu">
-							<li class="help__list">Исключить человеческий фактор из бизнес-процессов организации</li>
-							<li class="help__list">Автоматизировать систему отчетности по потребителям топлива</li>
-							<li class="help__list">Дисциплинировать сотрудников организации</li>
-							<li class="help__list">Автоматизировать процессы учета топлива</li>
-							<li class="help__list">Исключить человеческий фактор из бизнес-процессов организации</li>
-							<li class="help__list">Автоматизировать систему отчетности по потребителям топлива</li>
-							<li class="help__list">Дисциплинировать сотрудников организации</li>
-							<li class="help__list">Автоматизировать процессы учета топлива</li>
-						</ul>
-					</div>
-	
-					<div class="help__accordion">Экипажу</div>
-					<div class="help__panel">
-						<ul class="help__menu">
-							<li class="help__list">Исключить человеческий фактор из бизнес-процессов организации</li>
-							<li class="help__list">Автоматизировать систему отчетности по потребителям топлива</li>
-							<li class="help__list">Дисциплинировать сотрудников организации</li>
-							<li class="help__list">Автоматизировать процессы учета топлива</li>
-						</ul>
-					</div>
-				</div>
-				<div class="help__bottom">
-					<div class="help__group">
-						<div class="help__subtitle">Подготовим схему внедрения систем для вашего флота</div>
-						<a href="#" class="btn help__btn">Рассчитать стоимость</a>
-					</div>
-				</div>
-			</div>	
-		</div>
-	</section>
-	
-	
-	<section class="capability" id="capabilityLink">
-		<div class="container">
-			<div class="capability__content">
-				<div class="capability__left">
-					<span class="capability__title title">Возможности системы</span>
-				</div>
-				<div class="capability__right">
-					<span class="capability__subtitle">Основная задача систем котроля флота – это сокращение расходов бизнеса на обслуживание, имеющейся в собственности техники. Контролировать флот во время его эксплуатации помогает несколько систем. Важно, чтобы они были взаимосвязаны между собой и работали как единый механизм</span>
-					<img src="images/dist/capability.jpg" alt="sheep" class="capability__img">
-					<div class="capability__info" id="content">
-						<span>Особенности такого подхода позволяют:</span>
-						<ul>
-							<li>Контролировать местоположение техники, режим работы техники, процессы бункеровки, состояния грузов, фактические расходы топлива по потребителям, техническое состояние энергопотребителей
-							<li>Видеть текущие уровня топлива в энергопотребителях</li>
-							<li>Отслеживать режимы эксплуатации техники</li>
-							<li>Реагировать на любые внештатные изменения параметров на местах</li>
-							<li>Строить автоматизированные отчеты по каждому потребителю в отдельности</li>
-							<li>Выстроить отчетность по всем единицам техники в целом</li>
-							<li>Передать данные в CRM, ERP – системы</li>
-						</ul>
-						<span>Что впоследствии:</span>
-						<ul>
-							<li>дисциплинирует персонал</li>
-							<li>сократит затраты на ремонт техники</li>
-							<li>повысит производительность сотрудников</li>
-							<li>сократит затраты на топливо</li>
-						</ul>
-						<span>И как итог:</span>
-						<ul>
-							<li>Увеличится чистая прибыль предприятия</li>
-						</ul>
-						<p>Специалисты компании выслушают пожелания, проведут предпроектный аудит компании и грамотные инженеры спроектируют решение, которое подходит именно вашей организации.</p>
-						<p>С нами вы можете быть уверены, что любое «хочу» будет реализовано. Опытная команда инженеров выстроит систему контроля любой сложности.
-							Главное для нас - ода цифра. Это разница межджду расходами на содержание техники «до» внедрения систем контроля и «после». Сейчас наш рекор – 37%.</p>
-						<p>Мы приложим все усилия, чтобы эта цифра была больше. Подготовим рекомендации и обучим персонал работать с системой контроля транспорта.</p>
-						<p>Наша компания оказывает поддержку своим клиентам по всему миру. Главный офис компании находится в г. Петразоводск, по адресу: 6-й Гвардейский переулок., 7а. </p>
-						<p>Широкая сеть сертифицированных партнеров находится в 8 странах мира и 68 регионах РФ.</p>
-						
-	
-					</div>
-					<button class="btn capability__btn" type="button" >Читать полностью</button>
-				</div>
-	
+			<div class="decision__content">
+				<h4 class="decision__title">Решение ГК Технодар подходят <span>крупному бизнесу</span><br>
+					с автопарком<span> более 100 единиц техники</span></h4>
+					<img src="images/dist/gropimg.jpg" alt="icon">
 			</div>
-	
 		</div>
 	</section>
-	
-	<section class="interface" id="interfaceLink">
+
+
+	<section class="branch" id="branchLink">
 		<div class="container">
-			<div class="interface__content">
-				<div class="interface__left">
-					<h2 class="interface__tittle">Интерфейс Системы</h2>
-					<span class="interface__subtittle">Для быстрого принятия правильного решения, необходимо абсолютное понимание того, что происходит на вашем предприятии на всех этапах производства и реальных возможностей его ресурсов.</span>
-				</div>
-				<div class="interface__right">
-					<img class="interface__img" src="images/dist/dots.jpg" alt="dots">
-					<img class="interface__img-mobile" src="images/dist/dots-mobile.jpg" alt="dots">
+			<div class="branch__content">
+				<h2 class="title branch__title">Готовые отраслевые решения</h2>
+				<div class="branch__block">
+					<div class="branch__item">
+						<div class="branch__item-title">Логистическим
+							компаниям</div>
+						<ul class="branch__item-menu">
+							<li class="branch__item-list">контроль местоположения ТС</li>
+							<li class="branch__item-list">отчет по пробегу ТС</li>
+							<li class="branch__item-list">отчет по моточасам ТС</li>
+							<li class="branch__item-list">контроль топлива</li>
+							<li class="branch__item-list">анализ работы механизмов</li>
+							<li class="branch__item-list">контроль времени простоя ТС</li>
+							<li class="branch__item-list">видеомониторинг</li>
+							<li class="branch__item-list">контроль всех потребителей</li>
+							<li class="branch__item-list">контроль режимов эксплуатации
+								с привязкой к сотруднику</li>
+						</ul>
+						<div class="btn branch__btn">Подробнее</div>
+					</div>
+					<div class="branch__item">
+						<div class="branch__item-title">Строительным
+							организациям</div>
+						<ul class="branch__item-menu">
+							<li class="branch__item-list">Логистическим компаниям:</li>
+							<li class="branch__item-list">контроль местоположения ТС</li>
+							<li class="branch__item-list">отчет по пробегу ТС</li>
+							<li class="branch__item-list">отчет по моточасам ТС</li>
+							<li class="branch__item-list">контроль топлива</li>
+							<li class="branch__item-list">анализ работы механизмов</li>
+							<li class="branch__item-list">контроль времени простоя ТС</li>
+							<li class="branch__item-list">видеомониторинг</li>
+							<li class="branch__item-list">контроль состояния грузов</li>
+							<li class="branch__item-list">контроль массы груза</li>
+						</ul>
+						<div class="btn branch__btn">Подробнее</div>
+					</div>
+					<div class="branch__item">
+						<div class="branch__item-title">Производственным
+							компаниям</div>
+						<ul class="branch__item-menu">
+							<li class="branch__item-list">контроль местоположения ТС</li>
+							<li class="branch__item-list">отчет по пробегу ТС</li>
+							<li class="branch__item-list">отчет по моточасам ТС</li>
+							<li class="branch__item-list">контроль топлива</li>
+							<li class="branch__item-list">анализ работы механизмов</li>
+							<li class="branch__item-list">контроль времени простоя ТС</li>
+							<li class="branch__item-list">видеомониторинг</li>
+							<li class="branch__item-list">контроль всех потребителей</li>
+							<li class="branch__item-list">контроль всех едениц транспорта
+								по типу и назначению</li>
+							<li class="branch__item-list">контроль режимов работы
+								с привязкой к сотруднику</li>
+						</ul>
+						<div class="btn branch__btn">Подробнее</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	
-	
+
+
 	<section class="proposal">
 		<div class="container">
 			<div class="proposal__content">
 				<div class="proposal__left">
-					<span class="proposal__title title">Оставьте заявку на Online <br> демонстрацию системы</span>
-					<span class="proposal__subtitle">Оставляя заявку вы <br>
+					<h2 class="proposal__title title">Не нашли, что подходит<br> именно вам</h2>
+					<span class="proposal__subtitle">Оставляя заявку, вы <br>
 						соглашаетесь на<span class="proposal__subtitle-orange"> обработку данных</span></span>
 				</div>
 				<div class="proposal__right">
@@ -657,6 +626,54 @@
 	</section>
 	
 	
+	<section class="capability" id="capabilityLink">
+		<div class="container">
+			<div class="capability__content">
+				<div class="capability__left">
+					<h2 class="capability__title title">Возможности системы</h2>
+				</div>
+				<div class="capability__right">
+					<span class="capability__subtitle">Системы контроля помогают сократить расходы бизнеса на обслуживание техники до 30%. Работая как единый механизм, они отслеживают процессы во время эксплуатации автотранспорта и сигнализируют о переработках или недостачах на объекте мониторинга.</span>
+					<img src="images/dist/capability-auto.jpg" alt="sheep" class="capability__img">
+					<div class="capability__info" id="content">
+						<span>Особенности такого подхода позволяют:</span>
+						<ul>
+							<li>контролировать: местоположение и режим работы техники, процессы приема топлива, состояние грузов, фактические расходы топлива по потребителям, техническое состояние энергопотребителей.</li>
+							<li>видеть текущие уровни топлива в энергопотребителях;</li>
+							<li>отслеживать режимы эксплуатации техники;</li>
+							<li>реагировать на любые нештатные изменения параметров на местах;</li>
+							<li>строить автоматизированные отчеты по каждому потребителю в отдельности;</li>
+							<li>выстраивать отчетность по всем единицам техники в целом;</li>
+							<li>передавать данные в CRM, ERP – системы</li>
+						</ul>
+						<span>Что изменится в работе флота?</span>
+						<ul>
+							<li>под надзором персонал станет дисциплинированней;</li>
+							<li>сократятся затраты на ремонт техники;</li>
+							<li>повысится производительность сотрудников;</li>
+							<li>сократятся затраты на топливо.</li>
+						</ul>
+						<span>А главный результат после внедрения — увеличение чистой прибыли.</span>
+
+						<span>Что мы предлагаем?</span>
+						<ul>
+							<li>Более 50 специалистов из штата «Технодара» разберут ваш случай, выслушают пожелания и проведут предпроектный аудит компании.</li>
+							<li>Грамотные инженеры спроектируют решение, которое подходит именно вашей организации.</li>
+							<li>За время внедрения мы подготовим рекомендации и полностью обучим персонал работать с системой контроля транспорта.</li>
+						</ul>
+						<p>Наша компания оказывает поддержку клиентам по всему миру. Главный офис компании находится в <a href="https://www.google.com/maps/place/6-%D0%99+%D0%B3%D0%B2%D0%B0%D1%80%D0%B4%D0%B5%D0%B9%D1%81%D0%BA%D0%B8%D0%B9+%D0%BF%D0%B5%D1%80.,+7%D0%90,+%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D1%81%D0%BA,+%D0%A0%D0%B5%D1%81%D0%BF.+%D0%9A%D0%B0%D1%80%D0%B5%D0%BB%D0%B8%D1%8F,+185034/data=!4m2!3m1!1s0x46a1ecd0d7d7e229:0x3cef5664f6f7cfa?sa=X&ved=2ahUKEwixoNj08vHxAhXiwosKHQiQDkAQ8gEwAHoECAoQAQ" target="_blank">г. Петрозаводск, по адресу: 6-й Гвардейский переулок., 7а. </a></p>
+						<p>Где бы ни находилась ваша техника, вам будет оказана квалифицированная помощь. Ведь сеть наших сертифицированных партнеров простирается на 68 регионов России и 8 стран мира. И в любое время суток вы можете получить онлайн-консультацию от сотрудников «Технодара».</p>
+			
+					</div>
+					<button class="btn capability__btn" type="button" >Читать полностью</button>
+				</div>
+	
+			</div>
+	
+		</div>
+	</section>
+	
+	
 	<section class="method">
 		<div class="container">
 			<h2 class="method__tittle">Порядок<br>
@@ -666,19 +683,19 @@
 				<div class="method__block-1">
 					<div class="method__title-top">
 						<div class="method__label">Заявка</div>
-						<div class="method__times">2-3 недели</div>
+						<div class="method__times">2 дня</div>
 					</div>
 					<div class="method__title-top">
 						<div class="method__label">Проект</div>
-						<div class="method__times">2-3 недели</div>
+						<div class="method__times">3-7 дней</div>
 					</div>
 					<div class="method__title-top">
 						<div class="method__label">Монтаж<br> на судне</div>
-						<div class="method__times">2-3 недели</div>
+						<div class="method__times">1-5 дней</div>
 					</div>
 					<div class="method__title-top">
 						<div class="method__label">Обучение</div>
-						<div class="method__times">2-3 недели</div>
+						<div class="method__times">3-7 дней</div>
 					</div>
 					<div class="method__title-top">
 						<div class="method__label"></div>
@@ -689,16 +706,16 @@
 					<div class="method__title-bottom">
 						<div class="method__label">Предпроектное<br>
 							обследование</div>
-						<div class="method__times">2-3 недели</div>
+						<div class="method__times">1-3 дня</div>
 					</div>
 					<div class="method__title-bottom">
 						<div class="method__label">Компоненты<br>
 							и оборудование</div>
-						<div class="method__times">2-3 недели</div>
+						<div class="method__times">1-7 дней</div>
 					</div>
 					<div class="method__title-bottom">
 						<div class="method__label">Сдача</div>
-						<div class="method__times">2-3 недели</div>
+						<div class="method__times">1-2 дня</div>
 					</div>
 					<div class="method__title-bottom">
 						<div class="method__label">Техническое<br> сопровождение</div>
@@ -710,405 +727,12 @@
 	</section>
 	
 	
-	<section class="solutions" id="solutionsLink">
-		<div class="container">
-			<article class="solutions__item">
-				<header class="solutions__item-header">
-					<div class="row">
-						<div class="col-12 col-xl-4">
-							<p class="fs-md mb-md">Готовые решения для</p>
-							<h4 class="title">Буксира-толкача<br>Тип ОТ-2400</h4>
-						</div>
-					</div>
-				</header>
-				<section class="solutions__item-content">
-					<div class="row">
-						<div class="col-lg-6 col-xl-5 col-xxl-4">
-							<h5 class="title fs-sm">Комплектация</h5>
-							<ul class="nav nav-tabs tab" role="tablist">
-								<li class="tab-item" role="presentation">
-									<button class="tab-link active" id="econom-1-tab" data-bs-toggle="tab"
-										data-bs-target="#econom-1" type="button" role="tab">Эконом</button>
-								</li>
-								<li class="tab-item" role="presentation">
-									<button class="tab-link" id="comfort-tab" data-bs-toggle="tab"
-										data-bs-target="#comfort-1" type="button" role="tab">Комфорт</button>
-								</li>
-								<li class="tab-item" role="presentation">
-									<button class="tab-link" id="premium-tab" data-bs-toggle="tab"
-										data-bs-target="#premium-1" type="button" role="tab">Премиум</button>
-								</li>
-							</ul>
-							<div class="divider"></div>
-							<ul class="nav nav-tabs tab tab-links" role="tablist">
-								<li class="tab-item" role="presentation">
-									<button class="tab-link title active" id="whatInclude-tab" data-bs-toggle="tab"
-										data-bs-target="#whatInclude" type="button" role="tab">Что входит</button>
-								</li>
-								<li class="tab-item" role="presentation">
-									<button class="tab-link title" id="shipDescription-tab" data-bs-toggle="tab"
-										data-bs-target="#shipDescription" type="button" role="tab">Описание</button>
-								</li>
-							</ul>
-							<!-- Tab panes -->
-							<div class="tab-content">
-								<div class="tab-pane fade show active" id="whatInclude" role="tabpanel"
-									aria-labelledby="whatInclude-tab">
-									<div class="tab-content">
-										<div class="tab-pane fade show active" id="econom-1" role="tabpanel"
-											aria-labelledby="econom-tab">
-											<div class="row">
-												<div class="col-12 col-md-6">
-													<div class="block">
-														<p>VMTS <span class="mutted">х1</span></p>
-													</div>
-													<div class="block">
-														<div class="block__title">ГД</div>
-														<p>Sekee FM20 <span class="mutted">х4</span></p>
-														<p>Датчик оборотов <span class="mutted">х2</span></p>
-													</div>
-												</div>
-												<div class="col-12 col-md-6">
-													<div class="block">
-														<div class="block__title">Котел</div>
-														<p>Реле работы <span class="mutted">х1</span></p>
-													</div>
-													<div class="block">
-														<div class="block__title">ДГ</div>
-														<p>Реле работы <span class="mutted">х3</span></p>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="tab-pane fade" id="comfort-1" role="tabpanel"
-											aria-labelledby="comfort-tab">
-											<div class="row">
-												<div class="col-12 col-md-6">
-													<div class="block">
-														<p>VMTS <span class="mutted">х1</span></p>
-													</div>
-													<div class="block">
-														<div class="block__title">ГД</div>
-														<p>Sekee FM20 <span class="mutted">х4</span></p>
-														<p>Датчик оборотов <span class="mutted">х2</span></p>
-													</div>
-												</div>
-												<div class="col-12 col-md-6">
-													<div class="block">
-														<div class="block__title">Котел</div>
-														<p>Sekee FM10 <span class="mutted">х1</span></p>
-														<p>Реле работы <span class="mutted">х1</span></p>
-													</div>
-													<div class="block">
-														<div class="block__title">ДГ</div>
-														<p>Sekee FM10 <span class="mutted">х3</span></p>
-														<p>Реле работы <span class="mutted">х3</span></p>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="tab-pane fade" id="premium-1" role="tabpanel"
-											aria-labelledby="premium-tab">
-											<div class="row">
-												<div class="col-12 col-md-6">
-													<div class="block">
-														<p>VMTS <span class="mutted">х1</span></p>
-													</div>
-													<div class="block">
-														<div class="block__title">ГД</div>
-														<p>Sekee FM20 <span class="mutted">х4</span></p>
-														<p>Датчик оборотов <span class="mutted">х2</span></p>
-													</div>
-													<div class="block">
-														<div class="block__title">ДГ</div>
-														<p>Sekee FM10 <span class="mutted">х3</span></p>
-														<p>Реле работы <span class="mutted">х3</span></p>
-													</div>
-												</div>
-												<div class="col-12 col-md-6">
-													<div class="block">
-														<div class="block__title">Котел</div>
-														<p>Sekee FM10 <span class="mutted">х1</span></p>
-														<p>Реле работы <span class="mutted">х1</span></p>
-													</div>
-													<div class="block">
-														<div class="block__title">Танки запаса топлива</div>
-														<p>Датчик уровня топлива <span class="mutted">х6</span></p>
-														<p>Монитор <span class="mutted">х6</span></p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="tab-pane fade" id="shipDescription" role="tabpanel"
-									aria-labelledby="shipDescription-tab">
-	
-									<p class="coplectation__description">
-										Бортовой контроллер - запись, хранение, передача данных в ПО
-									</p>
-									<br>
-									<p class="coplectation__description">
-										Расходомеры топлива - контроль потребления топлива всех потребителей
-									</p>
-									<br>
-									<p class="coplectation__description">
-										Д.Оборотов - контроль режимов работы Главных двигателей
-									</p>
-									<br>
-									<p class="coplectation__description">
-										Реле Работы - контроль времени работы Дизель-генераторов, котла
-									</p>
-									<br>
-									<p class="coplectation__description">
-										Датчик уровня топлива танков запаса - контроль уровня и приема-выдачи толпива
-									</p>
-								</div>
-							</div>
-							<div class="divider last"></div>
-							<form action="#" class="form">
-								<input type="hidden" name="title" value="Буксира-толкача Тип ОТ-2400">
-								<input type="hidden" name="type" value="Эконом">
-								<div class="row">
-									<div class="col-12 col-md-6">
-										<input type="tel" name="phone" placeholder="Телефон" required>
-									</div>
-									<div class="col-12 col-md-6">
-										<button class="form__btn-primary">Оставить заявку</button>
-									</div>
-								</div>
-							</form>
-						</div>
-						<div class="order-first order-lg-last col-lg-6 col-xl-7 col-xxl-8">
-							<img src="images/src/solutions/ship-1.png" alt="Буксира-толкача Тип ОТ-2400"
-								class="solutions__img">
-						</div>
-					</div>
-				</section>
-			</article>
-			<article class="solutions__item">
-				<header class="solutions__item-header">
-					<div class="row">
-						<div class="col-12 col-lg-4">
-							<p class="fs-md mb-md">Готовые решения для</p>
-							<h4 class="title">Промыслового судна<br>Проект 1440</h4>
-						</div>
-					</div>
-				</header>
-				<section class="solutions__item-content">
-					<div class="row">
-						<div class="col-lg-6 col-xl-5 col-xxl-4">
-							<h5 class="title fs-sm">Комплектация</h5>
-							<ul class="nav nav-tabs tab" role="tablist">
-								<li class="tab-item" role="presentation">
-									<button class="tab-link active" id="econom-2-tab" data-bs-toggle="tab"
-										data-bs-target="#econom-2" type="button" role="tab">Эконом</button>
-								</li>
-								<li class="tab-item" role="presentation">
-									<button class="tab-link" id="comfort-tab" data-bs-toggle="tab"
-										data-bs-target="#comfort-2" type="button" role="tab">Комфорт</button>
-								</li>
-								<li class="tab-item" role="presentation">
-									<button class="tab-link" id="premium-tab" data-bs-toggle="tab"
-										data-bs-target="#premium-2" type="button" role="tab">Премиум</button>
-								</li>
-							</ul>
-							<div class="divider"></div>
-							<ul class="nav nav-tabs tab tab-links" role="tablist">
-								<li class="tab-item" role="presentation">
-									<button class="tab-link title active" id="whatInclude-tab" data-bs-toggle="tab"
-										data-bs-target="#whatInclude2" type="button" role="tab">Что входит</button>
-								</li>
-								<li class="tab-item" role="presentation">
-									<button class="tab-link title" id="shipDescription-tab" data-bs-toggle="tab"
-										data-bs-target="#shipDescription2" type="button" role="tab">Описание</button>
-								</li>
-							</ul>
-							<!-- Tab panes -->
-							<div class="tab-content">
-								<div class="tab-pane fade show active" id="whatInclude2" role="tabpanel"
-									aria-labelledby="whatInclude-tab">
-									<div class="tab-content">
-										<div class="tab-pane fade show active" id="econom-2" role="tabpanel"
-											aria-labelledby="econom-tab">
-											<div class="row">
-												<div class="col-12 col-md-6">
-													<div class="block">
-														<p>VMTS <span class="mutted">х1</span></p>
-													</div>
-													<div class="block">
-														<p>Панель оператора (Опционально) <span class="mutted">х1</span></p>
-													</div>
-													<div class="block">
-														<p>Свето звуковая сигнализация <span class="mutted">х1</span></p>
-													</div>
-												</div>
-												<div class="col-12 col-md-6">
-													<div class="block">
-														<p>Подключение к судовому спутникову интернету <span class="mutted">х1</span></p>
-													</div>
-													<div class="block">
-														<div class="block__title">Расходомер приема выдачи топлива</div>
-														<p>Ду80 <span class="mutted">х1</span></p>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="tab-pane fade" id="comfort-2" role="tabpanel"
-											aria-labelledby="comfort-tab">
-											<div class="row">
-												<div class="col-12 col-md-6">
-													<div class="block">
-														<p>VMTS<span class="mutted">х1</span></p>
-													</div>
-													<div class="block">
-														<p>Панель оператора (Опционально) <span class="mutted">х1</span></p>
-													</div>
-													<div class="block">
-														<p>Свето звуковая сигнализация <span class="mutted">х1</span></p>
-													</div>
-													<div class="block">
-														<div class="block__title">ДГ1,2</div>
-														<p>Sekee Ду20 <span class="mutted">х4</span></p>
-														<p>Трансформатор тока<span class="mutted">х6</span></p>
-														<p>Сч. ЭЭ<span class="mutted">х2</span></p>
-														<p>Реле работы<span class="mutted">х2</span></p>
-													</div>
-												</div>
-												<div class="col-12 col-md-6">
-													<div class="block">
-														<p>Подключение к судовому спутникову интернету <span class="mutted">х1</span></p>
-													</div>
-													<div class="block">
-														<div class="block__title">Расходомер приема выдачи топлива</div>
-														<p>Ду80 <span class="mutted">х1</span></p>
-													</div>
-													<div class="block">
-														<div class="block__title">ГД</div>
-														<p>Sekee Ду20 <span class="mutted">х2</span></p>
-														<p>Датчик оборотов <span class="mutted">х1</span></p>
-													</div>
-													<div class="block">
-														<div class="block__title">Котел</div>
-														<p>Sekee FM10 <span class="mutted">х1</span></p>
-														<p>Реле работы <span class="mutted">х1</span></p>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="tab-pane fade" id="premium-2" role="tabpanel"
-											aria-labelledby="premium-tab">
-											<div class="row">
-												<div class="col-12 col-md-6">
-													<div class="block">
-														<p>VMTS<span class="mutted">х1</span></p>
-													</div>
-													<div class="block">
-														<p>Панель оператора (Опционально) <span class="mutted">х1</span></p>
-													</div>
-													<div class="block">
-														<p>Свето звуковая сигнализация <span class="mutted">х1</span></p>
-													</div>
-													<div class="block">
-														<div class="block__title">ДГ1,2</div>
-														<p>Массомер Ду15 <span class="mutted">х2</span></p>
-														<p>Трансформатор тока<span class="mutted">х6</span></p>
-														<p>Сч. ЭЭ<span class="mutted">х2</span></p>
-														<p>Реле работы<span class="mutted">х2</span></p>
-													</div>
-												</div>
-												<div class="col-12 col-md-6">
-													<div class="block">
-														<p>Подключение к судовому спутникову интернету <span class="mutted">х1</span></p>
-													</div>
-													<div class="block">
-														<div class="block__title">Расходомер приема выдачи топлива</div>
-														<p>Ду80 <span class="mutted">х1</span></p>
-													</div>
-													<div class="block">
-														<div class="block__title">ГД</div>
-														<p>Массомер Ду15 <span class="mutted">х2</span></p>
-														<p>Датчик оборотов <span class="mutted">х1</span></p>
-													</div>
-													<div class="block">
-														<div class="block__title">Котел</div>
-														<p>Sekee FM10 <span class="mutted">х1</span></p>
-														<p>Реле работы <span class="mutted">х1</span></p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="tab-pane fade" id="shipDescription2" role="tabpanel"
-									aria-labelledby="shipDescription-tab">
-									<p class="coplectation__description">
-										Система сбора данных VMTS - запись, хранение, передача данных в ПО
-									</p>
-									<br>
-									<p class="coplectation__description">
-										Панель оператора - Панель (Планшет) отображает информацию с установленного оборудования на судне
-									</p>
-									<br>
-									<p class="coplectation__description">
-										Подключение к спутниковому интернету SAT - возможность пердачи данных системы в не зоны покрытия GSM сети.
-									</p>
-									<br>
-									<p class="coplectation__description">
-										Расходомеры топлива - контроль потребления топлива всех потребителей
-									</p>
-									<br>
-									<p class="coplectation__description">
-										Д.Оборотов - контроль режимов работы Главных двигателей
-									</p>
-									<br>
-									<p class="coplectation__description">
-										Трансформаторы тока + Сч. ЭЭ - контроль нагрузки дизель-генератора, выработка ЭЭ.
-									</p>
-									<br>
-									<p class="coplectation__description">
-										Реле Работы - контроль времени работы Дизель-генераторов, котла
-									</p>
-									<br>
-									<p class="coplectation__description">
-										Расходомер приема-выдачи топлива ДТ / ТТ - Контроль принимаемого и выдаваемого топлива (согласовывается)
-									</p>
-									<br>
-									<p class="coplectation__description">
-										Свето звуковая сигнализация контроля приема топлива - Контроль примеа топлива (оповещение при не качественных бункеровках)
-									</p>
-								</div>
-							</div>
-							<div class="divider last"></div>
-							<form action="#" class="form">
-								<input type="hidden" name="title" value="Буксира-толкача Тип ОТ-2400">
-								<input type="hidden" name="type" value="Эконом">
-								<div class="row">
-									<div class="col-12 col-lg-6">
-										<input type="tel" name="phone" placeholder="Телефон" required>
-									</div>
-									<div class="col-12 col-lg-6">
-										<button class="form__btn-primary">Оставить заявку</button>
-									</div>
-								</div>
-							</form>
-						</div>
-						<div class="order-first order-lg-last col-lg-6 col-xl-7 col-xxl-8">
-							<img src="images/src/solutions/ship-2.png" alt="Промыслового судна Проект 1440"
-								class="solutions__img">
-						</div>
-					</div>
-				</section>
-			</article>
-		</div>
-	</section>
-	
 	
 	<section class="certificate">
 		<div class="container">
 			<div class="certificate__content">
 				<div class="certificate__top">
-					<div class="certificate__title title">Сертификаты</div>
+					<h2 class="certificate__title title">Сертификаты</h2>
 					<div class="certificate__controls">
 						<div class="certificate__btn certificate__btn-prev"></div>
 						<div class="certificate__btn certificate__btn-next"></div>
@@ -1189,7 +813,7 @@
 		<div class="container">
 			<div class="media__content">
 				<div class="media__top">
-					<div class="media__title title">Упоминания в СМИ</div>
+					<h2 class="media__title title">Упоминания в СМИ</h2>
 				</div>
 				<div class="media__bot">
 					<a href="https://www.rbc.ru/tags/?tag=%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0" target="_blank" class="media__link">
@@ -1219,8 +843,8 @@
 		<div class="container">
 			<div class="proposal__content">
 				<div class="proposal__left">
-					<span class="proposal__title title">Установите систему <br> сейчас, оплатите потом</span>
-					<span class="proposal__subtitle">Оставляя заявку вы <br>
+					<h2 class="proposal__title title">Установите систему <br> сейчас, оплатите потом</h2>
+					<span class="proposal__subtitle">Оставляя заявку, вы <br>
 						соглашаетесь на<span class="proposal__subtitle-orange"> обработку данных</span></span>
 				</div>
 				<div class="proposal__right">
