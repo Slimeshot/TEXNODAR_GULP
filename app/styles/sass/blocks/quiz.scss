@@ -18,7 +18,8 @@
   }
   &-content {
     margin-left: auto;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     background-color: #FAF9F5;
     width: 59.6em;
     padding: 15.2em 3.2em 3.2em;
