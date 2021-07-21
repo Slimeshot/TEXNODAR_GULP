@@ -44,6 +44,13 @@ p,h1,h2,h3 {
     color: #000000;
 }
 
+.BodyOverflow {
+    max-height: 100vh;
+    max-height: -webkit-calc(var(--vh, 1vh) * 100);
+    max-height: calc(var(--vh, 1vh) * 100);
+    overflow: hidden;
+}
+
 @media (max-width: 1024px) {
     body {
         line-height: 1;

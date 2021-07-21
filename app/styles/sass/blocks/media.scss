@@ -7,6 +7,9 @@
 .media__top {
     margin-bottom: 32px;
 }
+.media__link {
+    cursor: pointer;
+}
 .media__title {
 }
 
@@ -44,5 +47,109 @@
     }
     .media {
         padding-bottom: 64px;
+    }
+}
+
+.interview {
+    cursor: default;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    height: calc(100 * var(--vh));
+    background-color: rgba(0, 0, 0, 0);
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 110;
+    padding: 24px;
+    @media screen and (max-width: 767px) {
+        padding: 24px 16px;
+    }
+    &_active {
+      background-color: rgba(0, 0, 0, 0.2);
+      pointer-events: all;
+      .interview-content {
+        transform: translateY(0);
+      }
+    }
+    &-content {
+        background-color: #FFFFFF;
+        transform: translateY(-1000px);
+        transition: transform .5s ease;
+        width: 912px;
+        padding: 32px;
+        position: relative;
+        max-height: calc(100 * var(--vh) - 48px);
+        overflow: auto;
+        @media screen and (max-width: 767px) {
+            padding: 32px 16px;
+        }
+    }
+    &__close {
+        position: absolute;
+        right: 32px;
+        top: 32px;
+        background: none;
+        padding: 0;
+        border: none;
+        @media screen and (max-width: 767px) {
+            right: 16px;
+        }
+    }
+    &-imgbox {
+        height: 114px;
+        width: 201px;
+        img, svg {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            display: block;
+        }
+    }
+    &__title {
+        margin: 32px 0;
+        font-family: Normalidad;
+        max-width: 741px;
+        font-size: 18px;
+        line-height: 20px;
+        text-transform: uppercase;
+        @media screen and (max-width: 767px) {
+            font-size: 12px;
+            line-height: 16px;
+        }
+        & + p {
+            @media screen and (max-width: 767px) {
+                display: block !important;
+            }
+        }
+    }
+    p {
+        margin-bottom: 16px;
+        font-size: 16px;
+        line-height: 24px;
+        color: $base500;
+        @media screen and (max-width: 767px) {
+            display: none;
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+    &__more {
+        margin-top: 32px;
+        font-size: 12px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        font-family: Normalidad;
+        svg {
+            margin-left: 8px;
+            display: block;
+        }
     }
 }

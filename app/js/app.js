@@ -2,8 +2,55 @@ import {Swiper, Parallax, Mousewheel, Controller, Pagination, Scrollbar, Navigat
 import {Tab} from "bootstrap/js/dist/tab"
 Swiper.use([ Parallax, Mousewheel, Controller, Pagination, Scrollbar, Navigation, Autoplay ]);
 
+function getScrollBarWidth () {
+  var inner = document.createElement('p');
+  inner.style.width = "100%";
+  inner.style.height = "200px";
+
+  var outer = document.createElement('div');
+  outer.style.position = "absolute";
+  outer.style.top = "0px";
+  outer.style.left = "0px";
+  outer.style.visibility = "hidden";
+  outer.style.width = "200px";
+  outer.style.height = "150px";
+  outer.style.overflow = "hidden";
+  outer.appendChild (inner);
+
+  document.body.appendChild (outer);
+  var w1 = inner.offsetWidth;
+  outer.style.overflow = 'scroll';
+  var w2 = inner.offsetWidth;
+  if (w1 == w2) w2 = outer.clientWidth;
+
+  document.body.removeChild (outer);
+
+  return (w1 - w2);
+};
+
+
+function compensateBody(){
+  $('body').addClass('BodyOverflow');
+  $('body').css('margin-right', getScrollBarWidth());
+}
+function unCompensateBody(){
+  $('body').attr('style', '');
+  $('body').removeClass('BodyOverflow');
+}
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
+	//! MOBILE FIX 100VH
+
+	let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+	window.addEventListener('resize', () => {
+	let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+	});
+
+	//! MOBILE FIX 100VH END
 
 	const introSwiper = new Swiper('.intro__swiper', {
 		loop: true,
@@ -256,10 +303,231 @@ document.addEventListener('DOMContentLoaded', () => {
 	  }
 
 
+	
+
+	function openQuis () {
+		if ($('.quiz').length) {
+			$('.quiz').addClass('quiz_active')
+			compensateBody()
+			checkCurrentStep()
+		}
+	}
+	function closeQuis () {
+		if ($('.quiz_active').length) {
+			$('.quiz_active').removeClass('quiz_active')
+			setTimeout(function () {
+				unCompensateBody()
+			}, 500)
+		}
+	}
+
+	$(document).on('click', '[data-quiz]', function() {
+		openQuis()
+	})
+	$(document).on('click', '[data-close-quiz]', function() {
+		closeQuis()
+	})
+
+	$(document).on('click', '.quiz', function(){
+		closeQuis()
+	})
+	$(document).on('click', '.quiz-content', function (e) {
+		e.stopPropagation()
+	})
+
+	$(document).on('click', '.quiz__next', function () {
+		nextStep()
+	})
+
+	function nextStep() {
+		const currentStepIndex = $('.quiz-step_active').attr('data-step')
+		const currentStep = $('.quiz-step_active')
+
+		
+		if ($('.quiz-step').length === parseInt(currentStepIndex) + 1) {
+		} else {
+			addResult(currentStep)
+			$('.quiz-step_active').removeClass('quiz-step_active')
+			$($('.quiz-step')[parseInt(currentStepIndex) + 1]).addClass('quiz-step_active')
+			if (parseInt(currentStepIndex) + 2 == $('.quiz-step').length) {
+				$('.quiz__next').html('Получить расчёт')
+			}
+			checkCurrentStep()
+		}
+	}
+
+	function addResult(step) {
+
+		const title = step.find('.quiz__title').html()
+		const checkedInputs = step.find('input[type="radio"]:checked, input[type="checkbox"]:checked')
+		let answers = []
+		if (checkedInputs.length) {
+			checkedInputs.each(function (index, el) {
+				answers.push(el.value);
+			})
+		}
+		const rangeInput = step.find('input[type="range"]')
+		if (rangeInput.length) {
+			rangeInput.each(function (index, el) {
+				answers.push(el.value);
+			})
+		} 
+
+		let vals = ''
+		answers.forEach(function(el) {
+			vals += `<span class="quiz-results-item-res__val">${el}</span>`
+		})
+		console.log(vals);
+		const template = 
+			`<div class="quiz-results-item">
+				<span class="quiz-results-item__title">${title}</span>
+				<div class="quiz-results-item-res">
+					${vals}
+				</div>
+			</div>`
+		$('.quiz-results').append(template)
+		$('.quiz-results-item:not(.quiz-results-item_active)').css('height', `${$('.quiz-results-item:not(.quiz-results-item_active)')[0].scrollHeight}px`)
+		$('.quiz-results-item:not(.quiz-results-item_active)').addClass('quiz-results-item_active')
+		setTimeout(function () {
+			$('.quiz-results-item:not(.quiz-results-item_active)').css('height', `auto`)
+		}, 400)
+		$('.quiz-results').addClass('quiz-results_active')
+	}
+
+	$(window).on('resize', function() {
+		checkCurrentStep()
+	})
+
+	function checkCurrentStep () {
+		const currentStep = $('.quiz-step_active')
+		const inputs = currentStep.find('input[type="radio"], input[type="checkbox"]').length
+		const checkedInputs = currentStep.find('input[type="radio"]:checked, input[type="checkbox"]:checked').length
+		const btn = $('.quiz__next')
+
+			const content = $('.quiz-content')[0]
+			if (content.clientHeight < content.scrollHeight) {
+				$('.quiz-bottom').addClass('quiz-bottom_sticky')
+			} else {
+				$('.quiz-bottom').removeClass('quiz-bottom_sticky')
+			}
+
+		if (inputs) {
+			if (checkedInputs) {
+				btn.prop('disabled', false)
+			} else {
+				btn.prop('disabled', true)
+			}
+		} else {
+			btn.prop('disabled', false)
+		}
+	}
+
+	$(document).on('input', '.quiz input[type="radio"], .quiz input[type="checkbox"]', function() {
+		checkCurrentStep()
+	})
+
+	$(document).on('input', '.quiz input[type="range"]', function(e) {
+		const val = parseInt(e.target.value)
+		let string = ''
+		if (val % 10 === 1 && Math.round(val / 10) !== 1) {
+			string = 'единица'
+		} else if (val % 10 > 4 || val % 10 === 0 || (val > 4 && val < 21)) {
+			string = 'единиц'
+		} else if(val / 10 !== 1) {
+			string = 'единицы'
+		}
+		$('.quiz__rangeValue span:nth-child(1)').html(val)
+		$('.quiz__rangeValue span:nth-child(2)').html(string)
+	})
 
 
+	function openInterview (el) {
+		el.find('.interview').addClass('interview_active')
+		compensateBody()
+	}
 
-	  
+	function closeInterview () {
+		$('.interview_active').removeClass('interview_active')
+		setTimeout(function () {
+			unCompensateBody()
+		}, 500)
+	}
+
+	$(document).on('click', '[data-interview]', function() {
+		openInterview($(this))
+	})
+	$(document).on('click', '.interview', function (e) {
+		e.stopPropagation()
+		closeInterview()
+	})
+	$(document).on('click', '.interview-content', function (e) {
+		e.stopPropagation()
+	})
+	$(document).on('click', '.interview__close', function() {
+		closeInterview()	
+	})
+
+
+	let currentIndex = null
+
+	function setSertificateModalData(el) {
+		const title = el.attr('data-title')
+		const image = el.attr('data-image')
+		const download = el.attr('data-download')
+
+		const modal = $('.sertificate-modal')
+		modal.find('.sertificate-modal__title').html(title)
+		modal.find('.sertificate-modal-imgbox img').prop('src', image)
+		modal.find('.sertificate-modal__download').prop('href', download)
+	}
+
+	function openSertificateModal (el) {
+		setSertificateModalData(el)
+		$('.sertificate-modal').addClass('sertificate-modal_active')
+		compensateBody()
+		currentIndex = el.attr('data-index')
+	}
+
+	function closeSertificate () {
+		$('.sertificate-modal_active').removeClass('sertificate-modal_active')
+		setTimeout(function () {
+			unCompensateBody()
+		}, 500)
+		currentIndex = null
+	}
+
+	$(document).on('click', '[data-sertificate]', function() {
+		openSertificateModal($(this))
+	})
+	$(document).on('click', '.sertificate-modal', function (e) {
+		e.stopPropagation()
+		closeSertificate()
+	})
+	$(document).on('click', '.sertificate-modal-content, .sertificate-modal-arrow', function (e) {
+		e.stopPropagation()
+	})
+	$(document).on('click', '.sertificate-modal__close', function() {
+		closeSertificate()	
+	})
+
+	
+	$(document).on('click', '.sertificate-modal-arrow_prev', function() {
+		const length = $('.certificate__slide:not(.swiper-slide-duplicate)').length
+		currentIndex--;
+		if (currentIndex == -1) {
+			currentIndex = length - 1
+		}
+		setSertificateModalData($(`.certificate__slide:not(.swiper-slide-duplicate)[data-index="${currentIndex}"]`))
+	})
+
+	$(document).on('click', '.sertificate-modal-arrow_next', function() {
+		const length = $('.certificate__slide:not(.swiper-slide-duplicate)').length
+		currentIndex++;
+		if (currentIndex == length) {
+			currentIndex = 0;
+		}
+		setSertificateModalData($(`.certificate__slide:not(.swiper-slide-duplicate)[data-index="${currentIndex}"]`))
+	})
 })
 
 

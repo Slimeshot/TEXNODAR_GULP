@@ -10,7 +10,7 @@
 			</div>
 			<div class="intro__bottom">
 				<div class="intro__buttons">
-					<a href="#" class="btn intro__btn-red">Рассчитать стоимость</a>
+					<button class="btn intro__btn-red" data-quiz>Рассчитать стоимость</button>
 					<a href="#" class="btn intro__btn-transparent">Подробнее о системе</a>
 				</div>
 				<div class="intro__block">
@@ -1029,13 +1029,50 @@
 					<div class="certificate__btn certificate__btn-next"></div>
 				</div>
 			</div>
+			<div class="sertificate-modal">
+				<button class="sertificate-modal-arrow sertificate-modal-arrow_prev">
+					<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M3.02344 6.00011L7.14844 1.87511L5.9701 0.696777L0.666771 6.00011L5.9701 11.3034L7.14844 10.1251L3.02344 6.00011Z" fill="black"/>
+					</svg>						
+				</button>
+				<div class="sertificate-modal-content">
+					<button class="sertificate-modal__close">
+						<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M4.99999 4.05732L8.29999 0.757324L9.24266 1.69999L5.94266 4.99999L9.24266 8.29999L8.29999 9.24266L4.99999 5.94266L1.69999 9.24266L0.757324 8.29999L4.05732 4.99999L0.757324 1.69999L1.69999 0.757324L4.99999 4.05732Z" fill="black"/>
+						</svg>			
+						<span>Закрыть</span>				
+					</button>
+					<span class="sertificate-modal__title"></span>
+					<div class="sertificate-modal-imgbox">
+						<img src="" alt="">
+					</div>
+					<a href="" target="_blank" class="sertificate-modal__download">
+						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M2 12.6667H14V14.0001H2V12.6667ZM8.66667 6.00008H13.3333L8 11.3334L2.66667 6.00008H7.33333V0.666748H8.66667V6.00008Z" fill="currentColor"/>
+						</svg>		
+						Загрузить					
+					</a>
+				</div>
+				<button class="sertificate-modal-arrow sertificate-modal-arrow_next">
+					<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M4.97656 6.00011L0.851562 1.87511L2.0299 0.696777L7.33323 6.00011L2.0299 11.3034L0.851562 10.1251L4.97656 6.00011Z" fill="black"/>
+					</svg>						
+				</button>
+			</div>
 			<div class="certificate__bot">
 
 				<div class="swiper-container certificate__swiper">
 
 					<div class="swiper-wrapper">
 
-						<div class="swiper-slide certificate__slide">
+						<button 
+							class="swiper-slide certificate__slide" 
+							data-sertificate 
+							data-title="О признании от Российского речного регистра"
+							data-image="images/dist/certificate/certificate-1.png"
+							data-download="images/dist/certificate/certificate-1.png"
+							data-index="0"
+						>
 							<div class="certificate__slide-top">
 								<img src="images/dist/char__logo.svg" alt="logo">
 								<div class="certificate__slide-year">2020</div>
@@ -1048,8 +1085,15 @@
 								</div>
 							</div>
 							<!-- <img src="images/dist/certificate/certificate-1.png" alt="certificate"> -->
-						</div>
-						<div class="swiper-slide certificate__slide">
+						</button>
+						<button 
+							class="swiper-slide certificate__slide" 
+							data-sertificate 
+							data-title="Об одобрении типа изделия от Российского речного регистра"
+							data-image="images/dist/certificate/certificate-2.png"
+							data-download="images/dist/certificate/certificate-2.png"
+							data-index="1"
+						>
 							<div class="certificate__slide-top">
 								<img src="images/dist/char__logo.svg" alt="logo">
 								<div class="certificate__slide-year">2020</div>
@@ -1062,8 +1106,15 @@
 								</div>
 							</div>
 							<!-- <img src="images/dist/certificate/certificate-2.png" alt="certificate"> -->
-						</div>
-						<div class="swiper-slide certificate__slide">
+						</button>
+						<button 
+							class="swiper-slide certificate__slide" 
+							data-sertificate 
+							data-title="О типовом одобрении от Российского морского регистра судоходства"
+							data-image="images/dist/certificate/certificate-3.png"
+							data-download="images/dist/certificate/certificate-3.png"
+							data-index="2"
+						>
 							<div class="certificate__slide-top">
 								<img src="images/dist/char__logo.svg" alt="logo">
 								<div class="certificate__slide-year">2020</div>
@@ -1075,8 +1126,15 @@
 								</div>
 							</div>
 							<!-- <img src="images/dist/certificate/certificate-3.png" alt="certificate"> -->
-						</div>
-						<div class="swiper-slide certificate__slide">
+						</button>
+						<button 
+							class="swiper-slide certificate__slide" 
+							data-sertificate 
+							data-title="О типовом одобрении от Российского морского регистра судоходства"
+							data-image="images/dist/certificate/certificate-4.png"
+							data-download="images/dist/certificate/certificate-4.png"
+							data-index="3"
+						>
 							<div class="certificate__slide-top">
 								<img src="images/dist/char__logo.svg" alt="logo">
 								<div class="certificate__slide-year">2020</div>
@@ -1089,7 +1147,7 @@
 								</div>
 							</div>
 							<!-- <img src="images/dist/certificate/certificate-4.png" alt="certificate"> -->
-						</div>
+						</button>
 
 					</div>
 
@@ -1107,24 +1165,162 @@
 				<div class="media__title title">Упоминания в СМИ</div>
 			</div>
 			<div class="media__bot">
-				<a href="https://www.rbc.ru/tags/?tag=%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0" target="_blank" class="media__link">
+				<div class="media__link" data-interview>
 					<img src="images/dist/media-1.jpg" target="_blank" alt="rbk">
-				</a>
-				<a href="https://rb.ru/" class="media__link">
+					
+					<div class="interview">
+						<div class="interview-content">
+							<button class="interview__close">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 10.586L16.95 5.63599L18.364 7.04999L13.414 12L18.364 16.95L16.95 18.364L12 13.414L7.04999 18.364L5.63599 16.95L10.586 12L5.63599 7.04999L7.04999 5.63599L12 10.586Z" fill="black"/>
+								</svg>									
+							</button>
+							<div class="interview-imgbox">
+								<img src="./images/src/media-1.jpg" alt="rbk">
+							</div>
+							<h4 class="interview__title">DOTS, VMTS, датчики и сигнализация при бункеровке: как системы контроля топлива экономят судовладельцам 35 млн. рублей в год</h4>
+							<p>Исключить манипуляции с топливом и сохранить 35 млн. рублей в год: как системы контроля топлива помогают судовладельцам экономить</p>
+							<p>Алексей Якушев, директор ГК «Технодар» рассказывает, как благодаря 3-х уровневой системе контроля судовладельцам удается отслеживать расхождения номинальной и реальной массы топлива при приеме на борт, прогнозировать технологический износ оборудования на судне, а также предотвращать манипуляции с горючим, которые приводят к потере 35 млн. рублей в год.</p>
+							<p>Заказчиком стала рыболовная компания «Доброфлот», которой было необходимо получить надежную систему по приему и учету топлива для своего флота, в том числе для крупнейшей в мире плавбазы «Всеволод Сибирцев». Как определялась архитектура установки датчиков и почему из четырех точек приема «Технодар» сделал две, расскажем подробнее. Но для начала — о системе.</p>
+							<a href="https://www.rbc.ru/tags/?tag=%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0" target="_blank" class="interview__more">
+								Читать полностью
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 2V7.71072H10.5723V4.43633L5.00935 10L3.99998 8.99063L9.56222 3.42768H6.28926V2H12Z" fill="currentColor"/>
+								</svg>									
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="media__link" data-interview>
 					<img src="images/dist/media-2.jpg" target="_blank" alt="rusbase">
-				</a>
-				<a href="https://secretmag.ru/" class="media__link">
+					
+					<div class="interview">
+						<div class="interview-content">
+							<button class="interview__close">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 10.586L16.95 5.63599L18.364 7.04999L13.414 12L18.364 16.95L16.95 18.364L12 13.414L7.04999 18.364L5.63599 16.95L10.586 12L5.63599 7.04999L7.04999 5.63599L12 10.586Z" fill="black"/>
+								</svg>									
+							</button>
+							<div class="interview-imgbox">
+								<img src="./images/src/media-1.jpg" alt="rbk">
+							</div>
+							<h4 class="interview__title">DOTS, VMTS, датчики и сигнализация при бункеровке: как системы контроля топлива экономят судовладельцам 35 млн. рублей в год</h4>
+							<p>Исключить манипуляции с топливом и сохранить 35 млн. рублей в год: как системы контроля топлива помогают судовладельцам экономить</p>
+							<p>Алексей Якушев, директор ГК «Технодар» рассказывает, как благодаря 3-х уровневой системе контроля судовладельцам удается отслеживать расхождения номинальной и реальной массы топлива при приеме на борт, прогнозировать технологический износ оборудования на судне, а также предотвращать манипуляции с горючим, которые приводят к потере 35 млн. рублей в год.</p>
+							<p>Заказчиком стала рыболовная компания «Доброфлот», которой было необходимо получить надежную систему по приему и учету топлива для своего флота, в том числе для крупнейшей в мире плавбазы «Всеволод Сибирцев». Как определялась архитектура установки датчиков и почему из четырех точек приема «Технодар» сделал две, расскажем подробнее. Но для начала — о системе.</p>
+							<a href="https://www.rbc.ru/tags/?tag=%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0" target="_blank" class="interview__more">
+								Читать полностью
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 2V7.71072H10.5723V4.43633L5.00935 10L3.99998 8.99063L9.56222 3.42768H6.28926V2H12Z" fill="currentColor"/>
+								</svg>									
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="media__link" data-interview>
 					<img src="images/dist/media-3.jpg" target="_blank" alt="secret">
-				</a>
-				<a href="https://www.rbc.ru/tags/?tag=%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0" target="_blank" class="media__link">
+					
+					<div class="interview">
+						<div class="interview-content">
+							<button class="interview__close">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 10.586L16.95 5.63599L18.364 7.04999L13.414 12L18.364 16.95L16.95 18.364L12 13.414L7.04999 18.364L5.63599 16.95L10.586 12L5.63599 7.04999L7.04999 5.63599L12 10.586Z" fill="black"/>
+								</svg>									
+							</button>
+							<div class="interview-imgbox">
+								<img src="./images/src/media-1.jpg" alt="rbk">
+							</div>
+							<h4 class="interview__title">DOTS, VMTS, датчики и сигнализация при бункеровке: как системы контроля топлива экономят судовладельцам 35 млн. рублей в год</h4>
+							<p>Исключить манипуляции с топливом и сохранить 35 млн. рублей в год: как системы контроля топлива помогают судовладельцам экономить</p>
+							<p>Алексей Якушев, директор ГК «Технодар» рассказывает, как благодаря 3-х уровневой системе контроля судовладельцам удается отслеживать расхождения номинальной и реальной массы топлива при приеме на борт, прогнозировать технологический износ оборудования на судне, а также предотвращать манипуляции с горючим, которые приводят к потере 35 млн. рублей в год.</p>
+							<p>Заказчиком стала рыболовная компания «Доброфлот», которой было необходимо получить надежную систему по приему и учету топлива для своего флота, в том числе для крупнейшей в мире плавбазы «Всеволод Сибирцев». Как определялась архитектура установки датчиков и почему из четырех точек приема «Технодар» сделал две, расскажем подробнее. Но для начала — о системе.</p>
+							<a href="https://www.rbc.ru/tags/?tag=%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0" target="_blank" class="interview__more">
+								Читать полностью
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 2V7.71072H10.5723V4.43633L5.00935 10L3.99998 8.99063L9.56222 3.42768H6.28926V2H12Z" fill="currentColor"/>
+								</svg>									
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="media__link" data-interview>
 					<img src="images/dist/media-1.jpg" alt="rbk">
-				</a>
-				<a href="https://rb.ru/" target="_blank" class="media__link">
+					
+					<div class="interview">
+						<div class="interview-content">
+							<button class="interview__close">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 10.586L16.95 5.63599L18.364 7.04999L13.414 12L18.364 16.95L16.95 18.364L12 13.414L7.04999 18.364L5.63599 16.95L10.586 12L5.63599 7.04999L7.04999 5.63599L12 10.586Z" fill="black"/>
+								</svg>									
+							</button>
+							<div class="interview-imgbox">
+								<img src="./images/src/media-1.jpg" alt="rbk">
+							</div>
+							<h4 class="interview__title">DOTS, VMTS, датчики и сигнализация при бункеровке: как системы контроля топлива экономят судовладельцам 35 млн. рублей в год</h4>
+							<p>Исключить манипуляции с топливом и сохранить 35 млн. рублей в год: как системы контроля топлива помогают судовладельцам экономить</p>
+							<p>Алексей Якушев, директор ГК «Технодар» рассказывает, как благодаря 3-х уровневой системе контроля судовладельцам удается отслеживать расхождения номинальной и реальной массы топлива при приеме на борт, прогнозировать технологический износ оборудования на судне, а также предотвращать манипуляции с горючим, которые приводят к потере 35 млн. рублей в год.</p>
+							<p>Заказчиком стала рыболовная компания «Доброфлот», которой было необходимо получить надежную систему по приему и учету топлива для своего флота, в том числе для крупнейшей в мире плавбазы «Всеволод Сибирцев». Как определялась архитектура установки датчиков и почему из четырех точек приема «Технодар» сделал две, расскажем подробнее. Но для начала — о системе.</p>
+							<a href="https://www.rbc.ru/tags/?tag=%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0" target="_blank" class="interview__more">
+								Читать полностью
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 2V7.71072H10.5723V4.43633L5.00935 10L3.99998 8.99063L9.56222 3.42768H6.28926V2H12Z" fill="currentColor"/>
+								</svg>									
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="media__link" data-interview>
 					<img src="images/dist/media-2.jpg" alt="rusbase">
-				</a>
-				<a href="https://secretmag.ru/" target="_blank" class="media__link">
+					
+					<div class="interview">
+						<div class="interview-content">
+							<button class="interview__close">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 10.586L16.95 5.63599L18.364 7.04999L13.414 12L18.364 16.95L16.95 18.364L12 13.414L7.04999 18.364L5.63599 16.95L10.586 12L5.63599 7.04999L7.04999 5.63599L12 10.586Z" fill="black"/>
+								</svg>									
+							</button>
+							<div class="interview-imgbox">
+								<img src="./images/src/media-1.jpg" alt="rbk">
+							</div>
+							<h4 class="interview__title">DOTS, VMTS, датчики и сигнализация при бункеровке: как системы контроля топлива экономят судовладельцам 35 млн. рублей в год</h4>
+							<p>Исключить манипуляции с топливом и сохранить 35 млн. рублей в год: как системы контроля топлива помогают судовладельцам экономить</p>
+							<p>Алексей Якушев, директор ГК «Технодар» рассказывает, как благодаря 3-х уровневой системе контроля судовладельцам удается отслеживать расхождения номинальной и реальной массы топлива при приеме на борт, прогнозировать технологический износ оборудования на судне, а также предотвращать манипуляции с горючим, которые приводят к потере 35 млн. рублей в год.</p>
+							<p>Заказчиком стала рыболовная компания «Доброфлот», которой было необходимо получить надежную систему по приему и учету топлива для своего флота, в том числе для крупнейшей в мире плавбазы «Всеволод Сибирцев». Как определялась архитектура установки датчиков и почему из четырех точек приема «Технодар» сделал две, расскажем подробнее. Но для начала — о системе.</p>
+							<a href="https://www.rbc.ru/tags/?tag=%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0" target="_blank" class="interview__more">
+								Читать полностью
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 2V7.71072H10.5723V4.43633L5.00935 10L3.99998 8.99063L9.56222 3.42768H6.28926V2H12Z" fill="currentColor"/>
+								</svg>									
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="media__link" data-interview>
 					<img src="images/dist/media-3.jpg" alt="secret">
-				</a>
+					
+					<div class="interview">
+						<div class="interview-content">
+							<button class="interview__close">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 10.586L16.95 5.63599L18.364 7.04999L13.414 12L18.364 16.95L16.95 18.364L12 13.414L7.04999 18.364L5.63599 16.95L10.586 12L5.63599 7.04999L7.04999 5.63599L12 10.586Z" fill="black"/>
+								</svg>									
+							</button>
+							<div class="interview-imgbox">
+								<img src="./images/src/media-1.jpg" alt="rbk">
+							</div>
+							<h4 class="interview__title">DOTS, VMTS, датчики и сигнализация при бункеровке: как системы контроля топлива экономят судовладельцам 35 млн. рублей в год</h4>
+							<p>Исключить манипуляции с топливом и сохранить 35 млн. рублей в год: как системы контроля топлива помогают судовладельцам экономить</p>
+							<p>Алексей Якушев, директор ГК «Технодар» рассказывает, как благодаря 3-х уровневой системе контроля судовладельцам удается отслеживать расхождения номинальной и реальной массы топлива при приеме на борт, прогнозировать технологический износ оборудования на судне, а также предотвращать манипуляции с горючим, которые приводят к потере 35 млн. рублей в год.</p>
+							<p>Заказчиком стала рыболовная компания «Доброфлот», которой было необходимо получить надежную систему по приему и учету топлива для своего флота, в том числе для крупнейшей в мире плавбазы «Всеволод Сибирцев». Как определялась архитектура установки датчиков и почему из четырех точек приема «Технодар» сделал две, расскажем подробнее. Но для начала — о системе.</p>
+							<a href="https://www.rbc.ru/tags/?tag=%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0" target="_blank" class="interview__more">
+								Читать полностью
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 2V7.71072H10.5723V4.43633L5.00935 10L3.99998 8.99063L9.56222 3.42768H6.28926V2H12Z" fill="currentColor"/>
+								</svg>									
+							</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -1214,5 +1410,83 @@
 			</span>
 		</div>
 	</div>
+</section>
+
+<section class="quiz">
+	<form class="quiz-content">
+		<div class="quiz-results"></div>
+		<div class="quiz-main">
+			<div class="quiz-step quiz-step_active" data-step="0">
+				<span class="quiz__title">К какой категории относится судно?</span>
+				<div class="quiz-form-wrapper">
+					<input class="quiz__radioinput" id="rechnoyFlot" name="flotType" value="Речной флот" type="radio">
+					<label class="quiz__checkboxLabel" for="rechnoyFlot">
+						<span>Речной флот</span>
+					</label>
+					<input class="quiz__radioinput" id="morskojFlot" name="flotType" value="Морской флот" type="radio">
+					<label class="quiz__checkboxLabel" for="morskojFlot">
+						<span>Морской флот</span>
+					</label>
+				</div>
+			</div>
+			<div class="quiz-step" data-step="1">
+				<span class="quiz__title">Сколько единиц флота планируется оснастить?</span>
+				<span class="quiz__rangeValue"><span>8</span> <span>единиц</span></span>
+				<input type="range" name="howMuch" id="howMuch" value="8" min="1" max="24" step="1">
+			</div>
+			<div class="quiz-step" data-step="2">
+				<span class="quiz__title">Какие задачи планируется решить?</span>
+				<div class="quiz-form-wrapper">
+					<input class="quiz__radioinput" id="marshrut" name="tasks" value="Местоположение и маршрут" type="checkbox">
+					<label class="quiz__checkboxLabel" for="marshrut">
+						<span>Местоположение и маршрут</span>
+					</label>
+					<input class="quiz__radioinput" id="toplivo" name="tasks" value="Расход топлива" type="checkbox">
+					<label class="quiz__checkboxLabel" for="toplivo">
+						<span>Расход топлива</span>
+					</label>
+					<input class="quiz__radioinput" id="buksir" name="tasks" value="Буксировка" type="checkbox">
+					<label class="quiz__checkboxLabel" for="buksir">
+						<span>Буксировка</span>
+					</label>
+					<input class="quiz__radioinput" id="rezhim" name="tasks" value="Режим эксплуатации" type="checkbox">
+					<label class="quiz__checkboxLabel" for="rezhim">
+						<span>Режим эксплуатации</span>
+					</label>
+					<input class="quiz__radioinput" id="control" name="tasks" value="Контроль команды" type="checkbox">
+					<label class="quiz__checkboxLabel" for="control">
+						<span>Контроль команды</span>
+					</label>
+					<input class="quiz__radioinput" id="zhidkost" name="tasks" value="Расход жидкостей" type="checkbox">
+					<label class="quiz__checkboxLabel" for="zhidkost">
+						<span>Расход жидкостей</span>
+					</label>
+					<input class="quiz__radioinput" id="analytics" name="tasks" value="Аналитика" type="checkbox">
+					<label class="quiz__checkboxLabel" for="analytics">
+						<span>Аналитика</span>
+					</label>
+					<input class="quiz__radioinput" id="avtomat" name="tasks" value="Автоматизация отчетности" type="checkbox">
+					<label class="quiz__checkboxLabel" for="avtomat">
+						<span>Автоматизация отчетности</span>
+					</label>
+				</div>
+			</div>
+			<div class="quiz-step" data-step="3">
+				<span class="quiz__title">Расчёт готов</span>
+				<span class="quiz__text">Укажите Вашу электронную почту и мы вышлем его туда</span>
+				<input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" class="quiz__input" type="email" name="email" placeholder="E-mail" required>
+			</div>
+		</div>
+		<div class="quiz-sticky"></div>
+		<div class="quiz-bottom">
+			<button class="btn quiz__close" data-close-quiz>
+				<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M7.99993 7.05732L11.2999 3.75732L12.2426 4.69999L8.9426 7.99999L12.2426 11.3L11.2999 12.2427L7.99993 8.94266L4.69993 12.2427L3.75726 11.3L7.05726 7.99999L3.75726 4.69999L4.69993 3.75732L7.99993 7.05732Z" fill="black"/>
+				</svg>					
+				<span>Закрыть</span>
+			</button>
+			<button class="btn quiz__next">Далее</button>
+		</div>
+	</form>
 </section>
 <!--#include virtual="/parts/footer.html" -->

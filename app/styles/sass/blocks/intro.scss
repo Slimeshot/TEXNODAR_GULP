@@ -58,6 +58,7 @@
     background-color: $accent;
     border-radius: 24px 8px 8px 8px;
     padding: 17px 32px;
+    transition: .3s;
     &:hover {
         color: #fff;
         background-color: #C04838;
