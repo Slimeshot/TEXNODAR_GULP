@@ -27,6 +27,10 @@ body {
     font-size: 0.69444vw;
 }
 
+body.active {
+    overflow: hidden;
+}
+
 p,h1,h2,h3 {
     padding: 0;
     margin: 0;
@@ -54,7 +58,7 @@ p,h1,h2,h3 {
 @media (max-width: 1024px) {
     body {
         line-height: 1;
-        font-size: 0.97vw;
+        font-size: 0.84vw;
     }
 }
 
@@ -74,7 +78,7 @@ p,h1,h2,h3 {
     }
     body {
         line-height: 1;
-        font-size: 10px;
+        font-size: 1.8vw;
     }
     .title {
         font-size: 15px;

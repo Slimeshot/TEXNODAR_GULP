@@ -18,7 +18,7 @@
 }
 .certificate__btn {
     background-position: center;
-    background-size: 15%;
+    background-size: 30%;
     background-repeat: no-repeat;
     width: 64px;
     height: 64px;
@@ -119,10 +119,13 @@
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .certificate {
         padding: 94px 0;
     }
+}
+
+@media (max-width: 768px) {
     .certificate__controls {
         width: 90px;     
     }
@@ -146,6 +149,17 @@
     }
 }
 
+.auto {
+    .certificate {
+        padding: 60px 0;
+        @media (max-width: 1024px) {
+            padding: 48px 0;
+        }
+        @media (max-width: 768px) {
+            padding: 32px 0;
+        }
+    }
+}
 
 .sertificate-modal {
     position: fixed;
@@ -189,7 +203,7 @@
       margin: 0 64px;
       transition: transform .5s ease;
       border-radius: 4px;
-      @media screen and (max-width: 1023px) {  
+      @media screen and (max-width: 1023px) {
         width: 53.6em;
         margin: 0 28px;
       }
@@ -212,7 +226,7 @@
         opacity: 0;
         pointer-events: none;
         flex-shrink: 0;
-        @media screen and (max-width: 767px) {  
+        @media screen and (max-width: 767px) {
           display: none;
         }
         svg {

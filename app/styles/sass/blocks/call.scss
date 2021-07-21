@@ -1,0 +1,79 @@
+.call {
+    top: 0;
+    right: -1500px;
+    opacity: 0;
+    height: 100vh;
+    width: 25%;
+    background-color: #FAF9F5;
+    position: fixed;
+    z-index: 101;
+    min-width: 320px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transition: all .3s ease-in-out;
+    
+}
+.call.active {
+    right: 0;
+    opacity: 1;
+}
+.call__title {
+    font-family: 'Normalidad', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #191919;
+    margin-bottom: 12px;
+}
+.call__subtitle {
+    font-family: 'IBM', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: #7D7D7D;
+    margin-bottom: 32px;
+}
+.call__form {
+}
+.call__btn {
+    padding: 17px 34px;
+    background-color: $accent;
+    color: #fff;
+    border-radius: 8px;
+
+}
+.call__name, .call__phone {
+    padding: 17px 24px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    font-family: "IBM", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: #7d7d7d;
+    background-color: transparent;
+    transition: 0.3s;
+    width: 100%;
+    margin-bottom: 16px;
+    &:hover,
+        &:focus {
+            border: 1px solid #8b8b8b;
+        }
+}
+
+.call__cross {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+}
+

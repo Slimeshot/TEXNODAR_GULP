@@ -1,5 +1,5 @@
 .control {
-    padding: 120px 0 64px 0;
+    padding: 120px 0 0 0;
     &__content {
         width: 100%;
         display: flex;
@@ -26,15 +26,73 @@
         display: flex;
         max-width: 616px;
         justify-content: space-between;
-        p {
+        p { 
+            &:first-child {
+                padding-left: 0px;
+            }
             font-family: 'IBM', sans-serif;
             font-style: normal;
             font-weight: normal;
             font-size: 16px;
             line-height: 24px;
             color: #000000;  
-            max-width: 270px; 
+            max-width: 300px; 
+            padding: 0 16px;
+            &:last-child {
+                max-width: 310px;
+            }
         }
     }
     
+}
+
+
+
+
+@media (max-width: 1024px) {
+    .control {
+        padding: 94px 0 0 0;
+        &__content {
+            flex-direction: column;
+        }
+        &__left {
+            width: 100%;
+        }
+        &__right {
+            width: 100%;
+        }
+        &__title {
+            margin-bottom: 24px;
+        }
+        &__subtitle {
+            margin-bottom: 48px;
+        }
+
+    }
+}
+
+
+
+@media (max-width: 540px) {
+    .control {
+        padding: 64px 0 32px 0;
+        &__title {
+            margin-bottom: 16px;
+        }
+        &__subtitle {
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 40px;
+        }
+        &__block {
+            flex-direction: column;
+            p { 
+                padding: 0px;
+                max-width: 100%;
+                &:first-child {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
 }

@@ -128,17 +128,74 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-	  //открытие бургер меню 
+		  //open/close burger-menu
 
-	  const burger = document.querySelector('.header__burger');
-	  const headerNavigation = document.querySelector('.header__navigation');
+	  const headerBurger = document.querySelector('.header__burger');
+	  const headerInfo = document.querySelector('.header__info');
 
 
-	  burger.addEventListener('click', () => {
-			burger.classList.toggle('active');
-			headerNavigation.classList.toggle('active');
+	  headerBurger.addEventListener('click', () => {
+		  	document.body.classList.toggle('active')
+			headerBurger.classList.toggle('active');
+			headerInfo.classList.toggle('active');
 
 	  })
+
+
+	  //open/close burger-menu
+	  const sailingBurger = document.querySelector('.sailing__burger');
+	  const sailingMenu = document.querySelector('.sailing__menu');
+	  const sailingLink = document.querySelectorAll('.sailing__link');
+
+
+	  if (sailingMenu) {
+		  sailingBurger.addEventListener('click', () => {
+				sailingBurger.classList.toggle('active');
+				sailingMenu.classList.toggle('active');
+
+		  })
+	  }
+
+
+
+	  //close menu after click
+	  sailingLink.forEach(item => {
+		  item.addEventListener('click', () => {
+			sailingBurger.classList.remove('active');
+			sailingMenu.classList.remove('active');
+		  })
+	  })
+
+
+	  //close/open call
+
+	  const headerBtn = document.querySelector('.header__btn');
+	  const callCross = document.querySelector('.call__cross');
+	  const sailingBtn = document.querySelectorAll('.sailing__btn-call');
+	  const callBlock = document.querySelector('.call');
+
+	  headerBtn.addEventListener('click', () => {
+		document.body.classList.remove('active')
+		headerBurger.classList.remove('active');
+		headerInfo.classList.remove('active');
+		callBlock.classList.add('active');
+
+	  })
+
+	  callCross.addEventListener('click', () => {
+		callBlock.classList.remove('active');
+	  })
+
+	  if (sailingBtn) {
+		  sailingBtn.forEach((item, index) => {
+			item.addEventListener('click', () => {
+				sailingBurger.classList.remove('active');
+				sailingMenu.classList.remove('active');
+				callBlock.classList.add('active');
+			  })
+		  })
+	  }
+
 
 
 
@@ -147,6 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	  // аккордеон для блока help
 
 	  const acc = document.querySelectorAll(".help__accordion");
+	//   const panel = document.querySelectorAll('.help__panel')
 
 	  for (let i = 0; i < acc.length; i++) {
 		acc[i].addEventListener("click", function() {
@@ -163,39 +221,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	//   acc.forEach((item, index) => {
 	// 	item.addEventListener('click', () => {
-	// 		panel.forEach((elem, counter) => {
-	// 			elem.style.maxHeight = null;
-	// 			if (index === counter) {
-	// 				item.classList.add('active')
-	// 				elem.style.maxHeight = elem.scrollHeight + "px";			
-	// 			  } else {
+	// 		// console.log(index);
+	// 		// panel.forEach((elem, counter) => {
+	// 		// 	console.log(counter);
+	// 		// 	elem.style.maxHeight = null;
+	// 		// 	item.classList.remove('active')
+	// 		// 	if (index === counter) {
+	// 		// 		item.classList.add('active')
+	// 		// 		elem.style.maxHeight = elem.scrollHeight + "px";
+	// 		// 	  } else {
 
-	// 		  }
-	// 		  })
-
-
+	// 		//   }
+	// 		//   })
+	// 		// let pa = this.nextElementSibling;
+	// 		// console.log(index);
+	// 		// console.log(pa);
 	// 	})
 	// });
 
-	  document.getElementById("defaultOpen").click();
+	if (document.getElementById("defaultOpen")) {
+		document.getElementById("defaultOpen").click();
+	}
 
-	  	
+
 	 // открытие блока читтать полностью 
-
 
 	  let btn = document.querySelector('.capability__btn');
 	  let content = document.querySelector('.capability__info');
 
 
-	  btn.addEventListener('click', () => {
-		  console.log(btn.innerHTML);
-		if (btn.innerHTML == "Читать полностью") {
-			btn.innerHTML = "Скрыть";
-		} else {
-			btn.innerHTML = "Читать полностью";
-		}
-		content.classList.toggle('active');
-	  })
+
+	  if (content) {
+		btn.addEventListener('click', () => {
+			console.log(btn.innerHTML);
+		  if (btn.innerHTML == "Читать полностью") {
+			  btn.innerHTML = "Скрыть";
+		  } else {
+			  btn.innerHTML = "Читать полностью";
+		  }
+		  content.classList.toggle('active');
+		})
+	  }
 
 
 
@@ -203,21 +269,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	  // плавный переход к ссылкам
 
-		$(document).ready(function(){
-			$("#navigation").on("click","a", function (event) {
-				event.preventDefault();
-				var id  = $(this).attr('href'),
-					top = $(id).offset().top;
-				$('body,html').animate({scrollTop: top}, 100);
-			});
-		});
+		document.querySelectorAll('a[href^="#"]').forEach(link => {
 
-		$(document).ready(function(){
-			$("#links").on("click","a", function (event) {
-				event.preventDefault();
-				var id  = $(this).attr('href'),
-					top = $(id).offset().top;
-				$('body,html').animate({scrollTop: top}, 100);
+			link.addEventListener('click', function(e) {
+				e.preventDefault();
+
+				let href = this.getAttribute('href').substring(1);
+
+				const scrollTarget = document.getElementById(href);
+
+				let topOffset;
+				// const topOffset = 0; // если не нужен отступ сверху
+
+				if (document.querySelector('.sailing')) {
+					topOffset = document.querySelector('.sailing').offsetHeight;
+				} else {
+					topOffset = 0; // если не нужен отступ сверху
+				}
+				const elementPosition = scrollTarget.getBoundingClientRect().top;
+				const offsetPosition = elementPosition - topOffset;
+
+				window.scrollBy({
+					top: offsetPosition,
+					behavior: 'smooth'
+				});
 			});
 		});
 
@@ -257,26 +332,27 @@ document.addEventListener('DOMContentLoaded', () => {
 	  *  Calculation form behavior
 	  */
 	 let calcBtn = document.querySelector('.calculator__form .calculator_btn_next');
-	 calcBtn.addEventListener('click', (event) => {
+
+	 if (calcBtn) {
+		calcBtn.addEventListener('click', (event) => {
  
-		 let fields = [].slice.call(document.querySelectorAll('.calculator__form-visible input, select'));
-		 let isAllValid = true;
- 
-		 fields.map(function (filedElement) {
-			 console.log(filedElement.validity.valid);
-			 if (!filedElement.validity.valid)
-				 isAllValid = false;
-		 })
- 
-		 if (isAllValid) {
-			 event.preventDefault();
-			 let hiddenBlock = document.querySelector('.calculator__form .calculator__form-hidden');
-			 hiddenBlock.classList.add('show');
-		 }
- 
- 
- 
-	 });
+			let fields = [].slice.call(document.querySelectorAll('.calculator__form-visible input, select'));
+			let isAllValid = true;
+
+			fields.map(function (filedElement) {
+				console.log(filedElement.validity.valid);
+				if (!filedElement.validity.valid)
+					isAllValid = false;
+			})
+
+			if (isAllValid) {
+				event.preventDefault();
+				let hiddenBlock = document.querySelector('.calculator__form .calculator__form-hidden');
+				hiddenBlock.classList.add('show');
+			}
+
+		});
+	 }
 
 
 
@@ -303,7 +379,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	  }
 
 
-	
+
 
 	function openQuis () {
 		if ($('.quiz').length) {
@@ -343,7 +419,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		const currentStepIndex = $('.quiz-step_active').attr('data-step')
 		const currentStep = $('.quiz-step_active')
 
-		
+
 		if ($('.quiz-step').length === parseInt(currentStepIndex) + 1) {
 		} else {
 			addResult(currentStep)
@@ -371,14 +447,13 @@ document.addEventListener('DOMContentLoaded', () => {
 			rangeInput.each(function (index, el) {
 				answers.push(el.value);
 			})
-		} 
+		}
 
 		let vals = ''
 		answers.forEach(function(el) {
 			vals += `<span class="quiz-results-item-res__val">${el}</span>`
 		})
-		console.log(vals);
-		const template = 
+		const template =
 			`<div class="quiz-results-item">
 				<span class="quiz-results-item__title">${title}</span>
 				<div class="quiz-results-item-res">
@@ -464,7 +539,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		e.stopPropagation()
 	})
 	$(document).on('click', '.interview__close', function() {
-		closeInterview()	
+		closeInterview()
 	})
 
 
@@ -507,10 +582,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		e.stopPropagation()
 	})
 	$(document).on('click', '.sertificate-modal__close', function() {
-		closeSertificate()	
+		closeSertificate()
 	})
 
-	
+
 	$(document).on('click', '.sertificate-modal-arrow_prev', function() {
 		const length = $('.certificate__slide:not(.swiper-slide-duplicate)').length
 		currentIndex--;

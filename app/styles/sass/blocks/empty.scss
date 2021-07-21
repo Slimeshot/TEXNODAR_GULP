@@ -1,0 +1,24 @@
+.empty {
+    position: relative;
+    background-color: #FAF9F5;
+    .proposal {
+
+        margin: 0 auto;
+        width: 97%;
+        border-radius: 32px 8px;
+        background-color: #fff;
+        bottom: 100px;
+        position: relative;
+        z-index: 100;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .empty {
+        .proposal {
+            width: 100%;
+            bottom: 0;
+        }
+    }
+}

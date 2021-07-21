@@ -19,36 +19,75 @@
 	<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
 </head>
 
-	<header class="header">
-		<div class="container">
-			<div class="header__content">
-				<a href="index.html" class="header__logo">
-					<img src="images/dist/Logo.png" alt="logo">
-				</a>
-				<nav class="navigation header__navigation">
-					<ul class="navigation__menu">
-						<li class="navigation__list"><a href="flot.html" class="navigation__link">Флот</a></li>
-						<li class="navigation__list"><a href="#" class="navigation__link">Автотранспорт</a></li>
-						<li class="navigation__list"><a href="#" class="navigation__link">Буровые установки</a></li>
-						<li class="navigation__list"><a href="#" class="navigation__link">Ж/Д транспорт</a></li>
-						<li class="navigation__list"><a href="#" class="navigation__link">Статьи</a></li>
-						<li class="navigation__list"><a href="#" class="navigation__link">О нас</a></li>
-						<li class="navigation__list"><a href="contacts.html" class="navigation__link">Контакты</a></li>
-					</ul>
-				</nav>
-				<div class="header__contacts">
-					<span class="header__phone">8 (800) 250-00-16</span>
-					<a href="#" class="btn header__btn">Заказать звонок</a>
-				</div>
-				<div class="header__btn-menu">
-					<div class="header__burger">
-						<img src="images/dist/burger.svg" alt="menu">
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
-
 
 
 <body>
+	
+		<header class="header">
+			<div class="container">
+				<div class="header__content">
+					<a href="index.html" class="header__logo">
+						<img src="images/dist/Logo.png" alt="logo">
+					</a>
+					<div class="header__info">
+						<nav class="navigation header__navigation">
+							<ul class="navigation__menu">
+								<li class="navigation__list"><a href="flot.html" class="navigation__link">Флот</a></li>
+								<li class="navigation__list"><a href="auto.html" class="navigation__link">Автотранспорт</a></li>
+								<li class="navigation__list"><a href="bur.html" class="navigation__link">Буровые установки</a></li>
+								<li class="navigation__list"><a href="train.html" class="navigation__link">Ж/Д транспорт</a></li>
+								<!-- <li class="navigation__list"><a href="paper.html" class="navigation__link">Статьи</a></li> -->
+								<li class="navigation__list"><a href="index.html" class="navigation__link">О нас</a></li>
+								<li class="navigation__list"><a href="contacts.html" class="navigation__link">Контакты</a></li>
+							</ul>
+						</nav>
+						<div class="header__block">
+							<div class="header__links">
+								<a href="tel:8800250016" class="header__phones">8 (800) 250-00-16</a>
+								<a href="mailto:skrt_biz@mail.ru" class="header__mail">skrt_biz@mail.ru</a>
+							</div>
+							<div class="header__social">
+								<a href="https://www.facebook.com/gktehnodar" class="header__social-link">
+									<img src="images/dist/Icon/facebook.svg" alt="facebook">
+								</a>
+								<a href="#" class="header__social-link">
+									<img src="images/dist/Icon/youtube.svg" alt="youtube">
+								</a>
+								<a href="https://vk.com/gktehnodar" class="header__social-link">
+									<img src="images/dist/Icon/vk.svg" alt="vk">
+								</a>
+								<a href="https://www.instagram.com/gktehnodar/" class="header__social-link">
+									<img src="images/dist/Icon/insta.svg" alt="instagram">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="header__contacts">
+						<a href="tel:8800250016" class="header__phone">8 (800) 250-00-16</a>
+						<a href="#" class="btn header__btn">Заказать звонок</a>
+					</div>
+					<div class="header__btn-menu">
+						<div class="header__burger">
+	
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+
+
+		<section class="call">
+			<div class="call__title">Заказать звонок</div>
+			<div class="call__subtitle">Перезвоним в указанное время</div>
+
+			<form class="call__form">
+				<input class="call__name" name="name" type="text" placeholder="Имя"> 
+				<input class="call__phone" name="phone" type="text" placeholder="Телефон"> 
+				<input type="submit" value="Оставить заявку" class="btn call__btn">
+				
+			</form>
+			<button class="btn call__cross">
+				<img src="../images/dist/cross.svg" alt="cross">
+			</button>
+		</section>
