@@ -1,22 +1,73 @@
 .flot {
-    .intro {
-        background-image: url(../images/dist/intro__bg.jpg);
-    }
+    // .intro {
+    //     min-height: 650px;
+    //     height: 100vh;
+    //     position: relative;
+    // }
+    // .intro__media {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     overflow: hidden;
+    //     z-index: -10;
+    //     video {
+    //         position: absolute;
+    //         top: 50%;
+    //         left: 50%;
+    //         min-width: 100%;
+    //         min-height: 100%;
+    //         object-fit: cover;
+    //         transform: translate(-50%, -50%);
+    //     }
+    // }
+    // .intro__content {
+    //     z-index: 1000;
+    // }
+
 }
 .train {
     .intro {
-        background-image: url(../images/dist/intro__bg-train.jpg);
+        // background-image: url(../images/dist/intro__bg-train.jpg);
     }
 }
 .auto {
     .intro {
-        background-image: url(../images/dist/intro__bg-auto.jpg);
+        // background-image: url(../images/dist/intro__bg-auto.jpg);
     }
 }
 .bur {
     .intro {
-        background-image: url(../images/dist/intro__bg-bur.jpg);
+        // background-image: url(../images/dist/intro__bg-bur.jpg);
     }
+}
+
+.intro {
+    min-height: 650px;
+    height: 100vh;
+    position: relative;
+}
+.intro__media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -10;
+    video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+    }
+}
+.intro__content {
+    z-index: 1000;
 }
 
 
@@ -26,6 +77,8 @@
     background-position: center;
     width: 100%;
     height: 100vh;
+    min-height: 650px;
+    position: relative;
 }
 
 
@@ -34,6 +87,7 @@
     padding-top: 72px;
     display: flex;
     height: 100vh;
+    min-height: 650px;
     width: 100%;
     flex-direction: column;
     justify-content: space-between;
@@ -157,6 +211,7 @@
 }
 
 .intro__swiper {
+    z-index: -1;
     width: 350px;
     height: 120px;
     background: rgba(255, 255, 255, 0.15);

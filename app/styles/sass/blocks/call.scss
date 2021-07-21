@@ -77,3 +77,18 @@
     left: 32px;
 }
 
+.call__agree {
+    position: absolute;
+    left: 32px;
+    bottom: 32px;
+    font-family: 'IBM', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: #B1B1B1;
+    span {
+        color: $accent;
+    }
+}
