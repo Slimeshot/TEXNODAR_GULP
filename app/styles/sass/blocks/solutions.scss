@@ -88,6 +88,7 @@
         width: 100%;
         max-width: 100%;
         height: auto;
+        border-radius: 32px 8px;
 
         @include media-breakpoint-down(lg) {
             margin-bottom: 32px;

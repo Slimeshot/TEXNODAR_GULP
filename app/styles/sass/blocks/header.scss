@@ -18,14 +18,9 @@
         width: 170px;
     }
 }
-.header__info {
-    flex-grow: 6;
 
-}
-.header__block {
-    display: none;
-}
 .header__navigation {
+    flex-grow: 6;
 }
 .header__contacts {
     flex-grow: 1;
@@ -46,8 +41,13 @@
     padding: 12px 24px;
     border: 1px solid #9FCCCB;
     border-radius: 24px 8px;
+    transition: .3s ease;
     &:hover {
         background-color: #5FAAA8;
+        color: #fff;
+    }
+    &:active {
+        background-color: #4C8886;
         color: #fff;
     }
 }
@@ -61,7 +61,7 @@
     .header {
         border-bottom: 1px solid #E5E5E5;
     }
-    .header__info {
+    .header__navigation {
         position: absolute;
         width: 100%;
         height: 100vh;
@@ -69,29 +69,29 @@
         top: 72px;
         right: -1500px;
         background-color: #FFFFFF;
-        transition: .3s ease-in-out;
+        transition: .3s ease;
         opacity: 0;
         z-index: 100;
         overflow: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         flex-grow: 100;
         .navigation__menu {
+            height: 100%;
             flex-direction: column;
             align-items: center;
+            justify-content: space-evenly;
+            padding-bottom: 72px;
+            
         }
         .navigation__list {
             margin: 0;
+            &:last-child {
+                display: block;
+            }
         }
     }
-    .header__info.active {
+    .header__navigation.active {
         right: 0px;
         opacity: 1;
-    }
-    .header__navigation {
-        width: 100%;
     }
     .header__contacts {
         justify-content: flex-end;
@@ -109,23 +109,16 @@
         width: 24px;
         height: 24px;
         display: block;
-        transition: all .1s ease-in-out;
+        transition: all .1s ease;
         background-image: url(../images/dist/burger.svg);
         z-index: 11;
     }
     .header__burger.active {
         background-image: url(../images/dist/cross.svg);
     }
-    .header__block {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
 
-    }
     .header__links {
-        margin-top: 40px;
         margin-bottom: 16px;
-    
         a { 
             margin: 0 16px;
             font-family: 'IBM', sans-serif;
@@ -143,6 +136,7 @@
         width: 180px;
         justify-content: space-between;
         display: flex;
+        margin: 0 auto;
     }
     .header__social-link {
         display: flex;
@@ -183,8 +177,6 @@
         display: none;
     }
     .header__links {
-        margin-top: 32px;
-        margin-bottom: 16px;
         display: flex;
         flex-direction: column;
         a {

@@ -48,10 +48,7 @@
     border-radius: 50px;
     border: 1px solid #E5E5E5;
     cursor: pointer;
-    transition: transform .3s ease-in-out;
-    &:hover {
-        transform: scale(1.1);
-    }
+
 }
 .project__btn-prev {
     background-image: url(../images/dist/Icon/arrow-left-black.svg);
@@ -94,7 +91,7 @@
     font-family: 'Normalidad', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 3.2em;
+    font-size: 2.4em;
     line-height: 1em;
     letter-spacing: -0.02em;
     text-transform: uppercase;
@@ -112,7 +109,6 @@
     font-size: 1.6em;
     line-height: 1em;
     letter-spacing: -0.02em;
-    text-transform: uppercase;
     color: #000000;
     margin-bottom: 16px;
 }
@@ -215,6 +211,7 @@
         position: relative;
     }
     .project__slider-panel {
+        top: -10px;
         right: 0px;
         z-index: 9;
         position: absolute;
@@ -322,6 +319,7 @@
     .project__block {
     }
     .project__slider-panel {
+        top: 0;
         align-items: flex-end;
     }
     .project__controls {

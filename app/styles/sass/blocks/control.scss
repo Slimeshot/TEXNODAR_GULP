@@ -1,5 +1,5 @@
 .control {
-    padding: 120px 0 0 0;
+    padding: 64px 0 0 0;
     &__content {
         width: 100%;
         display: flex;
@@ -51,7 +51,7 @@
 
 @media (max-width: 1024px) {
     .control {
-        padding: 94px 0 0 0;
+        padding: 48px 0 0 0;
         &__content {
             flex-direction: column;
         }
@@ -75,7 +75,7 @@
 
 @media (max-width: 540px) {
     .control {
-        padding: 64px 0 32px 0;
+        padding: 32px 0 32px 0;
         &__title {
             margin-bottom: 16px;
         }

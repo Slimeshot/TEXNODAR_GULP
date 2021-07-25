@@ -34,6 +34,7 @@
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
+    margin-left: 50px;
     
 }
 .method__title-top{
@@ -89,14 +90,15 @@
     justify-content: flex-end;
     flex-direction: column;
     position: relative;
+    min-width: 150px;
     &:nth-child(1) {
-        margin-left: 50px;
+        // margin-left: 50px;
     }
     &:nth-child(2) {
-        margin-left: -30px;
+        // margin-left: -30px;
     }
     &:nth-child(3) {
-        margin-left: -70px;
+        // margin-left: -70px;
     }
     &::before {
         position: absolute;
@@ -121,7 +123,12 @@
 
 
 @media (max-width: 768px) {
+    .method__block-2 {
+        margin-left: 0px;
+        
+    }
     .method__label {
+        margin-top: 8px;
         margin-left: 0px;
 
     }

@@ -162,9 +162,14 @@
             align-items: center;
         }
     }
+    .system__subtitle {
+        padding-right: 10px;
+    }
     .system__info {
         width: 100%;
         margin-bottom: 32px;
+        padding-bottom: 32px;
+        border-bottom: 1px solid #E5E5E5;
     }
     .system__subtitle {
         margin: 0;
@@ -172,6 +177,10 @@
 }
 
 @media (max-width: 540px) {
+    .system__info {
+        padding-bottom: 0;
+        border: none;
+    }
     .system {
         padding: 24px 0;
     }

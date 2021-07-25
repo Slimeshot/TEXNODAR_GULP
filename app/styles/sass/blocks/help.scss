@@ -90,17 +90,17 @@
     &:nth-child(1) {
         border: none;
         &::before {
-            background-image: url(../images/dist/accordion__icon-1.jpg);
+            background-image: url(../images/dist/flot/accordion__icon-1.png);
         }
     }
     &:nth-child(3) {
         &::before {
-            background-image: url(../images/dist/accordion__icon-2.jpg);
+            background-image: url(../images/dist/flot/accordion__icon-2.png);
         }
     }
     &:nth-child(5) {
         &::before {
-            background-image: url(../images/dist/accordion__icon-3.jpg);
+            background-image: url(../images/dist/flot/accordion__icon-3.png);
         }
     }
 
@@ -128,7 +128,7 @@
 
 .help__menu {
     padding-left: 60px;
-    margin-bottom: 32px;
+    padding-bottom: 32px;
 }
 .help__list {
     font-family: 'IBM';
@@ -139,6 +139,9 @@
     letter-spacing: 0.01em;
     color: #7D7D7D;
     margin-bottom: 16px;
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .help__bottom {
@@ -167,7 +170,7 @@
     }
     .help__accordion {
         font-size: 24px;
-        line-height: 24px;
+        line-height: 28px;
     }
     .help__bottom {
         margin-top: 32px;
@@ -184,15 +187,17 @@
     .help__left {
         margin-bottom: 32px;
     }
+    .help__list {
+        margin-bottom: 12px;
+        font-size: 14px;
+    }
+    .help__menu {
+        padding-bottom: 24px;
 }
 
 
 
 @media (max-width: 768px) { 
-    .help__accordion {
-        font-size: 18px;
-        line-height: 18px;
-    }
     .help__left {
         padding: 0;
         
@@ -243,5 +248,53 @@
         padding: 28px 62px;
         font-size: 14px;
         line-height: 16px;
+    }
+}
+}
+
+
+
+
+.bur {
+    .help__accordion {
+        &:nth-child(1) {
+        border: none;
+        &::before {
+            background-image: url(../images/dist/bur/accordion__icon-1.png);
+        }
+        }
+        &:nth-child(3) {
+            &::before {
+                background-image: url(../images/dist/bur/accordion__icon-2.png);
+            }
+        }
+        &:nth-child(5) {
+            &::before {
+                background-image: url(../images/dist/bur/accordion__icon-3.png);
+            }
+        }
+    
+    }
+}
+
+.train {
+    .help__accordion {
+        &:nth-child(1) {
+        border: none;
+        &::before {
+            background-image: url(../images/dist/bur/accordion__icon-1.png);
+        }
+        }
+        &:nth-child(3) {
+            &::before {
+                background-image: url(../images/dist/bur/accordion__icon-2.png);
+            }
+        }
+        &:nth-child(5) {
+            &::before {
+                background-image: url(../images/dist/train/accordion__icon-3.png);
+            }
+        }
+    
     }
 }

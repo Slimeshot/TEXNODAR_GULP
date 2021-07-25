@@ -14,9 +14,10 @@
     }
     &__item {
         border-radius: 8px;
-        background-color: #DFEEEE;
+        background-color: #EFF6F6;
         position: relative;
         &::after {
+            transition: all .3s ease;
             top: 28px;
             right: 32px;
             display: block;
@@ -27,6 +28,10 @@
             background-size: cover;
             width: 24px;
             height: 24px;
+        }
+        &:hover {
+            background-color: #DFEEEE;
+            cursor: url(../../../images/dist/cursor.png), pointer;
         }
         img {
             width: 100%;
@@ -103,6 +108,7 @@
 
 @media (max-width: 1024px) {
     .way {
+        padding-bottom: 48px;
         &__item-title {
             top: 24px;
             left: 24px;
@@ -150,6 +156,7 @@
 
 @media (max-width: 650px) {
     .way {
+        padding-bottom: 32px;
         &__block {
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;

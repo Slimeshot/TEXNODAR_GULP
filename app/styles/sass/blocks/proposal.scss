@@ -110,6 +110,9 @@
         width: 70%;
         min-width: 500px;
     }
+    br {
+        display: none;
+    }
 }
 
 @media (max-width: 670px) {
@@ -164,5 +167,8 @@
     .proposal__menu {
         width: 100%;
         min-width: auto;
+    }
+    br {
+        display: block;
     }
 }

@@ -16,39 +16,23 @@
 }
 .command__block {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    border-bottom: 1px solid #E5E5E5;
-    margin-bottom: 32px;
 }
 .command__item {
     width: 24%;
-    &:nth-child(1) {
-        .command__name {
-            &:before {
-                content: "Алексей Викторович Якушев";
-            }
-        }
+    margin-bottom: 48px;
+    &:nth-child(7) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: 1px dashed #E5E5E5;
+        border-radius: 8px;
+        padding: 32px;
     }
-    &:nth-child(2) {
-        .command__name {
-            &:before {
-                content: "Георгий Михайлович Герасимов";
-            }
-        }
-    }
-    &:nth-child(3) {
-        .command__name {
-            &:before {
-                content: "Александр Юрьевич Спиридонов";
-            }
-        }
-    }
-    &:nth-child(4) {
-        .command__name {
-            &:before {
-                content: "Анна Геннадьевна Кялина";
-            }
-        }
+    &:last-child {
+        visibility: hidden;
     }
 }
 .command__img {
@@ -65,7 +49,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 32px;
 
 }
 .command__name {
@@ -77,6 +60,7 @@
     letter-spacing: 0.01em;
     color: #000000;
     margin-bottom: 8px;
+    text-align: center;
     &:before {
         display: block;
         text-align: center;
@@ -90,7 +74,9 @@
     line-height: 16px;
     letter-spacing: 0.01em;
     color: #7D7D7D;
+    text-align: center;
 }
+
 .command__yet {
     font-family: 'IBM', sans-serif;
     font-style: normal;
@@ -99,42 +85,31 @@
     line-height: 16px;
     letter-spacing: 0.01em;
     color: #7D7D7D;
+    text-align: center;
+    margin-top: 16px;
 
 }
 
-
-@media (max-width: 1150px)  {
-    .command__item {
-        &:nth-child(1) {
-            .command__name {
-                &:before {
-                    content: "Якушев А.В.";
-                }
-            }
-        }
-        &:nth-child(2) {
-            .command__name {
-                &:before {
-                    content: "Герасимов Г.М.";
-                }
-            }
-        }
-        &:nth-child(3) {
-            .command__name {
-                &:before {
-                    content: "Спиридонов А.Ю.";
-                }
-            }
-        }
-        &:nth-child(4) {
-            .command__name {
-                &:before {
-                    content: "Кялина А.Г.";
-                }
-            }
-        }
-    }
+.command__num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $accent;
+    color: #fff;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    font-family: 'IBM', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
 }
+
+
+
+
 
 
 @media (max-width: 768px) {
@@ -143,76 +118,17 @@
     }
     .command__item {
         width: 49%;
-        margin-bottom: 16px;
     }
     .command {
         padding: 94px 0;
     }
-    .command__item {
-        &:nth-child(1) {
-            .command__name {
-                &:before {
-                    content: "Алексей Викторович Якушев";
-                }
-            }
-        }
-        &:nth-child(2) {
-            .command__name {
-                &:before {
-                    content: "Георгий Михайлович Герасимов";
-                }
-            }
-        }
-        &:nth-child(3) {
-            .command__name {
-                &:before {
-                    content: "Александр Юрьевич Спиридонов";
-                }
-            }
-        }
-        &:nth-child(4) {
-            .command__name {
-                &:before {
-                    content: "Анна Геннадьевна Кялина";
-                }
-            }
-        }
-}
-
-
-
-@media (max-width: 570px) {
-    .command__item {
-        &:nth-child(1) {
-            .command__name {
-                &:before {
-                    content: "Якушев А.В.";
-                }
-            }
-        }
-        &:nth-child(2) {
-            .command__name {
-                &:before {
-                    content: "Герасимов Г.М.";
-                }
-            }
-        }
-        &:nth-child(3) {
-            .command__name {
-                &:before {
-                    content: "Спиридонов А.Ю.";
-                }
-            }
-        }
-        &:nth-child(4) {
-            .command__name {
-                &:before {
-                    content: "Кялина А.Г.";
-                }
-            }
-        }
+    .command__img {
+        margin-bottom: 16px;
     }
 }
+
+
+
 
 
 
@@ -220,5 +136,11 @@
     .command {
         padding: 64px 0;
     }
-}
+    .command__img {
+        margin-bottom: 8px;
+    }
+    .command__item {
+        
+        margin-bottom: 32px;
+    }
 }

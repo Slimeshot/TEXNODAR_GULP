@@ -80,6 +80,14 @@
     padding: 12px 24px;
     border: 1px solid #E2E2E2;
     border-radius: 8px;
+    transition: .3s ease;
+    &:hover {
+        border: 1px solid #CBCBCB;
+        color: $accent;
+    }
+    &:active {
+        border: 1px solid #F05A46;
+    }
 }
 
 .capability__info.active {

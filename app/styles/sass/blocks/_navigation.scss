@@ -5,6 +5,9 @@
 }
 .navigation__list {
     margin-right: 24px;
+    &:last-child {
+        display: none;
+    }
 }
 .navigation__link {
     font-family: 'IBM', sans-serif;
@@ -15,21 +18,16 @@
     letter-spacing: 0.01em;
     color: #7D7D7D;
     text-decoration: none;
+    &:hover {
+        cursor: url(../../../images/dist/cursor.png), pointer;
+    }
 }
 
 
 @media (max-width: 1240px) {
-    .navigation__menu {
-        margin-top: -64px;
-        width: 100%;
-        border-bottom: 1px solid #E5E5E5;
-    }
-    .navigation__list {
-    }
     .navigation__link  {
         display: block;
         text-align: center;
-        margin-bottom: 40px;
         font-family: 'Normalidad', sans-serif;
         font-size: 24px;
         line-height: 24px;
@@ -37,16 +35,16 @@
         text-transform: uppercase;
         color: #000000;
     }
+    .navigation__list  {
+        font-size: 20px;
+        line-height: 20px;
+    }
 }
 
 
 
 @media (max-width: 540px) {
-    .navigation__menu {
-        margin-top: 32px;
-    }
     .navigation__link  {
-        margin-bottom: 32px;
         font-size: 20px;
         line-height: 20px;
     }

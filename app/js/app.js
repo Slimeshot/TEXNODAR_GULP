@@ -42,7 +42,6 @@ function unCompensateBody(){
 
 document.addEventListener('DOMContentLoaded', () => {
 	//! MOBILE FIX 100VH
-
 	let vh = window.innerHeight * 0.01;
 	document.documentElement.style.setProperty('--vh', `${vh}px`);
 	window.addEventListener('resize', () => {
@@ -51,6 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	//! MOBILE FIX 100VH END
+
+	const titleSwiper = new Swiper('.swiper__title', {
+		loop: true,
+		spaceBetween: 32,
+
+	  });
+	
 
 	const introSwiper = new Swiper('.intro__swiper', {
 		loop: true,
@@ -141,13 +147,20 @@ document.addEventListener('DOMContentLoaded', () => {
 	  });
 
 
+	  titleSwiper.controller.control = interfaceSwiper
+	  interfaceSwiper.controller.control = titleSwiper
 
 
+		//mask phone 
 
-		  //open/close burger-menu
+		$(".form__phone").mask("+7(999) 999-9999");
+		$(".call__phone").mask("+7(999) 999-9999");
+
+
+		//open/close burger-menu
 
 	  const headerBurger = document.querySelector('.header__burger');
-	  const headerInfo = document.querySelector('.header__info');
+	  const headerInfo = document.querySelector('.header__navigation');
 
 
 	  headerBurger.addEventListener('click', () => {
@@ -186,28 +199,69 @@ document.addEventListener('DOMContentLoaded', () => {
 	  //close/open call
 
 	  const headerBtn = document.querySelector('.header__btn');
+	  const proemBtn = document.querySelector('.proem__btn');
+	  const branchBtn = document.querySelectorAll('.branch__btn');
 	  const callCross = document.querySelector('.call__cross');
 	  const sailingBtn = document.querySelectorAll('.sailing__btn-call');
 	  const callBlock = document.querySelector('.call');
+	  const callBg = document.querySelector('.call__bg');
 
+	  //закрытие бургер и открытие кол
 	  headerBtn.addEventListener('click', () => {
-		document.body.classList.remove('active')
+		document.body.classList.add('active');
 		headerBurger.classList.remove('active');
 		headerInfo.classList.remove('active');
 		callBlock.classList.add('active');
+		callBg.classList.add('active');
+		
 
 	  })
-
+	  //закрытие кол
 	  callCross.addEventListener('click', () => {
 		callBlock.classList.remove('active');
+		callBg.classList.remove('active');
+		document.body.classList.remove('active')
+	  })
+	  //закртыие кал по клику на фон
+	  callBg.addEventListener('click', () => {
+		callBlock.classList.remove('active');
+		callBg.classList.remove('active');
+		if (calcBlock) {
+			calcBlock.classList.remove('active');
+		}
+		document.body.classList.remove('active')
 	  })
 
+	  //открытие кол по клику
+	  if (proemBtn) {
+		  proemBtn.addEventListener('click', () => {
+			callBlock.classList.add('active');
+			callBg.classList.add('active');
+			document.body.classList.add('active')
+		})
+
+	  }
+
+	  if (branchBtn) {
+		branchBtn.forEach(item => {
+			item.addEventListener('click', () => {
+			  callBlock.classList.add('active');
+			  callBg.classList.add('active');
+			  document.body.classList.add('active')
+			})
+		})
+	  }
+	  
+		  
+	  //закрытие навигации и открытие меню
 	  if (sailingBtn) {
 		  sailingBtn.forEach((item, index) => {
 			item.addEventListener('click', () => {
 				sailingBurger.classList.remove('active');
 				sailingMenu.classList.remove('active');
 				callBlock.classList.add('active');
+				callBg.classList.add('active');
+				document.body.classList.add('active')
 			  })
 		  })
 	  }
@@ -220,18 +274,106 @@ document.addEventListener('DOMContentLoaded', () => {
 	   const calcCross = document.querySelector('.calculator__cross');
 	   const calcBlock = document.querySelector('.calculator__finish');
 
-	//    calcBtnNext.addEventListener('click', () => {
-	// 	   console.log('sdsd');
-	// 	calcBlock.classList.add('active');
-	//    })
+	   
+	   if (calcBtnNext) {
+		   $('.calculator_btn_next').on('click', () => {
+			   var kindTransport = $('#shipSelect option:selected').html();
+			   var formCount = $('#formCount').val();
+			   var monthDelivery = $('#monthDelivery').val();
+			   var price = $('#price').val();
+				// console.log(typeof price);
+			   $('.calculator__view').text(kindTransport);
+			   $('.calculator__count').text(formCount);
+			   $('.calculator__delivery').text(monthDelivery);
+			   $('.calculator__price').text(price);
+			   $('.calculator__result').text(Math.floor(formCount * monthDelivery * price * (7.49/100)) + ' руб');
 
-	//    calcCross.addEventListener('click', () => {
-	// 	calcBlock.classList.remove('active');
-	//    })
+			//    if (formCount == "" || monthDelivery == "" || price == "") {
+			// 	   // $("#errorCalcMess").css('color', '#fff');
+			// 	   // $('#errorCalcMess').text('Заполните все поля!');
+			// 	   return false;
+			//    } 
+				calcBtnNext.addEventListener('click', () => {
+				callBg.classList.add('active')
+				calcBlock.classList.add('active');
+				})
+	
+				
+		   
+
+				// var color = $('#calc__color option:selected').text();
+				// var palitra = $('#calc__palitra option:selected').text();
+				// var cheked = '';
+				// if ($('#calc__express').is(':checked')){
+				// 	cheked = 'Нужна экспресс покраска!';
+				// } else {
+				// 	cheked = 'Не нужна экспресс покраска!'
+				// }
+				// var sum = $('.calc__price').text();
+				// $("#errorCalcMess").css('color', '#fff');
+				// $('#errorCalcMess').text('');
+			})
+			calcCross.addEventListener('click', () => {
+				calcBlock.classList.remove('active');
+				callBg.classList.remove('active')
+			})
+	   }
 
 
-
-
+	   $('#shipSelect').each(function() {
+		const _this = $(this),
+			selectOption = _this.find('option'),
+			selectOptionLength = selectOption.length,
+			selectedOption = selectOption.filter(':selected'),
+			duration = 450; // длительность анимации 
+	
+		_this.hide();
+		_this.wrap('<div class="select"></div>');
+		$('<div>', {
+			class: 'new-select',
+			text: _this.children('option:disabled').text()
+		}).insertAfter(_this);
+	
+		const selectHead = _this.next('.new-select');
+		$('<div>', {
+			class: 'new-select__list'
+		}).insertAfter(selectHead);
+	
+		const selectList = selectHead.next('.new-select__list');
+		for (let i = 1; i < selectOptionLength; i++) {
+			$('<div>', {
+				class: 'new-select__item',
+				html: $('<span>', {
+					text: selectOption.eq(i).text()
+				})
+			})
+			.attr('data-value', selectOption.eq(i).val())
+			.appendTo(selectList);
+		}
+	
+		const selectItem = selectList.find('.new-select__item');
+		selectList.slideUp(0);
+		selectHead.on('click', function() {
+			if ( !$(this).hasClass('on') ) {
+				$(this).addClass('on');
+				selectList.slideDown(duration);
+	
+				selectItem.on('click', function() {
+					let chooseItem = $(this).data('value');
+	
+					$('select').val(chooseItem).attr('selected', 'selected');
+					selectHead.text( $(this).find('span').text() );
+	
+					selectList.slideUp(duration);
+					selectHead.removeClass('on');
+				});
+	
+			} else {
+				$(this).removeClass('on');
+				selectList.slideUp(duration);
+			}
+		});
+	});
 
 
 
@@ -280,10 +422,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	 // открытие блока читтать полностью 
 
-	  let btn = document.querySelector('.capability__btn');
-	  let content = document.querySelector('.capability__info');
-
-
+		let btn = document.querySelector('.capability__btn');
+		let content = document.querySelector('.capability__info');
+		let capabylitiLink = document.getElementById('sailingLinkonCapability');
 
 	  if (content) {
 		btn.addEventListener('click', () => {
@@ -292,6 +433,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			  btn.innerHTML = "Скрыть";
 		  } else {
 			  btn.innerHTML = "Читать полностью";
+			  capabylitiLink.click();
 		  }
 		  content.classList.toggle('active');
 		})
@@ -395,12 +537,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	const footerLabel = document.querySelectorAll('.footer__label');
-
-	for (let j = 0; j < acc.length; j++) {
-		footerLabel[j].addEventListener("click", function() {
+	footerLabel.forEach(item => {
+		item.addEventListener("click", function() {
 		  this.classList.toggle("active");
 		  var footerMenu = this.nextElementSibling;
-		  console.log(footerMenu);
 		  if (footerMenu.style.maxHeight){
 			footerMenu.style.maxHeight = null;
 			footerMenu.style.paddingBottom = 0 + 'px';
@@ -410,233 +550,237 @@ document.addEventListener('DOMContentLoaded', () => {
 			footerMenu.style.maxHeight = footerMenu.scrollHeight + "px";
 		  }
 		});
-	  }
+
+	})
 
 
 
 
-	function openQuis () {
-		if ($('.quiz').length) {
-			$('.quiz').addClass('quiz_active')
-			compensateBody()
-			checkCurrentStep()
+
+	if (document.querySelector('.quiz')) {
+		function openQuis () {
+			if ($('.quiz').length) {
+				$('.quiz').addClass('quiz_active')
+				compensateBody()
+				checkCurrentStep()
+			}
 		}
-	}
-	function closeQuis () {
-		if ($('.quiz_active').length) {
-			$('.quiz_active').removeClass('quiz_active')
+		function closeQuis () {
+			if ($('.quiz_active').length) {
+				$('.quiz_active').removeClass('quiz_active')
+				setTimeout(function () {
+					unCompensateBody()
+				}, 500)
+			}
+		}
+	
+		$(document).on('click', '[data-quiz]', function() {
+			openQuis()
+		})
+		$(document).on('click', '[data-close-quiz]', function() {
+			closeQuis()
+		})
+	
+		$(document).on('click', '.quiz', function(){
+			closeQuis()
+		})
+		$(document).on('click', '.quiz-content', function (e) {
+			e.stopPropagation()
+		})
+	
+		$(document).on('click', '.quiz__next', function () {
+			nextStep()
+		})
+	
+		function nextStep() {
+			const currentStepIndex = $('.quiz-step_active').attr('data-step')
+			const currentStep = $('.quiz-step_active')
+	
+	
+			if ($('.quiz-step').length === parseInt(currentStepIndex) + 1) {
+			} else {
+				addResult(currentStep)
+				$('.quiz-step_active').removeClass('quiz-step_active')
+				$($('.quiz-step')[parseInt(currentStepIndex) + 1]).addClass('quiz-step_active')
+				if (parseInt(currentStepIndex) + 2 == $('.quiz-step').length) {
+					$('.quiz__next').html('Получить расчёт')
+				}
+				checkCurrentStep()
+			}
+		}
+	
+		function addResult(step) {
+	
+			const title = step.find('.quiz__title').html()
+			const checkedInputs = step.find('input[type="radio"]:checked, input[type="checkbox"]:checked')
+			let answers = []
+			if (checkedInputs.length) {
+				checkedInputs.each(function (index, el) {
+					answers.push(el.value);
+				})
+			}
+			const rangeInput = step.find('input[type="range"]')
+			if (rangeInput.length) {
+				rangeInput.each(function (index, el) {
+					answers.push(el.value);
+				})
+			}
+	
+			let vals = ''
+			answers.forEach(function(el) {
+				vals += `<span class="quiz-results-item-res__val">${el}</span>`
+			})
+			const template =
+				`<div class="quiz-results-item">
+					<span class="quiz-results-item__title">${title}</span>
+					<div class="quiz-results-item-res">
+						${vals}
+					</div>
+				</div>`
+			$('.quiz-results').append(template)
+			$('.quiz-results-item:not(.quiz-results-item_active)').css('height', `${$('.quiz-results-item:not(.quiz-results-item_active)')[0].scrollHeight}px`)
+			$('.quiz-results-item:not(.quiz-results-item_active)').addClass('quiz-results-item_active')
+			setTimeout(function () {
+				$('.quiz-results-item:not(.quiz-results-item_active)').css('height', `auto`)
+			}, 400)
+			$('.quiz-results').addClass('quiz-results_active')
+		}
+	
+		$(window).on('resize', function() {
+			checkCurrentStep()
+		})
+	
+		function checkCurrentStep () {
+			const currentStep = $('.quiz-step_active')
+			const inputs = currentStep.find('input[type="radio"], input[type="checkbox"]').length
+			const checkedInputs = currentStep.find('input[type="radio"]:checked, input[type="checkbox"]:checked').length
+			const btn = $('.quiz__next')
+	
+				const content = $('.quiz-content')[0]
+				if (content.clientHeight < content.scrollHeight) {
+					$('.quiz-bottom').addClass('quiz-bottom_sticky')
+				} else {
+					$('.quiz-bottom').removeClass('quiz-bottom_sticky')
+				}
+	
+			if (inputs) {
+				if (checkedInputs) {
+					btn.prop('disabled', false)
+				} else {
+					btn.prop('disabled', true)
+				}
+			} else {
+				btn.prop('disabled', false)
+			}
+		}
+	
+		$(document).on('input', '.quiz input[type="radio"], .quiz input[type="checkbox"]', function() {
+			checkCurrentStep()
+		})
+	
+		$(document).on('input', '.quiz input[type="range"]', function(e) {
+			const val = parseInt(e.target.value)
+			let string = ''
+			if (val % 10 === 1 && Math.round(val / 10) !== 1) {
+				string = 'единица'
+			} else if (val % 10 > 4 || val % 10 === 0 || (val > 4 && val < 21)) {
+				string = 'единиц'
+			} else if(val / 10 !== 1) {
+				string = 'единицы'
+			}
+			$('.quiz__rangeValue span:nth-child(1)').html(val)
+			$('.quiz__rangeValue span:nth-child(2)').html(string)
+		})
+	
+	
+		function openInterview (el) {
+			el.find('.interview').addClass('interview_active')
+			compensateBody()
+		}
+	
+		function closeInterview () {
+			$('.interview_active').removeClass('interview_active')
 			setTimeout(function () {
 				unCompensateBody()
 			}, 500)
 		}
-	}
-
-	$(document).on('click', '[data-quiz]', function() {
-		openQuis()
-	})
-	$(document).on('click', '[data-close-quiz]', function() {
-		closeQuis()
-	})
-
-	$(document).on('click', '.quiz', function(){
-		closeQuis()
-	})
-	$(document).on('click', '.quiz-content', function (e) {
-		e.stopPropagation()
-	})
-
-	$(document).on('click', '.quiz__next', function () {
-		nextStep()
-	})
-
-	function nextStep() {
-		const currentStepIndex = $('.quiz-step_active').attr('data-step')
-		const currentStep = $('.quiz-step_active')
-
-
-		if ($('.quiz-step').length === parseInt(currentStepIndex) + 1) {
-		} else {
-			addResult(currentStep)
-			$('.quiz-step_active').removeClass('quiz-step_active')
-			$($('.quiz-step')[parseInt(currentStepIndex) + 1]).addClass('quiz-step_active')
-			if (parseInt(currentStepIndex) + 2 == $('.quiz-step').length) {
-				$('.quiz__next').html('Получить расчёт')
-			}
-			checkCurrentStep()
-		}
-	}
-
-	function addResult(step) {
-
-		const title = step.find('.quiz__title').html()
-		const checkedInputs = step.find('input[type="radio"]:checked, input[type="checkbox"]:checked')
-		let answers = []
-		if (checkedInputs.length) {
-			checkedInputs.each(function (index, el) {
-				answers.push(el.value);
-			})
-		}
-		const rangeInput = step.find('input[type="range"]')
-		if (rangeInput.length) {
-			rangeInput.each(function (index, el) {
-				answers.push(el.value);
-			})
-		}
-
-		let vals = ''
-		answers.forEach(function(el) {
-			vals += `<span class="quiz-results-item-res__val">${el}</span>`
+	
+		$(document).on('click', '[data-interview]', function() {
+			openInterview($(this))
 		})
-		const template =
-			`<div class="quiz-results-item">
-				<span class="quiz-results-item__title">${title}</span>
-				<div class="quiz-results-item-res">
-					${vals}
-				</div>
-			</div>`
-		$('.quiz-results').append(template)
-		$('.quiz-results-item:not(.quiz-results-item_active)').css('height', `${$('.quiz-results-item:not(.quiz-results-item_active)')[0].scrollHeight}px`)
-		$('.quiz-results-item:not(.quiz-results-item_active)').addClass('quiz-results-item_active')
-		setTimeout(function () {
-			$('.quiz-results-item:not(.quiz-results-item_active)').css('height', `auto`)
-		}, 400)
-		$('.quiz-results').addClass('quiz-results_active')
-	}
-
-	$(window).on('resize', function() {
-		checkCurrentStep()
-	})
-
-	function checkCurrentStep () {
-		const currentStep = $('.quiz-step_active')
-		const inputs = currentStep.find('input[type="radio"], input[type="checkbox"]').length
-		const checkedInputs = currentStep.find('input[type="radio"]:checked, input[type="checkbox"]:checked').length
-		const btn = $('.quiz__next')
-
-			const content = $('.quiz-content')[0]
-			if (content.clientHeight < content.scrollHeight) {
-				$('.quiz-bottom').addClass('quiz-bottom_sticky')
-			} else {
-				$('.quiz-bottom').removeClass('quiz-bottom_sticky')
+		$(document).on('click', '.interview', function (e) {
+			e.stopPropagation()
+			closeInterview()
+		})
+		$(document).on('click', '.interview-content', function (e) {
+			e.stopPropagation()
+		})
+		$(document).on('click', '.interview__close', function() {
+			closeInterview()
+		})
+	
+	
+		let currentIndex = null
+	
+		function setSertificateModalData(el) {
+			const title = el.attr('data-title')
+			const image = el.attr('data-image')
+			const download = el.attr('data-download')
+	
+			const modal = $('.sertificate-modal')
+			modal.find('.sertificate-modal__title').html(title)
+			modal.find('.sertificate-modal-imgbox img').prop('src', image)
+			modal.find('.sertificate-modal__download').prop('href', download)
+		}
+	
+		function openSertificateModal (el) {
+			setSertificateModalData(el)
+			$('.sertificate-modal').addClass('sertificate-modal_active')
+			compensateBody()
+			currentIndex = el.attr('data-index')
+		}
+	
+		function closeSertificate () {
+			$('.sertificate-modal_active').removeClass('sertificate-modal_active')
+			setTimeout(function () {
+				unCompensateBody()
+			}, 500)
+			currentIndex = null
+		}
+	
+		$(document).on('click', '[data-sertificate]', function() {
+			openSertificateModal($(this))
+		})
+		$(document).on('click', '.sertificate-modal', function (e) {
+			e.stopPropagation()
+			closeSertificate()
+		})
+		$(document).on('click', '.sertificate-modal-content, .sertificate-modal-arrow', function (e) {
+			e.stopPropagation()
+		})
+		$(document).on('click', '.sertificate-modal__close', function() {
+			closeSertificate()
+		})
+	
+	
+		$(document).on('click', '.sertificate-modal-arrow_prev', function() {
+			const length = $('.certificate__slide:not(.swiper-slide-duplicate)').length
+			currentIndex--;
+			if (currentIndex == -1) {
+				currentIndex = length - 1
 			}
-
-		if (inputs) {
-			if (checkedInputs) {
-				btn.prop('disabled', false)
-			} else {
-				btn.prop('disabled', true)
+			setSertificateModalData($(`.certificate__slide:not(.swiper-slide-duplicate)[data-index="${currentIndex}"]`))
+		})
+	
+		$(document).on('click', '.sertificate-modal-arrow_next', function() {
+			const length = $('.certificate__slide:not(.swiper-slide-duplicate)').length
+			currentIndex++;
+			if (currentIndex == length) {
+				currentIndex = 0;
 			}
-		} else {
-			btn.prop('disabled', false)
-		}
+			setSertificateModalData($(`.certificate__slide:not(.swiper-slide-duplicate)[data-index="${currentIndex}"]`))
+		})
 	}
-
-	$(document).on('input', '.quiz input[type="radio"], .quiz input[type="checkbox"]', function() {
-		checkCurrentStep()
-	})
-
-	$(document).on('input', '.quiz input[type="range"]', function(e) {
-		const val = parseInt(e.target.value)
-		let string = ''
-		if (val % 10 === 1 && Math.round(val / 10) !== 1) {
-			string = 'единица'
-		} else if (val % 10 > 4 || val % 10 === 0 || (val > 4 && val < 21)) {
-			string = 'единиц'
-		} else if(val / 10 !== 1) {
-			string = 'единицы'
-		}
-		$('.quiz__rangeValue span:nth-child(1)').html(val)
-		$('.quiz__rangeValue span:nth-child(2)').html(string)
-	})
-
-
-	function openInterview (el) {
-		el.find('.interview').addClass('interview_active')
-		compensateBody()
-	}
-
-	function closeInterview () {
-		$('.interview_active').removeClass('interview_active')
-		setTimeout(function () {
-			unCompensateBody()
-		}, 500)
-	}
-
-	$(document).on('click', '[data-interview]', function() {
-		openInterview($(this))
-	})
-	$(document).on('click', '.interview', function (e) {
-		e.stopPropagation()
-		closeInterview()
-	})
-	$(document).on('click', '.interview-content', function (e) {
-		e.stopPropagation()
-	})
-	$(document).on('click', '.interview__close', function() {
-		closeInterview()
-	})
-
-
-	let currentIndex = null
-
-	function setSertificateModalData(el) {
-		const title = el.attr('data-title')
-		const image = el.attr('data-image')
-		const download = el.attr('data-download')
-
-		const modal = $('.sertificate-modal')
-		modal.find('.sertificate-modal__title').html(title)
-		modal.find('.sertificate-modal-imgbox img').prop('src', image)
-		modal.find('.sertificate-modal__download').prop('href', download)
-	}
-
-	function openSertificateModal (el) {
-		setSertificateModalData(el)
-		$('.sertificate-modal').addClass('sertificate-modal_active')
-		compensateBody()
-		currentIndex = el.attr('data-index')
-	}
-
-	function closeSertificate () {
-		$('.sertificate-modal_active').removeClass('sertificate-modal_active')
-		setTimeout(function () {
-			unCompensateBody()
-		}, 500)
-		currentIndex = null
-	}
-
-	$(document).on('click', '[data-sertificate]', function() {
-		openSertificateModal($(this))
-	})
-	$(document).on('click', '.sertificate-modal', function (e) {
-		e.stopPropagation()
-		closeSertificate()
-	})
-	$(document).on('click', '.sertificate-modal-content, .sertificate-modal-arrow', function (e) {
-		e.stopPropagation()
-	})
-	$(document).on('click', '.sertificate-modal__close', function() {
-		closeSertificate()
-	})
-
-
-	$(document).on('click', '.sertificate-modal-arrow_prev', function() {
-		const length = $('.certificate__slide:not(.swiper-slide-duplicate)').length
-		currentIndex--;
-		if (currentIndex == -1) {
-			currentIndex = length - 1
-		}
-		setSertificateModalData($(`.certificate__slide:not(.swiper-slide-duplicate)[data-index="${currentIndex}"]`))
-	})
-
-	$(document).on('click', '.sertificate-modal-arrow_next', function() {
-		const length = $('.certificate__slide:not(.swiper-slide-duplicate)').length
-		currentIndex++;
-		if (currentIndex == length) {
-			currentIndex = 0;
-		}
-		setSertificateModalData($(`.certificate__slide:not(.swiper-slide-duplicate)[data-index="${currentIndex}"]`))
-	})
 })
 
 

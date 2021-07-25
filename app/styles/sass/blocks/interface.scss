@@ -11,6 +11,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    padding-right: 16px;
 }
 .interface__tittle {
     font-family: 'Normalidad', sans-serif;
@@ -25,6 +26,10 @@
     position: absolute;
     top: 0;
 }
+.swiper__title {
+    width: 100%;
+    padding-top: 64px;
+}
 .interface__subtittle {
     font-family: 'IBM';
     font-style: normal;
@@ -32,28 +37,28 @@
     font-size: 14px;
     line-height: 24px;
     color: #7D7D7D;
-    max-width: 365px;
+    // max-width: 365px;
 }
 .interface__right {
     width: 70%;
-    padding-left: 32px;
-
+    
     img {
+        border-radius: 12px;
+        border: 6px solid #4B4B4B;
         width: 100%;
         height: auto;
         object-fit: cover;
-        border-radius: 8px;
     }
 }
 .interface__text {
-    display: inline-block;
-    font-family: 'IBM', sans-serif;
+    margin-top: 16px;
+    font-family: 'IBM';
     font-style: normal;
-    font-weight: 500;
+    font-weight: normal;
     font-size: 14px;
-    line-height: 16px;
-    color: #000000;
-    margin-bottom: 32px;
+    line-height: 24px;
+    color: #7D7D7D;
+    display: none;
 
 }
 
@@ -107,9 +112,14 @@
 
 
 
-
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .interface__text {
+        display: inline-block;
     
+    }
+    .swiper__title {
+        display: none;
+    }
     .interface {
         padding: 48px 0 96px 0px;
     }
@@ -118,25 +128,20 @@
     }
     .interface__left {
         width: 100%;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        margin-bottom: 16px;
+        padding-right: 0;
     }
     .interface__right {
         padding-left: 0px;
         width: 100%;
     }
-    .interface__left {
-        margin-bottom: 32px;
-    }
     .interface__tittle {
-        margin-bottom: 0;
-        margin-right: 32px;
+        margin-bottom: 8px;
         position: static;
     }
     .interface__slider-panel {
-        position: absolute;
-        bottom: 0;
-        left: 0;
+        align-self: flex-end;
     }
     .interface__btn {
         width: 40px;
@@ -167,15 +172,19 @@
     .interface__tittle {
         margin-bottom: 16px;
         margin-right: 0;
+        order: 1;
     }
     .interface__subtittle {
         max-width: 100%;
-        margin-bottom: 16px;
+    }
+    .swiper__title {
+        order: 3;
     }
     .interface__slider-panel {
         position: static;
         align-self: flex-end;
         display: flex;
+        order: 2;
     }
     .interface__controls {
         order: 2;

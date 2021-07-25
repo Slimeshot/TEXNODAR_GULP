@@ -1,15 +1,17 @@
 .empty {
-    position: relative;
     background-color: #FAF9F5;
-    .proposal {
-
-        margin: 0 auto;
-        width: 97%;
-        border-radius: 32px 8px;
-        background-color: #fff;
-        bottom: 100px;
+    .container {
         position: relative;
-        z-index: 100;
+        .proposal {
+            margin: 0 auto;
+            width: 98%;
+            border-radius: 32px 8px;
+            background-color: #fff;
+            bottom: 100px;
+            position: relative;
+            z-index: 100;
+        }
+
     }
 }
 
@@ -19,6 +21,7 @@
         .proposal {
             width: 100%;
             bottom: 0;
+            border-radius: 0px;
         }
     }
 }

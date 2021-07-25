@@ -28,6 +28,9 @@ body {
 }
 
 body.active {
+    max-height: 100vh;
+    max-height: -webkit-calc(var(--vh, 1vh) * 100);
+    max-height: calc(var(--vh, 1vh) * 100);
     overflow: hidden;
 }
 
