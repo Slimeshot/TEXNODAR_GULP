@@ -320,6 +320,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	   }
 
 
+	   
+	   // custom select
+
 	   $('#shipSelect').each(function() {
 		const _this = $(this),
 			selectOption = _this.find('option'),

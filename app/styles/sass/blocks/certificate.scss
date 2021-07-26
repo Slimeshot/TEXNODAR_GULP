@@ -194,7 +194,7 @@
     &-content {
     //   overflow: auto;
       max-height: calc(100vh - 48px);
-      overflow-y: scroll;
+    //   overflow-y: scroll;
       max-height: calc(100 * var(--vh) - 48px);
       background-color: #FFF;
       width: 59.6em;
@@ -240,8 +240,11 @@
     }
     &-imgbox {
         width: 100%;
+        overflow-y: scroll;
         img {
             width: 100%;
+            height: auto;
+            object-fit: cover;
             // max-height: 80vh;
         }
     }

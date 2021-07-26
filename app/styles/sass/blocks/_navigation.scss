@@ -5,6 +5,9 @@
 }
 .navigation__list {
     margin-right: 24px;
+    &:nth-child(7){
+        display: none;
+    }
     &:last-child {
         display: none;
     }
@@ -19,7 +22,7 @@
     color: #7D7D7D;
     text-decoration: none;
     &:hover {
-        cursor: url(../../../images/dist/cursor.png), pointer;
+        cursor: url(../images/dist/cursor.png), pointer;
     }
 }
 
@@ -38,6 +41,16 @@
     .navigation__list  {
         font-size: 20px;
         line-height: 20px;
+        &:nth-child(7){
+            display: block;
+            width: 100%;
+            padding: 0 32px;
+            .navigation__link {
+                height: 1px;
+                width: 100%;
+                background-color: #E5E5E5;
+            }
+        }
     }
 }
 
