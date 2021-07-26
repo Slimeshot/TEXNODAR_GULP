@@ -25,6 +25,9 @@
     margin-bottom: 32px;
     position: absolute;
     top: 0;
+    br {
+        display: none;
+    }
 }
 .swiper__title {
     width: 100%;
@@ -37,7 +40,9 @@
     font-size: 14px;
     line-height: 24px;
     color: #7D7D7D;
-    // max-width: 365px;
+    // max-width: 365px;\
+    display: flex;
+    align-items: flex-end;
 }
 .interface__right {
     width: 70%;
@@ -65,6 +70,7 @@
 .interface__slider-panel {
     display: flex;
     align-items: center;
+    margin-top: 8px;
 }
 .interface__pagination {
     font-family: 'Normalidad',sans-serif;
@@ -128,7 +134,9 @@
     }
     .interface__left {
         width: 100%;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         margin-bottom: 16px;
         padding-right: 0;
     }
@@ -137,11 +145,17 @@
         width: 100%;
     }
     .interface__tittle {
-        margin-bottom: 8px;
+        margin-bottom: 0px;
         position: static;
+        max-width: 250px;
     }
     .interface__slider-panel {
+        margin-top: 0px;
         align-self: flex-end;
+        
+    }
+    .swiper-pagination-fraction {
+        display: none;
     }
     .interface__btn {
         width: 40px;
@@ -156,37 +170,5 @@
 @media (max-width: 540px) {
     .interface {
         padding: 32px 0 64px 0px;
-    }
-
-    .interface__left {
-        width: 100%;
-        flex-direction: column;
-    }
-    .interface__right {
-        padding-left: 0px;
-        width: 100%;
-    }
-    .interface__left {
-        margin-bottom: 16px;
-    }
-    .interface__tittle {
-        margin-bottom: 16px;
-        margin-right: 0;
-        order: 1;
-    }
-    .interface__subtittle {
-        max-width: 100%;
-    }
-    .swiper__title {
-        order: 3;
-    }
-    .interface__slider-panel {
-        position: static;
-        align-self: flex-end;
-        display: flex;
-        order: 2;
-    }
-    .interface__controls {
-        order: 2;
     }
 }

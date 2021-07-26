@@ -20,9 +20,17 @@
     .media__link {
         width: 16%;
         img {
+            transition: opacity .3s ease;
             width: 80%;
             height: auto;
             object-fit: cover;
+            opacity: 0.18;
+        }
+        &:hover {
+            img {
+                cursor: url(../images/dist/cursor.png), pointer;
+                opacity: 1;
+            }
         }
     }
 }

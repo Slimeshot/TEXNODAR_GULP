@@ -70,6 +70,7 @@
     transition: border-color .3s;
     &:hover {
         border-color: #F05A46;
+        cursor: url(../images/dist/cursor.png), pointer;
         .certificate__slide-year {
             color: #F05A46;
         }
