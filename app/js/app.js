@@ -216,12 +216,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		
 
 	  })
+
 	  //закрытие кол
 	  callCross.addEventListener('click', () => {
 		callBlock.classList.remove('active');
 		callBg.classList.remove('active');
 		document.body.classList.remove('active')
 	  })
+
 	  //закртыие кал по клику на фон
 	  callBg.addEventListener('click', () => {
 		callBlock.classList.remove('active');
@@ -382,41 +384,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	  // аккордеон для блока help
 
-	  const acc = document.querySelectorAll(".help__accordion");
-	//   const panel = document.querySelectorAll('.help__panel')
+	const acc = document.querySelectorAll(".help__accordion");
 
-	  for (let i = 0; i < acc.length; i++) {
-		acc[i].addEventListener("click", function() {
-		  this.classList.toggle("active");
-		  let panel = this.nextElementSibling;
-		  if (panel.style.maxHeight){
-			panel.style.maxHeight = null;
-		  } else {
-			panel.style.maxHeight = panel.scrollHeight + "px";
-		  }
-		});
-	  }
+	acc.forEach(item => {
+		console.log('sdsd');
+		item.addEventListener('click', () => {
+			// console.log(item);
+			if (item.classList.contains('active')) {
+				return;
+			} else {
+				acc.forEach(el => {
+					el.classList.remove('active');
+					let info = el.nextElementSibling
+					info.style.maxHeight = null;
+				})
+				item.classList.toggle("active");
+				let panel = item.nextElementSibling;
+				if (panel.style.maxHeight){
+					panel.style.maxHeight = null;
+				} else {
+					panel.style.maxHeight = panel.scrollHeight + "px";
+				}
 
-
-	//   acc.forEach((item, index) => {
-	// 	item.addEventListener('click', () => {
-	// 		// console.log(index);
-	// 		// panel.forEach((elem, counter) => {
-	// 		// 	console.log(counter);
-	// 		// 	elem.style.maxHeight = null;
-	// 		// 	item.classList.remove('active')
-	// 		// 	if (index === counter) {
-	// 		// 		item.classList.add('active')
-	// 		// 		elem.style.maxHeight = elem.scrollHeight + "px";
-	// 		// 	  } else {
-
-	// 		//   }
-	// 		//   })
-	// 		// let pa = this.nextElementSibling;
-	// 		// console.log(index);
-	// 		// console.log(pa);
-	// 	})
-	// });
+			}
+				
+		})
+	
+	})
+	
 
 	if (document.getElementById("defaultOpen")) {
 		document.getElementById("defaultOpen").click();
@@ -696,94 +691,94 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 	
 	
-		function openInterview (el) {
-			el.find('.interview').addClass('interview_active')
-			compensateBody()
-		}
-	
-		function closeInterview () {
-			$('.interview_active').removeClass('interview_active')
-			setTimeout(function () {
-				unCompensateBody()
-			}, 500)
-		}
-	
-		$(document).on('click', '[data-interview]', function() {
-			openInterview($(this))
-		})
-		$(document).on('click', '.interview', function (e) {
-			e.stopPropagation()
-			closeInterview()
-		})
-		$(document).on('click', '.interview-content', function (e) {
-			e.stopPropagation()
-		})
-		$(document).on('click', '.interview__close', function() {
-			closeInterview()
-		})
-	
-	
-		let currentIndex = null
-	
-		function setSertificateModalData(el) {
-			const title = el.attr('data-title')
-			const image = el.attr('data-image')
-			const download = el.attr('data-download')
-	
-			const modal = $('.sertificate-modal')
-			modal.find('.sertificate-modal__title').html(title)
-			modal.find('.sertificate-modal-imgbox img').prop('src', image)
-			modal.find('.sertificate-modal__download').prop('href', download)
-		}
-	
-		function openSertificateModal (el) {
-			setSertificateModalData(el)
-			$('.sertificate-modal').addClass('sertificate-modal_active')
-			compensateBody()
-			currentIndex = el.attr('data-index')
-		}
-	
-		function closeSertificate () {
-			$('.sertificate-modal_active').removeClass('sertificate-modal_active')
-			setTimeout(function () {
-				unCompensateBody()
-			}, 500)
-			currentIndex = null
-		}
-	
-		$(document).on('click', '[data-sertificate]', function() {
-			openSertificateModal($(this))
-		})
-		$(document).on('click', '.sertificate-modal', function (e) {
-			e.stopPropagation()
-			closeSertificate()
-		})
-		$(document).on('click', '.sertificate-modal-content, .sertificate-modal-arrow', function (e) {
-			e.stopPropagation()
-		})
-		$(document).on('click', '.sertificate-modal__close', function() {
-			closeSertificate()
-		})
-	
-	
-		$(document).on('click', '.sertificate-modal-arrow_prev', function() {
-			const length = $('.certificate__slide:not(.swiper-slide-duplicate)').length
-			currentIndex--;
-			if (currentIndex == -1) {
-				currentIndex = length - 1
-			}
-			setSertificateModalData($(`.certificate__slide:not(.swiper-slide-duplicate)[data-index="${currentIndex}"]`))
-		})
-	
-		$(document).on('click', '.sertificate-modal-arrow_next', function() {
-			const length = $('.certificate__slide:not(.swiper-slide-duplicate)').length
-			currentIndex++;
-			if (currentIndex == length) {
-				currentIndex = 0;
-			}
-			setSertificateModalData($(`.certificate__slide:not(.swiper-slide-duplicate)[data-index="${currentIndex}"]`))
-		})
 	}
+	function openInterview (el) {
+		el.find('.interview').addClass('interview_active')
+		compensateBody()
+	}
+
+	function closeInterview () {
+		$('.interview_active').removeClass('interview_active')
+		setTimeout(function () {
+			unCompensateBody()
+		}, 500)
+	}
+
+	$(document).on('click', '[data-interview]', function() {
+		openInterview($(this))
+	})
+	$(document).on('click', '.interview', function (e) {
+		e.stopPropagation()
+		closeInterview()
+	})
+	$(document).on('click', '.interview-content', function (e) {
+		e.stopPropagation()
+	})
+	$(document).on('click', '.interview__close', function() {
+		closeInterview()
+	})
+
+
+	let currentIndex = null
+
+	function setSertificateModalData(el) {
+		const title = el.attr('data-title')
+		const image = el.attr('data-image')
+		const download = el.attr('data-download')
+
+		const modal = $('.sertificate-modal')
+		modal.find('.sertificate-modal__title').html(title)
+		modal.find('.sertificate-modal-imgbox img').prop('src', image)
+		modal.find('.sertificate-modal__download').prop('href', download)
+	}
+
+	function openSertificateModal (el) {
+		setSertificateModalData(el)
+		$('.sertificate-modal').addClass('sertificate-modal_active')
+		compensateBody()
+		currentIndex = el.attr('data-index')
+	}
+
+	function closeSertificate () {
+		$('.sertificate-modal_active').removeClass('sertificate-modal_active')
+		setTimeout(function () {
+			unCompensateBody()
+		}, 500)
+		currentIndex = null
+	}
+
+	$(document).on('click', '[data-sertificate]', function() {
+		openSertificateModal($(this))
+	})
+	$(document).on('click', '.sertificate-modal', function (e) {
+		e.stopPropagation()
+		closeSertificate()
+	})
+	$(document).on('click', '.sertificate-modal-content, .sertificate-modal-arrow', function (e) {
+		e.stopPropagation()
+	})
+	$(document).on('click', '.sertificate-modal__close', function() {
+		closeSertificate()
+	})
+
+
+	$(document).on('click', '.sertificate-modal-arrow_prev', function() {
+		const length = $('.certificate__slide:not(.swiper-slide-duplicate)').length
+		currentIndex--;
+		if (currentIndex == -1) {
+			currentIndex = length - 1
+		}
+		setSertificateModalData($(`.certificate__slide:not(.swiper-slide-duplicate)[data-index="${currentIndex}"]`))
+	})
+
+	$(document).on('click', '.sertificate-modal-arrow_next', function() {
+		const length = $('.certificate__slide:not(.swiper-slide-duplicate)').length
+		currentIndex++;
+		if (currentIndex == length) {
+			currentIndex = 0;
+		}
+		setSertificateModalData($(`.certificate__slide:not(.swiper-slide-duplicate)[data-index="${currentIndex}"]`))
+	})
 })
 
 
