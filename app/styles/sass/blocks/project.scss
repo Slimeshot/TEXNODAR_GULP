@@ -51,10 +51,10 @@
 
 }
 .project__btn-prev {
-    background-image: url(../images/dist/Icon/arrow-left-black.svg);
+    background-image: url(../images/dist/icon/arrow-left-black.svg);
 }
 .project__btn-next {
-    background-image: url(../images/dist/Icon/arrow-right-black.svg);
+    background-image: url(../images/dist/icon/arrow-right-black.svg);
 }
 .project__slider {
     width: 75%;
@@ -195,6 +195,9 @@
 }
 
 @media (max-width: 1024px) {
+    .project {
+        padding: 94px 0;
+    }
     .project__slide-tittle {
         margin-bottom: 24px;
     }
@@ -260,21 +263,18 @@
 
 
 @media (max-width: 768px) {
+    .project {
+        padding: 64px 0;
+    }
     .project__slide-img {
         width: 50%;
     }
     .project__slide-info {
         width: 50%;
     }
-    .project {
-        padding: 94px 0;
-    }
 }
 
 @media (max-width: 540px) {
-    .project {
-        padding: 64px 0;
-    }
     .project__slide {
         flex-direction: column;
         align-items: center;

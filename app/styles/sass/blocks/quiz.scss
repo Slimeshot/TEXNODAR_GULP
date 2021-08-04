@@ -16,12 +16,57 @@
       transform: translateX(0);
     }
   }
+  &__link-title {
+    color: #000;
+  }
+  &__link {
+    margin: 4px;
+    padding: 12px 18px;
+    border: 1px solid #E5E5E5;
+    border-radius: 24px;
+    svg {
+      margin-right: 8px;
+    }
+    &:hover {
+      .quiz__link-title {
+        color: #fff;
+      }
+      .quiz__mailto {
+        fill: #fff;
+      }
+      .quiz__telegram {
+        fill: #fff;
+      }
+      .quiz__whatsapp {
+        fill: #fff;
+      }
+      &:nth-child(3) {
+        background-color: #000;
+      }
+      &:nth-child(4) {
+        background-color: #26A4E3;
+      }
+      &:nth-child(5) {
+        background-color: #00E676;
+      }
+    }
+    
+  }
+  &__mailto {
+    fill: #000;
+  }
+  &__telegram {
+    fill: #26A4E3;
+  }
+  &__whatsapp {
+    fill: #00E676;
+  }
   &-content {
     margin-left: auto;
     overflow-y: auto;
     overflow-x: hidden;
     background-color: #FAF9F5;
-    width: 30%;
+    width: 55rem;
     padding: 15.2em 3.2em 3.2em;
     display: flex;
     flex-direction: column;
@@ -208,8 +253,8 @@
   &__checkboxLabel {
     border: 1px solid #E5E5E5;
     border-radius: 24px;    
-    padding: 0 18px;
-    height: 40px;
+    padding: 12px 18px;
+    // height: 40px;
     display: inline-flex;
     align-items: center;
     color: $base500;
@@ -222,6 +267,7 @@
 
     }
   }
+  
   &__rangeValue {
     margin-bottom: 23px;
     display: block;
@@ -336,8 +382,12 @@
     color: $base500;
     display: block;
   }
+  &-block {
+    display: flex;
+    justify-content: space-between;
+  }
   &__input {
-    width: 100%;
+    width: 49%;
     height: 50px;
     border: 1px solid #E5E5E5;
     border-radius: 8px;
@@ -347,4 +397,9 @@
     line-height: 1.14;
     margin-top: 32px;
   }
+}
+
+
+.quizResult {
+  visibility: hidden;
 }

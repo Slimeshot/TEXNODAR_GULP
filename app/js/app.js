@@ -56,6 +56,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		spaceBetween: 32,
 
 	  });
+
+	  const imgSwiper = new Swiper('.swiper__img', {
+		loop: true,
+		spaceBetween: 32,
+
+	  });
 	
 
 	const introSwiper = new Swiper('.intro__swiper', {
@@ -75,6 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
 
 	  });
+
+	  introSwiper.controller.control = imgSwiper
+	  imgSwiper.controller.control = introSwiper
 
 
 	  const projectSwiper = new Swiper('.project__swiper', {
@@ -152,7 +161,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 		//mask phone 
-
+		
+		$(".quiz-block input[name='phone']").mask("+7(999) 999-9999");
 		$(".form__phone").mask("+7(999) 999-9999");
 		$(".call__phone").mask("+7(999) 999-9999");
 
@@ -254,6 +264,29 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 	  }
 	  
+
+	  // open success message 
+
+	  const successBlock = document.querySelector('.success');
+	  const successContent = document.querySelector('.success__content');
+	  const successСross = document.querySelector('.success__cross');
+	  	
+	  if (successBlock) {
+		successBlock.addEventListener('click', (event) => {
+			if (event.target.contains(successBlock)) {
+			  successBlock.classList.remove('active');
+			  document.body.classList.remove('active')
+		  }
+		})
+
+		successСross.addEventListener('click', () => {
+		  successBlock.classList.remove('active');
+		  document.body.classList.remove('active')
+		})
+	  }
+
+
+
 		  
 	  //закрытие навигации и открытие меню
 	  if (sailingBtn) {
@@ -387,7 +420,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	const acc = document.querySelectorAll(".help__accordion");
 
 	acc.forEach(item => {
-		console.log('sdsd');
 		item.addEventListener('click', () => {
 			// console.log(item);
 			if (item.classList.contains('active')) {
@@ -552,7 +584,17 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 
 
-
+	if ($('.quiz').length) {
+		if (document.documentElement.clientWidth > 1024) {
+			$('.quiz-step')[3].remove();
+			$('.quiz-step').each(function() {
+				if ($(this).attr('data-step') == 4) {
+					$(this).attr('data-step', 3)
+				}
+	
+			});
+		}
+	}
 
 
 	if (document.querySelector('.quiz')) {
@@ -606,7 +648,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				checkCurrentStep()
 			}
 		}
-	
+		var strs = '';
 		function addResult(step) {
 	
 			const title = step.find('.quiz__title').html()
@@ -642,6 +684,18 @@ document.addEventListener('DOMContentLoaded', () => {
 				$('.quiz-results-item:not(.quiz-results-item_active)').css('height', `auto`)
 			}, 400)
 			$('.quiz-results').addClass('quiz-results_active')
+
+
+			
+			$('.quiz-results-item-res__val').each((index, item) => {
+    
+				if (index > 1) {
+
+					strs = `${strs} ${$(item).text()},`
+				}
+				// $('.quizResult').text(strs);
+			})
+		
 		}
 	
 		$(window).on('resize', function() {
@@ -779,6 +833,114 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 		setSertificateModalData($(`.certificate__slide:not(.swiper-slide-duplicate)[data-index="${currentIndex}"]`))
 	})
+
+
+	$('form').submit(function () {
+		var formID = $(this).attr('id'); // Получение ID формы
+		var formNm = $('#' + formID);
+		console.log(formID);
+		// console.log(formNm);
+
+		$.ajax({
+			url: 'ajax/mail.php',
+			type: 'POST',
+			cache: false,
+			data: { 'formID':formID },
+			dataType: 'html',
+			error: function(data) {
+				console.log(data);
+				// $("#errorMess").html(data);
+				// $("#errorMess").css('color', 'red');
+			}, 
+			/* если произойдет ошибка в элементе с id erconts выведится сообщение*/  
+			beforeSend: function() {
+				// $('#sendMail').prop('disabled', true);
+				// $("#errorMess").html("Подождите, идет отправка заявки!");
+				// $("#errorMess").css('color', 'orange');
+				
+			},
+			success: function(data) {
+				console.log(data);
+				// $("#errorMess").html(data);
+				if ($("input[name='name']")) {
+					$("input[name='name']").val('');
+				}
+				if ($("input[name='phone']")) {
+					$("input[name='phone']").val('');
+				}
+				if ($("input[name='email']")) {
+					$("input[name='email']").val('');
+				}
+				
+				if (successBlock) {
+					callBlock.classList.remove('active');
+					callBg.classList.remove('active');
+					$('.quiz_active').removeClass('quiz_active')
+					$('body').attr('style', '');
+ 					$('body').removeClass('BodyOverflow');
+					successBlock.classList.add('active');
+					document.body.classList.add('active')
+				}
+				// connect.classList.toggle('open');
+				// $('#sendMail').prop('disabled', false);
+				// $("#errorMess").css('color', 'green');
+				// dataLayer.push({'event': 'sendMail_1'})
+			}
+		})
+		return false;
+	});
+	// $('#index-1 #sendMail-1').on('click', () => {
+	// 	var name = $("#index-1 input[name='name']").val();
+	// 	var phone =$("#index-1 input[name='phone']").val();
+	// 	console.log(name);
+	// 	console.log(phone);
+		// if (name == "" || phone == "" || email == "") {
+		// 	$("#errorMess").css('color', '#000');
+		// 	$('#errorMess').text('Заполните все поля!');
+		// 	return false;
+		// } 
+		// $("#errorMess").css('color', '#000');
+		// $('#errorMess').text('');
+
+
+		// $.ajax({
+		// 	url: 'ajax/mail.php',
+		// 	type: 'POST',
+		// 	cache: false,
+		// 	data: { 'name':name, 'phone':phone, 'email':email },
+		// 	dataType: 'html',
+		// 	error: function(data) {
+		// 		$("#errorMess").html(data);
+		// 		$("#errorMess").css('color', 'red');
+		// 	}, 
+		// 	/* если произойдет ошибка в элементе с id erconts выведится сообщение*/  
+		// 	beforeSend: function() {
+		// 		$('#sendMail').prop('disabled', true);
+		// 		$("#errorMess").html("Подождите, идет отправка заявки!");
+		// 		$("#errorMess").css('color', 'orange');
+				
+		// 	},
+		// 	success: function(data) {
+		// 		$("#errorMess").html(data);
+		// 		$('#name').val('');
+		// 		$('#phone').val('');
+		// 		$('#email').val('');
+		// 		// connect.classList.toggle('open');
+		// 		$('#sendMail').prop('disabled', false);
+		// 		$("#errorMess").css('color', 'green');
+		// 		dataLayer.push({'event': 'sendMail_1'})
+		// 	}
+		// })
+	// })
+
+
+
+
+
+
+
+
+
 })
 
 

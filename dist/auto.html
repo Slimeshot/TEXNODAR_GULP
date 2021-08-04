@@ -1,14 +1,21 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
 
 	<meta charset="utf-8">
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-MV8GW52');</script>
+	<!-- End Google Tag Manager -->
 	<!-- <base href="/"> -->
 
 	<title>Автотранспорт</title>
-	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+	<meta name="description" content="Ведущий производитель систем контроля транспорта на российском рынке">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -18,12 +25,24 @@
 	<link rel="stylesheet" href="css/main.min.css">
 	<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
 	<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+	
 </head>
 
 
 
 <body>
-	
+	<script>
+		(function(w, d, s, h, id) {
+			w.roistatProjectId = id; w.roistatHost = h;
+			var p = d.location.protocol == "https:" ? "https://" : "http://";
+			var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init?referrer="+encodeURIComponent(d.location.href);
+			var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
+		})(window, document, 'script', 'cloud.roistat.com', 'c82e52f4838f4ba915c5d9227cf8a901');
+	</script>
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV8GW52"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
 		<header class="header">
 			<div class="container">
 				<div class="header__content">
@@ -38,8 +57,9 @@
 								<li class="navigation__list"><a href="bur.html" class="navigation__link">Буровые установки</a></li>
 								<li class="navigation__list"><a href="train.html" class="navigation__link">Ж/Д транспорт</a></li>
 								<!-- <li class="navigation__list"><a href="paper.html" class="navigation__link">Статьи</a></li> -->
-								<li class="navigation__list"><a href="index.html" class="navigation__link">О нас</a></li>
+								<!-- <li class="navigation__list"><a href="index.html" class="navigation__link">О нас</a></li> -->
 								<li class="navigation__list"><a href="contacts.html" class="navigation__link">Контакты</a></li>
+								<li class="navigation__list"><a href="" class="navigation__link"></a></li>
 								<li class="navigation__list">
 									<div class="header__links">
 										<a href="tel:8800250016" class="header__phones">8 (800) 250-00-16</a>
@@ -47,16 +67,16 @@
 									</div>
 									<div class="header__social">
 										<a href="https://www.facebook.com/gktehnodar" class="header__social-link">
-											<img src="images/dist/Icon/facebook.svg" alt="facebook">
+											<img src="images/dist/icon/facebook.svg" alt="facebook">
 										</a>
 										<a href="#" class="header__social-link">
-											<img src="images/dist/Icon/youtube.svg" alt="youtube">
+											<img src="images/dist/icon/youtube.svg" alt="youtube">
 										</a>
 										<a href="https://vk.com/gktehnodar" class="header__social-link">
-											<img src="images/dist/Icon/vk.svg" alt="vk">
+											<img src="images/dist/icon/vk.svg" alt="vk">
 										</a>
 										<a href="https://www.instagram.com/gktehnodar/" class="header__social-link">
-											<img src="images/dist/Icon/insta.svg" alt="instagram">
+											<img src="images/dist/icon/insta.svg" alt="instagram">
 										</a>
 									</div>
 								</li>
@@ -65,7 +85,7 @@
 
 					<div class="header__contacts">
 						<a href="tel:8800250016" class="header__phone">8 (800) 250-00-16</a>
-						<a href="#" class="btn header__btn">Заказать звонок</a>
+						<button class="btn header__btn">Заказать звонок</button>
 					</div>
 					<div class="header__btn-menu">
 						<div class="header__burger">
@@ -77,43 +97,61 @@
 		</header>
 
 
-		
-		<div class="call__bg"></div>	
-		<section class="call">
-			<div class="call__title">Заказать звонок</div>
-			<div class="call__subtitle">Перезвоним в указанное время</div>
+		<div class="success">
+			<div class="success__content">
+				<div class="success__cross">
+					<img src="../images/dist/cross.svg" alt="">
+				</div>
+				<div class="success__img">
+					<img src="images/dist/icon/check.svg" alt="check">
+				</div>
+				<div class="success__mes">Ваша заявка принята. С&nbsp;Вами свяжутся в&nbsp;ближайшее время.</div>
+			</div>
+		</div>
 
-			<form class="call__form">
-				<input class="call__name" name="name" type="text" placeholder="Имя"> 
-				<input class="call__phone" name="phone" type="text" placeholder="Телефон"> 
-				<input type="submit" value="Оставить заявку" class="btn call__btn">
-				
-			</form>
-			<button class="btn call__cross">
-				<img src="../images/dist/cross.svg" alt="cross">
-			</button>
-			<span class="call__agree">Оставляя заявку вы соглашаетесь 
-				на <span>обработку данных</span></span>
-		</section>
 
 <div class="auto">
 	<section class="intro" id="introLink">
 		<div class="intro__media">
+			<!-- Slider main container -->
+			<div class="swiper-container swiper__img">
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper">
+				<!-- Slides -->
+				<div class="swiper-slide slide-img">
+					<img src="images/dist/intro-auto/intro__auto-1.svg" alt="ssd">
+				</div>
+				<div class="swiper-slide slide-img">
+					<img src="images/dist/intro-auto/intro__auto-2.svg" alt="ssd">
+				</div>
+				<div class="swiper-slide slide-img">
+					<img src="images/dist/intro-auto/intro__auto-3.svg" alt="ssd">
+				</div>
+				<div class="swiper-slide slide-img">
+					<img src="images/dist/intro-auto/intro__auto-4.svg" alt="ssd">
+				</div>
+				<div class="swiper-slide slide-img">
+					<img src="images/dist/intro-auto/intro__auto-5.svg" alt="ssd">
+				</div>
+
+				</div>
+
+			</div>
 			<video src="Auto.mp4" autoplay muted loop playsinline ></video>
 		</div>
 		<div class="intro__content">
 			<div class="container">
 				<div class="intro__container">
 					<div class="intro__text">
-						<h1 class="intro__title">Комплексное решение<br>контроля автотранспорта</h1>
+						<h1 class="intro__title">Комплексное&ensp;решение<br>контроля&ensp;автотранспорта</h1>
 						<h2 class="intro__subtitle">Сократите затраты на автотранспорт до 30%, используя эффективные решения с гарантией качества</h2>
 					</div>
 					<div class="intro__bottom">
 						<div class="intro__buttons">
 							<button data-quiz class="btn intro__btn-red">Рассчитать стоимость</button>
-							<a href="#branchLink" class="btn intro__btn-transparent">Подробнее о системе</a>
+							<a href="#branchLink" class="btn intro__btn-transparent">Отраслевые решения</a>
 						</div>
-						<!-- <div class="intro__block">
+						<div class="intro__block">
 							<div class="intro__slider">
 								<div class="intro__slider-panel">
 									<div class="intro__pagination"></div>
@@ -125,22 +163,31 @@
 								<div class="swiper-container intro__swiper">
 									<div class="swiper-wrapper">
 										<div class="swiper-slide intro__slide">
-											<span class="intro__slide-title">Местоположение и скорость</span>
-											<span class="intro__slide-subtitle">Сократите затраты на флот до 30%, используя эффективные решения с гарантией качества</span>
+											<span class="intro__slide-title"><img src="images/dist/icon/slide__icon-1.svg" alt="icon">Местоположение и скорость</span>
+											<span class="intro__slide-subtitle">Отслеживайте местоположение и&nbsp;скорость движения транспорта</span>
 										</div>
 										<div class="swiper-slide intro__slide">
-											<span class="intro__slide-title">Местоположение и скорость</span>
-											<span class="intro__slide-subtitle">Сократите затраты на флот до 30%, используя эффективные решения с гарантией качества</span>
+											<span class="intro__slide-title"><img src="images/dist/icon/slide__icon-2.svg" alt="icon">Расход топлива</span>
+											<span class="intro__slide-subtitle">Контролируйте расход топлива на каждом потребителе с привязкой к&nbsp;маршруту</span>
 										</div>
 										<div class="swiper-slide intro__slide">
-											<span class="intro__slide-title">Местоположение и скорость</span>
-											<span class="intro__slide-subtitle">Сократите затраты на флот до 30%, используя эффективные решения с гарантией качества</span>
+											<span class="intro__slide-title"><img src="images/dist/icon/slide__icon-3.svg" alt="icon">Режим эксплуатации</span>
+											<span class="intro__slide-subtitle">Отслеживайте номинальную и&nbsp;оптимальную нагрузку на двигатели с привязкой к маршруту</span>
 										</div>
+										<div class="swiper-slide intro__slide">
+											<span class="intro__slide-title"><img src="images/dist/icon/slide__icon-4.svg" alt="icon">Система видеонаблюдения</span>
+											<span class="intro__slide-subtitle">Дисциплинируйте персонал и&nbsp;установите ответственных за&nbsp;нарушения</span>
+										</div>
+										<div class="swiper-slide intro__slide">
+											<span class="intro__slide-title"><img src="images/dist/icon/slide__icon-5.svg" alt="icon">Система аналитики</span>
+											<span class="intro__slide-subtitle">Получайте сводные данные о траспорте в режиме реального времени на&nbsp;одном экране</span>
+										</div>
+										
 									</div>
 									
 								</div>
 							</div>
-						</div> -->
+						</div>
 					</div>
 				</div>
 		
@@ -196,16 +243,16 @@
 								</div>
 								<div class="project__slide-info">
 									<div class="project__slide-text">
-										<h4 class="project__slide-tittle">АО МРТС</h4>
+										<h4 class="project__slide-tittle">МРТС</h4>
 										<span class="project__slide-subtittle">Задачи клиента:</span>
 										<ul class="project__slide-case">
-											<li class="project__slide-list">Контроль местоположения, скорости, времени работы двигателя.</li>
-											<li class="project__slide-list">Учет расхода топлива. Вывод информации на инфодисплей в кабине оператора.</li>
+											<li class="project__slide-list">Контроль местоположения, скорости, времени работы двигателя</li>
+											<li class="project__slide-list">Учет расхода топлива. Вывод информации на инфодисплей в кабине оператора</li>
 										</ul>
 									</div>
 									<div class="project__slide-params">
 										<div class="project__slide-row">
-											<span class="project__slide-label">Кол-во единиц транспорта</span>
+											<span class="project__slide-label">Кол-во транспорта</span>
 											<span class="project__slide-name">382</span>
 										</div>
 										<div class="project__slide-row">
@@ -233,16 +280,16 @@
 								</div>
 								<div class="project__slide-info">
 									<div class="project__slide-text">
-										<h4 class="project__slide-tittle">ГК Евроцемент</h4>
+										<h4 class="project__slide-tittle">Евроцемент</h4>
 										<span class="project__slide-subtittle">Задачи клиента:</span>
 										<ul class="project__slide-case">
-											<li class="project__slide-list">Контроль времени работы двигателя, местоположения, срабатывания спецоборудования.</li>
-											<li class="project__slide-list">Учет расхода топлива, контроль заправок.</li>
+											<li class="project__slide-list">Контроль времени работы двигателя, местоположения, срабатывания спецоборудования</li>
+											<li class="project__slide-list">Учет расхода топлива, контроль заправок</li>
 										</ul>
 									</div>
 									<div class="project__slide-params">
 										<div class="project__slide-row">
-											<span class="project__slide-label">Кол-во единиц транспорта</span>
+											<span class="project__slide-label">Кол-во транспорта</span>
 											<span class="project__slide-name">995</span>
 										</div>
 										<div class="project__slide-row">
@@ -273,13 +320,13 @@
 										<h4 class="project__slide-tittle">Технострой</h4>
 										<span class="project__slide-subtittle">Задачи клиента:</span>
 										<ul class="project__slide-case">
-											<li class="project__slide-list">Контроль времени работы двигателя, местоположения, скорости, загрузки двигателя.</li>
-											<li class="project__slide-list">Учет расхода топлива.</li>
+											<li class="project__slide-list">Контроль времени работы двигателя, местоположения, скорости, загрузки двигателя</li>
+											<li class="project__slide-list">Учет расхода топлива</li>
 										</ul>
 									</div>
 									<div class="project__slide-params">
 										<div class="project__slide-row">
-											<span class="project__slide-label">Кол-во единиц транспорта</span>
+											<span class="project__slide-label">Кол-во транспорта</span>
 											<span class="project__slide-name">633</span>
 										</div>
 										<div class="project__slide-row">
@@ -314,30 +361,35 @@
 			<div class="proposal__content">
 				<div class="proposal__left">
 					<h2 class="proposal__title title">Оставьте заявку<br> на консультацию</h2>
+				</div>
+				<div class="proposal__right">
+					<form class="proposal__form form" method="POST" id="auto-1">
+						<div class="form__block">
+							<input class="form__name" name="name" type="text" placeholder="Имя" required>
+							<input class="form__phone" name="phone" type="text" placeholder="Телефон" required>
+						</div>
+						<input type="submit" id="sendMail__auto-1" value="Оставить заявку" class="form__btn-primary">
+					</form>
+				</div>
+			</div>
+			<div class="proposal__row">
+				<div class="proposal__left-1">
 					<span class="proposal__subtitle">Оставляя заявку, вы <br>
 						соглашаетесь на<span class="proposal__subtitle-orange"> обработку данных</span></span>
 				</div>
-				<div class="proposal__right">
-					<form class="proposal__form form">
-						<div class="form__block">
-							<input class="form__name" name="name" type="text" placeholder="Имя"> 
-							<input class="form__phone" name="phone" type="text" placeholder="Телефон"> 
-						</div>
-						<input type="submit" value="Оставить заявку" class="form__btn-primary">
-					</form>
-					<div class="proposal__row">
-						<span class="proposal__subtitle proposal__row-subtitle">Или свяжитесь удобным вам способом</span>
-					
-						<ul class="proposal__menu">
-							<li class="proposal__list"><a href="mailto:info@skrt.biz" class="proposal__link">info@skrt.biz</a></li>
-							<li class="proposal__list"><a href="tel:88002500016" class="proposal__link">8 (800) 250-00-16</a></li>
-							<li class="proposal__list"></li>
-							<li class="proposal__list"><a href="#" class="proposal__link">telegram <img src="images/dist/Icon/arrow-way-black.svg" alt="arrow" aria-hidden="true"></a></li>
-							<li class="proposal__list"><a href="#" class="proposal__link">whatsapp <img src="images/dist/Icon/arrow-way-black.svg" alt="arrow" aria-hidden="true"></a></li>
-						</ul>
-					</div>
+				<div class="proposal__right-1">
+					<span class="proposal__subtitle proposal__row-subtitle">Или свяжитесь удобным вам способом</span>
+					<ul class="proposal__menu">
+						<li class="proposal__list"><a href="mailto:info@technodar.group" class="proposal__link">info@technodar.group</a></li>
+						<li class="proposal__list"><a href="tel:88002500016" class="proposal__link">8 (800) 250-00-16</a></li>
+						<li class="proposal__list"></li>
+						<li class="proposal__list"><a href="#" class="proposal__link">telegram <img src="images/dist/icon/arrow-way-black.svg" alt="arrow" aria-hidden="true"></a></li>
+						<li class="proposal__list"><a href="#" class="proposal__link">whatsapp <img src="images/dist/icon/arrow-way-black.svg" alt="arrow" aria-hidden="true"></a></li>
+					</ul>
 				</div>
 			</div>
+				
+			
 		</div>
 	</section>
 	
@@ -352,7 +404,7 @@
 				</div>
 				<div class="problem__gallery" id="links">
 					<div class="problem__block-1 problem__block">
-						<span class="problem__block-title">Воровство</span>
+						<span class="problem__block-title">Хищение топлива</span>
 						<span class="problem__block-subtitle">Слив топлива из бака транспортного средства</span>
 					</div>
 					<div class="problem__block-2 problem__block">
@@ -400,37 +452,37 @@
 				<h2 class="why__title">Почему клиенты выбрали систему мониторинга транспорта<br> <span class="why__label">от компании технодар</span></h2>
 				<div class="why__block">
 					<div class="why__item">
-						<img src="images/dist/Icon/percent.svg" alt="icon">
+						<img src="images/dist/icon/percent.svg" alt="icon">
 						<span class="why__item-title">
-							Экономия топлива до&nbsp;50%
+							Экономия топлива до&nbsp50%
 						</span>
 					</div>
 					<div class="why__item">
-						<img src="images/dist/Icon/headphones.svg" alt="icon">
+						<img src="images/dist/icon/headphones.svg" alt="icon">
 						<span class="why__item-title">
 							Единая сервисная служба
 						</span>
 					</div>
 					<div class="why__item">
-						<img src="images/dist/Icon/location.svg" alt="icon">
+						<img src="images/dist/icon/location.svg" alt="icon">
 						<span class="why__item-title">
-							Контроль местоположения и&nbsp;маршрута
+							Контроль местоположения и&nbspмаршрута
 						</span>
 					</div>
 					<div class="why__item">
-						<img src="images/dist/Icon/calc.svg" alt="icon">
+						<img src="images/dist/icon/calc.svg" alt="icon">
 						<span class="why__item-title">
 							Проверенные опытом отраслевые решения
 						</span>
 					</div>
 					<div class="why__item">
-						<img src="images/dist/Icon/clock.svg" alt="icon">
+						<img src="images/dist/icon/clock.svg" alt="icon">
 						<span class="why__item-title">
 							Контроль режима эксплуатации транспорта
 						</span>
 					</div>
 					<div class="why__item">
-						<img src="images/dist/Icon/tablet.svg" alt="icon">
+						<img src="images/dist/icon/tablet.svg" alt="icon">
 						<span class="why__item-title">
 							Глубокая аналитика и автоматизированные отчеты
 						</span>
@@ -454,13 +506,14 @@
 						</div>
 					</div>
 					<div class="col-lg-9 col-xl-8">
-						<form action="#" class="calculator__form form" method="POST">
+						<form class="calculator__form form" method="POST" id="auto__calc">
 							<div class="calculator__form-visible">
 								<div class="row">
 									<div class="col-12 col-md-6">
 										<div class="form__select mb-md">
 											<select name="ship_type" id="shipSelect">
-												<option disabled>Дорожная</option>
+												<option disabled>Вид транспорта</option>
+												<option value="Дорожная">Дорожная</option>
 												<option value="Строительная">Строительная</option>
 												<option value="Коммунальная">Коммунальная</option>
 												<option value="Производственная">Производственная</option>
@@ -484,7 +537,7 @@
 											placeholder="Количество топлива (л./мес.)" required>
 									</div>
 									<div class="col-12 col-md-6">
-										<input type="text" class="mb-md" name="price" placeholder="Стоимость за тонну" id="price"
+										<input type="text" class="mb-md" name="price" placeholder="Стоимость за литр" id="price"
 											required>
 									</div>
 								</div>
@@ -504,9 +557,12 @@
 
 
 							<div class="calculator__finish">
+								<button class="btn calculator__cross">
+									<img src="../images/dist/cross.svg" alt="cross">
+								</button>
 								<div class="calculator__info">
 									<div class="calculator__row">
-										<span>Вид судна</span><span class="calculator__total calculator__view">0</span>
+										<span>Вид транспорта</span><span class="calculator__total calculator__view">0</span>
 									</div>
 									<div class="calculator__row">
 										<span>Количество единиц</span><span class="calculator__total calculator__count">0</span>
@@ -523,15 +579,13 @@
 								</div>
 								<div class="calculator__group">
 									<div class="calculator__title">Подробное описание</div>
-									<div class="calculator__subtitle">Укажите электронную почту для отправки</div>
-
+									<div class="calculator__subtitle">Укажите ваши данные для связи</div>
+										<input class="calculator__phone" name="phone" type="text" placeholder="Телефон" required>
 										<input class="calculator__email" name="email" type="text" placeholder="E-mail" required>
-										<button value="Оставить заявку" class="btn call__btn">Оставить заявку</button>
+										<input type="submit" id="sendCalc__auto" value="Оставить заявку" class="btn call__btn">
 
 								</div>
-								<button class="btn calculator__cross">
-									<img src="../images/dist/cross.svg" alt="cross">
-								</button>
+								
 								<span class="calc__agree">Оставляя заявку вы соглашаетесь
 								на <span>обработку данных</span></span>
 							</div>
@@ -546,8 +600,7 @@
 	<section class="decision">
 		<div class="container">
 			<div class="decision__content">
-				<h4 class="decision__title">Решения ГК Технодар подходят <span>крупному бизнесу</span><br>
-					с автопарком<span> более 100 единиц техники</span></h4>
+				<h4 class="decision__title">Решения&ensp;ГК&ensp;Технодар&ensp;подходят&ensp;<span>крупному&ensp;бизнесу</span><br>с&ensp;автопарком<span>&ensp;более&ensp;100&ensp;единиц&ensp;техники</span></h4>
 					<img src="images/dist/auto/group.png" alt="icon">
 			</div>
 		</div>
@@ -562,6 +615,22 @@
 					<div class="branch__item">
 						<div class="branch__item-title">Логистическим
 							компаниям</div>
+							<ul class="branch__item-menu">
+								<li class="branch__item-list">контроль местоположения ТС</li>
+								<li class="branch__item-list">отчет по пробегу ТС</li>
+								<li class="branch__item-list">отчет по моточасам ТС</li>
+								<li class="branch__item-list">контроль топлива</li>
+								<li class="branch__item-list">анализ работы механизмов</li>
+								<li class="branch__item-list">контроль времени простоя ТС</li>
+								<li class="branch__item-list">видеомониторинг</li>
+								<li class="branch__item-list">контроль состояния грузов</li>
+								<li class="branch__item-list">контроль массы груза</li>
+							</ul>
+							<button class="btn branch__btn">Подробнее</button>
+						</div>
+						<div class="branch__item">
+							<div class="branch__item-title">Строительным
+								организациям</div>
 						<ul class="branch__item-menu">
 							<li class="branch__item-list">контроль местоположения ТС</li>
 							<li class="branch__item-list">отчет по пробегу ТС</li>
@@ -573,23 +642,6 @@
 							<li class="branch__item-list">контроль всех потребителей</li>
 							<li class="branch__item-list">контроль режимов эксплуатации
 								с привязкой к сотруднику</li>
-						</ul>
-						<button class="btn branch__btn">Подробнее</button>
-					</div>
-					<div class="branch__item">
-						<div class="branch__item-title">Строительным
-							организациям</div>
-						<ul class="branch__item-menu">
-							<li class="branch__item-list">Логистическим компаниям:</li>
-							<li class="branch__item-list">контроль местоположения ТС</li>
-							<li class="branch__item-list">отчет по пробегу ТС</li>
-							<li class="branch__item-list">отчет по моточасам ТС</li>
-							<li class="branch__item-list">контроль топлива</li>
-							<li class="branch__item-list">анализ работы механизмов</li>
-							<li class="branch__item-list">контроль времени простоя ТС</li>
-							<li class="branch__item-list">видеомониторинг</li>
-							<li class="branch__item-list">контроль состояния грузов</li>
-							<li class="branch__item-list">контроль массы груза</li>
 						</ul>
 						<button class="btn branch__btn">Подробнее</button>
 					</div>
@@ -622,31 +674,36 @@
 		<div class="container">
 			<div class="proposal__content">
 				<div class="proposal__left">
-					<h2 class="proposal__title title">Не нашли что подходит<br> именно вам</h2>
+					<h2 class="proposal__title title">Оставьте заявку<br> на демонстрацию системы</h2>
+				</div>
+				<div class="proposal__right">
+					<form class="proposal__form form" method="POST" id="auto-2">
+						<div class="form__block">
+							<input class="form__name" name="name" type="text" placeholder="Имя" required>
+							<input class="form__phone" name="phone" type="text" placeholder="Телефон" required>
+						</div>
+						<input type="submit" id="sendMail__auto-2" value="Оставить заявку" class="form__btn-primary">
+					</form>
+				</div>
+			</div>
+			<div class="proposal__row">
+				<div class="proposal__left-1">
 					<span class="proposal__subtitle">Оставляя заявку, вы <br>
 						соглашаетесь на<span class="proposal__subtitle-orange"> обработку данных</span></span>
 				</div>
-				<div class="proposal__right">
-					<form class="proposal__form form">
-						<div class="form__block">
-							<input class="form__name" name="name" type="text" placeholder="Имя"> 
-							<input class="form__phone" name="phone" type="text" placeholder="Телефон"> 
-						</div>
-						<input type="submit" value="Оставить заявку" class="form__btn-primary">
-					</form>
-					<div class="proposal__row">
-						<span class="proposal__subtitle proposal__row-subtitle">Или свяжитесь удобным вам способом</span>
-					
-						<ul class="proposal__menu">
-							<li class="proposal__list"><a href="mailto:info@skrt.biz" class="proposal__link">info@skrt.biz</a></li>
-							<li class="proposal__list"><a href="tel:88002500016" class="proposal__link">8 (800) 250-00-16</a></li>
-							<li class="proposal__list"></li>
-							<li class="proposal__list"><a href="#" class="proposal__link">telegram <img src="images/dist/Icon/arrow-way-black.svg" alt="arrow" aria-hidden="true"></a></li>
-							<li class="proposal__list"><a href="#" class="proposal__link">whatsapp <img src="images/dist/Icon/arrow-way-black.svg" alt="arrow" aria-hidden="true"></a></li>
-						</ul>
-					</div>
+				<div class="proposal__right-1">
+					<span class="proposal__subtitle proposal__row-subtitle">Или свяжитесь удобным вам способом</span>
+					<ul class="proposal__menu">
+						<li class="proposal__list"><a href="mailto:info@technodar.group" class="proposal__link">info@technodar.group</a></li>
+						<li class="proposal__list"><a href="tel:88002500016" class="proposal__link">8 (800) 250-00-16</a></li>
+						<li class="proposal__list"></li>
+						<li class="proposal__list"><a href="#" class="proposal__link">telegram <img src="images/dist/icon/arrow-way-black.svg" alt="arrow" aria-hidden="true"></a></li>
+						<li class="proposal__list"><a href="#" class="proposal__link">whatsapp <img src="images/dist/icon/arrow-way-black.svg" alt="arrow" aria-hidden="true"></a></li>
+					</ul>
 				</div>
 			</div>
+				
+			
 		</div>
 	</section>
 	
@@ -658,36 +715,36 @@
 					<h2 class="capability__title title">Возможности системы</h2>
 				</div>
 				<div class="capability__right">
-					<span class="capability__subtitle">Системы контроля помогают сократить расходы бизнеса на обслуживание техники до 30%. Работая как единый механизм, они отслеживают процессы во&nbsp;время эксплуатации автотранспорта и сигнализируют о переработках или недостачах на объекте мониторинга.</span>
+					<span class="capability__subtitle">Системы контроля помогают сократить расходы бизнеса на обслуживание техники до 30%. Работая, как единый механизм, они отслеживают процессы во&nbspвремя эксплуатации автотранспорта и сигнализируют о переработках или недостачах на объекте мониторинга.</span>
 					<img src="images/dist/auto/capability.png" alt="auto" class="capability__img">
 					<div class="capability__info" id="content">
 						<span>Особенности такого подхода позволяют:</span>
 						<ul>
-							<li>контролировать: местоположение и режим работы техники, процессы приема топлива, состояние грузов, фактические расходы топлива по&nbsp;потребителям, техническое состояние энергопотребителей.</li>
+							<li>контролировать местоположение и режим работы техники, процессы приема топлива, состояние грузов, фактические расходы топлива по&nbspпотребителям, техническое состояние энергопотребителей;</li>
 							<li>видеть текущие уровни топлива в энергопотребителях;</li>
 							<li>отслеживать режимы эксплуатации техники;</li>
 							<li>реагировать на любые нештатные изменения параметров на местах;</li>
-							<li>строить автоматизированные отчеты по каждому потребителю в&nbsp;отдельности;</li>
+							<li>строить автоматизированные отчеты по каждому потребителю в&nbspотдельности;</li>
 							<li>выстраивать отчетность по всем единицам техники в целом;</li>
-							<li>передавать данные в CRM, ERP – системы</li>
+							<li>передавать данные в CRM, ERP – системы;</li>
 						</ul>
 						<span>Что изменится в работе автопарка?</span>
 						<ul>
 							<li>под надзором персонал станет дисциплинированней;</li>
 							<li>сократятся затраты на ремонт техники;</li>
 							<li>повысится производительность сотрудников;</li>
-							<li>сократятся затраты на топливо.</li>
+							<li>сократятся затраты на топливо;</li>
 						</ul>
-						<span>А главный результат после внедрения — увеличение чистой прибыли.</span>
+						<span>А главный результат после внедрения — увеличение чистой прибыли</span>
 
 						<span>Что мы предлагаем?</span>
 						<ul>
-							<li>Более 50 специалистов из штата «Технодара» разберут ваш случай, выслушают пожелания и проведут предпроектный аудит компании.</li>
-							<li>Грамотные инженеры спроектируют решение, которое подходит именно вашей организации.</li>
-							<li>За время внедрения мы подготовим рекомендации и полностью обучим персонал работать с системой контроля транспорта.</li>
+							<li>Более 50 специалистов из штата «Технодара» разберут ваш случай, выслушают пожелания и проведут предпроектный аудит компании;</li>
+							<li>Грамотные инженеры спроектируют решение, которое подходит именно вашей организации;</li>
+							<li>За время внедрения мы подготовим рекомендации и полностью обучим персонал работать с системой контроля транспорта;</li>
 						</ul>
-						<p>Наша компания оказывает поддержку клиентам по всему миру. Главный офис компании находится в <a href="https://www.google.com/maps/place/6-%D0%99+%D0%B3%D0%B2%D0%B0%D1%80%D0%B4%D0%B5%D0%B9%D1%81%D0%BA%D0%B8%D0%B9+%D0%BF%D0%B5%D1%80.,+7%D0%90,+%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D1%81%D0%BA,+%D0%A0%D0%B5%D1%81%D0%BF.+%D0%9A%D0%B0%D1%80%D0%B5%D0%BB%D0%B8%D1%8F,+185034/data=!4m2!3m1!1s0x46a1ecd0d7d7e229:0x3cef5664f6f7cfa?sa=X&ved=2ahUKEwixoNj08vHxAhXiwosKHQiQDkAQ8gEwAHoECAoQAQ" target="_blank">г. Петрозаводск, по адресу: 6-й Гвардейский переулок., 7а. </a></p>
-						<p>Где бы ни находилась ваша техника, вам будет оказана квалифицированная помощь. Ведь сеть наших сертифицированных партнеров простирается на 68 регионов России и 8 стран мира. И&nbsp;в&nbsp;любое время суток вы можете получить онлайн-консультацию от&nbsp;сотрудников «Технодара».</p>
+						<p>Наша компания оказывает поддержку клиентам по всему миру. Главный офис компании находится в <a href="https://www.google.com/maps/place/6-%D0%99+%D0%B3%D0%B2%D0%B0%D1%80%D0%B4%D0%B5%D0%B9%D1%81%D0%BA%D0%B8%D0%B9+%D0%BF%D0%B5%D1%80.,+7%D0%90,+%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D1%81%D0%BA,+%D0%A0%D0%B5%D1%81%D0%BF.+%D0%9A%D0%B0%D1%80%D0%B5%D0%BB%D0%B8%D1%8F,+185034/data=!4m2!3m1!1s0x46a1ecd0d7d7e229:0x3cef5664f6f7cfa?sa=X&ved=2ahUKEwixoNj08vHxAhXiwosKHQiQDkAQ8gEwAHoECAoQAQ" target="_blank">г. Петрозаводск, по адресу: 6-й Гвардейский переулок., 7а </a></p>
+						<p>Где бы нe находилась ваша техника, вам будет оказана квалифицированная помощь. Ведь сеть наших сертифицированных партнеров простирается на 68 регионов России и 8 стран мира. И&nbspв&nbspлюбое время суток вы можете получить онлайн-консультацию от&nbspсотрудников «Технодара»</p>
 			
 					</div>
 					<button class="btn capability__btn" type="button" >Читать полностью</button>
@@ -826,7 +883,7 @@
 								data-index="1"
 						>
 							<img src="images/dist/char__logo.svg" alt="logo">
-							<div class="certificate__slide-year">2020</div>
+							<div class="certificate__slide-year">2021</div>
 							<div class="certificate__slide-bot">
 								<div class="certificate__slide-title">Свидетельство №13-11.1-3.9.6-1269</div>
 								<div class="certificate__slide-subtitle">
@@ -877,10 +934,10 @@
 								data-title="Свидетельство о типовом одобрении на ГС 2019-2024"
 								data-image="images/dist/certificate/certificate-5.png"
 								data-download="images/dist/certificate/certificate-5.png"
-								data-index="3"
+								data-index="4"
 						>
 							<img src="images/dist/char__logo.svg" alt="logo">
-							<div class="certificate__slide-year">2020</div>
+							<div class="certificate__slide-year">2019</div>
 							<div class="certificate__slide-bot">
 								<div class="certificate__slide-title">Свидетельств №132369 </div>
 								<div class="certificate__slide-subtitle">
@@ -895,7 +952,7 @@
 								data-title="Сертификат ПО BoatWatch Технодар"
 								data-image="images/dist/certificate/certificate-6.png"
 								data-download="images/dist/certificate/certificate-6.png"
-								data-index="3"
+								data-index="5"
 						>
 							<img src="images/dist/char__logo.svg" alt="logo">
 							<div class="certificate__slide-year">2020</div>
@@ -913,7 +970,7 @@
 								data-title="Сертификат СМК ТД Технодар"
 								data-image="images/dist/certificate/certificate-7.png"
 								data-download="images/dist/certificate/certificate-7.png"
-								data-index="3"
+								data-index="6"
 						>
 							<img src="images/dist/char__logo.svg" alt="logo">
 							<div class="certificate__slide-year">2020</div>
@@ -931,7 +988,7 @@
 								data-title="Сертификат англ яз (ТД Технодар)"
 								data-image="images/dist/certificate/certificate-8.png"
 								data-download="images/dist/certificate/certificate-8.png"
-								data-index="3"
+								data-index="7"
 						>
 							<img src="images/dist/char__logo.svg" alt="logo">
 							<div class="certificate__slide-year">2020</div>
@@ -949,7 +1006,7 @@
 								data-title="Сертификат соответствия IP68 и вибро"
 								data-image="images/dist/certificate/certificate-9.png"
 								data-download="images/dist/certificate/certificate-9.png"
-								data-index="3"
+								data-index="8"
 						>
 							<img src="images/dist/char__logo.svg" alt="logo">
 							<div class="certificate__slide-year">2020</div>
@@ -967,10 +1024,10 @@
 								data-title="Сертификат соответствия РРР - ПО BoatWatch"
 								data-image="images/dist/certificate/certificate-10.png"
 								data-download="images/dist/certificate/certificate-10.png"
-								data-index="3"
+								data-index="9"
 						>
 							<img src="images/dist/char__logo.svg" alt="logo">
-							<div class="certificate__slide-year">2020</div>
+							<div class="certificate__slide-year">2021</div>
 							<div class="certificate__slide-bot">
 								<div class="certificate__slide-title">Свидетельств №132369 </div>
 								<div class="certificate__slide-subtitle">
@@ -992,7 +1049,7 @@
 	<div class="container">
 		<div class="media__content">
 			<div class="media__top">
-				<div class="media__title title">Упоминания в СМИ</div>
+				<div class="media__title title">Публикации в СМИ</div>
 			</div>
 			<div class="media__bot">
 				<div class="media__link" data-interview>
@@ -1006,12 +1063,13 @@
 								</svg>
 							</button>
 							<div class="interview-imgbox">
-								<img src="images/dist/icon/media-1.svg" alt="rbk">
+								<img src="images/dist/icon/media-1.svg" alt="secret">
 							</div>
-							<h4 class="interview__title">DOTS, VMTS, датчики и сигнализация при бункеровке: как системы контроля топлива экономят судовладельцам 35 млн. рублей в год</h4>
-							<p>Исключить манипуляции с топливом и сохранить 35 млн. рублей в год: как системы контроля топлива помогают судовладельцам экономить</p>
-							<p>Алексей Якушев, директор ГК «Технодар» рассказывает, как благодаря 3-х уровневой системе контроля судовладельцам удается отслеживать расхождения номинальной и реальной массы топлива при приеме на борт, прогнозировать технологический износ оборудования на судне, а также предотвращать манипуляции с горючим, которые приводят к потере 35 млн. рублей в год.</p>
-							<p>Заказчиком стала рыболовная компания «Доброфлот», которой было необходимо получить надежную систему по приему и учету топлива для своего флота, в том числе для крупнейшей в мире плавбазы «Всеволод Сибирцев». Как определялась архитектура установки датчиков и почему из четырех точек приема «Технодар» сделал две, расскажем подробнее. Но для начала — о системе.</p>
+							<h4 class="interview__title">Как системы контроля топлива помогают судовладельцам экономить</h4>
+							<p>Статья скоро выйдет.</p>
+							<!-- <p>Исключить манипуляции с топливом и сохранить 35 млн. рублей в год: как системы контроля топлива помогают судовладельцам экономить</p> -->
+							<!-- <p>Алексей Якушев, директор ГК «Технодар» рассказывает, как благодаря 3-х уровневой системе контроля судовладельцам удается отслеживать расхождения номинальной и реальной массы топлива при приеме на борт, прогнозировать технологический износ оборудования на судне, а также предотвращать манипуляции с горючим, которые приводят к потере 35 млн. рублей в год.</p> -->
+							<!-- <p>Заказчиком стала рыболовная компания «Доброфлот», которой было необходимо получить надежную систему по приему и учету топлива для своего флота, в том числе для крупнейшей в мире плавбазы «Всеволод Сибирцев». Как определялась архитектура установки датчиков и почему из четырех точек приема «Технодар» сделал две, расскажем подробнее. Но для начала — о системе.</p> -->
 							<a href="https://www.rbc.ru/tags/?tag=%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0" target="_blank" class="interview__more">
 								Читать полностью
 								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1032,12 +1090,13 @@
 								</svg>
 							</button>
 							<div class="interview-imgbox">
-								<img src="images/dist/icon/media-2.svg" alt="secter">
+								<img src="images/dist/icon/media-2.svg" alt="rbk">
 							</div>
-							<h4 class="interview__title">DOTS, VMTS, датчики и сигнализация при бункеровке: как системы контроля топлива экономят судовладельцам 35 млн. рублей в год</h4>
-							<p>Исключить манипуляции с топливом и сохранить 35 млн. рублей в год: как системы контроля топлива помогают судовладельцам экономить</p>
-							<p>Алексей Якушев, директор ГК «Технодар» рассказывает, как благодаря 3-х уровневой системе контроля судовладельцам удается отслеживать расхождения номинальной и реальной массы топлива при приеме на борт, прогнозировать технологический износ оборудования на судне, а также предотвращать манипуляции с горючим, которые приводят к потере 35 млн. рублей в год.</p>
-							<p>Заказчиком стала рыболовная компания «Доброфлот», которой было необходимо получить надежную систему по приему и учету топлива для своего флота, в том числе для крупнейшей в мире плавбазы «Всеволод Сибирцев». Как определялась архитектура установки датчиков и почему из четырех точек приема «Технодар» сделал две, расскажем подробнее. Но для начала — о системе.</p>
+							<h4 class="interview__title">Как системы контроля топлива помогают судовладельцам экономить</h4>
+							<p>Статья скоро выйдет.</p>
+							<!-- <p>Исключить манипуляции с топливом и сохранить 35 млн. рублей в год: как системы контроля топлива помогают судовладельцам экономить</p> -->
+							<!-- <p>Алексей Якушев, директор ГК «Технодар» рассказывает, как благодаря 3-х уровневой системе контроля судовладельцам удается отслеживать расхождения номинальной и реальной массы топлива при приеме на борт, прогнозировать технологический износ оборудования на судне, а также предотвращать манипуляции с горючим, которые приводят к потере 35 млн. рублей в год.</p> -->
+							<!-- <p>Заказчиком стала рыболовная компания «Доброфлот», которой было необходимо получить надежную систему по приему и учету топлива для своего флота, в том числе для крупнейшей в мире плавбазы «Всеволод Сибирцев». Как определялась архитектура установки датчиков и почему из четырех точек приема «Технодар» сделал две, расскажем подробнее. Но для начала — о системе.</p> -->
 							<a href="https://www.rbc.ru/tags/?tag=%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0" target="_blank" class="interview__more">
 								Читать полностью
 								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1084,12 +1143,13 @@
 								</svg>
 							</button>
 							<div class="interview-imgbox">
-								<img src="images/dist/icon/media-1.svg" alt="rbk">
+								<img src="images/dist/icon/media-1.svg" alt="secret">
 							</div>
-							<h4 class="interview__title">DOTS, VMTS, датчики и сигнализация при бункеровке: как системы контроля топлива экономят судовладельцам 35 млн. рублей в год</h4>
-							<p>Исключить манипуляции с топливом и сохранить 35 млн. рублей в год: как системы контроля топлива помогают судовладельцам экономить</p>
-							<p>Алексей Якушев, директор ГК «Технодар» рассказывает, как благодаря 3-х уровневой системе контроля судовладельцам удается отслеживать расхождения номинальной и реальной массы топлива при приеме на борт, прогнозировать технологический износ оборудования на судне, а также предотвращать манипуляции с горючим, которые приводят к потере 35 млн. рублей в год.</p>
-							<p>Заказчиком стала рыболовная компания «Доброфлот», которой было необходимо получить надежную систему по приему и учету топлива для своего флота, в том числе для крупнейшей в мире плавбазы «Всеволод Сибирцев». Как определялась архитектура установки датчиков и почему из четырех точек приема «Технодар» сделал две, расскажем подробнее. Но для начала — о системе.</p>
+							<h4 class="interview__title">Как системы контроля топлива помогают судовладельцам экономить</h4>
+							<p>Статья скоро выйдет.</p>
+							<!-- <p>Исключить манипуляции с топливом и сохранить 35 млн. рублей в год: как системы контроля топлива помогают судовладельцам экономить</p> -->
+							<!-- <p>Алексей Якушев, директор ГК «Технодар» рассказывает, как благодаря 3-х уровневой системе контроля судовладельцам удается отслеживать расхождения номинальной и реальной массы топлива при приеме на борт, прогнозировать технологический износ оборудования на судне, а также предотвращать манипуляции с горючим, которые приводят к потере 35 млн. рублей в год.</p> -->
+							<!-- <p>Заказчиком стала рыболовная компания «Доброфлот», которой было необходимо получить надежную систему по приему и учету топлива для своего флота, в том числе для крупнейшей в мире плавбазы «Всеволод Сибирцев». Как определялась архитектура установки датчиков и почему из четырех точек приема «Технодар» сделал две, расскажем подробнее. Но для начала — о системе.</p> -->
 							<a href="https://www.rbc.ru/tags/?tag=%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0" target="_blank" class="interview__more">
 								Читать полностью
 								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1110,12 +1170,13 @@
 								</svg>
 							</button>
 							<div class="interview-imgbox">
-								<img src="images/dist/icon/media-2.svg" alt="secret">
+								<img src="images/dist/icon/media-2.svg" alt="rbk">
 							</div>
-							<h4 class="interview__title">DOTS, VMTS, датчики и сигнализация при бункеровке: как системы контроля топлива экономят судовладельцам 35 млн. рублей в год</h4>
-							<p>Исключить манипуляции с топливом и сохранить 35 млн. рублей в год: как системы контроля топлива помогают судовладельцам экономить</p>
-							<p>Алексей Якушев, директор ГК «Технодар» рассказывает, как благодаря 3-х уровневой системе контроля судовладельцам удается отслеживать расхождения номинальной и реальной массы топлива при приеме на борт, прогнозировать технологический износ оборудования на судне, а также предотвращать манипуляции с горючим, которые приводят к потере 35 млн. рублей в год.</p>
-							<p>Заказчиком стала рыболовная компания «Доброфлот», которой было необходимо получить надежную систему по приему и учету топлива для своего флота, в том числе для крупнейшей в мире плавбазы «Всеволод Сибирцев». Как определялась архитектура установки датчиков и почему из четырех точек приема «Технодар» сделал две, расскажем подробнее. Но для начала — о системе.</p>
+							<h4 class="interview__title">Как системы контроля топлива помогают судовладельцам экономить</h4>
+							<p>Статья скоро выйдет.</p>
+							<!-- <p>Исключить манипуляции с топливом и сохранить 35 млн. рублей в год: как системы контроля топлива помогают судовладельцам экономить</p> -->
+							<!-- <p>Алексей Якушев, директор ГК «Технодар» рассказывает, как благодаря 3-х уровневой системе контроля судовладельцам удается отслеживать расхождения номинальной и реальной массы топлива при приеме на борт, прогнозировать технологический износ оборудования на судне, а также предотвращать манипуляции с горючим, которые приводят к потере 35 млн. рублей в год.</p> -->
+							<!-- <p>Заказчиком стала рыболовная компания «Доброфлот», которой было необходимо получить надежную систему по приему и учету топлива для своего флота, в том числе для крупнейшей в мире плавбазы «Всеволод Сибирцев». Как определялась архитектура установки датчиков и почему из четырех точек приема «Технодар» сделал две, расскажем подробнее. Но для начала — о системе.</p> -->
 							<a href="https://www.rbc.ru/tags/?tag=%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0" target="_blank" class="interview__more">
 								Читать полностью
 								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1160,31 +1221,36 @@
 		<div class="container">
 			<div class="proposal__content">
 				<div class="proposal__left">
-					<h2 class="proposal__title title">Установите систему <br> сейчас - оплатите потом</h2>
+					<h2 class="proposal__title title">Установите систему<br> сейчас, оплатите потом</h2>
+				</div>
+				<div class="proposal__right">
+					<form class="proposal__form form" method="POST" id="auto-3">
+						<div class="form__block">
+							<input class="form__name" name="name" type="text" placeholder="Имя" required>
+							<input class="form__phone" name="phone" type="text" placeholder="Телефон" required>
+						</div>
+						<input type="submit" id="sendMail__auto-3" value="Оставить заявку" class="form__btn-primary">
+					</form>
+				</div>
+			</div>
+			<div class="proposal__row">
+				<div class="proposal__left-1">
 					<span class="proposal__subtitle">Оставляя заявку, вы <br>
 						соглашаетесь на<span class="proposal__subtitle-orange"> обработку данных</span></span>
 				</div>
-				<div class="proposal__right">
-					<form class="proposal__form form">
-						<div class="form__block">
-							<input class="form__name" name="name" type="text" placeholder="Имя"> 
-							<input class="form__phone" name="phone" type="text" placeholder="Телефон"> 
-						</div>
-						<input type="submit" value="Оставить заявку" class="form__btn-primary">
-					</form>
-					<div class="proposal__row">
-						<span class="proposal__subtitle proposal__row-subtitle">Или свяжитесь удобным вам способом</span>
-					
-						<ul class="proposal__menu">
-							<li class="proposal__list"><a href="mailto:info@skrt.biz" class="proposal__link">info@skrt.biz</a></li>
-							<li class="proposal__list"><a href="tel:88002500016" class="proposal__link">8 (800) 250-00-16</a></li>
-							<li class="proposal__list"></li>
-							<li class="proposal__list"><a href="#" class="proposal__link">telegram <img src="images/dist/Icon/arrow-way-black.svg" alt="arrow" aria-hidden="true"></a></li>
-							<li class="proposal__list"><a href="#" class="proposal__link">whatsapp <img src="images/dist/Icon/arrow-way-black.svg" alt="arrow" aria-hidden="true"></a></li>
-						</ul>
-					</div>
+				<div class="proposal__right-1">
+					<span class="proposal__subtitle proposal__row-subtitle">Или свяжитесь удобным вам способом</span>
+					<ul class="proposal__menu">
+						<li class="proposal__list"><a href="mailto:info@technodar.group" class="proposal__link">info@technodar.group</a></li>
+						<li class="proposal__list"><a href="tel:88002500016" class="proposal__link">8 (800) 250-00-16</a></li>
+						<li class="proposal__list"></li>
+						<li class="proposal__list"><a href="#" class="proposal__link">telegram <img src="images/dist/icon/arrow-way-black.svg" alt="arrow" aria-hidden="true"></a></li>
+						<li class="proposal__list"><a href="#" class="proposal__link">whatsapp <img src="images/dist/icon/arrow-way-black.svg" alt="arrow" aria-hidden="true"></a></li>
+					</ul>
 				</div>
 			</div>
+				
+			
 		</div>
 	</section>
 	
@@ -1192,15 +1258,15 @@
 	<section class="command">
 	<div class="container">
 		<div class="command__content">
-			<h2 class="command__title">Наша команда</h2>
+			<h2 class="command__title">С вами будут работать</h2>
 			<div class="command__block">
 				<div class="command__item">
 					<div class="command__img">
-						<img src="images/dist/command/command-1.png" alt="Ivan">
+						<img src="images/dist/command/command-3.png" alt="Ivan">
 					</div>
 					<div class="command__description">
-						<span class="command__name">Алексей Викторович Якушев</span>
-						<span class="command__position">Директор</span>
+						<span class="command__name">Спиридонов Александр Юрьевич</span>
+						<span class="command__position">Руководитель проектного отдела</span>
 					</div>
 				</div>
 				<div class="command__item">
@@ -1208,18 +1274,8 @@
 						<img src="images/dist/command/command-2.png" alt="Ivan">
 					</div>
 					<div class="command__description">
-						<span class="command__name">Георгий Михайлович Герасимов</span>
-						<span class="command__position">Руководить отдела производства</span>
-
-					</div>
-				</div>
-				<div class="command__item">
-					<div class="command__img">
-						<img src="images/dist/command/command-3.png" alt="Ivan">
-					</div>
-					<div class="command__description">
-						<span class="command__name">Анна Геннадьевна Кялина</span>
-						<span class="command__position">Руководитель проектного отдела</span>
+						<span class="command__name">Шихалева Елена Викторовна</span>
+						<span class="command__position">Руководитель отдела контроля качества и сертификации продукции</span>
 
 					</div>
 				</div>
@@ -1228,51 +1284,34 @@
 						<img src="images/dist/command/command-4.png" alt="Ivan">
 					</div>
 					<div class="command__description">
-						<span class="command__name">Александр Юрьевич Спиридонов</span>
-						<span class="command__position">Руководитель отдела продаж</span>
+						<span class="command__name">Герасимов Георгий Михайлович</span>
+						<span class="command__position">Руководитель производственного отдела</span>
 
 					</div>
 				</div>
 				<div class="command__item">
 					<div class="command__img">
-						<img src="images/dist/command/command-5.png" alt="Ivan">
+						<img src="images/dist/command/command-1.png" alt="Ivan">
 					</div>
 					<div class="command__description">
-						<span class="command__name">Александр Юрьевич Спиридонов</span>
+						<span class="command__name">Кялина Анна Геннадьевна</span>
 						<span class="command__position">Руководитель отдела продаж</span>
 
 					</div>
-				</div>
-				<div class="command__item">
-					<div class="command__img">
-						<img src="images/dist/command/command-6.png" alt="Ivan">
-					</div>
-					<div class="command__description">
-						<span class="command__name">Александр Юрьевич Спиридонов</span>
-						<span class="command__position">Руководитель отдела продаж</span>
-
-					</div>
-				</div>
-				<div class="command__item">
-					<span class="command__num">+55</span>
-					<span class="command__yet">профессиональных<br>
-						специалистов</span>
-				</div>
-				<div class="command__item">
-					
 				</div>
 			</div>
+			<span class="command__yet">...и еще 55 профессиональных специалистов</span>
 		</div>
 	</div>
 </section>
 	
 
 <section class="quiz">
-	<form class="quiz-content">
+	<form class="quiz-content" method="POST" id="auto__quiz">
 		<div class="quiz-results"></div>
 		<div class="quiz-main">
 			<div class="quiz-step quiz-step_active" data-step="0">
-				<span class="quiz__title">К какой категории относится судно?</span>
+				<span class="quiz__title">К какой категории техники относится транспорт?</span>
 				<div class="quiz-form-wrapper">
 					<input class="quiz__radioinput" id="dorojnaya" name="flotType" value="Дорожная" type="radio">
 					<label class="quiz__checkboxLabel" for="dorojnaya">
@@ -1302,8 +1341,8 @@
 			</div>
 			<div class="quiz-step" data-step="1">
 				<span class="quiz__title">Сколько единиц транспорта планируется оснастить?</span>
-				<span class="quiz__rangeValue"><span>8</span> <span>единиц</span></span>
-				<input type="range" name="howMuch" id="howMuch" value="8" min="1" max="24" step="1">
+				<span class="quiz__rangeValue"><span>50</span> <span>единица</span></span>
+				<input type="range" name="howMuch" id="howMuch" value="50" min="50" max="300" step="5">
 			</div>
 			<div class="quiz-step" data-step="2">
 				<span class="quiz__title">Какие задачи планируется решить?</span>
@@ -1341,26 +1380,68 @@
 						<span>Автоматизация отчетности</span>
 					</label>
 				</div>
+				<div class="quizResult"></div>
 			</div>
 			<div class="quiz-step" data-step="3">
+				<span class="quiz__title">Куда отправить расчёт?</span>
+				<input class="quiz__radioinput" id="avtomats" name="taskss" value="E-mail" type="checkbox">
+				<label class="quiz__link quiz__checkboxLabel" for="avtomats">
+					<svg class="quiz__mailto" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2h12a.667.667 0 01.667.667v10.667A.667.667 0 0114 14H2a.667.667 0 01-.667-.666V2.667A.667.667 0 012 2zm6.04 5.79L3.766 4.16l-.864 1.016 5.147 4.37 5.054-4.374-.872-1.008-4.19 3.626z"></svg>
+					<span class="quiz__link-title">E-mail</span>
+				</label>
+				<a href="#" class="quiz__link">
+					<svg class="quiz__telegram" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 13.667A6.666 6.666 0 117 .334a6.666 6.666 0 010 13.333zM4.927 7.78l.009-.005.58 1.914c.074.207.177.245.301.227.126-.017.192-.084.274-.162l.792-.766 1.7 1.259c.31.171.534.082.611-.288L10.3 4.744c.122-.485-.091-.68-.468-.525l-6.49 2.506c-.442.178-.44.426-.08.536l1.665.52z" /></svg>
+					<span class="quiz__link-title">Telegram</span>
+				</a>
+				<a href="#" class="quiz__link">
+					<svg class="quiz__whatsapp" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.336 13.667l.902-3.312a6.667 6.667 0 112.41 2.409l-3.312.903zm4.258-9.795a.64.64 0 00-.247.067.862.862 0 00-.196.152c-.08.075-.125.14-.174.204A1.82 1.82 0 003.6 5.414c.002.326.087.644.22.942.273.6.722 1.237 1.314 1.828.143.142.282.284.432.417a6.299 6.299 0 002.56 1.364l.38.058c.123.007.246-.003.37-.009.194-.01.384-.062.556-.154.11-.058.162-.088.255-.146l.083-.06a1.53 1.53 0 00.22-.193.766.766 0 00.14-.2c.052-.11.104-.317.125-.49.016-.132.012-.204.01-.248-.003-.072-.062-.146-.127-.177l-.388-.174s-.58-.253-.934-.414a.332.332 0 00-.118-.027.321.321 0 00-.252.085v-.002c-.003 0-.048.038-.53.622a.233.233 0 01-.245.087.945.945 0 01-.128-.044l-.168-.073-.003-.001a4.007 4.007 0 01-1.046-.667c-.084-.073-.162-.153-.242-.23a4.197 4.197 0 01-.68-.846l-.04-.063a.616.616 0 01-.068-.137.214.214 0 01.04-.176s.163-.178.238-.274a2.92 2.92 0 00.176-.248c.078-.127.103-.257.062-.358-.187-.456-.38-.91-.58-1.36-.038-.09-.155-.154-.261-.167a2.966 2.966 0 00-.108-.01 2.255 2.255 0 00-.269.002v.001z"/></svg>
+					<span class="quiz__link-title">WhatsApp</span>
+				</a>
+
+				
+			</div>
+			<div class="quiz-step" data-step="4">
 				<span class="quiz__title">Расчёт готов</span>
-				<span class="quiz__text">Укажите Вашу электронную почту и мы вышлем его туда</span>
-				<input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" class="quiz__input" type="email" name="email" placeholder="E-mail" required>
+				<span class="quiz__text">Заполните данные для отправки</span>
+				<div class="quiz-block">
+					<input class="quiz__input" name="phone" type="text" placeholder="Телефон" required> 
+					<input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" class="quiz__input" type="email" name="email" placeholder="E-mail" required>
+				</div>
 			</div>
 		</div>
 		<div class="quiz-sticky"></div>
 		<div class="quiz-bottom">
-			<button class="btn quiz__close" data-close-quiz>
+			<button type="button" class="btn quiz__close" data-close-quiz>
 				<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M7.99993 7.05732L11.2999 3.75732L12.2426 4.69999L8.9426 7.99999L12.2426 11.3L11.2999 12.2427L7.99993 8.94266L4.69993 12.2427L3.75726 11.3L7.05726 7.99999L3.75726 4.69999L4.69993 3.75732L7.99993 7.05732Z" fill="black"/>
 				</svg>
 				<span>Закрыть</span>
 			</button>
-			<button class="btn quiz__next">Далее</button>
+			<button class="btn quiz__next " id="sendQuiz__auto">Далее</button>
 		</div>
 	</form>
 </section>
 </div>
+
+<div class="call__bg"></div>	
+		<section class="call">
+			<button class="btn call__cross">
+				<img src="../images/dist/cross.svg" alt="cross">
+			</button>
+			<div class="call__block">
+				<div class="call__title">Заказать звонок</div>
+				<div class="call__subtitle">Перезвоним в теченнии 3 минут</div>
+
+				<form class="call__form" id="auto__call">
+					<input class="call__name" name="name" type="text" placeholder="Имя" required> 
+					<input class="call__phone" name="phone" type="text" placeholder="Телефон" required> 
+					<input type="submit" id="sendCall__auto" value="Оставить заявку" class="btn call__btn">
+					
+				</form>
+			</div>
+			<span class="call__agree">Оставляя заявку вы соглашаетесь 
+				на <span>обработку данных</span></span>
+		</section>
 	<footer class="footer">
 		<div class="container">
 			<div class="footer__content">
@@ -1371,16 +1452,16 @@
 						</a>
 						<div class="footer__social">
 							<a href="https://www.facebook.com/gktehnodar" class="footer__social-link">
-								<img src="images/dist/Icon/facebook.svg" alt="facebook">
+								<img src="images/dist/icon/facebook.svg" alt="facebook">
 							</a>
 							<a href="#" class="footer__social-link">
-								<img src="images/dist/Icon/youtube.svg" alt="youtube">
+								<img src="images/dist/icon/youtube.svg" alt="youtube">
 							</a>
 							<a href="https://vk.com/gktehnodar" class="footer__social-link">
-								<img src="images/dist/Icon/vk.svg" alt="vk">
+								<img src="images/dist/icon/vk.svg" alt="vk">
 							</a>
 							<a href="https://www.instagram.com/gktehnodar/" class="footer__social-link">
-								<img src="images/dist/Icon/insta.svg" alt="instagram">
+								<img src="images/dist/icon/insta.svg" alt="instagram">
 							</a>
 						</div>
 					</div>

@@ -1,7 +1,7 @@
 .sailing {
     position: sticky;
     top: 0;
-    z-index: 98;
+    z-index: 10;
     background-color: #FAF9F5;
     border: 1px solid #E5E5E5;
 }
@@ -19,7 +19,7 @@
 }
 .sailing__btn-link {
     display: block;
-    background-image: url(../images/dist/Icon/arrow-top.svg);
+    background-image: url(../images/dist/icon/arrow-top.svg);
     background-size: 70%;
     background-position: center;
     background-repeat: no-repeat;
@@ -89,12 +89,13 @@
         width: 100%;
         height: auto;
         top: 48px;
-        right: -1500px;
+        right: 0px;
         flex-direction: column;
         align-items: center;
         background-color: #FAF9F5;
         opacity: 0;
-        transition: all .3s ease-in-out;
+        visibility: hidden;
+        transition: all .2s ease-in-out;
         .sailing__list {
             width: 100%;
             border-top: 1px solid #E5E5E5;
@@ -115,8 +116,8 @@
         }
     }
     .sailing__menu.active {
-        right: 0px;
         opacity: 1;
+        visibility: visible;
     }
     .sailing__btn-menu {
         flex-grow: 1;

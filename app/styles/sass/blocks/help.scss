@@ -83,7 +83,7 @@
         right: 0;
         width: 48px;
         height: 48px;
-        background-image: url(../images/dist/Icon/arrow-bottom-gray.svg);
+        background-image: url(../images/dist/icon/arrow-bottom-gray.svg);
         background-repeat: no-repeat;
         background-position: center;
     }
@@ -110,7 +110,7 @@
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .help__accordion.active:after {
-    background-image: url(../images/dist/Icon/arrow-top-black.svg);
+    background-image: url(../images/dist/icon/arrow-top-black.svg);
     background-repeat: no-repeat;
     background-position: center;
 }

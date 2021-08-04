@@ -7,7 +7,7 @@
         <div class="contacts__content">
             <div class="contacts__info">
                 <div class="contacts__star">
-                    <img src="images/dist/Icon/Star.svg" alt="star">
+                    <img src="images/dist/icon/Star.svg" alt="star">
                 </div>
                 <div class="contacts__data">
                     <div class="contacts__column-1">
@@ -53,6 +53,11 @@ var map = new mapboxgl.Map({
 container: 'map',
 style: 'mapbox://styles/slimeshot/ckr4uc0kp0tdc17lx2g29yl03'
 });
+var marker = new mapboxgl.Marker({
+      color: "#FF0000",
+      draggable: false
+      }).setLngLat([34.441264, 61.751077])
+      .addTo(map);
 </script>
 
 
@@ -65,30 +70,35 @@ style: 'mapbox://styles/slimeshot/ckr4uc0kp0tdc17lx2g29yl03'
                     <div class="proposal__content">
                         <div class="proposal__left">
                             <h2 class="proposal__title title">Оставьте заявку<br> на консультацию</h2>
-                            <span class="proposal__subtitle"><span>Оставляя заявку вы соглашаетесь на</span>
-                                <span class="proposal__subtitle-orange"> обработку данных</span></span>
                         </div>
                         <div class="proposal__right">
-                            <form class="proposal__form form">
+                            <form class="proposal__form form" method="POST" id="flot-1">
                                 <div class="form__block">
-                                    <input class="form__name" name="name" type="text" placeholder="Имя"> 
-                                    <input class="form__phone" name="phone" type="text" placeholder="Телефон"> 
+                                    <input class="form__name" name="name" type="text" placeholder="Имя" required>
+                                    <input class="form__phone" name="phone" type="text" placeholder="Телефон" required>
                                 </div>
-                                <input type="submit" value="Оставить заявку" class="form__btn-primary">
+                                <input type="submit" id="sendMail__flot-1" value="Оставить заявку" class="form__btn-primary">
                             </form>
-                            <div class="proposal__row">
-                                <span class="proposal__subtitle proposal__row-subtitle">Или свяжитесь удобным вам способом</span>
-                            
-                                <ul class="proposal__menu">
-                                    <li class="proposal__list"><a href="mailto:info@skrt.biz" class="proposal__link">info@skrt.biz</a></li>
-                                    <li class="proposal__list"><a href="tel:88002500016" class="proposal__link">8 (800) 250-00-16</a></li>
-                                    <li class="proposal__list"></li>
-                                    <li class="proposal__list"><a href="#" class="proposal__link">telegram <img src="images/dist/Icon/arrow-way-black.svg" alt="arrow" aria-hidden="true"></a></li>
-                                    <li class="proposal__list"><a href="#" class="proposal__link">whatsapp <img src="images/dist/Icon/arrow-way-black.svg" alt="arrow" aria-hidden="true"></a></li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
+                    <div class="proposal__row">
+                        <div class="proposal__left-1">
+                            <span class="proposal__subtitle">Оставляя заявку, вы <br>
+                                соглашаетесь на<span class="proposal__subtitle-orange"> обработку данных</span></span>
+                        </div>
+                        <div class="proposal__right-1">
+                            <span class="proposal__subtitle proposal__row-subtitle">Или свяжитесь удобным вам способом</span>
+                            <ul class="proposal__menu">
+                                <li class="proposal__list"><a href="mailto:info@technodar.group" class="proposal__link">info@technodar.group</a></li>
+                                <li class="proposal__list"><a href="tel:88002500016" class="proposal__link">8 (800) 250-00-16</a></li>
+                                <li class="proposal__list"></li>
+                                <li class="proposal__list"><a href="#" class="proposal__link">telegram <img src="images/dist/icon/arrow-way-black.svg" alt="arrow" aria-hidden="true"></a></li>
+                                <li class="proposal__list"><a href="#" class="proposal__link">whatsapp <img src="images/dist/icon/arrow-way-black.svg" alt="arrow" aria-hidden="true"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                        
+                    
                 </div>
             </section>
         </div>
@@ -97,5 +107,23 @@ style: 'mapbox://styles/slimeshot/ckr4uc0kp0tdc17lx2g29yl03'
 
 
 
+<div class="call__bg"></div>	
+		<section class="call">
+            <button class="btn call__cross">
+                <img src="../images/dist/cross.svg" alt="cross">
+            </button>
+			<div class="call__block">
+                <div class="call__title">Заказать звонок</div>
+                <div class="call__subtitle">Перезвоним в теченнии 3 минут</div>
 
+                <form class="call__form" id="contacts__call">
+                    <input class="call__name" name="name" type="text" placeholder="Имя"> 
+                    <input class="call__phone" name="phone" type="text" placeholder="Телефон"> 
+                    <input type="button" id="sendCall__contacts" value="Оставить заявку" class="btn call__btn">
+                    
+                </form>
+            </div>
+			<span class="call__agree">Оставляя заявку вы соглашаетесь 
+				на <span>обработку данных</span></span>
+		</section>
 <!--#include virtual="/parts/footer.html" -->

@@ -1,13 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
 
 	<meta charset="utf-8">
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-MV8GW52');</script>
+	<!-- End Google Tag Manager -->
 	<!-- <base href="/"> -->
 
 	<title><!--#echo var="title" --></title>
-	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+	<meta name="description" content="Ведущий производитель систем контроля транспорта на российском рынке">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -17,12 +24,24 @@
 	<link rel="stylesheet" href="css/main.min.css">
 	<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
 	<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+	
 </head>
 
 
 
 <body>
-	
+	<script>
+		(function(w, d, s, h, id) {
+			w.roistatProjectId = id; w.roistatHost = h;
+			var p = d.location.protocol == "https:" ? "https://" : "http://";
+			var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init?referrer="+encodeURIComponent(d.location.href);
+			var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
+		})(window, document, 'script', 'cloud.roistat.com', 'c82e52f4838f4ba915c5d9227cf8a901');
+	</script>
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV8GW52"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
 		<header class="header">
 			<div class="container">
 				<div class="header__content">
@@ -37,7 +56,7 @@
 								<li class="navigation__list"><a href="bur.html" class="navigation__link">Буровые установки</a></li>
 								<li class="navigation__list"><a href="train.html" class="navigation__link">Ж/Д транспорт</a></li>
 								<!-- <li class="navigation__list"><a href="paper.html" class="navigation__link">Статьи</a></li> -->
-								<li class="navigation__list"><a href="index.html" class="navigation__link">О нас</a></li>
+								<!-- <li class="navigation__list"><a href="index.html" class="navigation__link">О нас</a></li> -->
 								<li class="navigation__list"><a href="contacts.html" class="navigation__link">Контакты</a></li>
 								<li class="navigation__list"><a href="" class="navigation__link"></a></li>
 								<li class="navigation__list">
@@ -47,16 +66,16 @@
 									</div>
 									<div class="header__social">
 										<a href="https://www.facebook.com/gktehnodar" class="header__social-link">
-											<img src="images/dist/Icon/facebook.svg" alt="facebook">
+											<img src="images/dist/icon/facebook.svg" alt="facebook">
 										</a>
 										<a href="#" class="header__social-link">
-											<img src="images/dist/Icon/youtube.svg" alt="youtube">
+											<img src="images/dist/icon/youtube.svg" alt="youtube">
 										</a>
 										<a href="https://vk.com/gktehnodar" class="header__social-link">
-											<img src="images/dist/Icon/vk.svg" alt="vk">
+											<img src="images/dist/icon/vk.svg" alt="vk">
 										</a>
 										<a href="https://www.instagram.com/gktehnodar/" class="header__social-link">
-											<img src="images/dist/Icon/insta.svg" alt="instagram">
+											<img src="images/dist/icon/insta.svg" alt="instagram">
 										</a>
 									</div>
 								</li>
@@ -65,7 +84,7 @@
 
 					<div class="header__contacts">
 						<a href="tel:8800250016" class="header__phone">8 (800) 250-00-16</a>
-						<a href="#" class="btn header__btn">Заказать звонок</a>
+						<button class="btn header__btn">Заказать звонок</button>
 					</div>
 					<div class="header__btn-menu">
 						<div class="header__burger">
@@ -77,21 +96,14 @@
 		</header>
 
 
-		
-		<div class="call__bg"></div>	
-		<section class="call">
-			<div class="call__title">Заказать звонок</div>
-			<div class="call__subtitle">Перезвоним в указанное время</div>
-
-			<form class="call__form">
-				<input class="call__name" name="name" type="text" placeholder="Имя"> 
-				<input class="call__phone" name="phone" type="text" placeholder="Телефон"> 
-				<input type="submit" value="Оставить заявку" class="btn call__btn">
-				
-			</form>
-			<button class="btn call__cross">
-				<img src="../images/dist/cross.svg" alt="cross">
-			</button>
-			<span class="call__agree">Оставляя заявку вы соглашаетесь 
-				на <span>обработку данных</span></span>
-		</section>
+		<div class="success">
+			<div class="success__content">
+				<div class="success__cross">
+					<img src="../images/dist/cross.svg" alt="">
+				</div>
+				<div class="success__img">
+					<img src="images/dist/icon/check.svg" alt="check">
+				</div>
+				<div class="success__mes">Ваша заявка принята. С&nbsp;Вами свяжутся в&nbsp;ближайшее время.</div>
+			</div>
+		</div>

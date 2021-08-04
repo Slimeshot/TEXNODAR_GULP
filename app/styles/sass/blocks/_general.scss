@@ -25,13 +25,18 @@ a {
 body {
     line-height: 1;
     font-size: 0.69444vw;
+    overflow-x: hidden;
 }
 
 body.active {
-    max-height: 100vh;
-    max-height: -webkit-calc(var(--vh, 1vh) * 100);
-    max-height: calc(var(--vh, 1vh) * 100);
+    // max-height: 100vh;
+    // max-height: -webkit-calc(var(--vh, 1vh) * 100);
+    // max-height: calc(var(--vh, 1vh) * 100);
+    // overflow: hidden;
+    // height: 100%;
     overflow: hidden;
+    // width: 100%;
+    // position: fixed;
 }
 
 p,h1,h2,h3 {
@@ -44,7 +49,7 @@ p,h1,h2,h3 {
     font-family: 'Normalidad', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 16px;
     letter-spacing: -0.02em;
     text-transform: uppercase;

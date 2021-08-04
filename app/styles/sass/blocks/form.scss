@@ -136,6 +136,10 @@
             color: #fff;
             background-color: #C04838;
         }
+        &:active {
+            color: #fff;
+            background-color: $accent;
+        }
     }
     &__block {
         flex-grow: 6;
