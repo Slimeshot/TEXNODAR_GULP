@@ -1,0 +1,82 @@
+.application {
+    top: 0;
+    right: -1500px;
+    opacity: 0;
+    height: 100vh;
+    // min-height: 650px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 20%;
+    background-color: #FAF9F5;
+    position: fixed;
+    z-index: 101;
+    min-width: 320px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition: all .5s ease;
+    
+}
+.application__block {
+    opacity: all .2s ease;
+    padding: 30px 0;
+    opacity: 1;
+    visibility: visible;
+    position: static;
+}
+.application__block.active {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+}
+.application__luck {
+    opacity: all .2s ease;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+}
+.application__luck.active {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+    padding: 40px 0;
+    width: 100%;
+}
+.application.active {
+    right: 0;
+    opacity: 1;
+}
+.application__agree {
+    left: 32px;
+    bottom: 32px;
+    padding-top: 30px;
+    font-family: 'IBM', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: #B1B1B1;
+    span {
+        color: $accent;
+    }
+}
+.application__agree.active {
+    visibility: hidden;
+}
+
+.application__cross {
+    width: 32px;
+    height: 32px;
+    padding-bottom: 30px;
+    padding-left: 0px;
+}
+
+
+@media (max-width: 540px) {
+    .application {
+        width: 100%;
+    }
+}

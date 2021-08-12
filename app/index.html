@@ -280,23 +280,31 @@
 
 <div class="call__bg"></div>	
 <section class="call">
-			<button class="btn call__cross">
-				<img src="../images/dist/cross.svg" alt="cross">
-			</button>
-			<div class="call__block">
-				<div class="call__title">Заказать звонок</div>
-				<div class="call__subtitle">Перезвоним в теченнии 3 минут</div>
+	<button class="btn call__cross">
+		<img src="../images/dist/cross.svg" alt="cross">
+	</button>
+	<div class="call__block">
+		<h6 class="call__title">Заказать звонок</h6>
+		<div class="call__subtitle">Перезвоним в теченнии 3 минут</div>
 
-				<form class="call__form" id="index__call">
-					<input class="call__name" name="name" type="text" placeholder="Имя"> 
-					<input class="call__phone" name="phone" type="text" placeholder="Телефон"> 
-					<input type="submit" id="sendCall__index" value="Оставить заявку" class="btn call__btn">
-					
-				</form>
-			</div>
-			<span class="call__agree">Оставляя заявку вы соглашаетесь 
-				на <span>обработку данных</span></span>
-		</section>
+		<form class="call__form" id="index__call">
+			<input class="call__name" name="name" type="text" placeholder="Имя" required> 
+			<input class="call__phone" name="phone" type="text" placeholder="Телефон" required> 
+			<input type="submit" id="sendCall__index" value="Оставить заявку" class="btn call__btn">
+		</form>
+	</div>
+	<div class="call__luck">
+		<div class="call__luck-img">
+			<img src="images/dist/icon/check.svg" alt="check">
+		</div>
+		<div class="call__luck-mes">
+			<span class="call__luck-title">Ваша заявка<br> получена!</span>
+			<span class="call__luck-subtitle">Мы свяжемся с вами в ближайшее время</span>
+		</div>
+	</div>
+	<div class="call__agree">Оставляя заявку вы соглашаетесь 
+		на <span>обработку данных</span></div>
+</section>
 <!--#include virtual="/parts/certificate.html" -->
 <!--#include virtual="/parts/command.html" -->
 <!--#include virtual="/parts/media.html" -->

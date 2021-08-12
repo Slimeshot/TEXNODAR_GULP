@@ -75,6 +75,10 @@
         }
     }
     position: relative;
+    cursor: pointer;
+    img {
+        width: 42px;
+    }
 }
 
 .certificate__slide-year {

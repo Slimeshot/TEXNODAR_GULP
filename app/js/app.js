@@ -206,6 +206,29 @@ document.addEventListener('DOMContentLoaded', () => {
 	  })
 
 
+
+	  //close/open aplication 
+
+	  const btnSolutionOrange = document.querySelector('.btn__solution-orange');
+	  const applicationCross = document.querySelector('.application__cross');
+	  const application = document.querySelector('.application');
+
+	  if (application) {
+		btnSolutionOrange.addEventListener('click', () => {
+			application.classList.add('active');
+			callBg.classList.add('active');
+			document.body.classList.add('active');
+		  })
+
+		applicationCross.addEventListener('click', () => {
+			application.classList.remove('active');
+			callBg.classList.remove('active');
+			document.body.classList.remove('active');
+		})
+
+	  }
+
+
 	  //close/open call
 
 	  const headerBtn = document.querySelector('.header__btn');
@@ -231,17 +254,20 @@ document.addEventListener('DOMContentLoaded', () => {
 	  callCross.addEventListener('click', () => {
 		callBlock.classList.remove('active');
 		callBg.classList.remove('active');
-		document.body.classList.remove('active')
+		document.body.classList.remove('active');
 	  })
 
 	  //закртыие кал по клику на фон
 	  callBg.addEventListener('click', () => {
 		callBlock.classList.remove('active');
 		callBg.classList.remove('active');
+		if (application) {
+			application.classList.remove('active');
+		}
 		if (calcBlock) {
 			calcBlock.classList.remove('active');
 		}
-		document.body.classList.remove('active')
+		document.body.classList.remove('active');
 	  })
 
 	  //открытие кол по клику
@@ -269,7 +295,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	  const successBlock = document.querySelector('.success');
 	  const successContent = document.querySelector('.success__content');
-	  const successСross = document.querySelector('.success__cross');
 	  	
 	  if (successBlock) {
 		successBlock.addEventListener('click', (event) => {
@@ -279,10 +304,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		  }
 		})
 
-		successСross.addEventListener('click', () => {
-		  successBlock.classList.remove('active');
-		  document.body.classList.remove('active')
-		})
 	  }
 
 
@@ -584,17 +605,15 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 
 
-	if ($('.quiz').length) {
-		if (document.documentElement.clientWidth > 1024) {
-			$('.quiz-step')[3].remove();
-			$('.quiz-step').each(function() {
-				if ($(this).attr('data-step') == 4) {
-					$(this).attr('data-step', 3)
-				}
-	
-			});
-		}
-	}
+	// if ($('.quiz').length) {
+	// 	$('.quiz-step')[3].remove();
+	// 	$('.quiz-step').each(function() {
+	// 		if ($(this).attr('data-step') == 4) {
+	// 			$(this).attr('data-step', 3)
+	// 		}
+
+	// 	});
+	// }
 
 
 	if (document.querySelector('.quiz')) {
@@ -693,7 +712,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 					strs = `${strs} ${$(item).text()},`
 				}
-				// $('.quizResult').text(strs);
+				$('.quizResult').text(strs);
 			})
 		
 		}
@@ -835,12 +854,33 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 
 
+	const callForm = document.querySelector('.call__block');
+	const callLuck = document.querySelector('.call__luck');
+	const callAgree = document.querySelector('.call__agree');
+
+
+	const applicationForm = document.querySelector('.application__block');
+	const applicationLuck = document.querySelector('.application__luck');
+	const applicationAgree = document.querySelector('.application__agree');
+
+
+	const calculatorInfo = document.querySelector('.calculator__info');
+	const calculatorGroup = document.querySelector('.calculator__group');
+	const calcAgree = document.querySelector('.calc__agree');
+	const calculatorLuck = document.querySelector('.calculator__luck');
+
+
+
 	$('form').submit(function () {
 		var formID = $(this).attr('id'); // Получение ID формы
 		var formNm = $('#' + formID);
+		var userMail = $(".calculator__email").val();
 		console.log(formID);
-		// console.log(formNm);
 
+		// console.log(formNm);
+		if (formID.includes('flot-') || formID.includes('bur-') || formID.includes('auto-') || formID.includes('train-') || formID.includes('index-') || formID.includes('contacts-')) {
+			console.log(`${formID} ASDASDAS`);
+		}
 		$.ajax({
 			url: 'ajax/mail.php',
 			type: 'POST',
@@ -872,15 +912,40 @@ document.addEventListener('DOMContentLoaded', () => {
 					$("input[name='email']").val('');
 				}
 				
-				if (successBlock) {
-					callBlock.classList.remove('active');
-					callBg.classList.remove('active');
-					$('.quiz_active').removeClass('quiz_active')
-					$('body').attr('style', '');
- 					$('body').removeClass('BodyOverflow');
-					successBlock.classList.add('active');
-					document.body.classList.add('active')
+				if (formID.includes('call')) {
+					callForm.classList.add('active')
+					callLuck.classList.add('active')
+					callAgree.classList.add('active')
 				}
+
+				if (formID.includes('application')) {
+					applicationForm.classList.add('active')
+					applicationLuck.classList.add('active')
+					applicationAgree.classList.add('active')
+				}
+
+				if (formID.includes('calc')) {
+					calculatorInfo.classList.add('active')
+					calculatorGroup.classList.add('active')
+					calcAgree.classList.add('active')
+					calculatorLuck.classList.add('active')
+					$('.call__luck-orange').html(`${userMail}`);
+				}
+
+				if (formID.includes('flot-') || formID.includes('bur-') || formID.includes('auto-') || formID.includes('train-') || formID.includes('index-') || formID.includes('contacts-')) {
+					if (successBlock) {
+						// callBlock.classList.remove('active');
+						// callBg.classList.remove('active');
+						// application.classList.remove('active')
+						// $('.quiz_active').removeClass('quiz_active')
+						// $('body').attr('style', '');
+						//  $('body').removeClass('BodyOverflow');
+						successBlock.classList.add('active');
+						document.body.classList.add('active');
+					}
+					
+				}
+
 				// connect.classList.toggle('open');
 				// $('#sendMail').prop('disabled', false);
 				// $("#errorMess").css('color', 'green');
@@ -889,51 +954,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 		return false;
 	});
-	// $('#index-1 #sendMail-1').on('click', () => {
-	// 	var name = $("#index-1 input[name='name']").val();
-	// 	var phone =$("#index-1 input[name='phone']").val();
-	// 	console.log(name);
-	// 	console.log(phone);
-		// if (name == "" || phone == "" || email == "") {
-		// 	$("#errorMess").css('color', '#000');
-		// 	$('#errorMess').text('Заполните все поля!');
-		// 	return false;
-		// } 
-		// $("#errorMess").css('color', '#000');
-		// $('#errorMess').text('');
-
-
-		// $.ajax({
-		// 	url: 'ajax/mail.php',
-		// 	type: 'POST',
-		// 	cache: false,
-		// 	data: { 'name':name, 'phone':phone, 'email':email },
-		// 	dataType: 'html',
-		// 	error: function(data) {
-		// 		$("#errorMess").html(data);
-		// 		$("#errorMess").css('color', 'red');
-		// 	}, 
-		// 	/* если произойдет ошибка в элементе с id erconts выведится сообщение*/  
-		// 	beforeSend: function() {
-		// 		$('#sendMail').prop('disabled', true);
-		// 		$("#errorMess").html("Подождите, идет отправка заявки!");
-		// 		$("#errorMess").css('color', 'orange');
-				
-		// 	},
-		// 	success: function(data) {
-		// 		$("#errorMess").html(data);
-		// 		$('#name').val('');
-		// 		$('#phone').val('');
-		// 		$('#email').val('');
-		// 		// connect.classList.toggle('open');
-		// 		$('#sendMail').prop('disabled', false);
-		// 		$("#errorMess").css('color', 'green');
-		// 		dataLayer.push({'event': 'sendMail_1'})
-		// 	}
-		// })
-	// })
-
-
 
 
 

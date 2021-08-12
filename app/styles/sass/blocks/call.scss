@@ -10,7 +10,7 @@
     background-color: #FAF9F5;
     position: fixed;
     z-index: 101;
-    min-width: 320px;
+    min-width: 360px;
     padding: 32px;
     display: flex;
     flex-direction: column;
@@ -19,6 +19,7 @@
     transition: all .5s ease;
     
 }
+
 .call__bg {
     position: fixed;
     top: 0;
@@ -65,6 +66,7 @@
 .call__form {
 }
 .call__btn {
+    margin-top: 16px;
     padding: 17px 34px;
     background-color: $accent;
     color: #fff;
@@ -102,9 +104,65 @@
 }
 
 .call__block {
+    opacity: all .2s ease;
     padding: 30px 0;
+    opacity: 1;
+    visibility: visible;
+    position: static;
 }
-
+.call__block.active {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+}
+.call__luck-orange {
+    color: $accent;
+    word-wrap: break-word;
+}
+.call__luck {
+    opacity: all .2s ease;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+}
+.call__luck.active {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+    padding: 40px 0;
+    width: 100%;
+}
+.call__luck-img {
+    margin-bottom: 32px;
+    img {
+        width: 44px;
+        height: 44px;
+    }
+}
+.call__luck-mes {
+    display: flex;
+    flex-direction: column;
+}
+.call__luck-title {
+    font-family: 'Normalidad', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #191919;
+    margin-bottom: 16px;
+}
+.call__luck-subtitle {
+    font-family: 'IBM', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: #7D7D7D;
+}
 .call__cross {
     width: 32px;
     height: 32px;
@@ -127,9 +185,27 @@
         color: $accent;
     }
 }
+.call__agree.active {
+    visibility: hidden;
+}
 
 @media (max-width: 540px) {
     .call {
         width: 100%;
+        min-width: 100%;
+        justify-content: center;
+        text-align: center;
     }
+    .call__block {
+    }
+    .call__btn {
+        width: 100%;
+    }
+    .call__cross {
+        // position: absolute;
+        // bottom: 20px;
+        // padding: 20px 0 20px 0;
+   
+    }
+
 }

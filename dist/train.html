@@ -20,7 +20,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<link rel="icon" href="images/favicon.png">
-	<meta property="og:image" content="images/dist/preview.jpg">
+	<meta property="og:title" content="Ведущий производитель систем контроля транспорта - ГК Технодар"/>
+	<meta property="og:description" content="Сократите расходы на содержание техники с помощью систем мониторинга, контроль топлива и аналитики"/>
+	<meta property="og:image" content="../images/dist/OGI.png"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content= "https://technodar.group/" />
+		
 	
 	<link rel="stylesheet" href="css/main.min.css">
 	<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
@@ -99,13 +104,13 @@
 
 		<div class="success">
 			<div class="success__content">
-				<div class="success__cross">
-					<img src="../images/dist/cross.svg" alt="">
-				</div>
 				<div class="success__img">
 					<img src="images/dist/icon/check.svg" alt="check">
 				</div>
-				<div class="success__mes">Ваша заявка принята. С&nbsp;Вами свяжутся в&nbsp;ближайшее время.</div>
+				<div class="success__mes">
+					<span class="succes__mes-title">Ваша заявка<br> получена!</span>
+					<span class="succes__mes-subtitle">Мы свяжемся с вами в ближайшее время</span>
+				</div>
 			</div>
 		</div>
 
@@ -192,9 +197,9 @@
 	<section class="sailing">
 		<div class="container">
 			<div class="sailing__content" id="navigation">
-				<div class="sailing__block">
+				<h3 class="sailing__block">
 					<a href="#introLink" class="sailing__title"><span class="sailing__btn-link"></span>Решение для Ж/Д</a>
-				</div>
+				</h3>
 				<ul class="sailing__menu">
 					<li class="sailing__list"><a href="#projectLink" class="sailing__link">Кейсы</a></li>
 					<li class="sailing__list"><a href="#systemLink" class="sailing__link">Комплектующие</a></li>
@@ -401,7 +406,7 @@
 						<span class="problem__block-title">Учет</span>
 						<span class="problem__block-subtitle">Системы фактического расхода топлива отсутствуют</span>
 					</div>
-					<img src="images/dist/train//gallery-1.png" class="problem__img-2 problem__img">
+					<img src="images/dist/train//gallery-1.png" class="problem__img-2 problem__img" alt="work">
 					<div class="problem__block-3 problem__block">
 						<span class="problem__block-title">Прием топлива</span>
 						<span class="problem__block-subtitle">Объем заправленного топлива не совпадает с фактически полученным количеством</span>
@@ -424,7 +429,7 @@
 						<span class="problem__block-title">Двигатели</span>
 						<span class="problem__block-subtitle">Двигатели работают на запредельных нагрузках и быстро изнашиваются</span>
 					</div>
-					<img src="images/dist/train/gallery-2.png" class="problem__img-8 problem__img">
+					<img src="images/dist/train/gallery-2.png" class="problem__img-8 problem__img" alt="work">
 					<div class="problem__block-9 problem__block">
 						<span class="problem__block-title">Экипажем трудно
 							управлять</span>
@@ -434,8 +439,8 @@
 						<span class="problem__block-title">Мы решили эти проблемы</span>
 						<img src="images/dist/icon/arrow-bottom-black.svg" alt="arrow" aria-hidden="true">
 					</a>
-					<img src="images/dist/train/gallery-1-small.png" class="problem__img-11 problem__img">
-					<img src="images/dist/train/gallery-2-small.png" class="problem__img-12 problem__img">
+					<img src="images/dist/train/gallery-1-small.png" class="problem__img-11 problem__img" alt="work">
+					<img src="images/dist/train/gallery-2-small.png" class="problem__img-12 problem__img" alt="work">
 				</div>
 			</div>
 		</div>
@@ -620,7 +625,15 @@
 										<input type="submit" id="sendCalc__train" value="Оставить заявку" class="btn call__btn">
 
 								</div>
-								
+								<div class="calculator__luck">
+									<div class="call__luck-img">
+										<img src="images/dist/icon/check.svg" alt="check">
+									</div>
+									<div class="call__luck-mes">
+										<span class="call__luck-title">Расчет отправлен на&nbsp;ваш e&nbsp;-&nbsp;mail<br><span class="call__luck-orange">test@mail.ru</span></span>
+										<span class="call__luck-subtitle">Мы свяжемся с вами в ближайшее время</span>
+									</div>
+								</div>
 								<span class="calc__agree">Оставляя заявку вы соглашаетесь
 								на <span>обработку данных</span></span>
 							</div>
@@ -900,183 +913,185 @@
 	</section>
 	
 	
-	<section class="solutions" id="solutionsLink">
+	<div class="solutions" id="solutionsLink">
 		<div class="container">
-			<article class="solutions__item">
-				<header class="solutions__item-header">
-					<div class="row">
-						<div class="col-12 col-xl-4">
-							<p class="fs-md mb-md">Готовые решения для</p>
-							<h4 class="title">Системы контроля для тепловозов серии:<br> ТЭМ/ТГМ/ТЭ10В</h4>
+			<!-- <h4 class="solutions__title title">Готовые решения для тепловозов серии: ТЭМ/ТГМ/ТЭ10В</h4> -->
+			<div class="solutions__content d-flex">
+				<div class="solutions__left order-first col-lg-8">
+					<h4 class="solutions__subtitle">Готовые решения<br> для тепловозов</h4>
+					<img src="images/dist/train/train.png" alt="ship">
+				</div>
+				<div class="solutions__right col-lg-4">
+					<nav>
+						<div class="nav nav-tabs solution__tabs" id="nav-tab-result" role="tablist">
+						<button class="btn solution__btn nav-link active" id="nav-econom-tab" data-bs-toggle="tab" data-bs-target="#nav-econom" type="button" role="tab" aria-controls="nav-econom" aria-selected="true">Эконом</button>
+						<button class="btn solution__btn nav-link" id="nav-comfort-tab" data-bs-toggle="tab" data-bs-target="#nav-comfort" type="button" role="tab" aria-controls="nav-comfort" aria-selected="false">Комфорт</button>
+						<button class="btn solution__btn nav-link" id="nav-premium-tab" data-bs-toggle="tab" data-bs-target="#nav-premium" type="button" role="tab" aria-controls="nav-premium" aria-selected="false">Премиум</button>
 						</div>
-					</div>
-				</header>
-				<section class="solutions__item-content">
-					<div class="row">
-						<div class="col-lg-6 col-xl-5 col-xxl-4">
-							<h5 class="title fs-sm">Комплектация</h5>
-							<ul class="nav nav-tabs tab" role="tablist">
-								<li class="tab-item" role="presentation">
-									<button class="tab-link active" id="econom-1-tab" data-bs-toggle="tab"
-										data-bs-target="#econom-1" type="button" role="tab">Эконом</button>
-								</li>
-								<li class="tab-item" role="presentation">
-									<button class="tab-link" id="comfort-tab" data-bs-toggle="tab"
-										data-bs-target="#comfort-1" type="button" role="tab">Комфорт</button>
-								</li>
-								<li class="tab-item" role="presentation">
-									<button class="tab-link" id="premium-tab" data-bs-toggle="tab"
-										data-bs-target="#premium-1" type="button" role="tab">Премиум</button>
-								</li>
-							</ul>
-							<div class="divider"></div>
-							<ul class="nav nav-tabs tab tab-links" role="tablist">
-								<li class="tab-item" role="presentation">
-									<button class="tab-link title active" id="whatInclude-tab" data-bs-toggle="tab"
-										data-bs-target="#whatInclude" type="button" role="tab">Что входит</button>
-								</li>
-								<li class="tab-item" role="presentation">
-									<button class="tab-link title" id="shipDescription-tab" data-bs-toggle="tab"
-										data-bs-target="#shipDescription" type="button" role="tab">Описание</button>
-								</li>
-							</ul>
-							<!-- Tab panes -->
-							<div class="tab-content">
-								<div class="tab-pane fade show active" id="whatInclude" role="tabpanel"
-									aria-labelledby="whatInclude-tab">
-									<div class="tab-content">
-										<div class="tab-pane fade show active" id="econom-1" role="tabpanel"
-											aria-labelledby="econom-tab">
-											<div class="row">
-												<div class="col-12 col-md-6">
-													<div class="block">
-														<p>Терминал - регистратор <span class="mutted">х1</span></p>
-													</div>
-													<div class="block">
-														<div class="block__title">Двигатель</div>
-														<p>Sekee FM10 <span class="mutted">х1</span></p>
-													</div>
-												</div>
-												<div class="col-12 col-md-6">
-													<div class="block">
-														<div class="block__title">Топливный бак</div>
-														<p>Siensor D310 <span class="mutted">х2</span></p>
-													</div>
-												</div>
-											</div>
+					</nav>
+					<div class="tab-content" id="nav-tabContent">
+					<div class="tab-pane fade show active" id="nav-econom" role="tabpanel" aria-labelledby="nav-econom-tab">
+						<div class="solutions__block">
+							<nav>
+								<div class="nav nav-tabs solution__panel" id="nav-tab-desc" role="tablist">
+									<button class="btn btn__block nav-link active" id="nav-complectation-tab" data-bs-toggle="tab" data-bs-target="#nav-complectation" type="button" role="tab" aria-controls="nav-complectation" aria-selected="true">Комплектация</button>
+									<button class="btn btn__block nav-link" id="nav-option-tab" data-bs-toggle="tab" data-bs-target="#nav-option" type="button" role="tab" aria-controls="nav-option" aria-selected="false">Описание</button>
+								</div>
+								</nav>
+								<div class="tab-content" id="nav-tabContent-econom">
+								<div class="tab-pane fade show active" id="nav-complectation" role="tabpanel" aria-labelledby="nav-complectation-tab">
+									<div class="solution__content">
+										<span class="solution__name">Терминал - регистратор</span>
+										<div class="solution__group">
+											<p><span class="mutted">х1</span></p>
 										</div>
-										<div class="tab-pane fade" id="comfort-1" role="tabpanel"
-											aria-labelledby="comfort-tab">
-											<div class="row">
-												<div class="col-12 col-md-6">
-													<div class="block">
-														<p>Терминал - регистратор <span class="mutted">х1</span></p>
-													</div>
-													<div class="block">
-														<p>Видеорегистратор <span class="mutted">х1</span></p>
-													</div>
-													<div class="block">
-														<p>Камера <span class="mutted">х2</span></p>
-													</div>
-													
-												</div>
-												<div class="col-12 col-md-6">
-													<div class="block">
-														<div class="block__title">Топливный бак</div>
-														<p>Siensor D310 <span class="mutted">х2</span></p>
-													</div>
-													<div class="block">
-														<div class="block__title">Двигатель</div>
-														<p>Sekee FM10 <span class="mutted">х1</span></p>
-													</div>
-												</div>
-											</div>
+									</div>
+									<div class="solution__content">
+										<span class="solution__name">Двигатель</span>
+										<div class="solution__group">
+											<p>Sekee FM10 <span class="mutted">х1</span></p>
 										</div>
-										<div class="tab-pane fade" id="premium-1" role="tabpanel"
-											aria-labelledby="premium-tab">
-											<div class="row">
-												<div class="col-12 col-md-6">
-													<div class="block">
-														<p>Терминал-регистратор <span class="mutted">х1</span></p>
-													</div>
-													<div class="block">
-														<p>Панель визуализации данных <span class="mutted">х1</span></p>
-													</div>
-													<div class="block">
-														<p>Датчик оборотов <span class="mutted">х1</span></p>
-													</div>
-												</div>
-												<div class="col-12 col-md-6">
-													<div class="block">
-														<div class="block__title">Датчики расхода</div>
-														<p>Seeke FM16  <span class="mutted">х2</span></p>
-														<p>Seeke FM5 <span class="mutted">х3</span></p>
-													</div>
-													<div class="block">
-														<p>Счетчик электроэнергии  <span class="mutted">х1</span></p>
-													</div>
-													<div class="block">
-														<p>Трансофрматоры тока <span class="mutted">х1</span></p>
-													</div>
-												</div>
-											</div>
+									</div>
+									<div class="solution__content">
+										<span class="solution__name">Топливный бак</span>
+										<div class="solution__group">
+											<p>Siensor D310<span class="mutted">х2</span></p>
+									
 										</div>
 									</div>
 								</div>
-								<div class="tab-pane fade" id="shipDescription" role="tabpanel"
-									aria-labelledby="shipDescription-tab">
-	
-									<p class="coplectation__description">
-										Система мониторинга транпорта
-									</p>
-									<br>
-									<p class="coplectation__description">
-										Система контроля расхода топлива
-									</p>
-									<br>
-									<p class="coplectation__description">
-										Система оперативного реагирования
-									</p>
-									<br>
-									<p class="coplectation__description">
-										Система контроля режимов работы потребителей
-									</p>
-									<br>
-									<p class="coplectation__description">
-										Система контроля и распределения электроэнергии
-									</p>
+								<div class="tab-pane fade" id="nav-option" role="tabpanel" aria-labelledby="nav-option-tab">
+									<p class="coplectation__description">Система мониторинга транпорта</p>
+									<p class="coplectation__description">Система контроля расхода топлива</p>
+									<p class="coplectation__description">Система оперативного реагирования</p>
+									<p class="coplectation__description">Система контроля режимов работы потребителей</p>
+								</div>	
 								</div>
 							</div>
-							<div class="divider last"></div>
-							<form class="form" action="#" method="POST" id="solutionTrain">
-								<input type="hidden" name="title" value="Буксира-толкача Тип ОТ-2400">
-								<input type="hidden" name="type" value="Эконом">
-								<div class="row">
-									<div class="col-12 col-md-6">
-										<input type="tel" name="phone" placeholder="Телефон" required>
-									</div>
-									<div class="col-12 col-md-6">
-										<button type="submit" id="sendSolution" class="form__btn-primary">Оставить заявку</button>
-									</div>
-								</div>
-							</form>
 						</div>
-						<div class="order-first order-lg-last col-lg-6 col-xl-7 col-xxl-8">
-							<img src="images/dist/train/train.png" alt="Буксира-толкача Тип ОТ-2400"
-								class="solutions__img">
+						<div class="tab-pane fade" id="nav-comfort" role="tabpanel" aria-labelledby="nav-comfort-tab">
+							<div class="solutions__block">
+								<nav>
+									<div class="nav nav-tabs solution__panel" id="nav-tab-comfort" role="tablist">
+										<button class="btn btn__block nav-link active" id="nav-complectation__comfort-tab" data-bs-toggle="tab" data-bs-target="#nav-complectation__comfort" type="button" role="tab" aria-controls="nav-complectation__comfort" aria-selected="true">Комплектация</button>
+										<button class="btn btn__block nav-link" id="nav-option__confort-tab" data-bs-toggle="tab" data-bs-target="#nav-option__confort" type="button" role="tab" aria-controls="nav-option__confort" aria-selected="false">Описание</button>
+									</div>
+								</nav>
+								<div class="tab-content" id="nav-tabContent-comfort">
+									<div class="tab-pane fade show active" id="nav-complectation__comfort" role="tabpanel" aria-labelledby="nav-complectation__comfort-tab">
+										<div class="solution__content">
+											<span class="solution__name">Терминал - регистратор</span>
+											<div class="solution__group">
+												<p><span class="mutted">х1</span></p>
+											</div>
+										</div>
+										<div class="solution__content">
+											<span class="solution__name">Видеорегистратор </span>
+											<div class="solution__group">
+												<p><span class="mutted">х1</span></p>
+											</div>
+										</div>
+										<div class="solution__content">
+											<span class="solution__name">Терминал - регистратор</span>
+											<div class="solution__group">
+												<p><span class="mutted">х1</span></p>
+											</div>
+										</div>
+										<div class="solution__content">
+											<span class="solution__name">Камера</span>
+											<div class="solution__group">
+												<p>Sekee FM10 <span class="mutted">х1</span></p>
+											</div>
+										</div>
+										<div class="solution__content">
+											<span class="solution__name">Топливный бак</span>
+											<div class="solution__group">
+												<p>Siensor D310<span class="mutted">х2</span></p>
+										
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane fade" id="nav-option__confort" role="tabpanel" aria-labelledby="nav-option__confort-tab">
+										<p class="coplectation__description">Система мониторинга транпорта</p>
+										<p class="coplectation__description">Система контроля расхода топлива</p>
+										<p class="coplectation__description">Система оперативного реагирования</p>
+										<p class="coplectation__description">Система контроля режимов работы потребителей</p>
+										<p class="coplectation__description">Система видеонаблюдения</p>
+									</div>	
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="nav-premium" role="tabpanel" aria-labelledby="nav-premium-tab">
+							<div class="solutions__block">
+								<nav>
+									<div class="nav nav-tabs solution__panel" id="nav-tab-premium" role="tablist">
+										<button class="btn btn__block nav-link active" id="nav-complectation__premium-tab" data-bs-toggle="tab" data-bs-target="#nav-complectation__premium" type="button" role="tab" aria-controls="nav-complectation__premium" aria-selected="true">Комплектация</button>
+										<button class="btn btn__block nav-link" id="nav-option__premium-tab" data-bs-toggle="tab" data-bs-target="#nav-option__premium" type="button" role="tab" aria-controls="nav-option__premium" aria-selected="false">Описание</button>
+									</div>
+								</nav>
+								<div class="tab-content" id="nav-tabContent-premium">
+									<div class="tab-pane fade show active" id="nav-complectation__premium" role="tabpanel" aria-labelledby="nav-complectation__premium-tab">
+										<div class="solution__content">
+											<span class="solution__name">Терминал - регистратор</span>
+											<div class="solution__group">
+												<p><span class="mutted">х1</span></p>
+											</div>
+										</div>
+										<div class="solution__content">
+											<span class="solution__name">Панель визуализации данных</span>
+											<div class="solution__group">
+												<p><span class="mutted">х1</span></p>
+											</div>
+										</div>
+										<div class="solution__content">
+											<span class="solution__name">Датчик оборотов</span>
+											<div class="solution__group">
+												<p><span class="mutted">х1</span></p>
+											</div>
+										</div>
+										<div class="solution__content">
+											<span class="solution__name">Счетчик электроэнергии</span>
+											<div class="solution__group">
+												<p><span class="mutted">х1</span></p>
+											</div>
+										</div>
+										<div class="solution__content">
+											<span class="solution__name">Трансофрматоры тока</span>
+											<div class="solution__group">
+												<p><span class="mutted">х1</span></p>
+											</div>
+										</div>
+										<div class="solution__content">
+											<span class="solution__name">Датчики расхода</span>
+											<div class="solution__group">
+												<p>Seeke FM16<span class="mutted">х2</span></p>
+												<p>Seeke FM5<span class="mutted">х3</span></p>
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane fade" id="nav-option__premium" role="tabpanel" aria-labelledby="nav-option__premium-tab">
+										<p class="coplectation__description">Система мониторинга транпорта</p>
+										<p class="coplectation__description">Система контроля расхода топлива</p>
+										<p class="coplectation__description">Система оперативного реагирования</p>
+										<p class="coplectation__description">Система контроля режимов работы потребителей</p>
+										<p class="coplectation__description">Система контроля и распределения электроэнергии</p>
+									</div>	
+								</div>
+							</div>
 						</div>
 					</div>
-				</section>
-			</article>
+					<button class="btn btn__solution-orange">Оставить заявку</button>
+				</div>
+			</div>
 		</div>
-	</section>
+	</div>
 	
 	
 	<section class="certificate">
 	<div class="container">
 		<div class="certificate__content">
 			<div class="certificate__top">
-				<div class="certificate__title title">Сертификаты</div>
+				<h4 class="certificate__title title">Сертификаты</h4>
 				<div class="certificate__controls">
 					<div class="certificate__btn certificate__btn-prev"></div>
 					<div class="certificate__btn certificate__btn-next"></div>
@@ -1097,7 +1112,7 @@
 					</button>
 					<span class="sertificate-modal__title"></span>
 					<div class="sertificate-modal-imgbox">
-						<img src="" alt="">
+						<img src="images/dist/certificate/certificate-8.png" alt="sertificate">
 					</div>
 					<a href="" target="_blank" class="sertificate-modal__download">
 						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1118,7 +1133,7 @@
 
 					<div class="swiper-wrapper">
 
-						<button
+						<div
 								class="swiper-slide certificate__slide"
 								data-sertificate
 								data-title="Декларация о соответствии ТР ТС.pdf"
@@ -1135,8 +1150,8 @@
 								</div>
 							</div>
 							<!-- <img src="images/dist/certificate/certificate-1.png" alt="certificate"> -->
-						</button>
-						<button
+						</div>
+						<div
 								class="swiper-slide certificate__slide"
 								data-sertificate
 								data-title="РМРС Sekee Сертификат о типовом одобрении"
@@ -1153,8 +1168,8 @@
 								</div>
 							</div>
 							<!-- <img src="images/dist/certificate/certificate-2.png" alt="certificate"> -->
-						</button>
-						<button
+						</div>
+						<div
 								class="swiper-slide certificate__slide"
 								data-sertificate
 								data-title="РРР Свидетельство об одобрении типа"
@@ -1171,8 +1186,8 @@
 								</div>
 							</div>
 							<!-- <img src="images/dist/certificate/certificate-3.png" alt="certificate"> -->
-						</button>
-						<button
+						</div>
+						<div
 								class="swiper-slide certificate__slide"
 								data-sertificate
 								data-title="Свидетельство о признании РРР"
@@ -1189,8 +1204,8 @@
 								</div>
 							</div>
 							<!-- <img src="images/dist/certificate/certificate-4.png" alt="certificate"> -->
-						</button>
-						<button
+						</div>
+						<div
 								class="swiper-slide certificate__slide"
 								data-sertificate
 								data-title="Свидетельство о типовом одобрении на ГС 2019-2024"
@@ -1207,8 +1222,8 @@
 								</div>
 							</div>
 							<!-- <img src="images/dist/certificate/certificate-4.png" alt="certificate"> -->
-						</button>
-						<button
+						</div>
+						<div
 								class="swiper-slide certificate__slide"
 								data-sertificate
 								data-title="Сертификат ПО BoatWatch Технодар"
@@ -1225,8 +1240,8 @@
 								</div>
 							</div>
 							<!-- <img src="images/dist/certificate/certificate-4.png" alt="certificate"> -->
-						</button>
-						<button
+						</div>
+						<div
 								class="swiper-slide certificate__slide"
 								data-sertificate
 								data-title="Сертификат СМК ТД Технодар"
@@ -1243,8 +1258,8 @@
 								</div>
 							</div>
 							<!-- <img src="images/dist/certificate/certificate-4.png" alt="certificate"> -->
-						</button>
-						<button
+						</div>
+						<div
 								class="swiper-slide certificate__slide"
 								data-sertificate
 								data-title="Сертификат англ яз (ТД Технодар)"
@@ -1261,8 +1276,8 @@
 								</div>
 							</div>
 							<!-- <img src="images/dist/certificate/certificate-4.png" alt="certificate"> -->
-						</button>
-						<button
+						</div>
+						<div
 								class="swiper-slide certificate__slide"
 								data-sertificate
 								data-title="Сертификат соответствия IP68 и вибро"
@@ -1279,8 +1294,8 @@
 								</div>
 							</div>
 							<!-- <img src="images/dist/certificate/certificate-4.png" alt="certificate"> -->
-						</button>
-						<button
+						</div>
+						<div
 								class="swiper-slide certificate__slide"
 								data-sertificate
 								data-title="Сертификат соответствия РРР - ПО BoatWatch"
@@ -1297,7 +1312,7 @@
 								</div>
 							</div>
 							<!-- <img src="images/dist/certificate/certificate-4.png" alt="certificate"> -->
-						</button>
+						</div>
 
 					</div>
 
@@ -1314,8 +1329,8 @@
 				<div class="media__title title">Публикации в СМИ</div>
 			</div>
 			<div class="media__bot">
-				<div class="media__link" data-interview>
-					<img src="images/dist/icon/media-1.svg" target="_blank" alt="rbk">
+				<!-- <div class="media__link" data-interview>
+					<img src="images/dist/icon/media-1.svg" alt="secret">
 
 					<div class="interview">
 						<div class="interview-content">
@@ -1329,9 +1344,6 @@
 							</div>
 							<h4 class="interview__title">Как системы контроля топлива помогают судовладельцам экономить</h4>
 							<p>Статья скоро выйдет.</p>
-							<!-- <p>Исключить манипуляции с топливом и сохранить 35 млн. рублей в год: как системы контроля топлива помогают судовладельцам экономить</p> -->
-							<!-- <p>Алексей Якушев, директор ГК «Технодар» рассказывает, как благодаря 3-х уровневой системе контроля судовладельцам удается отслеживать расхождения номинальной и реальной массы топлива при приеме на борт, прогнозировать технологический износ оборудования на судне, а также предотвращать манипуляции с горючим, которые приводят к потере 35 млн. рублей в год.</p> -->
-							<!-- <p>Заказчиком стала рыболовная компания «Доброфлот», которой было необходимо получить надежную систему по приему и учету топлива для своего флота, в том числе для крупнейшей в мире плавбазы «Всеволод Сибирцев». Как определялась архитектура установки датчиков и почему из четырех точек приема «Технодар» сделал две, расскажем подробнее. Но для начала — о системе.</p> -->
 							<a href="https://www.rbc.ru/tags/?tag=%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0" target="_blank" class="interview__more">
 								Читать полностью
 								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1340,9 +1352,9 @@
 							</a>
 						</div>
 					</div>
-				</div>
-				<div class="media__link" data-interview>
-					<img src="images/dist/icon/media-2.svg" target="_blank" alt="secter">
+				</div> -->
+				<!-- <div class="media__link" data-interview>
+					<img src="images/dist/icon/media-2.svg" alt="rbk">
 
 					<div class="interview">
 						<div class="interview-content">
@@ -1356,9 +1368,6 @@
 							</div>
 							<h4 class="interview__title">Как системы контроля топлива помогают судовладельцам экономить</h4>
 							<p>Статья скоро выйдет.</p>
-							<!-- <p>Исключить манипуляции с топливом и сохранить 35 млн. рублей в год: как системы контроля топлива помогают судовладельцам экономить</p> -->
-							<!-- <p>Алексей Якушев, директор ГК «Технодар» рассказывает, как благодаря 3-х уровневой системе контроля судовладельцам удается отслеживать расхождения номинальной и реальной массы топлива при приеме на борт, прогнозировать технологический износ оборудования на судне, а также предотвращать манипуляции с горючим, которые приводят к потере 35 млн. рублей в год.</p> -->
-							<!-- <p>Заказчиком стала рыболовная компания «Доброфлот», которой было необходимо получить надежную систему по приему и учету топлива для своего флота, в том числе для крупнейшей в мире плавбазы «Всеволод Сибирцев». Как определялась архитектура установки датчиков и почему из четырех точек приема «Технодар» сделал две, расскажем подробнее. Но для начала — о системе.</p> -->
 							<a href="https://www.rbc.ru/tags/?tag=%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0" target="_blank" class="interview__more">
 								Читать полностью
 								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1367,9 +1376,9 @@
 							</a>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				<div class="media__link" data-interview>
-					<img src="images/dist/icon/media-3.svg" target="_blank" alt="rusbase">
+					<img src="images/dist/icon/media-3.svg" alt="rusbase">
 
 					<div class="interview">
 						<div class="interview-content">
@@ -1395,7 +1404,111 @@
 					</div>
 				</div>
 				<div class="media__link" data-interview>
-					<img src="images/dist/icon/media-1.svg" alt="rbk">
+					<img src="images/dist/icon/media-3.svg" alt="rusbase">
+
+					<div class="interview">
+						<div class="interview-content">
+							<button class="interview__close">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 10.586L16.95 5.63599L18.364 7.04999L13.414 12L18.364 16.95L16.95 18.364L12 13.414L7.04999 18.364L5.63599 16.95L10.586 12L5.63599 7.04999L7.04999 5.63599L12 10.586Z" fill="black"/>
+								</svg>
+							</button>
+							<div class="interview-imgbox">
+								<img src="images/dist/icon/media-3.svg" alt="rusbase">
+							</div>
+							<h4 class="interview__title">Как системы контроля топлива помогают судовладельцам экономить</h4>
+							<p>Исключить манипуляции с топливом и сохранить 35 млн. рублей в год: как системы контроля топлива помогают судовладельцам экономить</p>
+							<p>Алексей Якушев, директор ГК «Технодар» рассказывает, как благодаря 3-х уровневой системе контроля судовладельцам удается отслеживать расхождения номинальной и реальной массы топлива при приеме на борт, прогнозировать технологический износ оборудования на судне, а также предотвращать манипуляции с горючим, которые приводят к потере 35 млн. рублей в год.</p>
+							<p>Заказчиком стала рыболовная компания «Доброфлот», которой было необходимо получить надежную систему по приему и учету топлива для своего флота, в том числе для крупнейшей в мире плавбазы «Всеволод Сибирцев». Как определялась архитектура установки датчиков и почему из четырех точек приема «Технодар» сделал две, расскажем подробнее. Но для начала — о системе.</p>
+							<a href="https://rb.ru/opinion/sistemy-kontrolya-topliva/" target="_blank" class="interview__more">
+								Читать полностью
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 2V7.71072H10.5723V4.43633L5.00935 10L3.99998 8.99063L9.56222 3.42768H6.28926V2H12Z" fill="currentColor"/>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="media__link" data-interview>
+					<img src="images/dist/icon/media-3.svg" alt="rusbase">
+
+					<div class="interview">
+						<div class="interview-content">
+							<button class="interview__close">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 10.586L16.95 5.63599L18.364 7.04999L13.414 12L18.364 16.95L16.95 18.364L12 13.414L7.04999 18.364L5.63599 16.95L10.586 12L5.63599 7.04999L7.04999 5.63599L12 10.586Z" fill="black"/>
+								</svg>
+							</button>
+							<div class="interview-imgbox">
+								<img src="images/dist/icon/media-3.svg" alt="rusbase">
+							</div>
+							<h4 class="interview__title">Как системы контроля топлива помогают судовладельцам экономить</h4>
+							<p>Исключить манипуляции с топливом и сохранить 35 млн. рублей в год: как системы контроля топлива помогают судовладельцам экономить</p>
+							<p>Алексей Якушев, директор ГК «Технодар» рассказывает, как благодаря 3-х уровневой системе контроля судовладельцам удается отслеживать расхождения номинальной и реальной массы топлива при приеме на борт, прогнозировать технологический износ оборудования на судне, а также предотвращать манипуляции с горючим, которые приводят к потере 35 млн. рублей в год.</p>
+							<p>Заказчиком стала рыболовная компания «Доброфлот», которой было необходимо получить надежную систему по приему и учету топлива для своего флота, в том числе для крупнейшей в мире плавбазы «Всеволод Сибирцев». Как определялась архитектура установки датчиков и почему из четырех точек приема «Технодар» сделал две, расскажем подробнее. Но для начала — о системе.</p>
+							<a href="https://rb.ru/opinion/sistemy-kontrolya-topliva/" target="_blank" class="interview__more">
+								Читать полностью
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 2V7.71072H10.5723V4.43633L5.00935 10L3.99998 8.99063L9.56222 3.42768H6.28926V2H12Z" fill="currentColor"/>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="media__link" data-interview>
+					<img src="images/dist/icon/media-3.svg" alt="rusbase">
+
+					<div class="interview">
+						<div class="interview-content">
+							<button class="interview__close">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 10.586L16.95 5.63599L18.364 7.04999L13.414 12L18.364 16.95L16.95 18.364L12 13.414L7.04999 18.364L5.63599 16.95L10.586 12L5.63599 7.04999L7.04999 5.63599L12 10.586Z" fill="black"/>
+								</svg>
+							</button>
+							<div class="interview-imgbox">
+								<img src="images/dist/icon/media-3.svg" alt="rusbase">
+							</div>
+							<h4 class="interview__title">Как системы контроля топлива помогают судовладельцам экономить</h4>
+							<p>Исключить манипуляции с топливом и сохранить 35 млн. рублей в год: как системы контроля топлива помогают судовладельцам экономить</p>
+							<p>Алексей Якушев, директор ГК «Технодар» рассказывает, как благодаря 3-х уровневой системе контроля судовладельцам удается отслеживать расхождения номинальной и реальной массы топлива при приеме на борт, прогнозировать технологический износ оборудования на судне, а также предотвращать манипуляции с горючим, которые приводят к потере 35 млн. рублей в год.</p>
+							<p>Заказчиком стала рыболовная компания «Доброфлот», которой было необходимо получить надежную систему по приему и учету топлива для своего флота, в том числе для крупнейшей в мире плавбазы «Всеволод Сибирцев». Как определялась архитектура установки датчиков и почему из четырех точек приема «Технодар» сделал две, расскажем подробнее. Но для начала — о системе.</p>
+							<a href="https://rb.ru/opinion/sistemy-kontrolya-topliva/" target="_blank" class="interview__more">
+								Читать полностью
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 2V7.71072H10.5723V4.43633L5.00935 10L3.99998 8.99063L9.56222 3.42768H6.28926V2H12Z" fill="currentColor"/>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="media__link" data-interview>
+					<img src="images/dist/icon/media-3.svg" alt="rusbase">
+
+					<div class="interview">
+						<div class="interview-content">
+							<button class="interview__close">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 10.586L16.95 5.63599L18.364 7.04999L13.414 12L18.364 16.95L16.95 18.364L12 13.414L7.04999 18.364L5.63599 16.95L10.586 12L5.63599 7.04999L7.04999 5.63599L12 10.586Z" fill="black"/>
+								</svg>
+							</button>
+							<div class="interview-imgbox">
+								<img src="images/dist/icon/media-3.svg" alt="rusbase">
+							</div>
+							<h4 class="interview__title">Как системы контроля топлива помогают судовладельцам экономить</h4>
+							<p>Исключить манипуляции с топливом и сохранить 35 млн. рублей в год: как системы контроля топлива помогают судовладельцам экономить</p>
+							<p>Алексей Якушев, директор ГК «Технодар» рассказывает, как благодаря 3-х уровневой системе контроля судовладельцам удается отслеживать расхождения номинальной и реальной массы топлива при приеме на борт, прогнозировать технологический износ оборудования на судне, а также предотвращать манипуляции с горючим, которые приводят к потере 35 млн. рублей в год.</p>
+							<p>Заказчиком стала рыболовная компания «Доброфлот», которой было необходимо получить надежную систему по приему и учету топлива для своего флота, в том числе для крупнейшей в мире плавбазы «Всеволод Сибирцев». Как определялась архитектура установки датчиков и почему из четырех точек приема «Технодар» сделал две, расскажем подробнее. Но для начала — о системе.</p>
+							<a href="https://rb.ru/opinion/sistemy-kontrolya-topliva/" target="_blank" class="interview__more">
+								Читать полностью
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 2V7.71072H10.5723V4.43633L5.00935 10L3.99998 8.99063L9.56222 3.42768H6.28926V2H12Z" fill="currentColor"/>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="media__link" data-interview>
+					<img src="images/dist/icon/media-1.svg" alt="secret">
 
 					<div class="interview">
 						<div class="interview-content">
@@ -1409,9 +1522,7 @@
 							</div>
 							<h4 class="interview__title">Как системы контроля топлива помогают судовладельцам экономить</h4>
 							<p>Статья скоро выйдет.</p>
-							<!-- <p>Исключить манипуляции с топливом и сохранить 35 млн. рублей в год: как системы контроля топлива помогают судовладельцам экономить</p> -->
-							<!-- <p>Алексей Якушев, директор ГК «Технодар» рассказывает, как благодаря 3-х уровневой системе контроля судовладельцам удается отслеживать расхождения номинальной и реальной массы топлива при приеме на борт, прогнозировать технологический износ оборудования на судне, а также предотвращать манипуляции с горючим, которые приводят к потере 35 млн. рублей в год.</p> -->
-							<!-- <p>Заказчиком стала рыболовная компания «Доброфлот», которой было необходимо получить надежную систему по приему и учету топлива для своего флота, в том числе для крупнейшей в мире плавбазы «Всеволод Сибирцев». Как определялась архитектура установки датчиков и почему из четырех точек приема «Технодар» сделал две, расскажем подробнее. Но для начала — о системе.</p> -->
+							
 							<a href="https://www.rbc.ru/tags/?tag=%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0" target="_blank" class="interview__more">
 								Читать полностью
 								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1420,9 +1531,9 @@
 							</a>
 						</div>
 					</div>
-				</div>
-				<div class="media__link" data-interview>
-					<img src="images/dist/icon/media-2.svg" alt="secret">
+				</div> -->
+				<!-- <div class="media__link" data-interview>
+					<img src="images/dist/icon/media-2.svg" alt="rbk">
 
 					<div class="interview">
 						<div class="interview-content">
@@ -1436,9 +1547,6 @@
 							</div>
 							<h4 class="interview__title">Как системы контроля топлива помогают судовладельцам экономить</h4>
 							<p>Статья скоро выйдет.</p>
-							<!-- <p>Исключить манипуляции с топливом и сохранить 35 млн. рублей в год: как системы контроля топлива помогают судовладельцам экономить</p> -->
-							<!-- <p>Алексей Якушев, директор ГК «Технодар» рассказывает, как благодаря 3-х уровневой системе контроля судовладельцам удается отслеживать расхождения номинальной и реальной массы топлива при приеме на борт, прогнозировать технологический износ оборудования на судне, а также предотвращать манипуляции с горючим, которые приводят к потере 35 млн. рублей в год.</p> -->
-							<!-- <p>Заказчиком стала рыболовная компания «Доброфлот», которой было необходимо получить надежную систему по приему и учету топлива для своего флота, в том числе для крупнейшей в мире плавбазы «Всеволод Сибирцев». Как определялась архитектура установки датчиков и почему из четырех точек приема «Технодар» сделал две, расскажем подробнее. Но для начала — о системе.</p> -->
 							<a href="https://www.rbc.ru/tags/?tag=%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0" target="_blank" class="interview__more">
 								Читать полностью
 								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1447,7 +1555,7 @@
 							</a>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				<div class="media__link" data-interview>
 					<img src="images/dist/icon/media-3.svg" alt="rusbase">
 
@@ -1641,25 +1749,7 @@
 				<div class="quizResult"></div>
 			</div>
 			<div class="quiz-step" data-step="3">
-				<span class="quiz__title">Куда отправить расчёт?</span>
-				<input class="quiz__radioinput" id="avtomats" name="taskss" value="E-mail" type="checkbox">
-				<label class="quiz__link quiz__checkboxLabel" for="avtomats">
-					<svg class="quiz__mailto" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2h12a.667.667 0 01.667.667v10.667A.667.667 0 0114 14H2a.667.667 0 01-.667-.666V2.667A.667.667 0 012 2zm6.04 5.79L3.766 4.16l-.864 1.016 5.147 4.37 5.054-4.374-.872-1.008-4.19 3.626z"></svg>
-					<span class="quiz__link-title">E-mail</span>
-				</label>
-				<a href="#" class="quiz__link">
-					<svg class="quiz__telegram" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 13.667A6.666 6.666 0 117 .334a6.666 6.666 0 010 13.333zM4.927 7.78l.009-.005.58 1.914c.074.207.177.245.301.227.126-.017.192-.084.274-.162l.792-.766 1.7 1.259c.31.171.534.082.611-.288L10.3 4.744c.122-.485-.091-.68-.468-.525l-6.49 2.506c-.442.178-.44.426-.08.536l1.665.52z" /></svg>
-					<span class="quiz__link-title">Telegram</span>
-				</a>
-				<a href="#" class="quiz__link">
-					<svg class="quiz__whatsapp" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.336 13.667l.902-3.312a6.667 6.667 0 112.41 2.409l-3.312.903zm4.258-9.795a.64.64 0 00-.247.067.862.862 0 00-.196.152c-.08.075-.125.14-.174.204A1.82 1.82 0 003.6 5.414c.002.326.087.644.22.942.273.6.722 1.237 1.314 1.828.143.142.282.284.432.417a6.299 6.299 0 002.56 1.364l.38.058c.123.007.246-.003.37-.009.194-.01.384-.062.556-.154.11-.058.162-.088.255-.146l.083-.06a1.53 1.53 0 00.22-.193.766.766 0 00.14-.2c.052-.11.104-.317.125-.49.016-.132.012-.204.01-.248-.003-.072-.062-.146-.127-.177l-.388-.174s-.58-.253-.934-.414a.332.332 0 00-.118-.027.321.321 0 00-.252.085v-.002c-.003 0-.048.038-.53.622a.233.233 0 01-.245.087.945.945 0 01-.128-.044l-.168-.073-.003-.001a4.007 4.007 0 01-1.046-.667c-.084-.073-.162-.153-.242-.23a4.197 4.197 0 01-.68-.846l-.04-.063a.616.616 0 01-.068-.137.214.214 0 01.04-.176s.163-.178.238-.274a2.92 2.92 0 00.176-.248c.078-.127.103-.257.062-.358-.187-.456-.38-.91-.58-1.36-.038-.09-.155-.154-.261-.167a2.966 2.966 0 00-.108-.01 2.255 2.255 0 00-.269.002v.001z"/></svg>
-					<span class="quiz__link-title">WhatsApp</span>
-				</a>
-
-				
-			</div>
-			<div class="quiz-step" data-step="4">
-				<span class="quiz__title">Расчёт готов</span>
+				<h6 class="quiz__title">Расчёт готов</h6>
 				<span class="quiz__text">Заполните данные для отправки</span>
 				<div class="quiz-block">
 					<input class="quiz__input" name="phone" type="text" placeholder="Телефон" required> 
@@ -1679,7 +1769,7 @@
 		</div>
 	</form>
 </section>
-</div>
+
 
 
 <div class="call__bg"></div>	
@@ -1688,7 +1778,7 @@
 				<img src="../images/dist/cross.svg" alt="cross">
 			</button>
 			<div class="call__block">
-				<div class="call__title">Заказать звонок</div>
+				<h6 class="call__title">Заказать звонок</h6>
 				<div class="call__subtitle">Перезвоним в теченнии 3 минут</div>
 
 				<form class="call__form" id="train__call">
@@ -1698,7 +1788,45 @@
 					
 				</form>
 			</div>
+			<div class="call__luck">
+				<div class="call__luck-img">
+					<img src="images/dist/icon/check.svg" alt="check">
+				</div>
+				<div class="call__luck-mes">
+					<span class="call__luck-title">Ваша заявка<br> получена!</span>
+					<span class="call__luck-subtitle">Мы свяжемся с вами в ближайшее время</span>
+				</div>
+			</div>
 			<span class="call__agree">Оставляя заявку вы соглашаетесь 
+				на <span>обработку данных</span></span>
+		</section>
+
+
+		<section class="application">
+			<button class="btn application__cross">
+				<img src="../images/dist/cross.svg" alt="cross">
+			</button>
+			<div class="application__block">
+				<h6 class="call__title">Оставить заявку</h6>
+				<div class="call__subtitle">Перезвоним в теченнии 3 минут</div>
+		
+				<form class="call__form" id="train__application">
+					<input class="call__name" name="name" type="text" placeholder="Имя" required> 
+					<input class="call__phone" name="phone" type="text" placeholder="Телефон" required> 
+					<input type="submit" id="sendapplication__train" value="Оставить заявку" class="btn call__btn">
+					
+				</form>
+			</div>
+			<div class="application__luck">
+				<div class="call__luck-img">
+					<img src="images/dist/icon/check.svg" alt="check">
+				</div>
+				<div class="call__luck-mes">
+					<span class="call__luck-title">Ваша заявка<br> получена!</span>
+					<span class="call__luck-subtitle">Мы свяжемся с вами в ближайшее время</span>
+				</div>
+			</div>
+			<span class="application__agree">Оставляя заявку вы соглашаетесь 
 				на <span>обработку данных</span></span>
 		</section>
 	<footer class="footer">
@@ -1773,9 +1901,14 @@
 	</footer>
 
 
-
+	<script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn-ru.bitrix24.ru/b431011/crm/site_button/loader_2_txdkg5.js');
+	</script>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"></script>
 	<script src="js/app.min.js"></script>
 
 </body>

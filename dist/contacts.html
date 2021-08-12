@@ -20,7 +20,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<link rel="icon" href="images/favicon.png">
-	<meta property="og:image" content="images/dist/preview.jpg">
+	<meta property="og:title" content="Ведущий производитель систем контроля транспорта - ГК Технодар"/>
+	<meta property="og:description" content="Сократите расходы на содержание техники с помощью систем мониторинга, контроль топлива и аналитики"/>
+	<meta property="og:image" content="../images/dist/OGI.png"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content= "https://technodar.group/" />
+		
 	
 	<link rel="stylesheet" href="css/main.min.css">
 	<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
@@ -99,13 +104,13 @@
 
 		<div class="success">
 			<div class="success__content">
-				<div class="success__cross">
-					<img src="../images/dist/cross.svg" alt="">
-				</div>
 				<div class="success__img">
 					<img src="images/dist/icon/check.svg" alt="check">
 				</div>
-				<div class="success__mes">Ваша заявка принята. С&nbsp;Вами свяжутся в&nbsp;ближайшее время.</div>
+				<div class="success__mes">
+					<span class="succes__mes-title">Ваша заявка<br> получена!</span>
+					<span class="succes__mes-subtitle">Мы свяжемся с вами в ближайшее время</span>
+				</div>
 			</div>
 		</div>
 
@@ -122,7 +127,7 @@
                     <div class="contacts__column-1">
                         <div class="contacts__item">
                             <div class="contacts__label">Адрес</div>
-                            <div class="contacts__adress">Петрозаводск<br><span>6-й Гвардейский пер., 7а</span></div>
+                            <h6 class="contacts__adress">Петрозаводск<br><span>6-й Гвардейский пер., 7а</span></h6>
                         </div>
                         <div class="contacts__link">
                             <a href="#map">Смотреть на карте</a>
@@ -142,7 +147,7 @@
                         <div class="contacts__column-3">
                             <div class="contacts__item">
                                 <div class="contacts__label">E-mail</div>
-                                <a href="mailto:skrt_biz@mail.ru" class="contacts__title">skrt_biz@mail.ru</span></a>
+                                <a href="mailto:skrt_biz@mail.ru" class="contacts__title">skrt_biz@mail.ru</a>
                             </div>
                         </div>
                     </div>
@@ -181,12 +186,12 @@ var marker = new mapboxgl.Marker({
                             <h2 class="proposal__title title">Оставьте заявку<br> на консультацию</h2>
                         </div>
                         <div class="proposal__right">
-                            <form class="proposal__form form" method="POST" id="flot-1">
+                            <form class="proposal__form form" method="POST" id="contacts-1">
                                 <div class="form__block">
                                     <input class="form__name" name="name" type="text" placeholder="Имя" required>
                                     <input class="form__phone" name="phone" type="text" placeholder="Телефон" required>
                                 </div>
-                                <input type="submit" id="sendMail__flot-1" value="Оставить заявку" class="form__btn-primary">
+                                <input type="submit" id="sendMail__contacts-1" value="Оставить заявку" class="form__btn-primary">
                             </form>
                         </div>
                     </div>
@@ -222,7 +227,7 @@ var marker = new mapboxgl.Marker({
                 <img src="../images/dist/cross.svg" alt="cross">
             </button>
 			<div class="call__block">
-                <div class="call__title">Заказать звонок</div>
+                <h1 class="call__title">Заказать звонок</h1>
                 <div class="call__subtitle">Перезвоним в теченнии 3 минут</div>
 
                 <form class="call__form" id="contacts__call">
@@ -307,9 +312,14 @@ var marker = new mapboxgl.Marker({
 	</footer>
 
 
-
+	<script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn-ru.bitrix24.ru/b431011/crm/site_button/loader_2_txdkg5.js');
+	</script>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"></script>
 	<script src="js/app.min.js"></script>
 
 </body>

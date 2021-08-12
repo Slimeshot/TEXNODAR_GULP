@@ -13,49 +13,99 @@
     opacity: 0;
     visibility: hidden;
     transition: .2s ease;
+    br {
+        display: none;
+    }
 }
 .success.active {
     opacity: 1;
     visibility: visible;
 }
 .success__content {
-    padding: 32px;
-    background-color: #fff;
-    max-width: 460px;
+    padding: 64px;
+    background-color: #FAF9F5;
+    max-width: 590px;
     display: flex;
     align-items: center;
-    position: relative;
+    border-radius: 32px 8px;
 }
 .success__img {
-    padding-right: 20px;
+    padding-right: 32px;
+    align-self: flex-start;
     img {
-        width: 40px;
-        height: 40px;
+        width: 28px;
+        height: 28px;
     }
 }
 .success__mes {
-    padding: 10px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.succes__mes-title {
+    font-family: 'Normalidad', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #191919;
+    margin-bottom: 16px;
+
+}
+.succes__mes-subtitle {
     font-family: 'IBM', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 14px;
+    line-height: 16px;
     letter-spacing: 0.01em;
-    color: #191919;
-    
-}
-.success__cross {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    cursor: pointer;
+    color: #7D7D7D;
 }
 
 
-@media (max-width: 540px) {
-    .success__mes {
-        font-size: 14px;
-
-        
+@media (max-width: 700px) {
+    .success__content {
+        padding: 32px;
     }
 }
+
+@media (max-width: 560px) {
+    .success {
+        br {
+            display: block;
+        }
+    }
+    .success__content {
+        flex-direction: column;
+    }
+    .success__img {
+        padding-right: 0px;
+        margin-bottom: 32px;
+        align-self: center;
+        img {
+            width: 44px;
+            height: 44px;
+        }
+    }
+    .succes__mes-title {
+        text-align: center;
+    
+    }
+}
+
+@media (max-width: 560px) {
+    .success__content {
+        padding: 32px 22px;
+    }
+    .succes__mes-title {
+        font-size: 20px;
+    
+    }
+    .succes__mes-subtitle {
+        font-size: 12px;
+    }
+}
+
