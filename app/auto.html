@@ -39,7 +39,7 @@
 					</div>
 					<div class="intro__bottom">
 						<div class="intro__buttons">
-							<button data-quiz class="btn intro__btn-red">Рассчитать стоимость</button>
+							<button data-quiz class="btn intro__btn-red">Узнать стоимость</button>
 							<a href="#branchLink" class="btn intro__btn-transparent">Отраслевые решения</a>
 						</div>
 						<div class="intro__block">
@@ -436,7 +436,7 @@
 									<div class="col-12">
 										<div class="calculator__form-footer">
 											<div class="divider mt-md mb-xl"></div>
-											<button class="form__btn-primary mr-xl calculator_btn_next" type="button">Рассчитать</button>
+											<button class="form__btn-primary mr-xl calculator_btn_next" type="button" id="calcBtnNext">Рассчитать</button>
 											<span class="mutted fs-md">
 												Оставляя заявку вы соглашаетесь на <a href="#" target="_blank">обработку
 													данных</a>
@@ -467,9 +467,12 @@
 									<div class="calculator__row">
 										<span class="calculator__preresult">Экономия/месяц</span><span class="calculator__result">0</span>
 									</div>
+									<div class="calculator__row">	
+										<span class="calculator__preresult">Экономия/год</span><span class="calculator__result-year">0</span>
+									</div>
 								</div>
 								<div class="calculator__group">
-									<div class="calculator__title">Подробное описание</div>
+									<div class="calculator__title">Начните экономить </div>
 									<div class="calculator__subtitle">Укажите ваши данные для связи</div>
 										<input class="calculator__phone" name="phone" type="text" placeholder="Телефон" required>
 										<input class="calculator__email" name="email" type="text" placeholder="E-mail" required>
@@ -481,7 +484,7 @@
 										<img src="images/dist/icon/check.svg" alt="check">
 									</div>
 									<div class="call__luck-mes">
-										<span class="call__luck-title">Расчет отправлен на&nbsp;ваш e&nbsp;-&nbsp;mail<br><span class="call__luck-orange">test@mail.ru</span></span>
+										<span class="call__luck-title">Ваша заявка<br> получена!</span>
 										<span class="call__luck-subtitle">Мы свяжемся с вами в ближайшее время</span>
 									</div>
 								</div>
@@ -831,12 +834,21 @@
 				<div class="quizResult"></div>
 			</div>
 			<div class="quiz-step" data-step="3">
-				<h6 class="quiz__title">Расчёт готов</h6>
-				<span class="quiz__text">Заполните данные для отправки</span>
+				<h6 class="quiz__title">Расчёт почти готов</h6>
+				<span class="quiz__text">Заполните форму нижу, чтобы рассчитать точную стоимость системы </span>
 				<div class="quiz-block">
 					<input class="quiz__input" name="phone" type="text" placeholder="Телефон" required> 
 					<input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" class="quiz__input" type="email" name="email" placeholder="E-mail" required>
 				</div>
+			</div>
+		</div>
+		<div class="quiz__luck">
+			<div class="call__luck-img">
+				<img src="images/dist/icon/check.svg" alt="check">
+			</div>
+			<div class="call__luck-mes">
+				<span class="call__luck-title">Ваша заявка<br> получена!</span>
+				<span class="call__luck-subtitle">Мы свяжемся с вами в ближайшее время</span>
 			</div>
 		</div>
 		<div class="quiz-sticky"></div>
@@ -848,6 +860,7 @@
 				<span>Закрыть</span>
 			</button>
 			<button class="btn quiz__next " id="sendQuiz__auto">Далее</button>
+			<button type="button" class="btn quiz__next-close" data-close-quiz >Спасибо!</button>
 		</div>
 	</form>
 </section>

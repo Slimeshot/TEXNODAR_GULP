@@ -140,6 +140,9 @@
             color: #fff;
             background-color: $accent;
         }
+        &:disabled {
+            background-color: #CBCBCB;
+        }
     }
     &__block {
         flex-grow: 6;

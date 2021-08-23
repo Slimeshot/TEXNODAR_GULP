@@ -54,6 +54,12 @@
         text-align: center;
     }
 }
+.command__br-1 {
+    display: none;
+}
+.command__br-2 {
+    display: none;
+}
 .command__position {
     font-family: 'IBM', sans-serif;
     font-style: normal;
@@ -81,6 +87,22 @@
 
 
 
+@media (max-width: 1262px) {
+    .command__br-1 {
+        display: block;
+    }
+}
+
+
+@media (max-width: 920px) {
+    .command__br-2 {
+        display: block;
+    }
+    .command__name-view {
+        display: none;
+
+    }
+}
 
 
 
@@ -97,6 +119,16 @@
     }
     .command__img {
         margin-bottom: 16px;
+    }
+     .command__br-1 {
+        display: none;
+    }
+    .command__br-2 {
+        display: none;
+    }
+    .command__name-view {
+        display: block;
+        
     }
 }
 
@@ -115,5 +147,19 @@
     .command__item {
         
         margin-bottom: 32px;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .command__br-1 {
+        display: block;
+    }
+    .command__br-2 {
+        display: block;
+    }
+    .command__name-view {
+        display: none;
+        
     }
 }

@@ -165,6 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		$(".quiz-block input[name='phone']").mask("+7(999) 999-9999");
 		$(".form__phone").mask("+7(999) 999-9999");
 		$(".call__phone").mask("+7(999) 999-9999");
+		$(".calculator__phone").mask("+7(999) 999-9999");
 
 
 		//open/close burger-menu
@@ -323,8 +324,66 @@ document.addEventListener('DOMContentLoaded', () => {
 	  }
 
 
+	     // custom select
 
-	   //close/open call
+		 $('#shipSelect').each(function() {
+			const _this = $(this),
+				selectOption = _this.find('option'),
+				selectOptionLength = selectOption.length,
+				selectedOption = selectOption.filter(':selected'),
+				duration = 450; // длительность анимации 
+		
+			_this.hide();
+			_this.wrap('<div class="select"></div>');
+			$('<div>', {
+				class: 'new-select',
+				text: _this.children('option:disabled').text()
+			}).insertAfter(_this);
+		
+			const selectHead = _this.next('.new-select');
+			$('<div>', {
+				class: 'new-select__list'
+			}).insertAfter(selectHead);
+		
+			const selectList = selectHead.next('.new-select__list');
+			for (let i = 1; i < selectOptionLength; i++) {
+				$('<div>', {
+					class: 'new-select__item',
+					html: $('<span>', {
+						class: 'calc__select',
+						text: selectOption.eq(i).text()
+					})
+				})
+				.attr('data-value', selectOption.eq(i).val())
+				.appendTo(selectList);
+			}
+		
+			const selectItem = selectList.find('.new-select__item');
+			selectList.slideUp(0);
+			selectHead.on('click', function() {
+				if ( !$(this).hasClass('on') ) {
+					$(this).addClass('on');
+					selectList.slideDown(duration);
+		
+					selectItem.on('click', function() {
+						let chooseItem = $(this).data('value');
+		
+						$('select').val(chooseItem).attr('selected', 'selected');
+						selectHead.text( $(this).find('span').text() );
+		
+						selectList.slideUp(duration);
+						selectHead.removeClass('on');
+					});
+		
+				} else {
+					$(this).removeClass('on');
+					selectList.slideUp(duration);
+				}
+			});
+		});
+
+
+	   //close/open calc
 
 	   const calcBtnNext = document.querySelector('.calculator_btn_next');
 	   const calcCross = document.querySelector('.calculator__cross');
@@ -332,6 +391,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	   
 	   if (calcBtnNext) {
+
+			// let btnMonthDelivery = $('#monthDelivery').val();
+				
+			// if (btnMonthDelivery === '') {
+			// 	$('.calculator_btn_next').prop('disabled', true);
+			// } else {
+			// 	$('.calculator_btn_next').prop('disabled', false);
+			// }
+
+
+			// элементы
+			const in_1 = document.getElementById("monthDelivery");
+			const in_2 = document.getElementById("price");
+			const newSelectItem = document.querySelectorAll('.calc__select');
+			const newSelect = document.querySelector('.new-select')
+			const calcBtnNext = document.getElementById("calcBtnNext");
+			let typeTs;
+			// document.addEventListener('click', (event) => {
+			// 	console.log(event.target);
+			// })
+			// console.log(typeTs);
+			// функция проверки и вкл/выкл кнопки
+			const check = () => {
+				typeTs = $('.new-select').text()
+				calcBtnNext.disabled =
+				in_1.value.length < 1  ||  in_2.value.length < 1 || typeTs == 'Вид транспорта';
+				// console.log(typeTs);
+			} 
+
+			// проверять при изменении инпутов
+			in_1.addEventListener('input', check);
+			in_2.addEventListener('input', check);
+			newSelect.addEventListener('click', () => {
+				newSelectItem.forEach(item => {
+					item.addEventListener('click', () => {
+						check();
+					});
+
+				})
+			})
+
+			// проверить разок в самом начале
+			check();
+
+
 		   $('.calculator_btn_next').on('click', () => {
 			   var kindTransport = $('#shipSelect option:selected').html();
 			   var formCount = $('#formCount').val();
@@ -343,96 +447,23 @@ document.addEventListener('DOMContentLoaded', () => {
 			   $('.calculator__delivery').text(monthDelivery);
 			   $('.calculator__price').text(price);
 			   $('.calculator__result').text(Math.floor(formCount * monthDelivery * price * (7.49/100)) + ' руб');
+			   $('.calculator__result-year').text(Math.floor(formCount * monthDelivery * price * (7.49/100) * 12) + ' руб');
 
-			//    if (formCount == "" || monthDelivery == "" || price == "") {
-			// 	   // $("#errorCalcMess").css('color', '#fff');
-			// 	   // $('#errorCalcMess').text('Заполните все поля!');
-			// 	   return false;
-			//    } 
-				calcBtnNext.addEventListener('click', () => {
+			})
+			calcBtnNext.addEventListener('click', () => {
 				callBg.classList.add('active')
 				calcBlock.classList.add('active');
 				})
-	
-				
-		   
-
-				// var color = $('#calc__color option:selected').text();
-				// var palitra = $('#calc__palitra option:selected').text();
-				// var cheked = '';
-				// if ($('#calc__express').is(':checked')){
-				// 	cheked = 'Нужна экспресс покраска!';
-				// } else {
-				// 	cheked = 'Не нужна экспресс покраска!'
-				// }
-				// var sum = $('.calc__price').text();
-				// $("#errorCalcMess").css('color', '#fff');
-				// $('#errorCalcMess').text('');
-			})
 			calcCross.addEventListener('click', () => {
 				calcBlock.classList.remove('active');
 				callBg.classList.remove('active')
 			})
 	   }
 
+	   //checked calc form 
+	   
 
 	   
-	   // custom select
-
-	   $('#shipSelect').each(function() {
-		const _this = $(this),
-			selectOption = _this.find('option'),
-			selectOptionLength = selectOption.length,
-			selectedOption = selectOption.filter(':selected'),
-			duration = 450; // длительность анимации 
-	
-		_this.hide();
-		_this.wrap('<div class="select"></div>');
-		$('<div>', {
-			class: 'new-select',
-			text: _this.children('option:disabled').text()
-		}).insertAfter(_this);
-	
-		const selectHead = _this.next('.new-select');
-		$('<div>', {
-			class: 'new-select__list'
-		}).insertAfter(selectHead);
-	
-		const selectList = selectHead.next('.new-select__list');
-		for (let i = 1; i < selectOptionLength; i++) {
-			$('<div>', {
-				class: 'new-select__item',
-				html: $('<span>', {
-					text: selectOption.eq(i).text()
-				})
-			})
-			.attr('data-value', selectOption.eq(i).val())
-			.appendTo(selectList);
-		}
-	
-		const selectItem = selectList.find('.new-select__item');
-		selectList.slideUp(0);
-		selectHead.on('click', function() {
-			if ( !$(this).hasClass('on') ) {
-				$(this).addClass('on');
-				selectList.slideDown(duration);
-	
-				selectItem.on('click', function() {
-					let chooseItem = $(this).data('value');
-	
-					$('select').val(chooseItem).attr('selected', 'selected');
-					selectHead.text( $(this).find('span').text() );
-	
-					selectList.slideUp(duration);
-					selectHead.removeClass('on');
-				});
-	
-			} else {
-				$(this).removeClass('on');
-				selectList.slideUp(duration);
-			}
-		});
-	});
 
 
 
@@ -870,17 +901,37 @@ document.addEventListener('DOMContentLoaded', () => {
 	const calculatorLuck = document.querySelector('.calculator__luck');
 
 
+	const quizResults = document.querySelector('.quiz-results');
+	const quizMain = document.querySelector('.quiz-main');
+	const quizNext = document.querySelector('.quiz__next');
+	const quizLuck = document.querySelector('.quiz__luck');
+	const quizNextClose = document.querySelector('.quiz__next-close');
+
+	//get clientID
+	function get_cookie ( cookie_name ) {
+		var results = document.cookie.match ( '(^|;) ?' + cookie_name + '=([^;]*)(;|$)' );
+		if ( results )
+			return ( unescape ( results[2] ) );
+		else
+			return null;
+		}
+
+
+
+	$.getJSON('https://ipapi.co/json/', function(data) {
+		$('.header-ip').text((JSON.stringify(data.ip, null, 2).slice(1, -1)));
+		});
+	
+	$('.header-ga').text(get_cookie('_ga'));
+	$('.header-fbp').text(get_cookie('_fbp'));
+	$('.header-uid').text(get_cookie('_ym_uid'));
+	$('.header-lvid').text(get_cookie('tmr_lvid'));
 
 	$('form').submit(function () {
 		var formID = $(this).attr('id'); // Получение ID формы
 		var formNm = $('#' + formID);
-		var userMail = $(".calculator__email").val();
 		console.log(formID);
 
-		// console.log(formNm);
-		if (formID.includes('flot-') || formID.includes('bur-') || formID.includes('auto-') || formID.includes('train-') || formID.includes('index-') || formID.includes('contacts-')) {
-			console.log(`${formID} ASDASDAS`);
-		}
 		$.ajax({
 			url: 'ajax/mail.php',
 			type: 'POST',
@@ -900,8 +951,8 @@ document.addEventListener('DOMContentLoaded', () => {
 				
 			},
 			success: function(data) {
+				dataLayer.push({'event': `${formID}`})
 				console.log(data);
-				// $("#errorMess").html(data);
 				if ($("input[name='name']")) {
 					$("input[name='name']").val('');
 				}
@@ -912,6 +963,18 @@ document.addEventListener('DOMContentLoaded', () => {
 					$("input[name='email']").val('');
 				}
 				
+				if (formID.includes('quiz')) {
+					quizResults.classList.add('active')
+					quizMain.classList.add('active')
+					quizNext.classList.add('active')
+					quizLuck.classList.add('active')
+					quizNextClose.classList.add('active')
+					$('.quiz-sticky').css('display','none')
+					$('.quiz-bottom').css('margin-top','0px')
+					$('.quiz-content').css('padding-top','3.2em')
+				}
+
+
 				if (formID.includes('call')) {
 					callForm.classList.add('active')
 					callLuck.classList.add('active')
@@ -929,7 +992,6 @@ document.addEventListener('DOMContentLoaded', () => {
 					calculatorGroup.classList.add('active')
 					calcAgree.classList.add('active')
 					calculatorLuck.classList.add('active')
-					$('.call__luck-orange').html(`${userMail}`);
 				}
 
 				if (formID.includes('flot-') || formID.includes('bur-') || formID.includes('auto-') || formID.includes('train-') || formID.includes('index-') || formID.includes('contacts-')) {

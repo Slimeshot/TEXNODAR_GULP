@@ -342,9 +342,12 @@
         &:first-child {
             padding-top: 0px;
         }
-        &:last-child {
+        &:nth-child(5) {
             border-top: 1px solid #000;
+        }
+        &:last-child {
             border-bottom: none;
+
         }
         span {
             display: block;
@@ -356,7 +359,7 @@
             letter-spacing: 0.01em;
             color: #7D7D7D;
         }
-        .calculator__result {
+        .calculator__result,.calculator__result-year {
             font-family: 'IBM', sans-serif;
             font-style: normal;
             font-weight: 500;

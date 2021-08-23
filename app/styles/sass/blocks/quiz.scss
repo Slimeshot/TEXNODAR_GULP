@@ -185,6 +185,42 @@
       }
     }
   }
+  &-results.active {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+  }
+  &-main.active {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+  }
+  &__next.active {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+  }
+  &__luck {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+  }
+  &__luck.active {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+    margin: auto 0;
+  }
+  &__next-close {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+  }
+  &__next-close.active {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+  }
   &__close {
     position: absolute;
     top: 32px;
@@ -219,7 +255,11 @@
       }
     }
   }
-  &__next {
+ 
+  &__next, &__next-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: $accent;
     width: 184px;
     height: 50px;
