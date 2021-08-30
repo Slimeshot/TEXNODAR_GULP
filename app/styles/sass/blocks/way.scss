@@ -16,6 +16,9 @@
         border-radius: 8px;
         background-color: #EFF6F6;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         &::after {
             transition: all .3s ease;
             top: 28px;
@@ -136,7 +139,7 @@
 @media (max-width: 920px) {
     .way {
         &__item-title {
-            font-size: 12px;
+            font-size: 16px;
             line-height: 16px;
             padding: 24px 48px 0 24px;
             position: static;
@@ -160,7 +163,12 @@
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
         }
-        
+        &__item-title {
+            font-size: 14px;
+            line-height: 16px;
+            padding: 24px 48px 0 24px;
+            position: static;
+        }
     }
 }
 

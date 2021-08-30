@@ -1,0 +1,36 @@
+// @media (max-width: 540px) {
+    .tsct {
+        height: 500px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        // background-position: center;
+        background-image: url(../../../images/dist/system/tsct.png);
+        .container {
+            height: 100%;
+        }
+    }
+    .tsct__line {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .tsct__title {
+        font-family: 'Normalidad', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 18px;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin: auto;
+    }
+    
+
+    
+@media (max-width: 1024px) {
+        .tsct {
+            height: 250px;
+        }
+}
+

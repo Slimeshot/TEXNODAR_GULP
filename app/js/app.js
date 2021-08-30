@@ -173,13 +173,15 @@ document.addEventListener('DOMContentLoaded', () => {
 	  const headerBurger = document.querySelector('.header__burger');
 	  const headerInfo = document.querySelector('.header__navigation');
 
+	  if (headerBurger) {
+		  headerBurger.addEventListener('click', () => {
+				  document.body.classList.toggle('active')
+				headerBurger.classList.toggle('active');
+				headerInfo.classList.toggle('active');
+	
+		  })
 
-	  headerBurger.addEventListener('click', () => {
-		  	document.body.classList.toggle('active')
-			headerBurger.classList.toggle('active');
-			headerInfo.classList.toggle('active');
-
-	  })
+	  }
 
 
 	  //open/close burger-menu
@@ -241,35 +243,43 @@ document.addEventListener('DOMContentLoaded', () => {
 	  const callBg = document.querySelector('.call__bg');
 
 	  //закрытие бургер и открытие кол
-	  headerBtn.addEventListener('click', () => {
-		document.body.classList.add('active');
-		headerBurger.classList.remove('active');
-		headerInfo.classList.remove('active');
-		callBlock.classList.add('active');
-		callBg.classList.add('active');
-		
+	  if (headerBtn) {
+		  headerBtn.addEventListener('click', () => {
+			document.body.classList.add('active');
+			headerBurger.classList.remove('active');
+			headerInfo.classList.remove('active');
+			callBlock.classList.add('active');
+			callBg.classList.add('active');
+			
+	
+		  })
 
-	  })
+	  }
 
 	  //закрытие кол
-	  callCross.addEventListener('click', () => {
-		callBlock.classList.remove('active');
-		callBg.classList.remove('active');
-		document.body.classList.remove('active');
-	  })
+	  if (callCross) {
+
+		  callCross.addEventListener('click', () => {
+			callBlock.classList.remove('active');
+			callBg.classList.remove('active');
+			document.body.classList.remove('active');
+		  })
+	  }
 
 	  //закртыие кал по клику на фон
-	  callBg.addEventListener('click', () => {
-		callBlock.classList.remove('active');
-		callBg.classList.remove('active');
-		if (application) {
-			application.classList.remove('active');
-		}
-		if (calcBlock) {
-			calcBlock.classList.remove('active');
-		}
-		document.body.classList.remove('active');
-	  })
+	  if (callBg) {
+		  callBg.addEventListener('click', () => {
+			callBlock.classList.remove('active');
+			callBg.classList.remove('active');
+			if (application) {
+				application.classList.remove('active');
+			}
+			if (calcBlock) {
+				calcBlock.classList.remove('active');
+			}
+			document.body.classList.remove('active');
+		  })
+	  }
 
 	  //открытие кол по клику
 	  if (proemBtn) {
@@ -647,6 +657,15 @@ document.addEventListener('DOMContentLoaded', () => {
 	// }
 
 
+	if ($('.tsct')) {
+		$('.links__link-email').on('click', function() {
+			$('.links__link-email').hide();
+			$('.proposal').fadeIn( 100 );;
+		})
+
+	}
+
+
 	if (document.querySelector('.quiz')) {
 		function openQuis () {
 			if ($('.quiz').length) {
@@ -883,6 +902,19 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 		setSertificateModalData($(`.certificate__slide:not(.swiper-slide-duplicate)[data-index="${currentIndex}"]`))
 	})
+
+
+
+	// add paper mail
+
+	
+
+
+
+
+
+
+
 
 
 	const callForm = document.querySelector('.call__block');
