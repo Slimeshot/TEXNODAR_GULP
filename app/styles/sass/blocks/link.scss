@@ -61,10 +61,12 @@
 }
 
 
-.proposal {
-    background-color: #fff;
+.links {
+    .proposal {
+        background-color: #fff;
     border: 1px solid black;
     border-radius: 5px;
+    }
 }
 
 
@@ -79,7 +81,17 @@
     .links__link {
         width: 100%;
     }
-    .proposal {
-        display: none;
+    .links {
+        padding: 0 0 32px 0;
+        .proposal {
+            display: none;
+        }
+        .form__block {
+            flex-direction: column;
+        }
+        .form__phone {
+            margin-bottom: 16px;
+        }
+
     }
 }

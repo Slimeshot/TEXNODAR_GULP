@@ -4,6 +4,14 @@
 	<head>
 
 		<meta charset="utf-8">
+
+		<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-MV8GW52');</script>
+	<!-- End Google Tag Manager -->
 		<meta name="facebook-domain-verification" content="o6nhmxna3zaekr0luwl8vb2ctn7nl9" />
 		<!-- <base href="/"> -->
 
@@ -12,10 +20,10 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="icon" href="images/favicon.png">
+		<link rel="icon" href="../images/favicon.png">
 		<meta property="og:title" content="Ведущий производитель систем контроля транспорта - ГК Технодар"/>
 		<meta property="og:description" content="Сократите расходы на содержание техники с помощью систем мониторинга, контроль топлива и аналитики"/>
-		<meta property="og:image" content="images/dist/OGI.png"/>
+		<meta property="og:image" content="../images/dist/OGI.png"/>
 		<meta property="og:type" content="website"/>
 		<meta property="og:url" content= "https://technodar.group/" />
 			
@@ -27,19 +35,40 @@
 	</head>
 
 	<body>
+		<script>
+			(function(w, d, s, h, id) {
+				w.roistatProjectId = id; w.roistatHost = h;
+				var p = d.location.protocol == "https:" ? "https://" : "http://";
+				var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init?referrer="+encodeURIComponent(d.location.href);
+				var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
+			})(window, document, 'script', 'cloud.roistat.com', 'c82e52f4838f4ba915c5d9227cf8a901');
+		</script>
+		<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV8GW52"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
 		<header class="tsct">
+			<img class="tsct__bg" src="../images/dist/system/tsct.png" alt="tsct">
 			<div class="container">
 				<div class="tsct__line">
-					<h1 class="tsct__title">Трехуровневая система контроля топлива</h1>
+					<img src="../images/dist/system/tsctbig.png" alt="tsct">
+					<!-- <h1 class="tsct__title">Трехуровневая система контроля топлива</h1> -->
 				</div>
+			</div>
+			<div class="header__cid">
+				<div class="header-ga"></div>
+				<div class="header-fbp"></div>
+				<div class="header-uid"></div>
+				<div class="header-lvid"></div>
+				<div class="header-ip"></div>
 			</div>
 		</header>
 		<section class="links">
 			<div class="container">
 				<h2 class="links__title">Куда отправить статью?</h2>
 				<div class="links__gorup">
-					<a href="#" class="links__link btn links__link-telegram">Telegram <img src="../images/dist/icon/arrow-right-up-white.svg" alt="arrow"></a>
-					<a href="#" class="links__link btn links__link-whatsapp">Whatsapp <img src="../images/dist/icon/arrow-right-up-white.svg" alt="arrow"></a>
+					<a href="https://t.me/technodar_group_bot" class="links__link btn links__link-telegram">Telegram <img src="../images/dist/icon/arrow-right-up-white.svg" alt="arrow"></a>
+					<a href="https://api.whatsapp.com/send/?phone=79114367943&text=%D1%81%D1%82%D0%B0%D1%82%D1%8C%D1%8F&app_absent=0" class="links__link btn links__link-whatsapp">Whatsapp <img src="../images/dist/icon/arrow-right-up-white.svg" alt="arrow"></a>
 					<button href="#" class="links__link btn links__link-email">E-mail <img src="../images/dist/icon/arrow-right-up-white.svg" alt="arrow"></button>
 				</div>
 				<section class="proposal tscs">
@@ -49,19 +78,19 @@
 								<h2 class="proposal__title title">Заполните поля для<br> отправки статьи</h2>
 							</div>
 							<div class="proposal__right">
-								<form class="proposal__form form" method="POST" id="flot-1">
+								<form class="proposal__form form" method="POST" id="tsct">
 									<div class="form__block">
-										<input class="form__name" name="name" type="text" placeholder="Имя" required>
 										<input class="form__phone" name="phone" type="text" placeholder="Телефон" required>
+										<input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" class="form__email" name="email" type="email" placeholder="E-mail" required>
 									</div>
-									<input type="submit" id="sendMail__flot-1" value="Оставить заявку" class="form__btn-primary">
+									<input type="submit" id="sendMail__tsct" value="Получить статью" class="form__btn-primary">
 								</form>
 							</div>
 						</div>
 						<div class="proposal__row">
 							<div class="proposal__left-1">
 								<span class="proposal__subtitle">Оставляя заявку, вы <br>
-									соглашаетесь на<span class="proposal__subtitle-orange"> обработку данных</span></span>
+									соглашаетесь на<a href="../privacy.html" class="proposal__subtitle-orange"> обработку данных</a></span>
 							</div>
 						</div>
 					</div>
@@ -69,12 +98,24 @@
 			</div>
 		</section>
 
-		<script>
+
+		<div class="success">
+			<div class="success__content">
+				<div class="success__img">
+					<img src="../images/dist/icon/check.svg" alt="check">
+				</div>
+				<div class="success__mes">
+					<span class="succes__mes-title">Ваша заявка<br> получена!</span>
+					<span class="succes__mes-subtitle">Мы свяжемся с вами в ближайшее время</span>
+				</div>
+			</div>
+		</div>
+		<!-- <script>
 			(function(w,d,u){
 					var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
 					var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
 			})(window,document,'https://cdn-ru.bitrix24.ru/b431011/crm/site_button/loader_2_txdkg5.js');
-		</script>
+		</script> -->
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"></script>
 		<script src="../js/app.min.js"></script>

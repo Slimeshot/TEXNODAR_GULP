@@ -1,18 +1,29 @@
 // @media (max-width: 540px) {
     .tsct {
-        height: 500px;
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
+        .tsct__bg {
+            display: none;
+        }
+        // height: 500px;
+        // background-size: cover;
+        // background-repeat: no-repeat;
+        // background-image: url(../../../images/dist/system/tsct.png);
         // background-position: center;
-        background-image: url(../../../images/dist/system/tsct.png);
         .container {
-            height: 100%;
+            // height: 100%;
         }
     }
     .tsct__line {
-        height: 100%;
-        display: flex;
-        align-items: center;
+        // height: 100%;
+        // display: flex;
+        // align-items: center;
+        // height: 450px;
+        margin-top: 32px;
+        img {
+            border-radius: 16px;
+            height: auto;
+            width: 100%;
+            object-fit: cover;
+        }
     }
     .tsct__title {
         font-family: 'Normalidad', sans-serif;
@@ -28,9 +39,19 @@
     
 
     
-@media (max-width: 1024px) {
+@media (max-width: 540px) {
         .tsct {
-            height: 250px;
+            .tsct__bg {
+                display: block;
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+        .tsct__line {
+            img {
+                display: none;
+            }
         }
 }
 

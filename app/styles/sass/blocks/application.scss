@@ -59,8 +59,11 @@
     line-height: 16px;
     letter-spacing: 0.01em;
     color: #B1B1B1;
-    span {
+    a {
         color: $accent;
+        &:hover {
+            color: darken($accent, 8);
+        }
     }
 }
 .application__agree.active {

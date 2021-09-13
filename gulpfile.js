@@ -70,6 +70,7 @@ function styles() {
 		.pipe(browserSync.stream())
 }
 
+
 function images() {
 	return src(['app/images/src/**/*'])
 		.pipe(newer('app/images/dist'))

@@ -672,6 +672,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				$('.quiz').addClass('quiz_active')
 				compensateBody()
 				checkCurrentStep()
+				$('.b24-widget-button-wrapper').hide()
 			}
 		}
 		function closeQuis () {
@@ -680,6 +681,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				setTimeout(function () {
 					unCompensateBody()
 				}, 500)
+				$('.b24-widget-button-wrapper').show()
 			}
 		}
 	
@@ -1026,7 +1028,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					calculatorLuck.classList.add('active')
 				}
 
-				if (formID.includes('flot-') || formID.includes('bur-') || formID.includes('auto-') || formID.includes('train-') || formID.includes('index-') || formID.includes('contacts-')) {
+				if (formID.includes('flot-') || formID.includes('tsct') || formID.includes('bur-') || formID.includes('auto-') || formID.includes('train-') || formID.includes('index-') || formID.includes('contacts-')) {
 					if (successBlock) {
 						// callBlock.classList.remove('active');
 						// callBg.classList.remove('active');
