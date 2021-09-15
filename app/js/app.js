@@ -1,6 +1,6 @@
-import {Swiper, Parallax, Mousewheel, Controller, Pagination, Scrollbar, Navigation, Autoplay} from "swiper"
+import {Swiper, EffectFade, Parallax, Mousewheel, Controller, Pagination, Scrollbar, Navigation, Autoplay} from "swiper"
 import {Tab} from "bootstrap/js/dist/tab"
-Swiper.use([ Parallax, Mousewheel, Controller, Pagination, Scrollbar, Navigation, Autoplay ]);
+Swiper.use([ Parallax, EffectFade, Mousewheel, Controller, Pagination, Scrollbar, Navigation, Autoplay ]);
 
 function getScrollBarWidth () {
   var inner = document.createElement('p');
@@ -50,6 +50,22 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	//! MOBILE FIX 100VH END
+
+	const proemSwiper = new Swiper('.proem__swiper', {
+		// Optional parameters
+		loop: true,
+		effect: "fade",
+		// If we need pagination
+		pagination: {
+		  el: '.proem__pagination',
+		},
+	  
+		// Navigation arrows
+		navigation: {
+		  nextEl: '.proem__btn-next',
+		  prevEl: '.proem__btn-prev',
+		},
+	  });
 
 	const titleSwiper = new Swiper('.swiper__title', {
 		loop: true,
@@ -235,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	  //close/open call
 
 	  const headerBtn = document.querySelector('.header__btn');
-	  const proemBtn = document.querySelector('.proem__btn');
+	  const proemBtn = document.querySelectorAll('.proem__btn');
 	  const branchBtn = document.querySelectorAll('.branch__btn');
 	  const callCross = document.querySelector('.call__cross');
 	  const sailingBtn = document.querySelectorAll('.sailing__btn-call');
@@ -283,12 +299,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	  //открытие кол по клику
 	  if (proemBtn) {
-		  proemBtn.addEventListener('click', () => {
-			callBlock.classList.add('active');
-			callBg.classList.add('active');
-			document.body.classList.add('active')
-		})
+		proemBtn.forEach(item => {
+			item.addEventListener('click', () => {
+			  callBlock.classList.add('active');
+			  callBg.classList.add('active');
+			  document.body.classList.add('active')
+		  })
 
+		})
+		
 	  }
 
 	  if (branchBtn) {

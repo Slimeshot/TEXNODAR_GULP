@@ -8,11 +8,11 @@
         display: flex;
     }
     &__star {
-        flex-grow: 4.5;
+        width: 20%;
     }
     &__data {
         display: flex;
-        flex-grow: 10;
+        width: 80%;
     }
     &__item {
         margin-bottom: 46px;
@@ -102,10 +102,13 @@
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .contacts {
         &__star {
             display: none;
+        }
+        &__data {
+            width: 100%;
         }
     }
 }
