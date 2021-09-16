@@ -1,7 +1,10 @@
 .proem {
     padding-top: 72px;
     
-
+    .proem__text {
+        color:transparent!important;
+        -webkit-text-stroke: 1px #fff;
+    }
     .proem__content {
         border-bottom: 1px solid #E5E5E5;
     }
@@ -85,6 +88,17 @@
         padding: 17px 34px;
         background-color: #fff;
         border-radius: 8px;
+        box-sizing: border-box;
+        border: 1px solid transparent;
+        transition: all .2s ease;
+        &:hover {
+            color: #B62C2C;
+            border: 1px solid #B62C2C;
+        }
+        &:active {
+            background-color: #B62C2C;
+            color: #fff;
+        }
     }
     .proem__subtitle {
         margin-left: 32px;

@@ -60,7 +60,7 @@
 .certificate__slide {
     background-color: #FFFFFF;
     border: 1px solid #E5E5E5;
-    border-bottom: 12px solid #F05A46;
+    border-bottom: 12px solid #B62C2C;
     border-radius: 16px 16px 0 0;
     height: 400px;
     padding: 32px;
@@ -69,9 +69,9 @@
     justify-content: space-between;
     transition: border-color .3s;
     &:hover {
-        border-color: #F05A46;
+        border-color: #B62C2C;
         .certificate__slide-year {
-            color: #F05A46;
+            color: #B62C2C;
         }
     }
     position: relative;

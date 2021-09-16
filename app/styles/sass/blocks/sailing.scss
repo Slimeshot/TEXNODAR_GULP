@@ -64,16 +64,16 @@
 }
 
 .sailing__btn-call {
-    border: 1px solid #9FCCCB;
+    border: 1px solid #66A0CC;
     border-radius: 4px;
     padding: 9px 18px;
     transition: .3s ease;
     &:hover {
-        background-color: #5FAAA8;
+        background-color: #0060AA;
         color: #fff;
     }
     &:active {
-        background-color: #4C8886;
+        background-color: #004D88;
         color: #fff;
     }
 }

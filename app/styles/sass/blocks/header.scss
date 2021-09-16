@@ -43,15 +43,15 @@
 }
 .header__btn {
     padding: 12px 24px;
-    border: 1px solid #9FCCCB;
+    border: 1px solid #66A0CC;
     border-radius: 24px 8px;
     transition: .3s ease;
     &:hover {
-        background-color: #5FAAA8;
+        background-color: #0060AA;
         color: #fff;
     }
     &:active {
-        background-color: #4C8886;
+        background-color: #004D88;
         color: #fff;
     }
 }

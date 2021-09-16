@@ -247,7 +247,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	  }
 
-
 	  //close/open call
 
 	  const headerBtn = document.querySelector('.header__btn');
@@ -925,16 +924,37 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 
 
+	if ($('.derivation')) {
+		const derivTitle = ['Система контроля бункеровки',
+		'Система контроля расхода топлива для транспорта',
+		'Система аналитики данных (DOTS)','Система обработки и визуализацииданных (VMTS)',
+		'Система мониторинга транспорта','Система видеонаблюдения','Системазвукового оповещения'];
+		const derivImg = ['img-1','img-2','img-3','img-4','img-5','img-6','img-7'];
+		const derivLink = ['scb','scrt','dots','vmts','smt','svn','szo'];
+
+		let i = 1
+		while (i <= 3) {
+			let randNum = Math.floor(Math.random() * (5 - 0 + 1)) + 0;
+			if ($('.entry__title').text() == derivTitle[randNum]) {
+				continue;
+			} else {
+				if (($('.derivation__item-title').text()).includes(derivTitle[randNum])) {
+					continue;
+				} else {
+					let derivPattern = `
+					<a href="${derivLink[randNum]}.html" class="derivation__item">
+						<img src="../images/dist/information/${derivImg[randNum]}.png" alt="img" class="derivation__item-img">
+						<div class="derivation__item-title">${derivTitle[randNum]}</div>
+					</a>
+					`
+					$('.derivation__row').append(derivPattern)	
+					i++;
+				}
+			}
+		}
+	}
 
 	// add paper mail
-
-	
-
-
-
-
-
-
 
 
 
