@@ -130,12 +130,12 @@
         }
     }
     &__title {
-        margin: 32px 0;
-        font-family: Normalidad;
+        margin: 0 0 32px 0;
+        font-family: 'Normalidad', sans-serif;
         max-width: 741px;
         font-size: 18px;
         line-height: 20px;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         @media screen and (max-width: 767px) {
             font-size: 12px;
             line-height: 16px;
@@ -164,8 +164,8 @@
         display: flex;
         align-items: center;
         letter-spacing: -0.02em;
-        text-transform: uppercase;
-        font-family: Normalidad;
+        // text-transform: uppercase;
+        font-family: 'Normalidad', sans-serif;
         svg {
             margin-left: 8px;
             display: block;

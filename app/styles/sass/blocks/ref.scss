@@ -1,0 +1,103 @@
+.ref {
+    padding-bottom: 48px;
+}
+.ref__content {
+
+}
+.ref__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+}
+.ref__column {
+    margin-top: 48px;
+    width: 32%;
+    &:last-child {
+        .ref__link {
+            color: #B62C2C;
+            &:after {
+                background-image: url(../../../images/dist/icon/link-red.svg);
+            }
+        }
+    }
+    @media (max-width: 1024px) {
+        width: 49%;
+        &:last-child {
+            margin-top: -48px;
+        }
+    }
+    @media (max-width: 540px) {
+        width: 100%;
+        margin-top: 32px;
+        &:last-child {
+            margin-top: 32px;
+        }
+    }
+}
+.ref__title {
+    font-family: Normalidad, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+    color: #000000;
+    margin-bottom: 16px;
+}
+.ref__menu {
+}
+.ref__list {
+}
+.ref__link {
+    font-family: IBM, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+
+    display: block;
+    width: 100%;
+    padding: 16px 48px 16px 16px;
+    margin-bottom: 16px;
+    border-radius: 5px;
+    &:hover {
+        color: #fff;
+    }
+    &-red {
+        background-color: #B62C2C;
+    }
+    &-blue {
+        background-color: #0060AA;
+    }
+    &-border {
+        background-color: #FAF9F5;
+        border: 1px solid #B62C2C;
+    }
+    position: relative;
+    &::after {
+        position: absolute;
+        content: "";
+        top: 16px;
+        right: 16px;
+        background-image: url(../../../images/dist/icon/link.svg);
+        width: 16px;
+        height: 16px;
+    }
+    @media (max-width: 540px) {
+        margin-bottom: 8px;
+    }
+}
+.ref__social {
+    text-align: center;
+}
+.ref__social-link {
+    display: inline-block;
+    margin: 0 12px;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #B62C2C;
+}

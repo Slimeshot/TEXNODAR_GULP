@@ -1,7 +1,7 @@
 
 .solutions {
     background-color: #FAF9F5;
-    padding: 120px 0px;
+    padding-top: 120px;
     .btn__solution-orange {
         margin-top: 32px;
         background-color: $accent;
@@ -21,7 +21,8 @@
     }
     &__content {
         border-top: 1px solid #E5E5E5;
-        padding-top: 120px;
+        padding: 120px 0px;
+
     }
     &__left {
         
@@ -40,7 +41,7 @@
         font-size: 32px;
         line-height: 32px;
         letter-spacing: -0.02em;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         color: #000000;
         margin-bottom: 32px;
     }
@@ -52,7 +53,7 @@
             font-size: 12px;
             line-height: 16px;
             letter-spacing: -0.02em;
-            text-transform: uppercase;
+            // text-transform: uppercase;
             color: #7D7D7D;
             padding: 0;
             padding-bottom: 16px;
@@ -201,9 +202,9 @@
 
 @media (max-width: 991px) {
     .solutions {
-        padding: 96px 0px;
+        padding-top: 96px;
         &__content {
-            padding-top: 96px;
+            padding: 96px 0px;
             flex-direction: column;
         }
         &__left {
@@ -224,7 +225,10 @@
 
 @media (max-width: 540px) {
     .solutions {
-        padding: 64px 0px;
+        padding-top: 64px;
+        &__content {
+            padding: 64px 0px;
+        }
         &__right {
             .solution__btn {
                 margin-right: 0px;

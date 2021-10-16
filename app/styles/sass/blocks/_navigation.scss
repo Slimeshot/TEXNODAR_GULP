@@ -32,13 +32,14 @@
         font-size: 24px;
         line-height: 24px;
         letter-spacing: -0.02em;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         color: #000000;
     }
     .navigation__list  {
         font-size: 20px;
         line-height: 20px;
-        &:nth-child(6){
+        &:nth-child(7){
+            display: block;
             width: 100%;
             padding: 0 32px;
             .navigation__link {

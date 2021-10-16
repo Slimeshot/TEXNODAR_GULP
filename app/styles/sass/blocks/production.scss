@@ -19,7 +19,7 @@
         font-size: 44px;
         line-height: 48px;
         letter-spacing: -0.02em;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         color: #000000;
 
     }
@@ -94,6 +94,13 @@
         }
         &:last-child {
             border-bottom: none;
+        }
+    }
+    &__link {
+        color: #000;
+        opacity: 0.9;
+        &:hover {
+            opacity: 1;
         }
     }
     &__text {

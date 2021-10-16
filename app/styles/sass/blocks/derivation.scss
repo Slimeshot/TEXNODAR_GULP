@@ -13,7 +13,7 @@
         font-size: 20px;
         line-height: 22px;
         letter-spacing: -0.02em;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         color: #000000;
         margin-bottom: 32px;
         @media (max-width: 540px) {
@@ -34,6 +34,14 @@
     }
     &__item {
         width: 32.5%;
+        &:hover {
+            .derivation__item-img {
+                border: 2px solid #B62C2C;
+            }
+            .derivation__item-title {
+                color:#B62C2C;;
+            }
+        }
         @media (max-width: 1024px) {
             width: 49%;
             &:last-child {
@@ -53,6 +61,8 @@
         height: auto;
         object-fit: cover;
         margin-bottom: 24px;
+        border: 2px solid transparent;
+        border-radius: 32px 8px;
     }
     &__item-title {
         font-family: 'Normalidad', sans-serif;
@@ -61,7 +71,7 @@
         font-size: 16px;
         line-height: 18px;
         letter-spacing: -0.02em;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         color: #000000;
     }
 }

@@ -31,7 +31,6 @@
 	<link rel="stylesheet" href="css/main.min.css">
 	<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
 	<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
-	
 </head>
 
 
@@ -49,11 +48,16 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV8GW52"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
+	<!-- <div class="preloader" id="page-preloader">
+		<div class="loader"></div>
+	</div> -->
+
+
 		<header class="header">
 			<div class="container">
 				<div class="header__content">
 					<a href="index.html" class="header__logo">
-						<img src="images/dist/Logo.png" alt="logo">
+						<img src="images/dist/Logo.svg" alt="logo">
 					</a>
 
 						<nav class="navigation header__navigation">
@@ -62,14 +66,14 @@
 								<li class="navigation__list"><a href="auto.html" class="navigation__link">Автотранспорт</a></li>
 								<li class="navigation__list"><a href="bur.html" class="navigation__link">Буровые установки</a></li>
 								<li class="navigation__list"><a href="train.html" class="navigation__link">Ж/Д транспорт</a></li>
-								<!-- <li class="navigation__list"><a href="paper.html" class="navigation__link">Статьи</a></li> -->
+								<li class="navigation__list"><a href="paper.html" class="navigation__link">Продукты</a></li>
 								<!-- <li class="navigation__list"><a href="index.html" class="navigation__link">О нас</a></li> -->
 								<li class="navigation__list"><a href="contacts.html" class="navigation__link">Контакты</a></li>
 								<li class="navigation__list"><a href="" class="navigation__link"></a></li>
 								<li class="navigation__list">
 									<div class="header__links">
 										<a href="tel:8800250016" class="header__phones">8 (800) 250-00-16</a>
-										<a href="mailto:skrt_biz@mail.ru" class="header__mail">skrt_biz@mail.ru</a>
+										<a href="mailto:info@technodar.group" class="header__mail">info@technodar.group</a>
 									</div>
 									<div class="header__social">
 										<a href="https://www.facebook.com/gktehnodar" class="header__social-link">
@@ -122,51 +126,42 @@
 
 <div class="flot">
 	<section class="intro" id="introLink">
-		<div class="intro__media">
-			<!-- Slider main container -->
-				<div class="swiper-container swiper__img">
-					<!-- Additional required wrapper -->
-					<div class="swiper-wrapper">
-					<!-- Slides -->
-					<div class="swiper-slide slide-img">
-						<img src="images/dist/intro-flot/intro__flot-1.svg" alt="ssd">
+		<div class="container">
+			<div class="intro__container">
+				<div class="intro__media">
+					<div class="swiper-container swiper__img js-scroll slide-right">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide slide-img">
+								<img src="images/dist/intro-flot/intro__flot-1.svg" alt="ssd">
+							</div>
+							<div class="swiper-slide slide-img">
+								<img src="images/dist/intro-flot/intro__flot-2.svg" alt="ssd">
+							</div>
+							<div class="swiper-slide slide-img">
+								<img src="images/dist/intro-flot/intro__flot-3.svg" alt="ssd">
+							</div>
+							<div class="swiper-slide slide-img">
+								<img src="images/dist/intro-flot/intro__flot-4.svg" alt="ssd">
+							</div>
+							<div class="swiper-slide slide-img">
+								<img src="images/dist/intro-flot/intro__flot-5.svg" alt="ssd">
+							</div>
+						</div>
 					</div>
-					<div class="swiper-slide slide-img">
-						<img src="images/dist/intro-flot/intro__flot-2.svg" alt="ssd">
-					</div>
-					<div class="swiper-slide slide-img">
-						<img src="images/dist/intro-flot/intro__flot-3.svg" alt="ssd">
-					</div>
-					<div class="swiper-slide slide-img">
-						<img src="images/dist/intro-flot/intro__flot-4.svg" alt="ssd">
-					</div>
-					<div class="swiper-slide slide-img">
-						<img src="images/dist/intro-flot/intro__flot-5.svg" alt="ssd">
-					</div>
-
-					</div>
-
+				<video src="Ship.mp4" autoplay muted loop playsinline ></video>
 				</div>
-			<!-- <img src="images/dist/intro-flot/intro__flot-1.svg" alt="ssd"> -->
-			<!-- <img src="images/dist/intro-flot/intro__flot-2.svg" alt="ssd"> -->
-			<!-- <img src="images/dist/intro-flot/intro__flot-3.svg" alt="ssd"> -->
-			<!-- <img src="images/dist/intro-flot/intro__flot-4.svg" alt="ssd"> -->
-			<!-- <img src="images/dist/intro-flot/intro__flot-5.svg" alt="ssd"> -->
-			<video src="Ship.mp4" autoplay muted loop playsinline ></video>
-		</div>
-		<div class="intro__content">
-			<div class="container">
-				<div class="intro__container">
-					<div class="intro__text">
-						<h1 class="intro__title">Комплексное&ensp;решение<br>контроля&ensp;флота</h1>
-						<h2 class="intro__subtitle">Сократите затраты на флот до 30%, используя	эффективные решения с гарантией качества</h2>
+				<div class="intro__content">
+					<div class="intro__text js-scroll slide-left">
+						<!-- <h1 class="intro__title">Комплексное&ensp;решение<br>контроля&ensp;флота</h1> -->
+						<h1 class="intro__title">Система контроля<br> расхода топлива<br> для <span class="intro__title-border">судна</span></h1>
+						<h2 class="intro__subtitle">Сократите затраты на топливо до 30%, используя	эффективные решения с гарантией качества</h2>
 					</div>
 					<div class="intro__bottom">
-						<div class="intro__buttons">
+						<div class="intro__buttons js-scroll slide-left">
 							<button data-quiz class="btn intro__btn-red">Узнать стоимость</button>
 							<a href="#systemLink" class="btn intro__btn-transparent">Подробнее о системе</a>
 						</div>
-						<div class="intro__block">
+						<div class="intro__block js-scroll slide-right" >
 							<div class="intro__slider">
 								<div class="intro__slider-panel">
 									<div class="intro__pagination"></div>
@@ -199,7 +194,7 @@
 										</div>
 										
 									</div>
-
+	
 								</div>
 							</div>
 						</div>
@@ -210,7 +205,7 @@
 	</section>
 
 	
-	<section class="sailing">
+	<section class="sailing js-scroll fade-in-bottom">
 		<div class="container">
 			<div class="sailing__content" id="navigation">
 				<h3 class="sailing__block">
@@ -239,7 +234,7 @@
 	<section class="project" id="projectLink">
 		<div class="container">
 			<div class="project__content">
-				<div class="project__block">
+				<div class="project__block js-scroll slide-left" >
 					<h2 class="project__title title">Реализованные<br> проекты</h2>
 					<div class="project__slider-panel">
 						<div class="project__controls">
@@ -249,7 +244,7 @@
 						<div class="project__pagination"></div>
 					</div>
 				</div>
-				<div class="project__slider">
+				<div class="project__slider js-scroll slide-right">
 					<div class="swiper-container project__swiper">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide project__slide">
@@ -419,10 +414,10 @@
 	<section class="proposal">
 		<div class="container">
 			<div class="proposal__content">
-				<div class="proposal__left">
+				<div class="proposal__left js-scroll slide-left">
 					<h2 class="proposal__title title">Оставьте заявку<br> на консультацию</h2>
 				</div>
-				<div class="proposal__right">
+				<div class="proposal__right js-scroll slide-right">
 					<form class="proposal__form form" method="POST" id="flot-1">
 						<div class="form__block">
 							<input class="form__name" name="name" type="text" placeholder="Имя" required>
@@ -433,11 +428,11 @@
 				</div>
 			</div>
 			<div class="proposal__row">
-				<div class="proposal__left-1">
+				<div class="proposal__left-1 js-scroll slide-left">
 					<span class="proposal__subtitle">Оставляя заявку, вы <br>
 						соглашаетесь на<a href="privacy.html" class="proposal__subtitle-orange"> обработку данных</a></span>
 				</div>
-				<div class="proposal__right-1">
+				<div class="proposal__right-1 js-scroll slide-right">
 					<span class="proposal__subtitle proposal__row-subtitle">Или свяжитесь удобным вам способом</span>
 					<ul class="proposal__menu">
 						<li class="proposal__list"><a href="mailto:info@technodar.group" class="proposal__link">info@technodar.group</a></li>
@@ -448,57 +443,55 @@
 					</ul>
 				</div>
 			</div>
-				
-			
 		</div>
 	</section>
 
 	<section class="problem">
 		<div class="container">
 			<div class="problem__content">
-				<div class="problem__text">
+				<div class="problem__text js-scroll slide-left">
 					<span class="problem__number">95%</span>
 					<span class="problem__line"></span>
 					<h4 class="problem__title">судовладельцев<br> сталкиваются с проблемами </h4>
 				</div>
 				<div class="problem__gallery" id="links">
-					<div class="problem__block-1 problem__block">
+					<div class="problem__block-1 problem__block js-scroll fade-in-bottom-300">
 						<span class="problem__block-title">Учет</span>
 						<span class="problem__block-subtitle">Системы фактического расхода топлива отсутствуют</span>
 					</div>
-					<img src="images/dist/flot/gallery-1.png" class="problem__img-2 problem__img" alt="work">
-					<div class="problem__block-3 problem__block">
+					<img src="images/dist/flot/gallery-1.png" class="problem__img-2 problem__img js-scroll fade-in-bottom-500" alt="work">
+					<div class="problem__block-3 problem__block js-scroll fade-in-bottom-700">
 						<span class="problem__block-title">Бункеровка</span>
 						<span class="problem__block-subtitle">Объем заправленного топлива не&nbsp;совпадает с фактически полученным количеством
 							</span>
 					</div>
-					<div class="problem__block-4 problem__block">
+					<div class="problem__block-4 problem__block js-scroll fade-in-bottom-900">
 						<span class="problem__block-title">Слив
 							топлива</span>
 						<span class="problem__block-subtitle"></span>
 					</div>
-					<div class="problem__block-5 problem__block">
+					<div class="problem__block-5 problem__block js-scroll fade-in-bottom-300">
 						<span class="problem__block-title">Поломки</span>
 						<span class="problem__block-subtitle">Выявить неисправность
 							в работе двигателя, не доводя
 							до капитальной поломки</span>
 					</div>
-					<div class="problem__block-6 problem__block">
+					<div class="problem__block-6 problem__block js-scroll fade-in-bottom-500">
 						<span class="problem__block-title">Трудозатраты</span>
 						<span class="problem__block-subtitle">Экипаж и топ-менеджмент компании тратят много времени
 							на учет и контроль топлива</span>
 					</div>
-					<div class="problem__block-7 problem__block">
+					<div class="problem__block-7 problem__block js-scroll fade-in-bottom-700">
 						<span class="problem__block-title">Двигатели</span>
 						<span class="problem__block-subtitle">Эксплуатация двигателей на запредельных нагрузках вместо номинальных</span>
 					</div>
-					<img src="images/dist/flot/gallery-2.png" class="problem__img-8 problem__img" alt="work">
-					<div class="problem__block-9 problem__block">
+					<img src="images/dist/flot/gallery-2.png" class="problem__img-8 problem__img js-scroll fade-in-bottom-900" alt="work" >
+					<div class="problem__block-9 problem__block js-scroll fade-in-bottom-300" >
 						<span class="problem__block-title">Экипажем трудно
 							управлять</span>
 						<span class="problem__block-subtitle"></span>
 					</div>
-					<a href="#systemLink" class="problem__block-10 problem__block">
+					<a href="#systemLink" class="problem__block-10 problem__block js-scroll fade-in-bottom-500" >
 						<span class="problem__block-title">Мы решили эти проблемы</span>
 						<img src="images/dist/icon/arrow-bottom-black.svg" alt="arrow" aria-hidden="true">
 					</a>
@@ -512,7 +505,7 @@
 	<section class="system" id="systemLink">
 		<div class="container">
 			<div class="system__content">
-				<div class="system__text">
+				<div class="system__text js-scroll slide-left">
 					<h2 class="system__title title">Комплектующие системы<br> контроля и аналитики</h2>
 					<div class="system__group">
 						<div class="system__subtitle">Подготовим проект внедрения<br>
@@ -521,7 +514,7 @@
 					</div>
 				</div>
 				<div class="system__info">
-					<div class="system__block-1 system__block">
+					<div class="system__block-1 system__block js-scroll fade-in-bottom-300">
 						<div class="system__block-img">
 							<img src="images/dist/sensor.svg" alt="sensor">
 						</div>
@@ -540,7 +533,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="system__block-1 system__block">
+					<div class="system__block-1 system__block js-scroll fade-in-bottom-500">
 						<div class="system__block-img">
 							<img src="images/dist/controllers.svg" alt="controllers">
 						</div>
@@ -559,7 +552,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="system__block-1 system__block">
+					<div class="system__block-1 system__block js-scroll fade-in-bottom-300">
 						<div class="system__block-img">
 							<img src="images/dist/vmts.svg" alt="VMTS">
 						</div>
@@ -571,7 +564,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="system__block-1 system__block">
+					<div class="system__block-1 system__block js-scroll fade-in-bottom-500">
 						<div class="system__block-img">
 							<img src="images/dist/dots.svg" alt="DOTS">
 						</div>
@@ -623,8 +616,8 @@
 											</select> -->
 											<select name="ship_type" id="shipSelect">
 												<option disabled>Вид судна</option>
-												<option value="Буксирное судно">Буксирное судно</option>
-												<option value="Промышленое судно">Промышленое судно</option>
+												<option value="Речное судно">Речное судно</option>
+												<option value="Морское судно">Морское судно</option>
 												<option value="Грузовое Судно">Грузовое судно</option>
 											</select>
 										</div>
@@ -720,7 +713,7 @@
 	<section class="help" id="helpLink">
 		<div class="container">
 			<div class="help__content">
-				<div class="help__left">
+				<div class="help__left js-scroll fade-in-bottom">
 					<h2 class="help__title title">Кому поможет комплексное<br> решение контроля флота?</h2>
 					<div class="help__group">
 						<div class="help__subtitle">Подготовим схему внедрения<br>систем для вашего флота</div>
@@ -728,8 +721,8 @@
 					</div>
 				</div>
 				<div class="help__right">
-					<div class="help__accordion" id="defaultOpen">Судовладельцам</div>
-					<div class="help__panel">
+					<div class="help__accordion js-scroll fade-in-bottom" id="defaultOpen">Судовладельцам</div>
+					<div class="help__panel js-scroll fade-in-bottom">
 						<ul class="help__menu">
 							<li class="help__list">Исключить человеческий фактор из бизнес-процессов организации</li>
 							<li class="help__list">Автоматизировать процессы учета топлива</li>
@@ -738,9 +731,9 @@
 						</ul>
 					</div>
 
-					<div class="help__accordion">Управляющему компании</div>
+					<div class="help__accordion js-scroll fade-in-bottom">Управляющему компании</div>
 					<div class="help__panel">
-						<ul class="help__menu">
+						<ul class="help__menu ">
 							<li class="help__list">Автоматизировать системы учета топлива</li>
 							<li class="help__list">Наладить систему отчетности</li>
 							<li class="help__list">Отслеживать процессы бункеровки</li>
@@ -752,7 +745,7 @@
 						</ul>
 					</div>
 
-					<div class="help__accordion">Экипажу</div>
+					<div class="help__accordion js-scroll fade-in-bottom">Экипажу</div>
 					<div class="help__panel">
 						<ul class="help__menu">
 							<li class="help__list">Контролировать процесс бункеровки и реагировать на отклонения</li>
@@ -775,13 +768,13 @@
 	<section class="capability" id="capabilityLink">
 		<div class="container">
 			<div class="capability__content">
-				<div class="capability__left">
+				<div class="capability__left js-scroll slide-left">
 					<h2 class="capability__title title">Возможности системы</h2>
 				</div>
 				<div class="capability__right">
-					<span class="capability__subtitle">Системы контроля помогают сократить расходы бизнеса на обслуживание техники до 30%. Работая, как единый механизм, они отслеживают процессы во время эксплуатации флота и сигнализируют о переработках или недостачах на судне.</span>
-					<img src="images/dist/flot/capabiliti.png" alt="sheep" class="capability__img">
-					<div class="capability__info" id="content">
+					<span class="capability__subtitle js-scroll fade-in-bottom">Системы контроля помогают сократить расходы бизнеса на обслуживание техники до 30%. Работая, как единый механизм, они отслеживают процессы во время эксплуатации флота и сигнализируют о переработках или недостачах на судне.</span>
+					<img src="images/dist/flot/capabiliti.png" alt="sheep" class="capability__img js-scroll fade-in-bottom">
+					<div class="capability__info js-scroll fade-in-bottom" id="content">
 						<span>Особенности такого подхода позволяют:</span>
 						<ul>
 							<li>контролировать местоположение и режим работы техники, процессы бункеровки, состояние грузов, фактические расходы топлива по&nbsp;потребителям, техническое состояние энергопотребителей;</li>
@@ -811,7 +804,7 @@
 						<p>Где бы вы или ваше судно не находились, вам будет оказана квалифицированная помощь. Ведь сеть наших сертифицированных партнеров простирается на 68 регионов России и 8 стран мира. В&nbsp;любое время суток вы можете получить онлайн-консультацию от сотрудников «Технодара»</p>
 
 					</div>
-					<button class="btn capability__btn" type="button" >Читать полностью</button>
+					<button class="btn capability__btn js-scroll fade-in-bottom" type="button" >Читать полностью</button>
 				</div>
 
 			</div>
@@ -823,8 +816,8 @@
 		<div class="container">
 			<div class="interface__content">
 				<div class="interface__left">
-					<h2 class="interface__tittle">Интерфейс Системы</h2>
-					<div class="swiper-container swiper__title">
+					<h2 class="interface__tittle js-scroll slide-left">Интерфейс Системы</h2>
+					<div class="swiper-container swiper__title js-scroll fade-in-bottom">
 						<!-- Additional required wrapper -->
 						<div class="swiper-wrapper">
 						<!-- Slides -->
@@ -842,7 +835,7 @@
 					</div>
 					<!-- Slider main container -->
 					<!-- <span class="interface__subtittle">Ситуации с флотом требуют быстрого и правильного реагирования. А для этого нужно точно понимать, что происходит на предприятии на всех этапах производства и каковы реальные возможности его ресурсов.</span> -->
-					<div class="interface__slider-panel">
+					<div class="interface__slider-panel js-scroll fade-in-bottom">
 						<div class="interface__controls">
 							<div class="interface__btn interface__btn-prev"></div>
 							<div class="interface__btn interface__btn-next"></div>
@@ -850,7 +843,7 @@
 						<div class="interface__pagination"></div>
 					</div>
 				</div>
-				<div class="interface__right">
+				<div class="interface__right js-scroll fade-in-bottom">
 	
 						<div class="swiper-container interface__swiper">
 	
@@ -893,13 +886,13 @@
 	</section>
 
 
-	<section class="proposal">
+	<section class="proposal" >
 		<div class="container">
 			<div class="proposal__content">
-				<div class="proposal__left">
+				<div class="proposal__left js-scroll slide-left">
 					<h2 class="proposal__title title">Оставьте заявку<br> на демонстрацию системы</h2>
 				</div>
-				<div class="proposal__right">
+				<div class="proposal__right js-scroll slide-right">
 					<form class="proposal__form form" method="POST" id="flot-2">
 						<div class="form__block">
 							<input class="form__name" name="name" type="text" placeholder="Имя" required>
@@ -910,11 +903,11 @@
 				</div>
 			</div>
 			<div class="proposal__row">
-				<div class="proposal__left-1">
+				<div class="proposal__left-1 js-scroll slide-left">
 					<span class="proposal__subtitle">Оставляя заявку, вы <br>
 						соглашаетесь на<a href="privacy.html" class="proposal__subtitle-orange"> обработку данных</a></span>
 				</div>
-				<div class="proposal__right-1">
+				<div class="proposal__right-1 js-scroll slide-right">
 					<span class="proposal__subtitle proposal__row-subtitle">Или свяжитесь удобным вам способом</span>
 					<ul class="proposal__menu">
 						<li class="proposal__list"><a href="mailto:info@technodar.group" class="proposal__link">info@technodar.group</a></li>
@@ -938,43 +931,43 @@
 
 			<div class="method__content">
 				<div class="method__block-1">
-					<div class="method__title-top">
+					<div class="method__title-top js-scroll fade-in-bottom-300">
 						<div class="method__label">Заявка</div>
 						<div class="method__times">2 дня</div>
 					</div>
-					<div class="method__title-top">
+					<div class="method__title-top js-scroll fade-in-bottom-500">
 						<div class="method__label">Проект</div>
 						<div class="method__times">3-7 дней</div>
 					</div>
-					<div class="method__title-top">
+					<div class="method__title-top js-scroll fade-in-bottom-700">
 						<div class="method__label">Монтаж<br> на судне</div>
 						<div class="method__times">1-5 дней</div>
 					</div>
-					<div class="method__title-top">
+					<div class="method__title-top js-scroll fade-in-bottom-900">
 						<div class="method__label">Обучение</div>
 						<div class="method__times">3-7 дней</div>
 					</div>
-					<div class="method__title-top">
+					<div class="method__title-top js-scroll fade-in-bottom-300">
 						<div class="method__label"></div>
 						<div class="method__times">2-3 недели</div>
 					</div>
 				</div>
 				<div class="method__block-2">
-					<div class="method__title-bottom">
+					<div class="method__title-bottom js-scroll fade-in-bottom-500">
 						<div class="method__label">Предпроектное<br>
 							обследование</div>
 						<div class="method__times">1-3 дня</div>
 					</div>
-					<div class="method__title-bottom">
+					<div class="method__title-bottom js-scroll fade-in-bottom-700">
 						<div class="method__label">Компоненты<br>
 							и оборудование</div>
 						<div class="method__times">1-7 дней</div>
 					</div>
-					<div class="method__title-bottom">
+					<div class="method__title-bottom js-scroll fade-in-bottom-900">
 						<div class="method__label">Сдача</div>
 						<div class="method__times">1-2 дня</div>
 					</div>
-					<div class="method__title-bottom">
+					<div class="method__title-bottom js-scroll fade-in-bottom-300">
 						<div class="method__label">Техническое<br> сопровождение</div>
 						<div class="method__times">∞</div>
 					</div>
@@ -987,14 +980,14 @@
 
 	<div class="solutions" id="solutionsLink">
 		<div class="container">
-			<h4 class="solutions__title title">Готовые решения для флота</h4>
+			<h4 class="solutions__title title js-scroll slide-left">Готовые решения для флота</h4>
 			<div class="solutions__content d-flex">
-				<div class="solutions__left order-first col-lg-8">
+				<div class="solutions__left order-first col-lg-8 js-scroll fade-in-bottom-300">
 					<div class="solutions__subtitle">Буксир-толкач<br>
 						Тип ОТ-2400</div>
 					<img src="images/dist/flot/ship-1.png" alt="ship">
 				</div>
-				<div class="solutions__right col-lg-4">
+				<div class="solutions__right col-lg-4 js-scroll fade-in-bottom-500">
 					<nav>
 						<div class="nav nav-tabs solution__tabs" id="nav-tab-result" role="tablist">
 						  <button class="btn solution__btn nav-link active" id="nav-econom-tab" data-bs-toggle="tab" data-bs-target="#nav-econom" type="button" role="tab" aria-controls="nav-econom" aria-selected="true">Эконом</button>
@@ -1095,7 +1088,7 @@
 										<p class="coplectation__description">Фиксации плотности топлива в емкостях</p>
 										<p class="coplectation__description">Фиксация  объема подтоварной воды в емкостях</p>
 										<p class="coplectation__description">Фиксация массы топлива в емкостях для хранения топлива</p>
-										<p class="coplectation__description">Удаленный контроль параметров работы двигателя (температура охл жидкости, обороты, давление масла и т. п.) </p>
+										<p class="coplectation__description">Удаленный контроль параметров работы двигателя (температура, обороты, давление)</p>
 									  </div>	
 								  </div>
 							</div>
@@ -1154,10 +1147,199 @@
 										<p class="coplectation__description">Фиксации плотности топлива в емкостях</p>
 										<p class="coplectation__description">Фиксация  объема подтоварной воды в емкостях</p>
 										<p class="coplectation__description">Фиксация массы топлива в емкостях для хранения топлива</p>
-										<p class="coplectation__description">Удаленный контроль параметров работы двигателя (температура охл жидкости, обороты, давление масла и т. п.)</p>
+										<p class="coplectation__description">Удаленный контроль параметров работы двигателя (температура, обороты, давление)</p>
 										<p class="coplectation__description">Фиксация объема  и массы принимаемого и выдаваемого топлива в емкостях с привязкой  R-FID -Карте (ответственному лицу)</p>
 									</div>	
 								  </div>
+							</div>
+						</div>
+					</div>
+					<button class="btn btn__solution-orange">Оставить заявку</button>
+				</div>
+			</div>
+			<div class="solutions__content d-flex">
+				<div class="solutions__left order-first col-lg-8 js-scroll fade-in-bottom-300">
+					<div class="solutions__subtitle">Промыслового судна<br>
+						Проект 1440</div>
+					<img src="images/dist/flot/ship-2.png" alt="ship">
+				</div>
+				<div class="solutions__right col-lg-4 js-scroll fade-in-bottom-500">
+					<nav>
+						<div class="nav nav-tabs solution__tabs" id="nav-tab-result" role="tablist">
+						  <button class="btn solution__btn nav-link active" id="nav-econom-tab-2" data-bs-toggle="tab" data-bs-target="#nav-econom-2" type="button" role="tab" aria-controls="nav-econom-2" aria-selected="true">Эконом</button>
+						  <button class="btn solution__btn nav-link" id="nav-comfort-tab-2" data-bs-toggle="tab" data-bs-target="#nav-comfort-2" type="button" role="tab" aria-controls="nav-comfort-2" aria-selected="false">Комфорт</button>
+						  <button class="btn solution__btn nav-link" id="nav-premium-tab-2" data-bs-toggle="tab" data-bs-target="#nav-premium-2" type="button" role="tab" aria-controls="nav-premium-2" aria-selected="false">Премиум</button>
+						</div>
+					</nav>
+					<div class="tab-content" id="nav-tabContent">
+						<div class="tab-pane fade show active" id="nav-econom-2" role="tabpanel" aria-labelledby="nav-econom-tab-2">
+							<div class="solutions__block">
+								<nav>
+									<div class="nav nav-tabs solution__panel" id="nav-tab-desc" role="tablist">
+										<button class="btn btn__block nav-link active" id="nav-complectation-tab-2" data-bs-toggle="tab" data-bs-target="#nav-complectation-2" type="button" role="tab" aria-controls="nav-complectation-2" aria-selected="true">Комплектация</button>
+										<button class="btn btn__block nav-link" id="nav-option-tab-2" data-bs-toggle="tab" data-bs-target="#nav-option-2" type="button" role="tab" aria-controls="nav-option-2" aria-selected="false">Описание</button>
+									</div>
+									</nav>
+									<div class="tab-content" id="nav-tabContent-econom">
+									<div class="tab-pane fade show active" id="nav-complectation-2" role="tabpanel" aria-labelledby="nav-complectation-tab-2">
+										<div class="solution__content">
+											<span class="solution__name">Бортовой контроллер</span>
+											<div class="solution__group">
+												<p><span class="mutted">х1</span></p>
+											</div>
+										</div>
+										<div class="solution__content">
+											<span class="solution__name">Датчик уровня топлива</span>
+											<div class="solution__group">
+												<p><span class="mutted">х1</span></p>
+											</div>
+										</div>
+										<div class="solution__content">
+											<span class="solution__name">Светозвуковая сигнализация</span>
+											<div class="solution__group">
+												<p><span class="mutted">х1</span></p>
+												
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane fade" id="nav-option-2" role="tabpanel" aria-labelledby="nav-option-tab-2">
+										<p class="coplectation__description">Контроль местонахождения</p>
+										<p class="coplectation__description">Контроль расхода топлива потребителей</p>
+										<p class="coplectation__description">Светозвуковая сигнализация контроля приема топлива</p>
+									</div>	
+									</div>
+								</div>
+						</div>
+						<div class="tab-pane fade" id="nav-comfort-2" role="tabpanel" aria-labelledby="nav-comfort-tab-2">
+							<div class="solutions__block">
+								<nav>
+									<div class="nav nav-tabs solution__panel" id="nav-tab-comfort" role="tablist">
+										<button class="btn btn__block nav-link active" id="nav-complectation__comfort-tab-2" data-bs-toggle="tab" data-bs-target="#nav-complectation__comfort-2" type="button" role="tab" aria-controls="nav-complectation__comfort-2" aria-selected="true">Комплектация</button>
+										<button class="btn btn__block nav-link" id="nav-option__confort-tab-2" data-bs-toggle="tab" data-bs-target="#nav-option__confort-2" type="button" role="tab" aria-controls="nav-option__confort-2" aria-selected="false">Описание</button>
+									</div>
+									</nav>
+									<div class="tab-content" id="nav-tabContent-comfort">
+										<div class="tab-pane fade show active" id="nav-complectation__comfort-2" role="tabpanel" aria-labelledby="nav-complectation__comfort-tab-2">
+										<div class="solution__content">
+											<span class="solution__name">Бортовой контроллер</span>
+											<div class="solution__group">
+												<p><span class="mutted">х1</span></p>
+											</div>
+										</div>
+										<div class="solution__content">
+											<span class="solution__name">Дизельный генератор</span>
+											<div class="solution__group">
+												<p>Sekee FM20 <span class="mutted">х4</span></p>
+												<p>Реле работы <span class="mutted">х2</span></p>
+												<p>Трансформатор тока <span class="mutted">х6</span></p>
+												<p>Счетчик электроэнергии <span class="mutted">х2</span></p>
+											</div>
+										</div>
+										<div class="solution__content">
+											<span class="solution__name">Главный двигатель</span>
+											<div class="solution__group">
+												<p>Sekee FM20 <span class="mutted">х2</span></p>
+												<p>Датчик оборотов <span class="mutted">х1</span></p>
+											</div>
+										</div>
+										<div class="solution__content">
+											<span class="solution__name">Котел</span>
+											<div class="solution__group">
+												<p>Sekee FM10 <span class="mutted">х1</span></p>
+												<p>Реле работы <span class="mutted">х1</span></p>
+											</div>
+										</div>
+										<div class="solution__content">
+											<span class="solution__name">Светозвуковая сигнализация</span>
+											<div class="solution__group">
+												<p><span class="mutted">х1</span></p>
+											</div>
+										</div>
+										</div>
+										<div class="tab-pane fade" id="nav-option__confort-2" role="tabpanel" aria-labelledby="nav-option__confort-tab-2">
+										<p class="coplectation__description">Контроль местонахождения</p>
+										<p class="coplectation__description">Контроль расхода топлива потребителей</p>
+										<p class="coplectation__description">Контроль режимов работы оборудования</p>
+										<p class="coplectation__description">Контроль топлива в емкостях </p>
+										<p class="coplectation__description">Отчет с динамикой остатков топлива на объекте</p>
+										<p class="coplectation__description">Фиксации плотности топлива в емкостях</p>
+										<p class="coplectation__description">Фиксация  объема подтоварной воды в емкостях</p>
+										<p class="coplectation__description">Фиксация массы топлива в емкостях для хранения топлива</p>
+										<p class="coplectation__description">Удаленный контроль параметров работы двигателя (температура, обороты, давление)</p>
+										<p class="coplectation__description">Светозвуковая сигнализация контроля приема топлива</p>
+										</div>	
+									</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="nav-premium-2" role="tabpanel" aria-labelledby="nav-premium-tab-2">
+							<div class="solutions__block">
+								<nav>
+									<div class="nav nav-tabs solution__panel" id="nav-tab-premium" role="tablist">
+										<button class="btn btn__block nav-link active" id="nav-complectation__premium-tab-2" data-bs-toggle="tab" data-bs-target="#nav-complectation__premium-2" type="button" role="tab" aria-controls="nav-complectation__premium-2" aria-selected="true">Комплектация</button>
+										<button class="btn btn__block nav-link" id="nav-option__premium-tab-2" data-bs-toggle="tab" data-bs-target="#nav-option__premium-2" type="button" role="tab" aria-controls="nav-option__premium-2" aria-selected="false">Описание</button>
+									</div>
+								</nav>
+								<div class="tab-content" id="nav-tabContent-premium">
+									<div class="tab-pane fade show active" id="nav-complectation__premium-2" role="tabpanel" aria-labelledby="nav-complectation__premium-tab-2">
+										<div class="solution__content">
+											<span class="solution__name">Бортовой контроллер</span>
+											<div class="solution__group">
+												<p><span class="mutted">х1</span></p>
+											</div>
+										</div>
+										<div class="solution__content">
+											<span class="solution__name">Дизельный генератор</span>
+											<div class="solution__group">
+												<p>Sekee FM15 <span class="mutted">х2</span></p>
+												<p>Трансформатор тока <span class="mutted">х6</span></p>
+												<p>Счетчик электроэнергии <span class="mutted">х2</span></p>
+												<p>Реле работы <span class="mutted">х2</span></p>
+											</div>
+										</div>
+										<div class="solution__content">
+											<span class="solution__name">Главный двигатель</span>
+											<div class="solution__group">
+												<p>Массовый расходомер ДУ15<span class="mutted">х2</span></p>
+												<p>Датчик оборотов <span class="mutted">х1</span></p>
+											</div>
+										</div>
+										<div class="solution__content">
+											<span class="solution__name">Котел</span>
+											<div class="solution__group">
+												<p>Sekee FM10 <span class="mutted">х1</span></p>
+												<p>Реле работы <span class="mutted">х1</span></p>
+											</div>
+										</div>
+										<div class="solution__content">
+											<span class="solution__name">Датчик уровня топлива FM80</span>
+											<div class="solution__group">
+												<p><span class="mutted">х1</span></p>
+
+											</div>
+										</div>
+										<div class="solution__content">
+											<span class="solution__name">Светозвуковая сигнализация</span>
+											<div class="solution__group">
+												<p><span class="mutted">х1</span></p>
+
+											</div>
+										</div>
+										
+									</div>
+									<div class="tab-pane fade" id="nav-option__premium-2" role="tabpanel" aria-labelledby="nav-option__premium-tab-2">
+										<p class="coplectation__description">Контроль местонахождения</p>
+										<p class="coplectation__description">Контроль расхода топлива потребителей в массе</p>
+										<p class="coplectation__description">Контроль режимов работы оборудования</p>
+										<p class="coplectation__description">Контроль топлива в емкостях</p>
+										<p class="coplectation__description">Отчет с динамикой остатков топлива на объекте</p>
+										<p class="coplectation__description">Фиксации плотности топлива в емкостях</p>
+										<p class="coplectation__description">Фиксация объема подтоварной воды в емкостях</p>
+										<p class="coplectation__description">Фиксация массы топлива в емкостях для хранения топлива</p>
+										<p class="coplectation__description">Удаленный контроль параметров работы двигателя (температура, обороты, давление)</p>
+										<p class="coplectation__description">Светозвуковая сигнализация контроля приема топлива</p>
+
+									</div>	
+								</div>
 							</div>
 						</div>
 					</div>
@@ -1172,7 +1354,7 @@
 	<div class="container">
 		<div class="certificate__content">
 			<div class="certificate__top">
-				<h4 class="certificate__title title">Сертификаты</h4>
+				<h4 class="certificate__title title js-scroll slide-left">Сертификаты</h4>
 				<div class="certificate__controls">
 					<div class="certificate__btn certificate__btn-prev"></div>
 					<div class="certificate__btn certificate__btn-next"></div>
@@ -1208,7 +1390,7 @@
 					</svg>
 				</button>
 			</div>
-			<div class="certificate__bot">
+			<div class="certificate__bot js-scroll fade-in-bottom">
 
 				<div class="swiper-container certificate__swiper">
 
@@ -1403,7 +1585,7 @@
 	</div>
 </section>
 	
-	<section class="media">
+	<section class="media js-scroll ">
 	<div class="container">
 		<div class="media__content">
 			<div class="media__top">
@@ -1672,10 +1854,10 @@
 	<section class="proposal">
 		<div class="container">
 			<div class="proposal__content">
-				<div class="proposal__left">
+				<div class="proposal__left js-scroll slide-left">
 					<h2 class="proposal__title title">Установите систему<br> сейчас, оплатите потом</h2>
 				</div>
-				<div class="proposal__right">
+				<div class="proposal__right js-scroll slide-right">
 					<form class="proposal__form form" method="POST" id="flot-3">
 						<div class="form__block">
 							<input class="form__name" name="name" type="text" placeholder="Имя" required>
@@ -1686,11 +1868,11 @@
 				</div>
 			</div>
 			<div class="proposal__row">
-				<div class="proposal__left-1">
+				<div class="proposal__left-1 js-scroll slide-left">
 					<span class="proposal__subtitle">Оставляя заявку, вы <br>
 						соглашаетесь на<a href="privacy.html" class="proposal__subtitle-orange"> обработку данных</a></span>
 				</div>
-				<div class="proposal__right-1">
+				<div class="proposal__right-1 js-scroll slide-right">
 					<span class="proposal__subtitle proposal__row-subtitle">Или свяжитесь удобным вам способом</span>
 					<ul class="proposal__menu">
 						<li class="proposal__list"><a href="mailto:info@technodar.group" class="proposal__link">info@technodar.group</a></li>
@@ -1711,9 +1893,9 @@
 	<section class="command">
 	<div class="container">
 		<div class="command__content">
-			<h2 class="command__title">С вами будут работать</h2>
+			<h2 class="command__title js-scroll slide-left">С вами будут работать</h2>
 			<div class="command__block">
-				<div class="command__item">
+				<div class="command__item js-scroll fade-in-bottom-300">
 					<div class="command__img">
 						<img src="images/dist/command/command-3.jpg" alt="Ivan">
 					</div>
@@ -1722,7 +1904,7 @@
 						<span class="command__position">Руководитель проектного отдела</span>
 					</div>
 				</div>
-				<div class="command__item">
+				<div class="command__item js-scroll fade-in-bottom-500">
 					<div class="command__img">
 						<img src="images/dist/command/command-5.jpg" alt="Ivan">
 					</div>
@@ -1732,7 +1914,7 @@
 
 					</div>
 				</div>
-				<div class="command__item">
+				<div class="command__item js-scroll fade-in-bottom-700">
 					<div class="command__img">
 						<img src="images/dist/command/command-4.jpg" alt="Ivan">
 					</div>
@@ -1742,7 +1924,7 @@
 
 					</div>
 				</div>
-				<div class="command__item">
+				<div class="command__item js-scroll fade-in-bottom-900">
 					<div class="command__img">
 						<img src="images/dist/command/command-1.jpg" alt="Ivan">
 					</div>
@@ -1753,7 +1935,7 @@
 					</div>
 				</div>
 			</div>
-			<span class="command__yet">...и еще 55 профессиональных специалистов</span>
+			<span class="command__yet js-scroll fade-in-bottom">...и еще 55 профессиональных специалистов</span>
 		</div>
 	</div>
 </section>
@@ -1821,7 +2003,7 @@
 
 				<div class="quiz-step" data-step="3">
 					<h6 class="quiz__title">Расчёт почти готов</h6>
-					<span class="quiz__text">Заполните форму нижу, чтобы рассчитать точную стоимость системы </span>
+					<span class="quiz__text">Заполните форму ниже, чтобы рассчитать точную стоимость системы </span>
 					<div class="quiz-block">
 						<input class="quiz__input" name="phone" type="text" placeholder="Телефон" required> 
 						<input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" class="quiz__input" type="email" name="email" placeholder="E-mail" required>
@@ -1914,9 +2096,9 @@
 		<div class="container">
 			<div class="footer__content">
 				<div class="footer__top">
-					<div class="footer__left">
+					<div class="footer__left js-scroll slide-left">
 						<a href="index.html" class="footer__logo">
-							<img src="images/dist/Logo.png" alt="Logo">
+							<img src="images/dist/Logo.svg" alt="Logo">
 						</a>
 						<div class="footer__social">
 							<a href="https://www.facebook.com/gktehnodar" class="footer__social-link">
@@ -1930,7 +2112,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="footer__right">
+					<div class="footer__right js-scroll slide-right">
 						<div class="footer__services">
 							<span class="footer__label">Услуги</span>
 							<ul class="footer__menu">
@@ -1960,11 +2142,11 @@
 					</div>
 				</div>
 				<div class="footer__bot">
-					<div class="footer__left">
+					<div class="footer__left js-scroll slide-left">
 						<span class="info footer__text">© 2021 ГК Технодар</span>
 						
 					</div>
-					<div class="footer__right">
+					<div class="footer__right js-scroll slide-right">
 						<span class="dopamin footer__text">Created by <span>dopamine.team</span></span>
 						<span class="politics footer__text">Политика конфиденциальности</span>
 					</div>

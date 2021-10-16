@@ -31,7 +31,6 @@
 	<link rel="stylesheet" href="css/main.min.css">
 	<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
 	<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
-	
 </head>
 
 
@@ -49,11 +48,16 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV8GW52"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
+	<!-- <div class="preloader" id="page-preloader">
+		<div class="loader"></div>
+	</div> -->
+
+
 		<header class="header">
 			<div class="container">
 				<div class="header__content">
 					<a href="index.html" class="header__logo">
-						<img src="images/dist/Logo.png" alt="logo">
+						<img src="images/dist/Logo.svg" alt="logo">
 					</a>
 
 						<nav class="navigation header__navigation">
@@ -62,14 +66,14 @@
 								<li class="navigation__list"><a href="auto.html" class="navigation__link">Автотранспорт</a></li>
 								<li class="navigation__list"><a href="bur.html" class="navigation__link">Буровые установки</a></li>
 								<li class="navigation__list"><a href="train.html" class="navigation__link">Ж/Д транспорт</a></li>
-								<!-- <li class="navigation__list"><a href="paper.html" class="navigation__link">Статьи</a></li> -->
+								<li class="navigation__list"><a href="paper.html" class="navigation__link">Продукты</a></li>
 								<!-- <li class="navigation__list"><a href="index.html" class="navigation__link">О нас</a></li> -->
 								<li class="navigation__list"><a href="contacts.html" class="navigation__link">Контакты</a></li>
 								<li class="navigation__list"><a href="" class="navigation__link"></a></li>
 								<li class="navigation__list">
 									<div class="header__links">
 										<a href="tel:8800250016" class="header__phones">8 (800) 250-00-16</a>
-										<a href="mailto:skrt_biz@mail.ru" class="header__mail">skrt_biz@mail.ru</a>
+										<a href="mailto:info@technodar.group" class="header__mail">info@technodar.group</a>
 									</div>
 									<div class="header__social">
 										<a href="https://www.facebook.com/gktehnodar" class="header__social-link">
@@ -121,22 +125,57 @@
 
 
 
+
+
 <section class="proem">
     <div class="container">
         <div class="proem__content">
 			<!-- Slider main container -->
 			<div class="swiper proem__swiper">
 				<!-- Additional required wrapper -->
-				<div class="swiper-wrapper">
+				<div class="swiper-wrapper proem-wrapper">
 				<!-- Slides -->
 					<div class="swiper-slide proem__slide">
 						<div class="proem__media">
-							<video class="proem__ship" src="Ship.mp4" autoplay muted loop playsinline ></video>
+							<video class="proem__ship" autoplay muted loop playsinline>
+								<source src="Ship.mp4" type="video/mp4">
+							</video>
+						</div>
+						<div class="proem__info">
+							<div class="proem__top">
+								<span class="proem__title js-scroll fade-in-bottom" >
+									Ведущий&nbsp;производитель систем&nbsp;контроля&nbsp;топлива для&nbsp;<span class="proem__text">судна</span>
+									<!-- Ведущий&nbsp;производитель систем&nbsp;контроля&nbsp;<span class="proem__text">флота</span> на&nbsp;российском&nbsp;рынке -->
+								</span>
+								<div class="proem__pagination"></div>
+							</div>
+							<div class="proem__bot">
+								<span class="proem__label">Проектирование, производство и установка эффективных<br> систем контроля техники, на сложных объектах</span>
+								<div class="proem__block">
+									<div class="proem__left js-scroll fade-in-bottom">
+										<button class="btn proem__btn">Получить консультацию</button>
+										<span class="proem__subtitle">Проектирование, производство и установка эффективных<br> систем контроля техники, на сложных объектах</span>
+									</div>
+									<div class="proem__right">
+										<!-- If we need navigation buttons -->
+										<div class="proem__btn-navigation proem__btn-prev"></div>
+										<div class="proem__btn-navigation proem__btn-next"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide proem__slide">
+						<div class="proem__media">
+							<video class="proem__auto lazy" muted loop playsinline >
+								<source data-src="video/autoIndex.mp4" type="video/mp4">
+							</video>
 						</div>
 						<div class="proem__info">
 							<div class="proem__top">
 								<span class="proem__title">
-									Ведущий&nbsp;производитель систем&nbsp;контроля&nbsp;<span class="proem__text">флота</span> на&nbsp;российском&nbsp;рынке
+									Ведущий&nbsp;производитель систем&nbsp;контроля&nbsp;топлива для&nbsp;<span class="proem__text">автотранспорта</span>
+									<!-- Ведущий&nbsp;производитель систем&nbsp;контроля <span class="proem__text">автотранспорта</span> на&nbsp;российском&nbsp;рынке -->
 								</span>
 								<div class="proem__pagination"></div>
 							</div>
@@ -158,12 +197,15 @@
 					</div>
 					<div class="swiper-slide proem__slide">
 						<div class="proem__media">
-							<video src="Auto.mp4" autoplay muted loop playsinline ></video>
+							<video class="proem__rig lazy" muted loop playsinline >
+								<source data-src="video/rigIndex.mp4" type="video/mp4">
+							</video>
 						</div>
 						<div class="proem__info">
 							<div class="proem__top">
 								<span class="proem__title">
-									Ведущий&nbsp;производитель систем&nbsp;контроля <span class="proem__text">автотранспорта</span> на&nbsp;российском&nbsp;рынке
+									Ведущий&nbsp;производитель систем&nbsp;контроля&nbsp;топлива для&nbsp;<span class="proem__text">буровых&nbsp;установок</span>
+									<!-- Ведущий&nbsp;производитель систем&nbsp;контроля <span class="proem__text">буровых&nbsp;установок</span> на&nbsp;российском&nbsp;рынке -->
 								</span>
 								<div class="proem__pagination"></div>
 							</div>
@@ -185,39 +227,15 @@
 					</div>
 					<div class="swiper-slide proem__slide">
 						<div class="proem__media">
-							<video src="Rig.mp4" autoplay muted loop playsinline ></video>
+							<video class="proem__train lazy" muted loop playsinline >
+								<source data-src="video/trainIndex.mp4" type="video/mp4">
+							</video>
 						</div>
 						<div class="proem__info">
 							<div class="proem__top">
 								<span class="proem__title">
-									Ведущий&nbsp;производитель систем&nbsp;контроля <span class="proem__text">буровых&nbsp;установок</span> на&nbsp;российском&nbsp;рынке
-								</span>
-								<div class="proem__pagination"></div>
-							</div>
-							<div class="proem__bot">
-								<span class="proem__label">Проектирование, производство и установка эффективных<br> систем контроля техники, на сложных объектах</span>
-								<div class="proem__block">
-									<div class="proem__left">
-										<button class="btn proem__btn">Получить консультацию</button>
-										<span class="proem__subtitle">Проектирование, производство и установка эффективных<br> систем контроля техники, на сложных объектах</span>
-									</div>
-									<div class="proem__right">
-										<!-- If we need navigation buttons -->
-										<div class="proem__btn-navigation proem__btn-prev"></div>
-										<div class="proem__btn-navigation proem__btn-next"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide proem__slide">
-						<div class="proem__media">
-							<video src="Train.mp4" autoplay muted loop playsinline ></video>
-						</div>
-						<div class="proem__info">
-							<div class="proem__top">
-								<span class="proem__title">
-									Ведущий&nbsp;производитель систем&nbsp;контроля <span class="proem__text">Ж&nbsp;/&nbsp;Д&nbsp;транспорта</span> на&nbsp;российском&nbsp;рынке
+									Ведущий&nbsp;производитель систем&nbsp;контроля&nbsp;топлива для&nbsp;<span class="proem__text">Ж&nbsp;/&nbsp;Д&nbsp;транспорта</span>
+									<!-- Ведущий&nbsp;производитель систем&nbsp;контроля <span class="proem__text">Ж&nbsp;/&nbsp;Д&nbsp;транспорта</span> на&nbsp;российском&nbsp;рынке -->
 								</span>
 								<div class="proem__pagination"></div>
 							</div>
@@ -244,22 +262,22 @@
 			</div>
 
 			<ul class="proem__menu">
-				<li class="proem__list">
+				<li class="proem__list js-scroll fade-in-bottom-300">
 					<span class="proem__list-title">География проектов</span>
 					<span class="proem__list-number">8</span>
 					<span class="proem__list-data">стран</span>
 				</li>
-				<li class="proem__list">
+				<li class="proem__list js-scroll fade-in-bottom-500">
 					<span class="proem__list-title">Объем сотрудничества</span>
 					<span class="proem__list-number">748</span>
 					<span class="proem__list-data">клиентов</span>
 				</li>
-				<li class="proem__list">
+				<li class="proem__list js-scroll fade-in-bottom-700">
 					<span class="proem__list-title">Реализовано</span>
 					<span class="proem__list-number">1784</span>
 					<span class="proem__list-data">проекта</span>
 				</li>
-				<li class="proem__list">
+				<li class="proem__list js-scroll fade-in-bottom-900">
 					<span class="proem__list-title">Оснащено техники</span>
 					<span class="proem__list-number">13044</span>
 					<span class="proem__list-data">единиц</span>
@@ -273,25 +291,25 @@
 <section class="way">
     <div class="container">
         <div class="way__content">
-            <h2 class="title way__title">направления
+            <h2 class="title way__title js-scroll slide-left">направления
                 деятельности</h2>
             <div class="way__block">
-                <a href="flot.html" class="way__item">
+                <a href="flot.html" class="way__item js-scroll fade-in-bottom-300">
                     <h2 class="way__item-title">Морской и речной<br class="way__br-2">флот</h2>
                     <!-- <h3 class="way__item-subtitle">Комплексные решения для контроля и&nbsp;аналитики</h3> -->
                     <img src="images/dist/flot.png" alt="flot">
                 </a>
-                <a href="train.html" class="way__item">
+                <a href="train.html" class="way__item js-scroll fade-in-bottom-500">
                     <h2 class="way__item-title">Железнодорожный<br class="way__br-1">транспорт</h2>
                     <!-- <h3 class="way__item-subtitle">Комплексные решения для контроля и&nbsp;аналитики</h3> -->
                     <img src="images/dist/jd.png" alt="train">
                 </a>
-                <a href="auto.html" class="way__item">
+                <a href="auto.html" class="way__item js-scroll fade-in-bottom-700">
                     <h2 class="way__item-title">Автотранспорт</h2>
                     <!-- <h3 class="way__item-subtitle">Комплексные решения для контроля и&nbsp;аналитики</h3> -->
                     <img src="images/dist/auto.png" alt="auto">
                 </a>
-                <a href="bur.html" class="way__item">
+                <a href="bur.html" class="way__item js-scroll fade-in-bottom-900">
                     <h2 class="way__item-title">Буровые установки</h2>
                     <!-- <h3 class="way__item-subtitle">Комплексные решения для контроля и&nbsp;аналитики</h3> -->
                     <img src="images/dist/bur.png" alt="bur">
@@ -305,32 +323,33 @@
     <div class="container">
         <div class="production__content">
             <div class="production__top">
-                <div class="production__left">
+                <div class="production__left js-scroll slide-left">
                     <h2 class="production__label">Производство</h2>
                 </div>
-                <div class="production__right">
+                <div class="production__right js-scroll slide-right">
                     <div class="production__subtitle">Собственная линия производства позволяет 
                         воплотить в жизнь решение любой сложности</div>
                 </div>
             </div>
             <div class="production__bottom">
                 <div class="production__left">
-                    <h2 class="title production__title">Проектный отдел</h2>
-                    <div class="production__description">Опытные инженеры-проектировщики получают все требования к системе и проектируют техническое решение</div>
+                    <h2 class="title production__title js-scroll fade-in-bottom">Проектный отдел</h2>
+                    <div class="production__description js-scroll fade-in-bottom">Опытные инженеры-проектировщики получают все требования к системе и проектируют техническое решение</div>
                     <div class="production__block">
-                        <div class="production__footnote">Системы для решения задач</div>
-                        <ul class="production__menu">
-                            <li class="production__list">Мониторинг</li>
-                            <li class="production__list">Контроль топлива</li>
-                            <li class="production__list">Звуковое оповещение</li>
-                            <li class="production__list">Визуализация данных</li>
-                            <li class="production__list">Видеонаблюдение</li>
-                            <li class="production__list">Аналитика данных</li>
+                        <div class="production__footnote js-scroll fade-in-bottom">Системы для решения задач</div>
+                        <ul class="production__menu js-scroll fade-in-bottom">
+                            <li class="production__list"><a href="solution/dots.html" class="production__link">Аналитика данных</a></li>
+                            <li class="production__list"><a href="solution/vmts.html" class="production__link">Визуализация данных</a></li>
+                            <li class="production__list"><a href="solution/scrt.html" class="production__link">Контроль топлива</a></li>
+							<li class="production__list"><a href="solution/scb.html" class="production__link">Контроль бункеровки</a></li>
+                            <li class="production__list"><a href="solution/smt.html" class="production__link">Мониторинг транспорта</a></li>
+                            <li class="production__list"><a href="solution/svn.html" class="production__link">Звуковое оповещение</a></li>
+                            <li class="production__list"><a href="solution/szo.html" class="production__link">Видеонаблюдение</a></li>
                         </ul>
                     </div>
-                    <div class="production__text">Поможем определить, какое решение нужно именно вам</div>
+                    <div class="production__text js-scroll fade-in-bottom">Поможем определить, какое решение нужно именно вам</div>
                 </div>
-                <div class="production__right">
+                <div class="production__right js-scroll fade-in-bottom">
                     <img src="images/dist/man.png" alt="man">
                     <img src="images/dist/man-small.png" alt="man">
                 </div>
@@ -343,16 +362,16 @@
 <section class="department">
     <div class="container">
         <div class="department__content">
-            <div class="department__left">
+            <div class="department__left js-scroll slide-left">
                 <h2 class="title department__title">Производственный
                     отдел</h2>
             </div>
             <div class="department__right">
-                <div class="department__subtitle">
+                <div class="department__subtitle js-scroll fade-in-bottom">
                     Когда решение спроектировано и согласовано, начинается этап его реализации <br>
 					Производственный отдел воплотит идеи и чертежи в осязаемые объекты реальности  
                 </div>
-                <div class="department__row">
+                <div class="department__row js-scroll fade-in-bottom">
 					<div class="department__text">В решениях мы используем продукцию собственного производства:</div>
 					<ul class="department__menu">
 						<li class="department__list">Датчики Sekee</li>
@@ -361,7 +380,7 @@
 						<li class="department__list">Бортовые компьютеры</li>
 					</ul>
 				</div>
-				<div class="department__block">
+				<div class="department__block js-scroll fade-in-bottom">
 					<div class="department__label">Даем гарантию</div>
 					<div class="department__info">
 						<div class="department__circle-1">
@@ -386,13 +405,13 @@
 	<div class="container">
 		<div class="purchases__content">
 			<div class="purchases__left">
-				<h2 class="title purchases__title">Отдел закупок</h2>
+				<h2 class="title purchases__title js-scroll slide-left">Отдел закупок</h2>
 			</div>
 			<div class="purchases__right">
-				<div class="purchases__subtitle">
+				<div class="purchases__subtitle js-scroll fade-in-bottom">
 					На основании данных о более чем 9 000 реализованных проектах, сотрудники отдела безошибочно подбирают 
 					недостающие комплектующие от производителей лучшего мирового оборудования</div>
-				<div class="purchases__block">
+				<div class="purchases__block js-scroll fade-in-bottom">
 					<div class="purchases__item">
 						<img src="images/dist/purchases/abb.png" alt="purchases">
 					</div>
@@ -440,10 +459,10 @@
 <section class="proposal">
 	<div class="container">
 		<div class="proposal__content">
-			<div class="proposal__left">
+			<div class="proposal__left js-scroll slide-left">
 				<h2 class="proposal__title title">Станьте нашим партнером</h2>
 			</div>
-			<div class="proposal__right">
+			<div class="proposal__right js-scroll slide-right">
 				<form class="proposal__form form" method="POST" id="index-1">
 					<div class="form__block">
 						<input class="form__name" name="name" type="text" placeholder="Имя" required>
@@ -454,11 +473,11 @@
 			</div>
 		</div>
 		<div class="proposal__row">
-			<div class="proposal__left-1">
+			<div class="proposal__left-1 js-scroll slide-left">
 				<span class="proposal__subtitle">Оставляя заявку, вы <br>
 					соглашаетесь на<a href="privacy.html" class="proposal__subtitle-orange"> обработку данных</a></span>
 			</div>
-			<div class="proposal__right-1">
+			<div class="proposal__right-1 js-scroll slide-right">
 				<span class="proposal__subtitle proposal__row-subtitle">Или свяжитесь удобным вам способом</span>
 				<ul class="proposal__menu">
 					<li class="proposal__list"><a href="mailto:info@technodar.group" class="proposal__link">info@technodar.group</a></li>
@@ -478,12 +497,12 @@
 <section class="workshop">
 	<div class="container">
 		<div class="workshop__content">
-			<div class="workshop__left">
+			<div class="workshop__left js-scroll slide-left">
 				<h2 class="title workshop__title">Сборочный цех</h2>
 			</div>
 			<div class="workshop__right">
-				<div class="workshop__subtitle">Штат инженеров с опытом работы от 10 лет производят комплектующие (датчики, газоотделители, контроллеры, бортовые компьютеры) решения компании Технодар</div>
-				<div class="workshop__block">
+				<div class="workshop__subtitle js-scroll fade-in-bottom">Штат инженеров с опытом работы от 10 лет производят комплектующие (датчики, газоотделители, контроллеры, бортовые компьютеры) решения компании Технодар</div>
+				<div class="workshop__block js-scroll fade-in-bottom">
 					<img src="images/dist/workshop.png" alt="workshop">
 				</div>
 			</div>
@@ -495,10 +514,10 @@
 <section class="control">
 	<div class="container">
 		<div class="control__content">
-			<div class="control__left">
+			<div class="control__left js-scroll slide-left">
 				<h2 class="title control__title">Контроль качества</h2>
 			</div>
-			<div class="control__right">
+			<div class="control__right js-scroll fade-in-bottom">
 				<div class="control__subtitle">Все датчики и узловые системы проходят испытания. Самое важное - 
 					это корректная механическая работа приборов на предельных нагрузках</div>
 				<div class="control__block">
@@ -542,7 +561,7 @@
 	<div class="container">
 		<div class="certificate__content">
 			<div class="certificate__top">
-				<h4 class="certificate__title title">Сертификаты</h4>
+				<h4 class="certificate__title title js-scroll slide-left">Сертификаты</h4>
 				<div class="certificate__controls">
 					<div class="certificate__btn certificate__btn-prev"></div>
 					<div class="certificate__btn certificate__btn-next"></div>
@@ -578,7 +597,7 @@
 					</svg>
 				</button>
 			</div>
-			<div class="certificate__bot">
+			<div class="certificate__bot js-scroll fade-in-bottom">
 
 				<div class="swiper-container certificate__swiper">
 
@@ -775,9 +794,9 @@
 <section class="command">
 	<div class="container">
 		<div class="command__content">
-			<h2 class="command__title">С вами будут работать</h2>
+			<h2 class="command__title js-scroll slide-left">С вами будут работать</h2>
 			<div class="command__block">
-				<div class="command__item">
+				<div class="command__item js-scroll fade-in-bottom-300">
 					<div class="command__img">
 						<img src="images/dist/command/command-3.jpg" alt="Ivan">
 					</div>
@@ -786,7 +805,7 @@
 						<span class="command__position">Руководитель проектного отдела</span>
 					</div>
 				</div>
-				<div class="command__item">
+				<div class="command__item js-scroll fade-in-bottom-500">
 					<div class="command__img">
 						<img src="images/dist/command/command-5.jpg" alt="Ivan">
 					</div>
@@ -796,7 +815,7 @@
 
 					</div>
 				</div>
-				<div class="command__item">
+				<div class="command__item js-scroll fade-in-bottom-700">
 					<div class="command__img">
 						<img src="images/dist/command/command-4.jpg" alt="Ivan">
 					</div>
@@ -806,7 +825,7 @@
 
 					</div>
 				</div>
-				<div class="command__item">
+				<div class="command__item js-scroll fade-in-bottom-900">
 					<div class="command__img">
 						<img src="images/dist/command/command-1.jpg" alt="Ivan">
 					</div>
@@ -817,11 +836,11 @@
 					</div>
 				</div>
 			</div>
-			<span class="command__yet">...и еще 55 профессиональных специалистов</span>
+			<span class="command__yet js-scroll fade-in-bottom">...и еще 55 профессиональных специалистов</span>
 		</div>
 	</div>
 </section>
-<section class="media">
+<section class="media js-scroll ">
 	<div class="container">
 		<div class="media__content">
 			<div class="media__top">
@@ -1089,9 +1108,9 @@
 		<div class="container">
 			<div class="footer__content">
 				<div class="footer__top">
-					<div class="footer__left">
+					<div class="footer__left js-scroll slide-left">
 						<a href="index.html" class="footer__logo">
-							<img src="images/dist/Logo.png" alt="Logo">
+							<img src="images/dist/Logo.svg" alt="Logo">
 						</a>
 						<div class="footer__social">
 							<a href="https://www.facebook.com/gktehnodar" class="footer__social-link">
@@ -1105,7 +1124,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="footer__right">
+					<div class="footer__right js-scroll slide-right">
 						<div class="footer__services">
 							<span class="footer__label">Услуги</span>
 							<ul class="footer__menu">
@@ -1135,11 +1154,11 @@
 					</div>
 				</div>
 				<div class="footer__bot">
-					<div class="footer__left">
+					<div class="footer__left js-scroll slide-left">
 						<span class="info footer__text">© 2021 ГК Технодар</span>
 						
 					</div>
-					<div class="footer__right">
+					<div class="footer__right js-scroll slide-right">
 						<span class="dopamin footer__text">Created by <span>dopamine.team</span></span>
 						<span class="politics footer__text">Политика конфиденциальности</span>
 					</div>

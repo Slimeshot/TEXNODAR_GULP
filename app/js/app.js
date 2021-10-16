@@ -1,5 +1,6 @@
-import {Swiper, EffectFade, Parallax, Mousewheel, Controller, Pagination, Scrollbar, Navigation, Autoplay} from "swiper"
-import {Tab} from "bootstrap/js/dist/tab"
+import {Swiper, EffectFade, Parallax, Mousewheel, Controller, Pagination, Scrollbar, Navigation, Autoplay} from "swiper";
+import {Tab} from "bootstrap/js/dist/tab";
+import lottie from 'lottie-web/build/player/lottie_html.min.js'
 Swiper.use([ Parallax, EffectFade, Mousewheel, Controller, Pagination, Scrollbar, Navigation, Autoplay ]);
 
 function getScrollBarWidth () {
@@ -39,8 +40,32 @@ function unCompensateBody(){
 }
 
 
+// document.body.onload = function() {
+// 	setTimeout( function() {
+// 		var preloader = document.getElementById('page-preloader');
+// 		console.log(preloader)
+// 		if (!preloader.classList.contains('done') ) {
+// 			preloader.classList.add('done')
+// 		}
+// 	}, 0)
+// }
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
+	
+	//lotitie.animation
+
+	lottie.loadAnimation({
+		container: document.querySelector('.sss'), // the dom element that will contain the animation
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: '../data.json' // the path to the animation json
+	  });
+
+
+
 	//! MOBILE FIX 100VH
 	let vh = window.innerHeight * 0.01;
 	document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -55,10 +80,15 @@ document.addEventListener('DOMContentLoaded', () => {
 		// Optional parameters
 		loop: true,
 		effect: "fade",
+		speed: 200,
 		// If we need pagination
 		pagination: {
 		  el: '.proem__pagination',
 		},
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		  },
 	  
 		// Navigation arrows
 		navigation: {
@@ -83,7 +113,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	const introSwiper = new Swiper('.intro__swiper', {
 		loop: true,
 		spaceBetween: 32,
-		
+		autoplay: {
+			delay: 10000,
+			disableOnInteraction: false,
+		  },
 		// If we need pagination
 		pagination: {
 		  el: '.intro__pagination',
@@ -104,7 +137,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	  const projectSwiper = new Swiper('.project__swiper', {
 		loop: true,
-	  
+		
+		autoplay: {
+			delay: 10000,
+			disableOnInteraction: false,
+		  },
 
 		pagination: {
 		  el: '.project__pagination',
@@ -228,16 +265,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	  //close/open aplication 
 
-	  const btnSolutionOrange = document.querySelector('.btn__solution-orange');
+	  const btnSolutionOrange = document.querySelectorAll('.btn__solution-orange');
 	  const applicationCross = document.querySelector('.application__cross');
 	  const application = document.querySelector('.application');
 
 	  if (application) {
-		btnSolutionOrange.addEventListener('click', () => {
-			application.classList.add('active');
-			callBg.classList.add('active');
-			document.body.classList.add('active');
-		  })
+		btnSolutionOrange.forEach(item => {
+			item.addEventListener('click', () => {
+				application.classList.add('active');
+				callBg.classList.add('active');
+				document.body.classList.add('active');
+			  })
+		});
+	
 
 		applicationCross.addEventListener('click', () => {
 			application.classList.remove('active');
@@ -419,14 +459,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	   
 	   if (calcBtnNext) {
-
-			// let btnMonthDelivery = $('#monthDelivery').val();
-				
-			// if (btnMonthDelivery === '') {
-			// 	$('.calculator_btn_next').prop('disabled', true);
-			// } else {
-			// 	$('.calculator_btn_next').prop('disabled', false);
-			// }
 
 
 			// элементы
@@ -612,38 +644,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	 })
  
 
-	 
- 
-	 /**
-	  *  Calculation form behavior
-	  */
-	//  let calcBtn = document.querySelector('.calculator__form .calculator_btn_next');
-
-	//  if (calcBtn) {
-	// 	calcBtn.addEventListener('click', (event) => {
- 
-	// 		let fields = [].slice.call(document.querySelectorAll('.calculator__form-visible input, select'));
-	// 		let isAllValid = true;
-
-	// 		fields.map(function (filedElement) {
-	// 			console.log(filedElement.validity.valid);
-	// 			if (!filedElement.validity.valid)
-	// 				isAllValid = false;
-	// 		})
-
-	// 		if (isAllValid) {
-	// 			event.preventDefault();
-	// 			let hiddenBlock = document.querySelector('.calculator__form .calculator__form-hidden');
-	// 			hiddenBlock.classList.add('show');
-	// 		}
-
-	// 	});
-	//  }
-
-
-
-
-
 
 
 	const footerLabel = document.querySelectorAll('.footer__label');
@@ -664,15 +664,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 
 
-	// if ($('.quiz').length) {
-	// 	$('.quiz-step')[3].remove();
-	// 	$('.quiz-step').each(function() {
-	// 		if ($(this).attr('data-step') == 4) {
-	// 			$(this).attr('data-step', 3)
-	// 		}
-
-	// 	});
-	// }
 
 
 	if ($('.tsct')) {
@@ -745,13 +736,13 @@ document.addEventListener('DOMContentLoaded', () => {
 			let answers = []
 			if (checkedInputs.length) {
 				checkedInputs.each(function (index, el) {
-					answers.push(el.value);
+					console.log();
 				})
 			}
 			const rangeInput = step.find('input[type="range"]')
 			if (rangeInput.length) {
 				rangeInput.each(function (index, el) {
-					answers.push(el.value);
+					console.log();
 				})
 			}
 	
@@ -1013,14 +1004,11 @@ document.addEventListener('DOMContentLoaded', () => {
 			dataType: 'html',
 			error: function(data) {
 				console.log(data);
-				// $("#errorMess").html(data);
-				// $("#errorMess").css('color', 'red');
+
 			}, 
 			/* если произойдет ошибка в элементе с id erconts выведится сообщение*/  
 			beforeSend: function() {
-				// $('#sendMail').prop('disabled', true);
-				// $("#errorMess").html("Подождите, идет отправка заявки!");
-				// $("#errorMess").css('color', 'orange');
+
 				
 			},
 			success: function(data) {
@@ -1069,33 +1057,177 @@ document.addEventListener('DOMContentLoaded', () => {
 
 				if (formID.includes('flot-') || formID.includes('tsct') || formID.includes('bur-') || formID.includes('auto-') || formID.includes('train-') || formID.includes('index-') || formID.includes('contacts-')) {
 					if (successBlock) {
-						// callBlock.classList.remove('active');
-						// callBg.classList.remove('active');
-						// application.classList.remove('active')
-						// $('.quiz_active').removeClass('quiz_active')
-						// $('body').attr('style', '');
-						//  $('body').removeClass('BodyOverflow');
+
 						successBlock.classList.add('active');
 						document.body.classList.add('active');
 					}
 					
 				}
 
-				// connect.classList.toggle('open');
-				// $('#sendMail').prop('disabled', false);
-				// $("#errorMess").css('color', 'green');
-				// dataLayer.push({'event': 'sendMail_1'})
+
 			}
 		})
 		return false;
 	});
 
+	// // play video index.html
+	// $('.proem__media video').each(function (index, el) {
+	// 	if(index > 1) {
+	// 		el.currentTime = 0;
+	// 		el.pause();	
+	// 	}
+	// })
+
+	$('.proem-wrapper').on('transitionend', (event) => {
+		// $('.proem__media video').each(function (index, el) {
+		// 	console.log(index)
+		// 	console.log(el)
+		// 	if(index > 1) {
+		// 		el.currentTime = 0;
+		// 	} 
+		// 	el.pause();	
+		// })
+		// console.log($('.proem__media video'))
+		$('.swiper-slide-prev .proem__media video')[0].pause();
+		$('.swiper-slide-prev .proem__media video')[0].currentTime = 0;
+		$('.swiper-slide-active .proem__media video')[0].play();
+		$('.swiper-slide-next .proem__media video')[0].pause();
+		$('.swiper-slide-next .proem__media video')[0].currentTime = 0;
+		// console.log($('.swiper-slide-prev .proem__media video')[0])
+		// console.log($('.swiper-slide-active .proem__media video')[0])
+		// console.log($('.swiper-slide-next .proem__media video')[0])
+		// $('.swiper-slide-active .proem__media video')[0].play();
+	})
+
+	//lazy load video
+
+	var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+	console.log(lazyVideos)
+	
+	if ("IntersectionObserver" in window) {
+		var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+		entries.forEach(function(video) {
+			if (video.isIntersecting) {
+			for (var source in video.target.children) {
+				var videoSource = video.target.children[source];
+				if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+				videoSource.src = videoSource.dataset.src;
+				}
+			}
+	
+			video.target.load();
+			console.log(video.target.load())
+			video.target.classList.remove("lazy");
+			lazyVideoObserver.unobserve(video.target);
+			}
+		});
+		});
+	
+		lazyVideos.forEach(function(lazyVideo) {
+		lazyVideoObserver.observe(lazyVideo);
+		});
+	}
+
+
+	// lazy load img
+
+	// const imageObserver = new IntersectionObserver((entries, imgObserver) => {
+	// 	entries.forEach((entry) => {
+	// 		if (entry.isIntersecting) {
+	// 			const lazyImage = entry.target
+	// 			console.log("lazy loading ", lazyImage)
+	// 			lazyImage.src = lazyImage.dataset.src
+	// 			lazyImage.classList.remove("lzy_img");
+	// 			imgObserver.unobserve(lazyImage);
+	// 		}
+	// 	})
+	// });
+	// const arr = document.querySelectorAll('img.lzy-img')
+	// arr.forEach((v) => {
+	// 	imageObserver.observe(v);
+	// })
+	
+
+
+	//Плавная анимация
+
+	const scrollElements = document.querySelectorAll(".js-scroll");
+	const scrollElementsAnimation = document.querySelectorAll(".js-scroll-animation");
+
+	const elementInView = (el, dividend = 1) => {
+
+		const elementTop = el.getBoundingClientRect().top;
+		return ( elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend );
+
+	};
+
+	// const elementOutofView = (el) => {
+
+	// 	const elementTop = el.getBoundingClientRect().top;
+	// 	return ( elementTop > (window.innerHeight || document.documentElement.clientHeight) );
+
+	// };
+	if (screen.width > 1024) {
+		const displayScrollElement = (element) => {
+			element.classList.add("scrolled");
+		};
+	
+		const hideScrollElement = (element) => {
+			element.classList.remove("scrolled");
+		};
+	
+		const handleScrollAnimation = () => {
+			scrollElements.forEach((el) => {
+				if (elementInView(el, 1.04)) {
+				displayScrollElement(el);
+				}  // else if (elementOutofView(el)) {
+				// hideScrollElement(el)
+				// }
+			})
+		}
+	
+		window.addEventListener("scroll", () => { 
+			handleScrollAnimation();
+		});
+		handleScrollAnimation();
+	}
+	
+
+	const time = 4000;
+	const step = 100
+
+	function outNum(num, elem) {
+		let l = document.querySelector('#' + elem);
+		let n = 0;
+		let t = Math.round( time / ( num / step ) );
+		let interval = setInterval(() => {
+			n = n + step;
+			if (n == num) {
+				clearInterval(interval);
+			}
+			l.innerHTML = n
+		}, t);
+	}
+
+	outNum(100, 'ccc')
 
 
 
 
 
+	// animate counter
 
+	$('.proem__list-number').each(function () {
+		$(this).prop('Counter',0).animate({
+			Counter: $(this).text()
+		}, {
+			duration: 6000,
+			easing: 'swing',
+			step: function (now) {
+				$(this).text(Math.ceil(now));
+			}
+		});
+	});
 })
 
 

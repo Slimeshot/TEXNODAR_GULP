@@ -91,7 +91,7 @@
     font-size: 48px;
     line-height: 52px;
     letter-spacing: -0.02em;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     color: #000000;
     transform: rotate(-90deg);
     transition: color .3s;
@@ -299,11 +299,11 @@
         padding: 16px;
         display: flex;
         align-items: center;
-        font-family: Normalidad;
+        font-family: 'Normalidad', sans-serif;
         font-size: 12px;
         line-height: 16px;
         letter-spacing: -0.02em;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         svg {
             display: block;
             margin-right: 8px;
