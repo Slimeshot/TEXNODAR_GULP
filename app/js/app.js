@@ -1193,23 +1193,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 	
 
-	const time = 4000;
-	const step = 100
-
-	function outNum(num, elem) {
-		let l = document.querySelector('#' + elem);
-		let n = 0;
-		let t = Math.round( time / ( num / step ) );
-		let interval = setInterval(() => {
-			n = n + step;
-			if (n == num) {
-				clearInterval(interval);
-			}
-			l.innerHTML = n
-		}, t);
-	}
-
-	outNum(100, 'ccc')
+	
 
 
 
@@ -1217,17 +1201,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// animate counter
 
-	$('.proem__list-number').each(function () {
-		$(this).prop('Counter',0).animate({
-			Counter: $(this).text()
-		}, {
-			duration: 6000,
-			easing: 'swing',
-			step: function (now) {
-				$(this).text(Math.ceil(now));
-			}
+	if (document.querySelector('.proem')) {
+		$('.proem__list-number').each(function () {
+			$(this).prop('Counter',0).animate({
+				Counter: $(this).text()
+			}, {
+				duration: 6000,
+				easing: 'swing',
+				step: function (now) {
+					$(this).text(Math.ceil(now));
+				}
+			});
 		});
-	});
+	}
 })
 
 
