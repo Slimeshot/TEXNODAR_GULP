@@ -66,6 +66,58 @@
         &__block {
             max-width: 800px;
             margin-bottom: 96px;
+            .entry__img-block {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            .entry__item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 22%;
+                img {
+                    margin-bottom: 24px;
+                }
+                @media(max-width: 540px) {
+                    width: 45%;
+                }
+                .entry__item-title {
+                    font-family: 'IBM', sans-serif;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 16px;
+                    text-align: center;
+                    letter-spacing: 0.01em;
+                    text-transform: uppercase;
+                    color: #000000;
+                    @media (max-width: 768px) {
+                        font-size: 1.4em;
+                        line-height: 1.1em;
+                    }
+                    @media (max-width: 540px) {
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+                }
+            }
+            .info-desktop {
+                @media(max-width: 540px) {
+                    display: none;
+                }
+            }
+            .info-mobile {
+                display: none;
+                @media(max-width: 540px) {
+                    display: block;
+                    width: 80%;
+                    height: auto;
+                    object-fit: cover;
+                    margin: 0 auto;
+                }
+            }
             img {
                 width: 100%;
                 height: auto;
@@ -155,5 +207,6 @@
             }
         }
     }
+
 }
 

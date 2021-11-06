@@ -55,14 +55,101 @@ function unCompensateBody(){
 document.addEventListener('DOMContentLoaded', () => {
 	
 	//lotitie.animation
-
-	lottie.loadAnimation({
-		container: document.querySelector('.sss'), // the dom element that will contain the animation
+    lottie.loadAnimation({
+		container: document.querySelector('.flot-1'), // the dom element that will contain the animation
 		renderer: 'svg',
 		loop: true,
 		autoplay: true,
-		path: '../data.json' // the path to the animation json
+		path: '../animate/1_1.json' // the path to the animation json
 	  });
+	  lottie.loadAnimation({
+		container: document.querySelector('.flot-2'), // the dom element that will contain the animation
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: '../animate/1_2.json' // the path to the animation json
+	  });
+	  lottie.loadAnimation({
+		container: document.querySelector('.flot-3'), // the dom element that will contain the animation
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: '../animate/1_3.json' // the path to the animation json
+	  });
+	  lottie.loadAnimation({
+		container: document.querySelector('.flot-4'), // the dom element that will contain the animation
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: '../animate/1_4.json' // the path to the animation json
+	  });
+	  lottie.loadAnimation({
+		container: document.querySelector('.flot-5'), // the dom element that will contain the animation
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: '../animate/1_5.json' // the path to the animation json
+	  });
+
+	  lottie.loadAnimation({
+		container: document.querySelector('.train-1'), // the dom element that will contain the animation
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: '../animate/2_1.json' // the path to the animation json
+	  });
+	  lottie.loadAnimation({
+		container: document.querySelector('.train-2'), // the dom element that will contain the animation
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: '../animate/2_2.json' // the path to the animation json
+	  });
+	  lottie.loadAnimation({
+		container: document.querySelector('.train-3'), // the dom element that will contain the animation
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: '../animate/2_3.json' // the path to the animation json
+	  });
+	  lottie.loadAnimation({
+		container: document.querySelector('.train-4'), // the dom element that will contain the animation
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: '../animate/2_4.json' // the path to the animation json
+	  });
+
+
+	  lottie.loadAnimation({
+		container: document.querySelector('.auto-1'), // the dom element that will contain the animation
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: '../animate/3_1.json' // the path to the animation json
+	  });
+	  lottie.loadAnimation({
+		container: document.querySelector('.auto-2'), // the dom element that will contain the animation
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: '../animate/3_2.json' // the path to the animation json
+	  });
+	  lottie.loadAnimation({
+		container: document.querySelector('.auto-3'), // the dom element that will contain the animation
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: '../animate/3_3.json' // the path to the animation json
+	  });
+	  lottie.loadAnimation({
+		container: document.querySelector('.auto-5'), // the dom element that will contain the animation
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: '../animate/3_5.json' // the path to the animation json
+	  });
+	
 
 
 

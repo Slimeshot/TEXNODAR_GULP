@@ -100,7 +100,7 @@
             }
         }
         .swiper__img {
-            top: -40px;
+            top: -100px;
         }
     }
 }
@@ -137,6 +137,8 @@
             object-fit: cover;
             // transform: scale(-1, 1);
             min-height: 620px;
+            z-index: 10000;
+            display: block;
         }
     }
 }
