@@ -7,6 +7,53 @@
     background-color: #fff;
     z-index: 11;
 }
+.header__land {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    .header__logo {
+        width: 180px;
+        @media (max-width: 540px) {
+            img {
+                width: 150px;
+            }
+        }
+    }
+}
+.header__contacts-land {
+    display: flex;
+    align-items: center;
+    width: 315px;
+    @media (max-width: 540px) {
+        justify-content: flex-end;
+    }
+}
+.header__btn-land {
+    border: 1px solid #B62C2C;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 12px 24px;
+    color:  #B62C2C;
+    @media (max-width: 540px) {
+        font-size: 12px;
+        line-height: 14px;
+        padding: 9px 13px;
+    }
+}
+.header__phone-land {
+    font-family: 'IBM', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: #000000;
+    margin-right: 24px;
+    @media (max-width: 540px) {
+        display: none;
+    }
+}
 .header__content {
     height: 72px;
     display: flex;

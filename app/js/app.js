@@ -54,6 +54,204 @@ function unCompensateBody(){
 
 document.addEventListener('DOMContentLoaded', () => {
 	
+	// const circle = document.querySelector('.prograss-ring__circle');
+	// const radius = circle.r.baseVal.value;
+	// const circumference = 2 * Math.Pi * radius;
+
+	// console.log(circle.r)
+
+	if (document.querySelector('.prelude')) {
+
+		var circle = document.querySelector('.progress-ring__circle');
+		var radius = circle.r.baseVal.value;
+		var circumference = radius * 2 * Math.PI;
+
+		circle.style.strokeDasharray = `${circumference} ${circumference}`;
+		circle.style.strokeDashoffset = `${circumference}`;
+
+		function setProgress(percent) {
+		const offset = circumference - percent / 100 * circumference;
+		circle.style.strokeDashoffset = offset;
+		}
+
+
+
+
+
+
+
+
+		$('input[type=range]').on('input', function(e){
+			var min = e.target.min,
+				max = e.target.max,
+				val = e.target.value;
+			
+			$(e.target).css({
+			'backgroundSize': (val - min) * 100 / (max - min) + '% 100%'
+			});
+		}).trigger('input');
+
+
+		let bgFon = document.querySelector('.prelude__bg-fon');
+		let bgShip = document.querySelector('.prelude__bg-ship');
+		let bgGull = document.querySelector('.prelude__bg-gull');
+		window.addEventListener('mousemove', function(e) {
+			let x = e.clientX / window.innerWidth;
+			let y = e.clientY / window.innerHeight;  
+			bgFon.style.transform = 'translateX(-' + x * 60 + 'px)';
+			bgShip.style.transform = 'translateX(+' + x * 40 + 'px)';
+			bgGull.style.transform = 'translateX(-' + x * 20 + 'px)';
+		});
+
+
+		let inputBtn = document.querySelector('.caster__input');
+		let inputBlock = document.querySelector('.caster__input-block');
+
+
+		inputBtn.addEventListener('click', () => {
+			inputBtn.classList.toggle('active')
+			inputBlock.classList.toggle('active');
+		})
+		
+		let checkedInputs = []
+		$(".caster__input-radioinput").change( function(){
+			checkedInputs = $('.caster__input-block').find('input[type="radio"]:checked, input[type="checkbox"]:checked')
+			if (checkedInputs.length == 0) {
+				$('.caster__element-empty').remove()
+				$('.caster__element').remove()
+				$('.caster__element caster__element-number').remove()
+				let emptyTemp = ` <span class="caster__element-empty">Добавить задачу</span>`
+				$('.caster__input').append(emptyTemp)
+			} else {
+				$('.caster__element-empty').remove()
+				$('.caster__element').remove()
+				$('.caster__element caster__element-number').remove()
+				
+				// console.log(checkedInputs[0].value)
+				let temp = `
+				<span class="caster__element">${checkedInputs[0].value}</span>
+				<span class="caster__element caster__element-number">+${checkedInputs.length}</span>
+				`
+				$('.caster__input').append(temp)
+			}
+			// console.log(checkedInputs)
+			// checkedInputs.each(function() {
+			// 	let save = 0
+			// 	console.log('Разделитель')
+			// 	console.log(save)
+			// 	console.log($(this).attr('data-procent'))
+			// 	console.log(checkedInputs.length)
+			//    save = (save + (+$(this).attr('data-procent'))) / checkedInputs.length
+			//    console.log(save)
+			// })
+			countPrice()
+		});
+
+		function countProcent() {
+			let save = 0;
+			if (checkedInputs.length == 0) {
+				save = 1;
+				$('.caster__item-num').text(0)
+				$('.caster__item-mouth').text('месяцев')
+				setProgress(0)
+				return 0
+			} else {
+				checkedInputs.each(function() {
+					save = (save + (+$(this).attr('data-procent')))
+				})
+				
+			}
+			console.log(save/checkedInputs.length)
+			if (save/checkedInputs.length < 0.08) {
+				$('.caster__item-num').text(3)
+				$('.caster__item-mouth').text('месяца')
+				$('.caster__item-otext').text('3 месяца')
+				setProgress(30)
+			} else if (save/checkedInputs.length < 0.1) {
+				$('.caster__item-num').text(4)
+				$('.caster__item-mouth').text('месяца')
+				$('.caster__item-otext').text('4 месяца')
+				setProgress(50)
+			} else if (save/checkedInputs.length < 0.11) {
+				$('.caster__item-num').text(5)
+				$('.caster__item-mouth').text('месяцев')
+				$('.caster__item-otext').text('5 месяцев')
+				setProgress(60)
+			} else {
+				$('.caster__item-num').text(6)
+				$('.caster__item-mouth').text('месяцев')
+				$('.caster__item-otext').text('6 месяцев')
+				setProgress(70)
+			}
+			return (save/checkedInputs.length)
+		}
+		
+		
+		const rangeInput1 = $('.caster__radion-range-1')[0];
+		const rangeInput2 = $('.caster__radion-range-2')[0];
+		
+		rangeInput1.addEventListener('input', () => {
+			$('.caster__radio-value-1').text(rangeInput1.value)
+			countPrice()
+
+		})
+	
+		rangeInput2.addEventListener('input', () => {
+			$('.caster__radio-value-2').text(rangeInput2.value)
+			countPrice()
+		})
+
+
+
+		function countPrice() {
+			let formula = Math.floor($('.caster__radion-range-1')[0].value * $('.caster__radion-range-2')[0].value * 55000 * countProcent());
+			
+			$('.caster__item-price').text(charTransform(formula*12))
+			$('.caster__item-ytext').text(charTransform(formula*12))
+			$('.caster__item-mtext').text(charTransform(formula))
+			let price = charTransform(formula).split(' ')
+			
+			if (formula == 0) {
+				$('.caster__item-mil').text(0)
+				$('.caster__item-ts').text(0)
+				$('.caster__item-rub').text(0)
+				$('.caster__item-tmil').text('миллионов')
+				$('.caster__item-tts').text('тысяч')
+				$('.caster__item-trub').text('рублей')
+			} else if (formula < 100000) {
+				$('.caster__item-mil').text(0)
+				$('.caster__item-ts').text(price[0])
+				$('.caster__item-rub').text(price[1])
+				$('.caster__item-tmil').text('миллионов')
+				$('.caster__item-tts').text('тысяч')
+				$('.caster__item-trub').text('рублей')
+			} else if (formula < 1000000) {
+				$('.caster__item-mil').text(0)
+				$('.caster__item-ts').text(price[1])
+				$('.caster__item-rub').text(price[2])
+				$('.caster__item-tmil').text('миллионов')
+				$('.caster__item-tts').text('тысяч')
+				$('.caster__item-trub').text('рублей')
+			} else {
+				$('.caster__item-mil').text(price[0])
+				$('.caster__item-ts').text(price[1])
+				$('.caster__item-rub').text(price[2])
+			}
+	
+		}
+		
+		function charTransform(n) {
+				n += "";
+				n = new Array(4 - n.length % 3).join("U") + n;
+				return n.replace(/([0-9U]{3})/g, "$1 ").replace(/U/g, "");
+		}
+	}
+
+
+		
+
+
+
 	//lotitie.animation
     lottie.loadAnimation({
 		container: document.querySelector('.flot-1'), // the dom element that will contain the animation
@@ -376,6 +574,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	  //close/open call
 
+	  const headerBtnLand = document.querySelector('.header__btn-land');
+	  const preludeBtnLand = document.querySelector('.prelude__btn-white');
 	  const headerBtn = document.querySelector('.header__btn');
 	  const proemBtn = document.querySelectorAll('.proem__btn');
 	  const branchBtn = document.querySelectorAll('.branch__btn');
@@ -385,6 +585,24 @@ document.addEventListener('DOMContentLoaded', () => {
 	  const callBg = document.querySelector('.call__bg');
 
 	  //закрытие бургер и открытие кол
+	  if (headerBtnLand) {
+		  headerBtnLand.addEventListener('click', () => {
+			  document.body.classList.add('active');
+			  callBlock.classList.add('active');
+			  callBg.classList.add('active');
+		  })
+		  preludeBtnLand.addEventListener('click', () => {
+			  document.body.classList.add('active');
+			  callBlock.classList.add('active');
+			  callBg.classList.add('active');
+		  })
+		  
+		}
+
+
+
+
+
 	  if (headerBtn) {
 		  headerBtn.addEventListener('click', () => {
 			document.body.classList.add('active');
@@ -399,6 +617,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	  }
 
 	  //закрытие кол
+
 	  if (callCross) {
 
 		  callCross.addEventListener('click', () => {

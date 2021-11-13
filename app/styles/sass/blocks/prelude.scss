@@ -1,0 +1,173 @@
+.prelude {
+    padding-top: 72px;
+    .container {
+        @media (max-width: 650px) {
+            padding: 0;
+        }
+    }
+}
+.prelude__content {
+    height: 400px;
+    width: 100%;
+    // background-image: url(../images/dist/land/img-1.png);
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    transition: all 0.1s ease;  
+    @media (max-width: 650px) {
+        border-radius: 0px;
+    }
+    @media (max-width: 540px) {
+        height: 480px;
+        justify-content: flex-start;
+    }
+}
+.prelude__bg-fon {
+    // right: -10px;
+    position: absolute;
+    background-image: url(../images/dist/land/img-1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: -1;
+    height: 100%;
+    width: 120%;
+    transition: all 0.1s ease;  
+    @media (max-width: 650px) {
+        width: 150%;
+        background-size: 110% 110%;
+    }
+}
+.prelude__bg-ship {
+    right: -10px;
+    position: absolute;
+    background-image: url(../images/dist/land/ship.png);
+    background-size: cover;
+    width: 600px;
+    height: 400px;
+    transition: all 0.1s ease;  
+    z-index: 10;
+    @media (max-width: 1024px) {
+        bottom: 0;
+        right: -10px;
+        width: 420px;
+        height: 280px;
+    }
+    @media (max-width: 650px) {
+        width: 360px;
+        height: 240px;
+    }
+}
+.prelude__bg-crow {
+    position: absolute;
+}
+.prelude__bg-gull {
+    position: absolute;
+    background-image: url(../images/dist/land/gull.png);
+    width: 90px;
+    height: 51px;
+    right: 500px;
+    top: 35px;
+    transition: all 0.1s ease;  
+    z-index: 1;
+    @media (max-width: 1024px) {
+        top: 120px;
+        right: 153px;
+    }
+    @media (max-width: 650px) {
+        top: auto;
+        bottom: 190px;
+        right: 120px;
+    }
+    @media (max-width: 540px) {
+        top: auto;
+        bottom: 190px;
+        right: 250px;
+    }
+}
+.prelude__bg-num {
+    font-family: 'IBM', sans-serif;
+    position: absolute;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 200px;
+    line-height: 200px;
+    letter-spacing: 0.01em;
+    right: 120px;
+    top: 65px;
+    color: #fff;
+    opacity: 0.3;
+    @media (max-width: 1024px) {
+        font-size: 130px;
+        line-height: 130px;
+        right: 90px;
+        top: 180px;
+       
+    }
+    @media (max-width: 650px) {
+        font-size: 100px;
+        line-height: 100px;
+        top: auto;
+        bottom: 90px;
+        right: 120px;
+    }
+}
+.prelude__title {
+    font-family: 'Normalidad', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 40px;
+    color: #FFFFFF;
+    padding: 40px 0 0 40px;
+    z-index: 5;
+    @media (max-width: 1024px) {
+        padding: 32px 0 0 32px;
+        font-size: 32px;
+        line-height: 32px;
+    }
+    @media (max-width: 540px) {
+        padding: 48px 16px 0 16px;
+        margin-bottom: 24px;
+        font-size: 24px;
+        line-height: 24px;
+    }
+}
+.prelude__group {
+    display: flex;
+    padding: 0 0 40px 40px;
+    z-index: 11;
+    @media (max-width: 1024px) {
+        padding: 0 0 32px 32px;
+    }
+    @media (max-width: 540px) {
+        padding: 0 0 0px 16px;
+    }
+}
+.prelude__btn-white, .prelude__btn-transparent {
+    padding: 17px 34px;
+    border-radius: 8px;
+    margin: 0 8px;
+}
+.prelude__btn-white {
+    border: 1px solid #fff;
+    background-color: #fff;
+    margin-left: 0px;
+}
+.btn {
+}
+.prelude__btn-transparent {
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: transparent;
+    &:hover {
+        color: #fff;
+    }
+}
